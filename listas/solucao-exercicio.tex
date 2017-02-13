@@ -1,0 +1,92 @@
+% !TEX encoding = ISO-8859-1
+\documentclass[12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[all]{xy}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{15}
+\noindent{\bf Exerc{\'\i}cio \arabic{exercicios}: }}
+
+\newcommand{\equi}{\Leftrightarrow}
+\newcommand{\bic}{\leftrightarrow}
+\newcommand{\cond}{\rightarrow}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\nao}{\sim}
+\newcommand{\sub}{\subseteq}
+\newcommand{\e}{\ \wedge\ }
+\newcommand{\ou}{\ \vee\ }
+\newcommand{\vaz}{\emptyset}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\vesp}{\vspace{0.2cm}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\q}{\mathbb{Q}}
+\newtheorem{defin}{Defini{\c c}{\~a}o}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+
+\questao Seja $T : \real^5 \to \real^5$ o operador linear dado por
+  \[
+      T(x_1,x_2,x_3,x_4,x_5) = (3x_1 -2x_5, 0 , 2x_3 - x_4 + x_5, x_5 - x_1, 2x_1 - x_5).
+  \]
+  Determine a decomposi\c{c}\~ao $T = T_1 \oplus T_2$ onde $T_1$ \'e nilpotente e $T_2$ \'e invert{\'\i}vel.
+
+\textbf{Solu{\c c}{\~a}o}: Precisamos encontrar $\real$-subespaços vetoriais $T$-invariante $W_1$ e $W_2$ tais que $T_1 = T : W_1 \to W_1$ seja nilpotente, $T_2 = T : W_2 \to W_2$ seja invertível e $\real^5 = W_1 \oplus W_2$.
+
+Para issso, primeiro observe que
+\begin{align*}
+	T(e_1) &= 3e_1 - e_4 + 2e_5\\
+	T(e_2) &= (0,0,0,0,0)\\
+	T(e_3) &= 2e_3\\
+	T(e_4) &= -e_3\\
+	T(e_5) &= -2e_1 + e_3 + e_4 - e_5.
+\end{align*}
+
+Segue facilmente que
+\[
+ 	\ker T = [e_2, e_3 + 2e_4].
+\]
+
+Defina $W_1 = \ker T$. Assim
+\[
+	T_1(e_2) = T_1(e_3 + 2e_4) = (0,0,0,0,0)
+\]
+e então $T_1$ é nilpotente de índice de nilpotência 1.
+
+Agora, defina
+\[
+	W_2 = [e_1 + e_5, e_3, e_4 + e_5].
+\]
+Temos
+\begin{align*}
+	T_2(e_1 + e_5) &= e_1 + e_3 + e_5 \in W_2\\
+	T_2(e_3) &= 3e_3 \in W_2\\
+	T_2(e_4 + e_5) &= -2e_1 + e_4 - e_5 = -2(e_1 + e_5) + (e_4 + e_5) \in W_2.
+\end{align*}
+
+É fácil ver que $\ker T_2 = \{(0,0,0,0,0)\}$, daí $T_2 : W_2 \to W_2$ é um invertível. Portanto $T = T_1 + T_2$, onde $T_1$ é nilpotente e $T_2$ é invertível.
+
+
+
+\end{document}

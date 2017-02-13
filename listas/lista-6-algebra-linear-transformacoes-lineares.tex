@@ -1,0 +1,339 @@
+% !TEX encoding = ISO-8859-1
+
+\documentclass[12pt]{exam}
+
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+ \usepackage{answers}
+\usepackage{tikz,ifthen}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\Newassociation{solucao}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exerc{\'\i}cio #1: }}
+
+\newcommand{\im}{{\rm Im\,}}
+\newcommand{\sub}{\subseteq}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\minf}{+\infty}
+\newcommand{\ninf}{-\infty}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
+
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+
+\newcommand{\vesp}[1]{\vspace{ #1  cm}}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+
+\vesp{-0.35} \hrule
+
+\begin{center}
+{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+  $6^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Transforma\c{c}\~oes Lineares}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vesp{.6}
+
+\begin{exercicio}
+  Sejam $V$ e $W$ espa\c{c}os vetorias sobre $\cp{K}$ e $T : V \to W$ um fun\c{c}\~ao. Mostre que
+  \begin{enumerate}[label=({\alph*})]
+    \item Se uma transforma\c{c}\~ao linear, ent\~ao
+  \[
+    T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+  \]
+  para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
+  \item Se
+  \[
+    T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+  \]
+  para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$, ent\~ao $T$ \'e uma transforma\c{c}\~ao linear.
+  \end{enumerate}
+
+\end{exercicio}
+
+\begin{exercicio}
+  Prove que cada uma das fun\c{c}\~oes abaixo \'e uma transforma\c{c}\~ao linear.
+  \begin{enumerate}[label=({\alph*})]
+     \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+    \[
+      D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+    \]
+    \item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
+    \[
+      T(f(x)) = \int_a^bf(x)dx.
+    \]
+    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$.
+    \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
+    \[
+      M = \begin{pmatrix}
+        1 & 0\\
+        0 & 0
+      \end{pmatrix}.
+    \]
+    \item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(x) = MX - XM$ onde
+    \[
+      M = \begin{pmatrix}
+        1 & 2\\
+        0 & 1
+      \end{pmatrix}.
+    \]
+    \item $T : \mathcal{P}_3(\real) \to \real^2$ dada por
+    \[
+      T(p) = \left(\int_{-1}^0p(x)dx, \int_0^1p(x)dx\right).
+    \]
+    \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$.
+    \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$.
+    \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$.
+   \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Consideremos uma transforma\c{c}\~ao linear $T : V \to W$, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais tais que $\dim_\cp{K}W < \dim_\cp{K}V < \infty$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que existe um elemento n\~ao nulo $u \in V$ tal que $T(u) = 0_W$.
+    \item Se $\mathcal{B}$ \'e uma base arbitr\'aria de $V$, existe sempre um vetor $u \in V$ tal que $T(u) = 0_W$? Prove ou d\^e um contra-exemplo.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Considere a fun\c{c}\~ao $T : \complex \to \cp{M}_2(\real)$ dada por
+  \[
+    T(x + yi) = \begin{pmatrix}
+      x + 7y & 5y\\
+      -10y & x - 7y
+    \end{pmatrix}.
+  \]
+  Considerando $\complex$ como um espa\c{c}o vetorial sobre $\real$:
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que $T$ \'e uma transforma\c{c}\~ao linear.
+    \item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que a composta de transforma\c{c}\~oes lineares \'e linear.
+\end{exercicio}
+
+\begin{exercicio}
+  Determine quatro transforma\c{c}\~oes lineares de $\real^3$ em $\real^3$ cujos n\'ucleos tenham dimens\~oes 0, 1, 2 e 3, respectivamente.
+\end{exercicio}
+
+\begin{exercicio}
+  Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que $\ker T = V$ e $\im T = W$.
+\end{exercicio}
+
+\begin{exercicio}
+  Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
+  \begin{enumerate}[label=({\alph*})]
+    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
+    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear tal que $T(1,1) = (1,0)$ e $T(1,-1) = (0,1)$. Encontre $T(1,0)$ e $T(1,2)$.
+  \begin{solucao}
+    $T(1,0) = (1/2,1/2)$ e $T(0,2) = (1,-1)$.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que
+  \begin{align*}
+    \ker T = [(1,0,0,1);(-1,0,0,1)]\\
+    \im T = [(1,-1,0,2);(0,1,-1,0)].
+  \end{align*}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial de dimens\~ao $n$ sobre $\cp{K}$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Se $n$ for {\'\i}mpar, prove que n\~ao existe nenhuma transforma\c{c}\~ao linear $T : V \to V$ tal que $\im T = \ker T$.
+    \item Mostre que a afirma\c{c}\~ao (a) \'e falsa se $n$ for par.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $V$, $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear.
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que $T$ \'e injetora se, e somente se, $T$ leva cada subconjunto L.I. de $V$ em um subconjunto L.I. de $W$.
+    \item Prove que se  conjunto $\{T(u_1),\dots,T(u_n)\}$ for L.I. em $W$, ent\~ao $\{u_1,\dots,u_n\}$ \'e L.I. em $V$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Dada uma transforma\c{c}\~ao linear $T : U \to U$, considere a seguinte afirma\c{c}\~ao:
+  \begin{itemize}
+    \item[($\star$)] se $\{u_1,\dots,u_r\}$ forma uma base de $\ker T$ e $\{w_1,\dots,w_s\}$ for uma base de $\im T$, ent\~ao $\{u_1,\dots,u_r,w_1,\dots,w_s\}$ ser\'a uma base de $U$.
+  \end{itemize}
+  \begin{enumerate}[label=({\alph*})]
+    \item D\^e um exemplo de uma transforma\c{c}\~ao linear $T$ que satisfa\c{c}a a condi\c{c}\~ao ($\star$), com $\dim_\cp{K}\ker T \ne 0 \ne \dim_\cp{K}\im T$.
+    \item Mostre que nem toda transforma\c{c}\~ao linear $T$ satisfaz ($\star$).
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e $T : V \to V$ uma transforma\c{c}\~ao linear. Prove que as seguintes condi\c{c}\~oes s\~ao equivalentes:
+  \begin{enumerate}
+    \item $\ker T \cap \im T = \{0_V\}$.
+    \item Se $(T\circ T)(u) = 0_V$ para $u \in V$, ent\~ao $T(u) = 0_V$.
+  \end{enumerate}
+\end{exercicio}
+
+Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, encontre uma base e a dimens\~ao de:
+\begin{enumerate}[label=({\alph*})]
+    \item $\ker F$
+    \item $\im F$
+  \end{enumerate}
+
+\begin{exercicio}\label{nucleo_imagem_inicio}
+  Seja $F : \real^4 \to \real^3$ a transforma\c{c}\~ao linear definida por
+  \[
+    F(x,y,s,t) = (x - y + s + t, x + 2s - t, x + y + 3s - 3t).
+  \]
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $F : \real^3 \to \real^3$ a transforma\c{c}\~ao linear definida por
+  \[
+    F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
+  \]
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 1$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transforma\c{c}\~ao linear definida por
+  \[
+    F(A) = MA,
+  \]
+  onde $M = \begin{bmatrix}
+    1 & -1\\-2 & 2
+  \end{bmatrix}$ e $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{nucleo_imagem_fim}
+  Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transforma\c{c}\~ao linear definida por
+  \[
+    F(A) = AM - MA,
+  \]
+  onde $M = \begin{bmatrix}
+    1 & 2\\0 & 3
+  \end{bmatrix}$ e $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma transforma\c{c}\~ao linear $F : \real^3 \to \real^4$, cuja imagem \'e gerada por $(1,2,0,-4)$ e $(2,0,-1,-3)$.
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma transforma\c{c}\~ao linear $T : \real^3 \to \cp{M}_{3 \times 1}(\real)$, cuja imagem \'e gerada por
+  \[
+    v_1 = \begin{bmatrix}
+      1\\2\\3
+    \end{bmatrix}, v_2 = \begin{bmatrix}
+      4\\5\\6
+    \end{bmatrix}.
+  \]
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma transforma\c{c}\~ao linear $T : \cp{M}_{1 \times 4}(\real) \to \real^5$ , cujo kernel \'e gerado por
+  \[
+    v_1 = \begin{bmatrix}
+      1 & 2 & 3 & 4
+    \end{bmatrix}, v_2 = \begin{bmatrix}
+      0 & 1 & 1 & 1
+    \end{bmatrix}.
+  \]
+\end{exercicio}
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+\end{document}

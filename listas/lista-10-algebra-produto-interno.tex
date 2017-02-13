@@ -1,0 +1,211 @@
+% !TEX encoding = ISO-8859-1
+
+\documentclass[12pt]{exam}
+
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage{hhline}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+ \usepackage{answers}
+\usepackage{tikz,ifthen}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\Newassociation{solucao}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exerc{\'\i}cio #1: }}
+
+\newcommand{\im}{{\rm Im\,}}
+\newcommand{\sub}{\subseteq}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\minf}{+\infty}
+\newcommand{\ninf}{-\infty}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
+
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+
+\newcommand{\vesp}[1]{\vspace{ #1  cm}}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+
+\vesp{-0.35} \hrule
+
+\begin{center}
+{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+  $10^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Produto Interno}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vesp{.6}
+
+\begin{exercicio}
+  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial com produto interno $\langle\ ,\ \rangle$. Mostre que
+  \begin{enumerate}[label=({\alph*})]
+    \item $\langle u, 0\rangle = \langle 0, u\rangle = 0_\cp{K}$ para todo $u \in V$.
+    \item $\langle u, u\rangle = 0_\cp{K}$ se, e somente se, $u = 0_V$.
+    \item $\langle u, v + w\rangle = \langle u, v\rangle + \langle u, w\rangle$ para todos $u$, $v$ e $w \in V$.
+    \item $\langle u, \lambda w\rangle = \overline{\lambda} \langle u, w\rangle$ para todo $\lambda \in \cp{K}$ e todos $u$, $w \in V$.
+    \item $\displaystyle\langle \sum_{i = 1}^n\alpha_iu_i, \sum_{j - 1}^m\beta_jw_j\rangle = \sum_{i - 1}^n\sum_{j = 1}^m\alpha_i\overline{\beta_j}\langle u_i, w_j \rangle$ para $u_i$, $w_j \in V$ e $\alpha_i$, $\beta_j \in \cp{K}$, $i = 1$, \dots, $n$ e $j = 1$, \dots, $m$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $V$ e $W$ dois espa\c{c}os vetoriais sobre $\cp{K}$ e seja $\langle\ ,\ \rangle$ um produto interno em $V$. Se $T : W \to V$ \'e uma transforma\c{c}\~ao linear injetora, ent\~ao defina
+    \[
+        \langle u , v \rangle_T = \langle T(u) , T(v) \rangle,
+    \]
+    para todos $u$, $v \in W$. Mostre que $\langle\ ,\ \rangle_T$ \'e um produto interno em $W$.
+\end{exercicio}
+
+\begin{exercicio}
+  Verifique se as seguintes fun\c{c}\~oes s\~ao um produto no $\cp{K}$-espa\c{c}o vetorial $V$ ou n\~ao.
+  \begin{enumerate}[label=({\alph*})]
+    \item $V = \real^2$, $(a,b)$, $(x, y) \in \real^2$, $\langle (a,b) , (x,y) \rangle = 2ax - ay - bx + by$;
+    \item $V = \complex^2$, $(a,b)$, $(x, y) \in \complex^2$, $\langle (a,b) , (x,y) \rangle = ax$;
+    \item $V = \complex^3$, $(a, b, c)$, $(x, y, z) \in \complex^3$, $\langle (a, b, c) , (x, y, z) \rangle = a\overline{x} + b\overline{y} + c\overline{z}$;
+    \item $V = \real^3$, $(a, b, c)$, $(x, y, z) \in \real^3$, $\langle (a, b, c) , (x, y, z) \rangle = a^2x^2 + b^2y^2 + c^2z^2$;
+    \item $V = \mathcal{C}([a,b], \real)$ o espa\c{c}o das fun\c{c}\~oes cont{\'\i}nuas de $[a,b]$ em $\real$. Defina
+    \[
+        \langle f , g \rangle = \int_a^bf(t)g(t)dt
+    \]
+    para $f$, $g \in V$.
+    \item $V = \mathcal{P}_3(\complex)$, $p(x) = a_0 + a_1x + a_2x^2 + a_3x^3$, $q(x) = b_0 + b_1x + b_2x^2 + b_3x^3$,
+    \[
+        \langle p(x) , q(x) \rangle = a_0\overline{b_0} + a_1\overline{b_1} + a_2\overline{b_2} + a_3\overline{b_3}.
+    \]
+    \item $V = \cp{M}_2(\complex)$, $A = \begin{bmatrix}
+      a_{11} & a_{12}\\
+      a_{21} & a_{22}
+    \end{bmatrix}$, $B = \begin{bmatrix}
+      b_{11} & b_{12}\\
+      b_{21} & b_{22}
+    \end{bmatrix}$,
+    \[
+        \langle A, B \rangle = 2a_{11}b_{11} + a_{12}b_{12} + a_{21}b_{21} + 2a_{22}b_{22}.
+    \]
+    \item $V = \real^2$, $(a,b)$, $(x, y) \in \real^2$, $\langle (a,b) , (x,y) \rangle = ax - by$;
+  \end{enumerate}
+  \begin{solucao}
+  \begin{enumerate}[label=({\alph*})]
+    \item Sim.
+    \item N\~ao.
+    \item Sim.
+    \item N\~ao.
+    \item Sim.
+    \item Sim.
+    \item N\~ao.
+    \item N\~ao.
+  \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Determine se os conjuntos abaixo s\~ao ortogonais, ortonormais ou nenhum deles, considerando o produto interno can\^onico em $V$.
+  \begin{enumerate}[label=({\alph*})]
+    \item $\{(-4, 6); (5, 0)\}$, $V = \real^2$
+    \item $\{(3/5, 4/5); (-4/5, 3/5)\}$, $V = \real^2$
+    \item $\{(4, -1, 1); (-1, 0, 4); (-4, -17, -1)\}$, $V = \real^3$
+    \item $\{1, x, x^2, x^3\}$, $V = \mathcal{P}_3(\complex)$
+    \item $\{(\sin \theta, \cos \theta); (\cos \theta, -\sin \theta)\}$, $V = \real^2$
+    \item $\{(1/\sqrt{2}, i/\sqrt{2}, 0); ((1 + 2i)/\sqrt{18}, (2 - i)/\sqrt{18}, (2 - 2i)/\sqrt{18})\}$, $V = \complex^3$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item Nenhum deles.
+      \item Ortonormal.
+      \item Ortogonal.
+      \item Ortogonal.
+      \item Ortonormal.
+      \item Ortonormal.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma base ortonormal para $\complex^3$ contendo o vetor $\{(1, 2i, 0)\}$, onde o produto interno de $\complex^3$ \'e dado por
+  \[
+      \langle (x_1, x_2, x_3) ; (y_1, y_2, y_3) \rangle = 2x_1\overline{y_1} + 4x_2\overline{y_2} + x_3\overline{y_3}.
+  \]
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $S = [(1 + i, 3i, 2 - i); (2 - 3i, 10 + 2i, 5 - i)]$. Determine uma base ortogonal para $S$, considerando em $\complex^3$ o produto interno can\^onio.
+\end{exercicio}
+
+\begin{exercicio}
+  Considere a base $\mathcal{B} = \{(1, i); (i, 1)\}$ de $\complex^2$. Determine uma base ortonormal de $\complex^2$ que contenha um dos elementos de $\mathcal{B}$, considerando em $\complex^2$ o produto interno can\^onico.
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma base ortonormal do subespa\c{c}o $W$ de $\complex^3$ gerado por $v_1 = (1, i, 0)$ e $v_2 = (1, 2, 1 - i)$.
+\end{exercicio}
+
+\begin{exercicio}
+  Considere a base de $\real^3$ dada por $\{(1, 1, 1); (0, 1, 1); (0, 0, 1)\}$. Encontre uma base ortonormal para $\real^3$ em rela\c{c}\~ao  ao produto interno can\^onico.
+\end{exercicio}
+
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+\end{document}

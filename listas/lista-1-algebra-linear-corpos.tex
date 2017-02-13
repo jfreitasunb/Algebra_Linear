@@ -1,0 +1,170 @@
+% !TEX encoding = ISO-8859-1
+\documentclass[12pt]{exam}
+
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+ \usepackage{answers}
+\usepackage{tikz,ifthen}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\Newassociation{sol}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exerc{\'\i}cio #1: }}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\minf}{+\infty}
+\newcommand{\ninf}{-\infty}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
+
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+
+\newcommand{\vesp}[1]{\vspace{ #1  cm}}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+
+\vesp{-0.35} \hrule
+
+\begin{center}
+{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+  $1^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Corpos}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vesp{.6}
+
+\begin{exercicio}
+Verifique se os seguintes conjuntos s\~ao corpos:
+\begin{enumerate}[label={\alph*})]
+    \item $M = \{ a + bi \mid a,\ b \in \cp{Q}\}$, onde $i$ \'e o n\'umero complexo imagin\'ario;
+    \item $M = \{ a + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$;
+    \item $M = \{ a + b\sqrt[3]{2} \mid a,\ b \in \cp{Q}\}$;
+    \item $M = \{ a\sqrt{2} + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$;
+    \item $M = \{ a + b\sqrt{2} \mid a,\ b \in \cp{Z}\}$.
+    \item $(\cp{Q}, \oplus, \odot)$ onde $a \oplus b = a + b - 1$ e $a \odot b = a + b - ab$.
+  \end{enumerate}  
+\end{exercicio}
+
+\begin{exercicio}
+Resolva as seguintes equa\c{c}\~oes:
+\begin{enumerate}[label={\alph*})]
+  \item $x \oplus \overline{2} = \overline{0}$ no conjunto $\integer_4$;
+  \item $x^2 \oplus \overline{2}x = \overline{2}$ no conjunto $\integer_5$;
+  \item $x^3 \oplus \overline{2}x = \overline{3}$ no conjunto $\integer_7$.
+\end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Resolva o sistema de equa\c{c}\~oes
+  \[
+    \begin{cases}
+      x \oplus y = \overline{0}\\
+      \overline{2}x \oplus y = \overline{2}
+    \end{cases}
+  \]
+  no conjunto $\integer_4$. Este sistema possui solu\c{c}\~ao em $\integer_3$?
+\end{exercicio}
+
+\begin{exercicio}
+  Resolva a equa\c{c}\~ao $x^2 \oplus \overline{2}x \oplus \overline{1} = \overline{0}$ nos conjuntos $\integer_7$ e $\integer_{11}$, caso ela tenha ra{\'\i}zes.
+\end{exercicio}
+
+\begin{exercicio}
+  Para quais valores de $\overline{c}$ a equa\c{c}\~ao $\overline{2}\otimes x = \overline{c}$ tem solu\c{c}\~ao no conjunto $\integer_5$.
+\end{exercicio}
+
+\begin{exercicio}
+Seja $\mathbb{K}$ um corpo. Definimos a caracter{\'\i}stica \textbf{$\ch \mathbb{K}$} de $\mathbb{K}$ da seguinte maneira:
+\begin{enumerate}[label=({\roman*})]
+  \item se a soma $1 + 1 + \cdots + 1$ for sempre diferente de zero, ent\~ao \textbf{$\ch \mathbb{K} = 0$};
+  \item se a soma $\underbrace{1 + 1 + \cdots + 1}_{m} = 0$, para algum $m \ge 2$, ent\~ao \textbf{$\ch \mathbb{K}$} \'e o menor n\'umero $m$ com esta propriedade.
+\end{enumerate}
+Com base nesta defini\c{c}\~ao:
+\begin{enumerate}[label={\alph*})]
+  \item Mostre que se $\mathbb{K} = m \ne 0$, ent\~ao $m$ \'e um n\'umero primo.
+  \item Exiba corpos com caracter{\'\i}sticas iguais a 0 e outros com caracter{\'\i}sticas distintas de 0.
+\end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\cp{K}$ um corpo. Dizemos que um elemento $a \in \cp{K}$ \'e um \textbf{elemento quadrado} se existe um elemento $x \in \cp{K}$ tal que $x^2 = a$. Denotamos o conjunto formado por todos os elementos quadrados de um corpo $\cp{K}$ por $\cp{K}^2$. Mostre que:
+  \begin{enumerate}[label={\alph*})]
+    \item $0 \in \cp{K}^2$ e $1 \in \cp{K}^2$.
+    \item Se $a$, $b \in \cp{K}^2$, ent\~ao $ab \in \cp{K}^2$.
+    \item Se $a \in \cp{K}^2$ e $a \ne 0$, ent\~ao $a^{-1} \in \cp{K}^2$.
+    \item \'E verdade que se $a$, $b \in \cp{K}^2$, ent\~ao $a + b \in \cp{K}^2$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Ache todos os elementos quadrados de $\integer_5$, $\integer_7$ e $\integer_{11}$.
+\end{exercicio}
+
+% \newpage
+% \Closesolutionfile{ans}
+% \hrule
+% \begin{center}
+% {\large\bf RESPOSTAS}
+% \end{center}
+% \hrule
+% \begin{multicols}{2}
+% \input{ans1}
+% \end{multicols}
+
+\end{document}

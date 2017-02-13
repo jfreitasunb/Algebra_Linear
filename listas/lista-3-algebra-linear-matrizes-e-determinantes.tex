@@ -1,0 +1,368 @@
+% !TEX encoding = ISO-8859-1
+
+\documentclass[12pt]{exam}
+
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+ \usepackage{answers}
+\usepackage{tikz,ifthen}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\Newassociation{solucao}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exerc{\'\i}cio #1: }}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\minf}{+\infty}
+\newcommand{\ninf}{-\infty}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
+
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+
+\newcommand{\vesp}[1]{\vspace{ #1  cm}}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+
+\vesp{-0.35} \hrule
+
+\begin{center}
+{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+  $3^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Matrizes e Determinantes}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vesp{.6}
+
+Nos exerc{\'\i}cios \ref{matrizinicio} \`a \ref{matrizfim}, mostre que $B$ \'e a inversa de $A$.
+\begin{exercicio}\label{matrizinicio}
+\[
+  A =\begin{bmatrix}
+    1 & -1\\
+    2 & 3
+  \end{bmatrix}, B =\begin{bmatrix}
+    3/5 & 1/5\\
+    -2/5 & 1/5
+  \end{bmatrix}
+\]
+\end{exercicio}
+
+\begin{exercicio}
+\[
+  A =\begin{bmatrix}
+    -2 & 2 & 3\\
+    1 & -1 & 0\\
+    0 & 1 & 4
+  \end{bmatrix}, B =\begin{bmatrix}
+    -4/3 & -5/3 & 1\\
+    -4/3 & -8/3 & 1\\
+    1/3 & 2/3 & 0
+  \end{bmatrix}
+\]
+\end{exercicio}
+
+\begin{exercicio}\label{matrizfim}
+\[
+  A =\begin{bmatrix}
+    2 & -17 & 11\\
+    -1 & 11 & -7\\
+    0 & 3 & -2
+  \end{bmatrix}, B =\begin{bmatrix}
+    1 & 1 & 2\\
+    2 & 4 & -3\\
+    3 & 6 & -5
+  \end{bmatrix}
+\]
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{matrizinversainicio} \`a \ref{matrizinversafim}, encontre a inversa da matriz dada, se existir.
+
+\begin{exercicio}\label{matrizinversainicio}
+$A =\begin{bmatrix}
+    1 & 2\\
+    3 & 7
+  \end{bmatrix}$
+\begin{solucao}
+  $A^{-1} =\begin{bmatrix}
+    7 & -2\\
+    -3 & 1
+  \end{bmatrix}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A =\begin{bmatrix}
+    -7 & 33\\
+    4 & 19
+  \end{bmatrix}$
+\begin{solucao}
+  $A^{-1} =\begin{bmatrix}
+    -19 & -33\\
+    -4 & -7
+  \end{bmatrix}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{pmatrix}
+    \overline{4} & \overline{0} & \overline{1}\\
+    \overline{1} & \overline{1} & \overline{0}\\
+    \overline{3} & \overline{0} & \overline{1}
+  \end{pmatrix}$ em $\integer_5$.
+\begin{solucao}
+  $A^{-1} = \begin{pmatrix}
+    \overline{1} & \overline{0} & \overline{4}\\
+    \overline{4} & \overline{1} & \overline{1}\\
+    \overline{2} & \overline{0} & \overline{4}
+  \end{pmatrix}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    \overline{1} & \overline{4} & \overline{3} & \overline{3}\\
+    \overline{1} & \overline{6} & \overline{0} & \overline{0}\\
+    \overline{1} & \overline{6} & \overline{4} & \overline{4}\\
+    \overline{1} & \overline{6} & \overline{5} & \overline{5}
+  \end{bmatrix}$ em $\integer_7$.
+\begin{solucao}
+  N\~ao existe inversa.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A =\begin{bmatrix}
+    2 & 4\\
+    4 & 8
+  \end{bmatrix}$
+\begin{solucao}
+  N\~ao possui inversa.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A =\begin{bmatrix}
+    1 & 1 & 1\\
+    3 & 5 & 4\\
+    3 & 6 & 5
+  \end{bmatrix}$
+\begin{solucao}
+  $A^{-1} =\begin{bmatrix}
+    1 & 1 & -1\\
+    -3 & 2 & -1\\
+    3 & -3 & 2
+  \end{bmatrix}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A =\begin{bmatrix}
+    1 & 2 & -1\\
+    3 & 7 & -10\\
+    7 & 16 & -21
+  \end{bmatrix}$
+\begin{solucao}
+  N\~ao tem inversa.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A =\begin{bmatrix}
+    -8 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & -5
+  \end{bmatrix}$
+\begin{solucao}
+ N\~ao existe inversa.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{matrizinversafim}
+$A =\begin{bmatrix}
+    1 & 1 & 2\\
+    3 & 1 & 0\\
+    -2 & 0 & 3
+  \end{bmatrix}$
+\begin{solucao}
+  $A^{-1} =\begin{bmatrix}
+    -3/2 & 3/2 & 1\\
+    9/2 & -7/2 & -3\\
+    -1 & 1 & 1
+  \end{bmatrix}$
+\end{solucao}
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{determinanteinicio} \`a \ref{determinantefim}, encontre o determinante da matriz dada.
+
+\begin{exercicio}\label{determinanteinicio}
+$A = \begin{bmatrix}
+    2 & 1\\
+    3 & 4
+    \end{bmatrix}$
+\begin{solucao}
+  $\det A = 5$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    \overline{1} & \overline{1}\\
+    \overline{2} & \overline{1}
+    \end{bmatrix}$ em $\integer_3$.
+\begin{solucao}
+  $\det A = \overline{2}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    \overline{0} & \overline{1} & \overline{0}\\
+    \overline{1} & \overline{1} & \overline{0}\\
+    \overline{1} & \overline{1} & \overline{1}\\
+    \end{bmatrix}$ em $\integer_2$.
+\begin{solucao}
+  $\det A = \overline{1}$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    \overline{1} & \overline{6} & \overline{0} & \overline{0}\\
+    \overline{1} & \overline{7} & \overline{0} & \overline{0}\\
+    \overline{2} & \overline{3} & \overline{1} & \overline{2}\\
+    \overline{3} & \overline{8} & \overline{0} & \overline{0}\\
+    \end{bmatrix}$ em $\integer_{11}$.
+\begin{solucao}
+  $\det A = \overline{0}$
+\end{solucao}
+\end{exercicio}
+
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    1 & 4 & -2\\
+    3 & 2 & 0\\
+    -1 & 4 & 3
+    \end{bmatrix}$
+\begin{solucao}
+  $\det A = -58$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    3 & 6 & -5 & 4\\
+    -2 & 0 & 6 & 0\\
+    1 & 1 & 2 & 2\\
+    0 & 3 & -1 & -1
+    \end{bmatrix}$
+\begin{solucao}
+  $\det A = -108$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    5 & 8 & -4 & 2\\
+    0 & 0 & 6 & 0\\
+    0 & 0 & 2 & 2\\
+    0 & 0 & 0 & -1
+    \end{bmatrix}$
+\begin{solucao}
+  $\det A = 0$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$A = \begin{bmatrix}
+    -1 & 4 & 2 & 1 & -3\\
+    0 & 3 & -4 & 5 & 2\\
+    0 & 0 & 2 & 7 & 0\\
+    0 & 0 & 0 & 5 & -1\\
+    0 & 0 & 0 & 0 & -1
+    \end{bmatrix}$
+\begin{solucao}
+  $\det A = -30$
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{determinantefim}
+$A = \begin{bmatrix}
+    5 & 2 & 0 & 0 & -2\\
+    0 & 1 & 4 & 3 & 2\\
+    0 & 0 & 2 & 6 & 3\\
+    0 & 0 & 3 & 4 & 1\\
+    0 & 0 & 0 & 0 & 2
+  \end{bmatrix}$
+\begin{solucao}
+  $\det A = -100$
+\end{solucao}
+\end{exercicio}
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+\end{document}

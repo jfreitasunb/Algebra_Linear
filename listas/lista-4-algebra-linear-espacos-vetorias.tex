@@ -1,0 +1,209 @@
+% !TEX encoding = ISO-8859-1
+
+\documentclass[12pt]{exam}
+
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+ \usepackage{answers}
+\usepackage{tikz,ifthen}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\Newassociation{solucao}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exerc{\'\i}cio #1: }}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\minf}{+\infty}
+\newcommand{\ninf}{-\infty}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
+
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+
+\newcommand{\vesp}[1]{\vspace{ #1  cm}}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+
+\vesp{-0.35} \hrule
+
+\begin{center}
+{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+  $4^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Espa\c{c}os Vetoriais}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vesp{.6}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$.
+  \begin{enumerate}[label={\alph*})]
+    \item Mostre que $0_\cp{K} v = 0_V$ para todo $v \in V$ e que $\alpha 0_V = 0_V$ para todo $\alpha \in \cp{K}$.
+    \item Mostre que se $\alpha v = 0_V$, com $\alpha \in \cp{K}$ e $v \in V$, ent\~ao $\alpha = 0_\cp{K}$ ou $v = 0_V$.
+  \end{enumerate}
+\end{exercicio}
+\begin{exercicio}
+Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que todo subconjunto de $V$ que cont\'em $\mathcal{B}$ \'e um conjunto gerador de $V$.
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que os seguintes conjuntos s\~ao espa\c{c}os vetoriais:
+  \begin{enumerate}[label={\alph*})]
+    \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
+    \begin{itemize}
+      \item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
+      \item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
+    \end{itemize}
+    \item Considere o conjunto dos polin\^omios
+    \[
+      \mathcal{P}(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, i = 1, 2, \dots, n; n \ge 0 \}.
+    \]
+    Dados $p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$ e $q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_1x + b_0$ em $\mathcal{P}(\cp{K})$, suponha que $n < m$ e defina:
+    \begin{itemize}
+      \item $(p + q)(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
+      \item $(\alpha p)(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
+    \end{itemize}
+    Assim $\mathcal{P}(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+    \item Para cada $m \ge 0$ defina
+    \[
+      \mathcal{P}_m(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, 0 \le n \le m \}.
+    \]
+    Assim $\mathcal{P}_m(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+    \item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Considere o seguinte sistema linear homog\^eneo
+    \begin{equation}\label{sistemahomogeneo}
+      \begin{cases}
+        \alpha_{11}x_1 + \alpha_{12}x_2 + \cdots + \alpha_{1n}x_n = 0_\cp{K}\\
+        \vdots\\
+        \alpha_{m1}x_1 + \alpha_{m2}x_2 + \cdots + \alpha_{mn}x_n = 0_\cp{K}
+      \end{cases}
+    \end{equation}
+    onde $\alpha_{ij} \in \cp{K}$ para $1 \le i \le m$ e $1 \le j \le n$. Seja 
+    \[
+    \mathcal{S} = \{(a_1, \dots, a_n) \in \cp{K}^n \mid (a_1, \dots, a_n) \mbox{\'e solu\c{c}\~ao de } \eqref{sistemahomogeneo}\}
+    \]
+    o conjunto de todas as solu\c{c}\~oes deste sistema. Mostre que $\mathcal{S}$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que $\rac[\sqrt{2}]$ \'e um espa\c{c}o vetorial sobre $\rac$.
+\end{exercicio}
+
+\begin{exercicio}
+  Suponha que estejam definidas as seguintes opera\c{c}\~oes no conjunto $V = \{(a, b) \in \real^2 \mid a, b > 0\}$:
+  \begin{itemize}
+    \item $(a, b) \oplus (c, d) = (ac, bd)$, para todos $(a,b)$, $(c,d) \in V$.
+    \item $\alpha (a, b) = (a^\alpha, b^\alpha)$ para todo $\alpha \in \real$ e $(a, b) \in V$.
+  \end{itemize}
+  Prove que $V$ com essa opera\c{c}\~oes \'e um $\real$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  \'E poss{\'\i}vel encontrar um conjunto gerador de $\mathcal{P}(\real)$ com uma quantidade finita de elementos?
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que
+  \[
+    \mathcal{B} = \{(1_\cp{K}, 0_\cp{K}, \dots, 0_\cp{K}); (0_\cp{K}, 1_\cp{K}, 0_\cp{K}, \dots, 0_\cp{K}); (0_\cp{K}, 0_\cp{K}, 1_\cp{K}, \dots, 0_\cp{K}); \dots; (0_\cp{K}, 0_\cp{K}, 0_\cp{K}, \dots, 1_\cp{K})\}
+  \]
+  \'e uma base de $\cp{K}^n$ como um $\cp{K}$-espa\c{c}o vetorial. Tal base \'e chamada de \textbf{base can\^onica} de $\cp{K}^n$.
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma base de $\cp{M}_{p \times q}(\complex)$ como um $\complex$-espa\c{c}o vetorial. Quantos elementos tem? E se considerarmos $\cp{M}_{p \times q}(\complex)$ como um $\real$-espa\c{c}o vetorial
+\end{exercicio}
+
+\begin{exercicio}
+  Se $\cp{K} = \integer_2$, o subconjunto $\{(\overline{1}, \overline{1}, \overline{0}), (\overline{1}, \overline{0}, \overline{1}), (\overline{0}, \overline{1}, \overline{1})\}$ de $\cp{K}^3$ \'e L.D.? E se $\cp{K} = \integer_{13}$?
+\end{exercicio}
+
+\begin{exercicio}
+  Sob que condi\c{c}\~oes impostas ao escalar $\alpha \in \complex$ os vetores $(0,1,\alpha)$, $(\alpha,0,1)$ e $(1 + \alpha, 1, \alpha)$ formam uma base de $\complex^3$?
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o de dimens\~ao $n \ge 1$. Mostre que:
+  \begin{enumerate}[label={\alph*})]
+    \item todo conjunto de vetores com mais de que $n$ elementos \'e linearmente dependente.
+    \item nenhum conjunto com menos do que $n$ elementos pode gerar $V$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao n\~ao necessariamente finita e seja $\mathcal{B}$ um conjunto L.I. em V. Mostre que se existir um elemento $v \in V$ que n\~ao seja combina\c{c}\~ao linear de elementos de $\mathcal{B}$, ent\~ao $\mathcal{B}' = \mathcal{B} \cup \{v\}$ \'e L.I.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Mostre que todo subconjunto de um conjunto L.I. \'e L.I.
+\end{exercicio}
+
+% \newpage
+% \Closesolutionfile{ans}
+% \hrule
+% \begin{center}
+% {\large\bf RESPOSTAS}
+% \end{center}
+% \hrule
+% \input{ans1}
+
+\end{document}
