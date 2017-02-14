@@ -1,7 +1,7 @@
 \begin{theindex}
 
-  \item Autovalor, \hyperpage{60}
-  \item Autovetor, \hyperpage{61}
+  \item Autovalor, \hyperpage{62}
+  \item Autovetor, \hyperpage{63}
 
   \indexspace
 
@@ -25,9 +25,9 @@
   \indexspace
 
   \item Jordan
-    \subitem Base de, \hyperpage{88}
-    \subitem Bloco de , \hyperpage{81}
-    \subitem Forma de, \hyperpage{83}
+    \subitem Base de, \hyperpage{90}
+    \subitem Bloco de , \hyperpage{83}
+    \subitem Forma de, \hyperpage{85}
 
   \indexspace
 
@@ -41,8 +41,8 @@
     \subitem Na forma escada, \hyperpage{22}
     \subitem Quadrada, \hyperpage{31}
   \item Multiplicidade
-    \subitem Alg\'ebrica, \hyperpage{67}
-    \subitem Geom\'etrica, \hyperpage{67}
+    \subitem Alg\'ebrica, \hyperpage{69}
+    \subitem Geom\'etrica, \hyperpage{69}
 
   \indexspace
 
@@ -53,17 +53,17 @@
 
   \item Opera\c{c}\~oes Elementares, \hyperpage{13}
     \subitem Sobre Matrizes, \hyperpage{15}
-  \item Operador Linear, \hyperpage{59}
-    \subitem Nilpotente, \hyperpage{78}
+  \item Operador Linear, \hyperpage{61}
+    \subitem Nilpotente, \hyperpage{80}
 
   \indexspace
 
   \item Polin\^omio
-    \subitem Caracter{\'\i}stico, \hyperpage{62}
-    \subitem Minimal, \hyperpage{74}
+    \subitem Caracter{\'\i}stico, \hyperpage{64}
+    \subitem Minimal, \hyperpage{76}
   \item Posto
     \subitem de uma matriz, \hyperpage{23}
-  \item Produto interno, \hyperpage{95}
+  \item Produto interno, \hyperpage{97}
 
   \indexspace
 
@@ -75,14 +75,14 @@
 
   \item Sistema Linear, \hyperpage{12}
   \item Sistemas Equivalentes, \hyperpage{14}
-  \item Soma direta, \hyperpage{70}
+  \item Soma direta, \hyperpage{72}
   \item Subespa\c{c}o, \hyperpage{47}
-    \subitem $T$-invariante, \hyperpage{70}
+    \subitem $T$-invariante, \hyperpage{72}
     \subitem gerado, \hyperpage{50}
 
   \indexspace
 
   \item Transforma\c{c}\~ao Linear
-    \subitem Diagonaliz\'avel, \hyperpage{61}
+    \subitem Diagonaliz\'avel, \hyperpage{63}
 
 \end{theindex}

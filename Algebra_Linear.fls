@@ -402,6 +402,8 @@ INPUT espacos_vetoriais.tex
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 OUTPUT transformacoes_lineares.aux
+INPUT transformacoes_lineares.tex
+INPUT transformacoes_lineares.tex
 OUTPUT formas_canonicas.aux
 INPUT formas_canonicas.tex
 INPUT formas_canonicas.tex

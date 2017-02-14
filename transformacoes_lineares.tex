@@ -31,3 +31,37 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 \begin{prova}
 	Deixada a cargo do leitor.
 \end{prova}
+
+\begin{lema}
+	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transformação linear. Então:
+	\begin{enumerate}
+		\item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
+		\item $T(-u) = -T(u)$, para cada $u \in V$.
+		\item $T(\sum_{i=1}^m\alpha_iu_i) = \sum_{i=1}^mT(u_i)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
+	\end{enumerate}
+\end{lema}
+\begin{prova}
+	\begin{enumerate}
+		\item Note que
+		\[
+			0_W + T(0_V) = T(0_V + 0_V) = T(0_V) + T(0_V),
+		\]
+		ou seja, $T(0_V) = 0_W$.
+		\item Basta observar que $-u = (-1_\cp{K})u$ e daí
+		\[
+			T(-u) = T((-1_\cp{K})u) = -1_\cp{K}T(u) = -T(u).
+		\]
+		\item Por indução em $m$. Se $m = 2$, então
+		\[
+			T(\alpha_1u_1 + \alpha_2u_2) = T(\alpha_1u_1) + T(\alpha_2u_2) = \alpha_1T(u_1) + \alpha_2T(u_2).
+		\]
+		Suponha que para $m = p$ tenhamos
+		\[
+			T(\sum_{i=1}^p\alpha_iu_i) = \sum_{i=1}^pT(u_i).
+		\]
+		Vamos mostra que é válido para $m = p + 1$. De fato,
+		\begin{align*}
+			T(\sum_{i=1}^{p+1}\alpha_iu_i) &= T([\sum_{i=1}^p\alpha_iu_i] + \alpha_{p + 1}u_{p + 1}) = T(\sum_{i=1}^p\alpha_iu_i) + T(\alpha_{p+1}u_{p+1}) \\ &= \sum_{i=1}^p\alpha_iT(u_i) + \alpha_{p+1}T(u_{p+1}) = \sum_{i=1}^{p+1}\alpha_iT(u_i).
+		\end{align*}
+	\end{enumerate}
+\end{prova}
