@@ -329,3 +329,18 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\item A transformação linear $T : V \to V$ dada por $T(u) = u$ é injetora e sobrejetora, ou seja, é um isomorfismo.
 	\end{enumerate}
 \end{exemplos}
+
+\begin{proposicao}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear. Então $T$ é injetora se, e somente se, $\ker T = \{0_V\}$.
+\end{proposicao}
+\begin{prova}
+	Suponha que $T$ é injetora. Queremos mostrar que $\ker T = \{0_V\}$. Seja então $u \in \ker T$. Então $T(u) = 0_W$. Mas $T(0_V) = 0_W$ e como $T$ é injetora devemos ter $u = 0_V$. Logo $\ker T = \{0_V\}$.
+
+	Agora suponha que $\ker T = \{0_V\}$. Queremos mostrar que $T$ é injetora. Para isso, sejam $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$. Então
+	\begin{align*}
+		T(u_1) &= T(u_2)\\
+		T(u_1) - T(u_2) & = 0_W\\
+		T(u_1 - u_2) &= 0_W,
+	\end{align*}
+	isto é, $u_1 - u_2 \in \ker T$. Mas $\ker T = \{0_V\}$, logo $u_1 = u_2$. Portanto $T$ é injetora.
+\end{prova}
