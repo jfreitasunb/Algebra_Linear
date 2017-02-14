@@ -384,3 +384,14 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_cp{K}\cp{M}_2(\cp{K}).
 	\]
 \end{exemplo}
+
+\begin{lema}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ é uma base de $V$, então $\{T(u_1), \dots, T(u_n)\}$ gera $\im T$.
+\end{lema}
+\begin{prova}
+	Seja $w \in \im T$. Por definição, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ é uma base de $V$, então existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Daí
+	\[
+		w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
+	\]
+	ou seja, todo vetor de $\im T$ é uma combinação linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im T = [T(u_1), \dots, T(u_n)]$ como queríamos.
+\end{prova}
