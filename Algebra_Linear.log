@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 17:13
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2070,27 +2070,47 @@ Missing character: There is no É in font cmti12!
 Missing character: There is no á in font cmti12!
 Missing character: There is no é in font cmti12!
 Missing character: There is no í in font cmti12!
-)
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no ç in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no é in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no í in font cmr12!
+Missing character: There is no é in font cmr12!
+Missing character: There is no ç in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no í in font cmr12!
+Missing character: There is no ç in font cmti12!
+Missing character: There is no É in font cmti12!
+Missing character: There is no á in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ã in font cmti12!
 Missing character: There is no ç in font cmbx10!
 Missing character: There is no õ in font cmbx10!
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 405.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 405.
+ [65]
+Missing character: There is no ã in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no ú in font cmti12!
+Missing character: There is no é in font cmti12!
+)
+Missing character: There is no á in font cmbx10!
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 150.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 150.
- [65]
+ [66]
 \openout2 = `formas_canonicas.aux'.
 
  (./formas_canonicas.tex
-Missing character: There is no á in font cmbx10!
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
- [66
-
-
-
-]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
@@ -2100,7 +2120,11 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
-[67]
+[67
+
+
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 54.
 Package babel Info: Redefining portuges shorthand "|
@@ -2434,10 +2458,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 159.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 38418 strings out of 493706
- 790157 string characters out of 6145769
- 985003 words of memory out of 5000000
- 41176 multiletter control sequences out of 15000+600000
+ 38419 strings out of 493706
+ 790184 string characters out of 6145769
+ 985036 words of memory out of 5000000
+ 41177 multiletter control sequences out of 15000+600000
  21363 words of font info for 84 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,21n,54p,10404b,1132s stack positions out of 5000i,500n,10000p,200000b,80000s
