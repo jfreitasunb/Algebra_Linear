@@ -193,3 +193,26 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		é chamado de \textbf{imagem} de $T$.
 	\end{enumerate}
 \end{definicao}
+
+\begin{proposicao}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear. Então:
+	\begin{enumerate}
+		\item $\ker T$ é um subespaço de $V$;
+		\item $\im T$ é um subespaço de $W$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	\begin{enumerate}
+		\item Inicialmente $\ker T \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker T$. Agora, sejam $u_1$, $u_2 \in \ker T$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in cp{K}$, isto é, precisamos mostrar que $\lambda u_1 + u_2 \in \ker T$. Temos
+		\[
+			T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2) = 0_W.
+		\]
+		Logo, $\ker T$ é um subespaço de $V$.
+
+		\item Inicialmente $0_W \in \im T$ pois $0_W = T(0_V)$ e daí $\im T \ne \emptyset$. Sejam $w_1$, $w_2 \in \im T$ e $\lambda \in \cp{K}$. Então existem $u_1$, $u_2 \in V$ tais que $w_1 = T(u_1)$ e $w_2 = T(u_2)$. Assim
+		\[
+			\lambda w_1 + w_2 = \lambda T(u_1) + T(u_2) = T(\lambda u_1) + T(u_2) = T(\lambda u_1 + u_2)
+		\]
+		e então $\lambda u_1 + u_2 \in \im T$. Portanto, $\im T$ é um subespaço de $W$.
+	\end{enumerate}
+\end{prova}

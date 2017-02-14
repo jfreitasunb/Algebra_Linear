@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 15:36
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1969,27 +1969,31 @@ Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
 Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
-)
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no ú in font cmbxti10!
+Missing character: There is no ú in font cmti12!
+Missing character: There is no é in font cmti12!
 Missing character: There is no ç in font cmbx10!
 Missing character: There is no õ in font cmbx10!
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 192.
+ [61]
+Missing character: There is no é in font cmti12!
+)
+Missing character: There is no á in font cmbx10!
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 149.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 149.
- [61]
+ [62]
 \openout2 = `formas_canonicas.aux'.
 
  (./formas_canonicas.tex
-Missing character: There is no á in font cmbx10!
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
- [62
-
-
-
-]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
@@ -1999,7 +2003,11 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
-[63]
+[63
+
+
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 54.
 Package babel Info: Redefining portuges shorthand "|
