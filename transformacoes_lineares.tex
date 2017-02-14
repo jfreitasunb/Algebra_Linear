@@ -216,3 +216,97 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		e então $\lambda w_1 + w_2 \in \im T$. Portanto, $\im T$ é um subespaço de $W$.
 	\end{enumerate}
 \end{prova}
+
+\begin{exemplos}
+	\begin{enumerate}
+		\item Seja $T : \real^3 \to \cp{M}_2(\real)$ dada por
+		\[
+			T(a,b,c) = \begin{bmatrix}
+				a + b & 0\\
+				0 & c - b
+			\end{bmatrix}.
+		\]
+		Determine $\ker T$ e $\im T$.
+		\begin{solucao}
+			Temos
+			\[
+				T(a,b,c) = \begin{bmatrix}
+					0 & 0\\
+					0 & 0
+				\end{bmatrix}
+			\]
+			se, e só se, $a = -b$ e $c = b$. Daí
+			\[
+				\ker T = \{(a,b,c) \in \real^3 \mid a = -b, c = b\} = \{(-b,b,b) \mid b \in \real\}.
+			\]
+			Note que $\{(1,1,1)\}$ é uma base de $\ker T$, ou seja, $\dim_\real \ker T = 1$.
+
+			Agora,
+			\begin{align*}
+				\im T &= \{v \in \cp{M}_2(\real) \mid \mbox{ existe } u \in \real^3 \mbox{ de modo que } T(u) = v\}\\
+				\im T &= \left\{ \begin{bmatrix}
+					a + b & 0\\
+					0 & c - b
+				\end{bmatrix} \mid a, b, c \in \real\right\}.
+			\end{align*}
+			Assim temos
+			\begin{align*}
+				\begin{bmatrix}
+					a + b & 0\\
+					0 & c - b
+				\end{bmatrix} &= a \begin{bmatrix}
+					1 & 0\\ 0 & 0
+				\end{bmatrix} + b \begin{bmatrix}
+					1 & 0\\ 0 & 0
+				\end{bmatrix} + c \begin{bmatrix}
+					0 & 0\\ 0 & 1
+				\end{bmatrix} + b \begin{bmatrix}
+					0 & 0\\ 0 & -1
+				\end{bmatrix}
+			\end{align*}
+			e é fácil ver que
+			\[
+				\mathcal{B}' = \left\{ \begin{bmatrix}
+					1 & 0\\ 0 & 0
+				\end{bmatrix}; \begin{bmatrix}
+					1 & 0\\ 0 & -1
+				\end{bmatrix}; \begin{bmatrix}
+					0 & 0\\ 0 & 1
+				\end{bmatrix}\right\}
+			\]
+			é um conjunto gerado de $\im T$. No entanto tal conjunto não é L.I.. Mas o conjunto
+			\[
+				\left\{ \begin{bmatrix}
+					1 & 0\\ 0 & 0
+				\end{bmatrix}; \begin{bmatrix}
+					0 & 0\\ 0 & 1
+				\end{bmatrix}\right\}
+			\]
+			é uma base de $\im T$, ou seja, $\dim_\real\im T = 2$. Observe que
+			\[
+				\dim_\real\ker T + \dim_\real\im T = 3 = \dim_\real\real^3.
+			\]
+		\end{solucao}
+
+		\item Seja $T : \real^2 \to \real$ dada por $T(x,y) = x + y$. Determine $\ker T$ e $\im T$.
+		\begin{solucao}
+			Temos
+			\begin{align*}
+				\ker T &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
+				\ket T &= \{(x,-x) \in \real^2 \mid x \in \real\}.
+			\end{align*}
+			Assim $\{(1,-1)\}$ é uma base de $\ker T$, ou seja, $\dim_\real\ker T = 1$.
+
+			Agora
+			\[
+				\im T = \{w \in \real \mid \mbox{ existe } (x,y) \in \real^2 \mbox{ tal que } T(x,y) = w\}.
+			\]
+			Assim dado $w \in \real$ um número real qualquer, tome o elemento $(w,0) \in \real^2$. Temos $T(w,0) = w + 0 = w$. Logo $\im T = \real$ e então $\dim_\real\im T = 1$.
+
+			Novamente temos
+			\[
+				\dim_\real\ker T + \dim_\real\im T = 2 = \dim_\real\real^2.
+			\]
+		\end{solucao}
+	\end{enumerate}
+\end{exemplos}
