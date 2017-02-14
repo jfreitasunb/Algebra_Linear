@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 17:00
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2066,6 +2066,10 @@ Package babel Info: Redefining portuges shorthand "|
  [64]
 Missing character: There is no é in font cmr12!
 Missing character: There is no é in font cmr12!
+Missing character: There is no É in font cmti12!
+Missing character: There is no á in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no í in font cmti12!
 )
 Missing character: There is no ç in font cmbx10!
 Missing character: There is no õ in font cmbx10!
