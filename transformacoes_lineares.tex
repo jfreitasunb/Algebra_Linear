@@ -293,7 +293,7 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 			Temos
 			\begin{align*}
 				\ker T &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
-				\ket T &= \{(x,-x) \in \real^2 \mid x \in \real\}.
+				\ker T &= \{(x,-x) \in \real^2 \mid x \in \real\}.
 			\end{align*}
 			Assim $\{(1,-1)\}$ é uma base de $\ker T$, ou seja, $\dim_\real\ker T = 1$.
 
@@ -310,3 +310,12 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\end{solucao}
 	\end{enumerate}
 \end{exemplos}
+
+\begin{definicao}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear.
+	\begin{enumerate}
+		\item Dizemos que $T$ é \textbf{injetora} se dados $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$, então $u_1 = u_2$. De modo equivalente, se $u_1$, $u_2 \in V$ são tais que $u_1 \ne u_2$, então $T(u_1) \ne T(u_2)$.
+
+		\item Dizemos que $T$ é \textbf{sobrejetora} se $\im T = W$. Em outras palavras, $T$ é \textbf{sobrejetora} se para todo $w \in W$, existe $u \in V$ tal que $T(u) = w$.
+	\end{enumerate}
+\end{definicao}
