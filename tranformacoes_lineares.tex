@@ -1,3 +1,33 @@
+%!TEX program = xelatex
 %!TEX root = Algebra_Linear.tex
 %%Usar makeindex -s indexstyle.ist Algebra_Linear.idx arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
 %%Ap\'os executar pdflatex arquivo
+
+\chapter{Transformações Lineares}
+
+Em todo esse capítulo $\cp{K}$ denotará um corpo.
+
+\section{Conceitor Básicos}
+
+\begin{definicao}
+	Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T : V \to W$ é uma \textbf{transformação linear} se
+	\begin{enumerate}
+		\item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
+		\item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
+	\end{enumerate}
+\end{definicao}
+
+\begin{observacao}
+	Para simplificar a notação, vamos adotar os mesmos símbolos para indicar a soma e o produto por escalar nos espaços vetoriais que aparecerão no decorrer do texto. No entanto, o leitor deve estar ciente que estes símbolos podem ter significados diferentes, dependendo do espaço vetorial em questão.
+\end{observacao}
+
+\begin{lema}
+	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. Então uma função $T : V \to W$ é uma transformação linear se, e somente se,
+	\[
+		T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+	\]
+	para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
+\end{lema}
+\begin{prova}
+	Deixada a cargo do leitor.
+\end{prova}
