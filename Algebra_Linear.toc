@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {2.2}Espa\c {c}os de dimens\~ao infinita}{54}{section.2.2}
 \contentsline {chapter}{\numberline {3}Transformações Lineares}{57}{chapter.3}
 \contentsline {section}{\numberline {3.1}Conceitos Básicos}{57}{section.3.1}
-\contentsline {chapter}{\numberline {4}Formas Can\^onicas}{65}{chapter.4}
-\contentsline {section}{\numberline {4.1}Operadores Diagonaliz\'aveis}{68}{section.4.1}
-\contentsline {section}{\numberline {4.2}Subespa\c {c}os T-invariantes}{77}{section.4.2}
-\contentsline {section}{\numberline {4.3}Polin\^omio Minimal}{81}{section.4.3}
-\contentsline {section}{\numberline {4.4}Como encontrar a base de Jordan}{96}{section.4.4}
-\contentsline {chapter}{\numberline {5}Espa\c {c}os com produto interno}{103}{chapter.5}
-\contentsline {section}{\numberline {5.1}Processo de Ortogonaliza\c {c}\~ao de Gram-Schmidt}{108}{section.5.1}
-\contentsline {chapter}{Bibliografia}{111}{section*.1}
-\contentsline {chapter}{\'Indice Remissivo}{113}{section*.2}
+\contentsline {chapter}{\numberline {4}Formas Can\^onicas}{67}{chapter.4}
+\contentsline {section}{\numberline {4.1}Operadores Diagonaliz\'aveis}{70}{section.4.1}
+\contentsline {section}{\numberline {4.2}Subespa\c {c}os T-invariantes}{79}{section.4.2}
+\contentsline {section}{\numberline {4.3}Polin\^omio Minimal}{83}{section.4.3}
+\contentsline {section}{\numberline {4.4}Como encontrar a base de Jordan}{98}{section.4.4}
+\contentsline {chapter}{\numberline {5}Espa\c {c}os com produto interno}{105}{chapter.5}
+\contentsline {section}{\numberline {5.1}Processo de Ortogonaliza\c {c}\~ao de Gram-Schmidt}{110}{section.5.1}
+\contentsline {chapter}{Bibliografia}{113}{section*.1}
+\contentsline {chapter}{\'Indice Remissivo}{115}{section*.2}

@@ -344,3 +344,43 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 	\end{align*}
 	isto é, $u_1 - u_2 \in \ker T$. Mas $\ker T = \{0_V\}$, logo $u_1 = u_2$. Portanto $T$ é injetora.
 \end{prova}
+
+\begin{exemplo}
+	Seja $T : \cp{K}^4 \to \cp{M}_2(\cp{K})$ dada por
+	\begin{align*}
+		T(1_\cp{K},0_\cp{K},0_\cp{K},0_\cp{K}) &= \begin{bmatrix}
+			1_\cp{K} & 0_\cp{K}\\
+			0_\cp{K} & 0_\cp{K}
+		\end{bmatrix}; T(0_\cp{K},1_\cp{K},0_\cp{K},0_\cp{K}) = \begin{bmatrix}
+			0_\cp{K} & 1_\cp{K}\\
+			0_\cp{K} & 0_\cp{K}
+		\end{bmatrix}\\
+		T(0_\cp{K},0_\cp{K},1_\cp{K},0_\cp{K}) &= \begin{bmatrix}
+			0_\cp{K} & 0_\cp{K}\\
+			1_\cp{K} & 0_\cp{K}
+		\end{bmatrix}; T(0_\cp{K},0_\cp{K},0_\cp{K},1_\cp{K}) = \begin{bmatrix}
+			0_\cp{K} & 0_\cp{K}\\
+			0_\cp{K} & 1_\cp{K}
+		\end{bmatrix}\\
+	\end{align*}
+	É fácil ver que $\ker T = \{(0_\cp{K},0_\cp{K},0_\cp{K},0_\cp{K})\}$. Além disso,
+	\[
+		\im T = \left[\begin{bmatrix}
+			1_\cp{K} & 0_\cp{K}\\
+			0_\cp{K} & 0_\cp{K}
+		\end{bmatrix};\begin{bmatrix}
+			0_\cp{K} & 1_\cp{K}\\
+			0_\cp{K} & 0_\cp{K}
+		\end{bmatrix};\begin{bmatrix}
+			0_\cp{K} & 0_\cp{K}\\
+			1_\cp{K} & 0_\cp{K}
+		\end{bmatrix};\begin{bmatrix}
+			0_\cp{K} & 0_\cp{K}\\
+			0_\cp{K} & 1_\cp{K}
+		\end{bmatrix}\right] = = \cp{M}_2(\cp{K}).
+	\]
+	Daí $\dim_\cp{K}\im T = 4$ e novamente
+	\[
+		\dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_cp{K}\cp{M}_2(\cp{K}).
+	\]
+\end{exemplo}
