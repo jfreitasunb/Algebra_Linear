@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 14:42
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1882,11 +1882,6 @@ Missing character: There is no ã in font cmti12!
 Missing character: There is no é in font cmti12!
 Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
-
-Overfull \hbox (369.4623pt too wide) in paragraph at lines 100--100
-[] 
- []
-
 Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
 Missing character: There is no é in font cmti12!
@@ -1903,6 +1898,13 @@ Missing character: There is no ã in font cmti12!
 Missing character: There is no é in font cmti12!
 Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
+Missing character: There is no ç in font cmbx10!
+Missing character: There is no õ in font cmbx10!
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+ [59]
 Missing character: There is no É in font cmti12!
 Missing character: There is no é in font cmti12!
 Missing character: There is no ç in font cmti12!
@@ -1911,13 +1913,6 @@ Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!
 Missing character: There is no ã in font cmti12!
 Missing character: There is no é in font cmti12!
-Missing character: There is no ç in font cmbx10!
-Missing character: There is no õ in font cmbx10!
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 121.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 121.
-[59]
 Missing character: There is no é in font cmti12!
 Missing character: There is no ç in font cmti12!
 Missing character: There is no ã in font cmti12!

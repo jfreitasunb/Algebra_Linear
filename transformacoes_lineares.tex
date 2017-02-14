@@ -87,16 +87,16 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\]
 		Então $T$ é uma transformação linear. De fato, dados $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$ temos
 		\begin{align*}
-			T(\lambda(a,b,c) + (d,e,f)) = T(\lambda a + d, \lambda b + e, \lambda c + f) = \begin{bmatrix}
+			T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
 				(\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
 				0_\cp{K} & (\lambda c + f) - (\lambda b + e)
-			\end{bmatrix} = \begin{bmatrix}
+			\end{bmatrix} \\ &= \begin{bmatrix}
 				\lambda a + \lambda b & 0_\cp{K}\\
 				0_\cp{K} & \lambda c - \lambda b
 			\end{bmatrix} + \begin{bmatrix}
 				d + e & 0_\cp{K}\\
 				0_\cp{K} & f - e
-			\end{bmatrix} = \lambda T(a,b,c) + T(d,e,f).
+			\end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
 		\end{align*}
 
 		\item Seja $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial e considere $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
@@ -130,3 +130,30 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		para determinados escalares $a_1$, \dots, $a_n \in \cp{K}$. Isto é, para determinarmos a transformação $T$ só precisamos conhecer seus valores na base $\{e_1, \dots, e_n\}$ de $\cp{K}^n$.
 	\end{enumerate}
 \end{exemplo}
+
+\begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transformação linear $T : V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+\end{teorema}
+\begin{prova}
+	Dado $v \in V$, como $\{u_1, \dots, u_n\}$ é uma base de $V$, então sabemos que existem únicos $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+	\[
+		v = \alpha_1u_1 + \cdots + \alpha_nu_n.
+	\]
+	Defina então $T : V \to W$ por
+	\[
+		T(v) = T(\alpha_1u_1 + \cdots + \alpha_nu_n) = \alpha_1w_1 + \cdots + \alpha_nw_n.
+	\]
+	A unicidade dos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ garantem que $T$ está bem definida, isto é, um mesmo elemento de $V$ não pode ter duas imagens distintas.
+
+	Agora, note que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$. Assim precisamos mostrar que $T$ é linear. Sejam $v_1 = \sum_{i=1}^n\alpha_iu_i$, $v_2 = \sum_{i=1}^n\beta_iu_i$ e $\lambda \in \cp{K}$. Então
+	\begin{align*}
+		T(\lambda v_1 + v_2) = T(\lambda\sum_{i=1}^n\alpha_iu_i + \sum_{i=1}^n\beta_iu_i) = T(\sum_{i=1}^n(\lambda\alpha_i + \beta_i)u_i) = \sum_{i=1}^n(\lambda_i\alpha_i + \beta_i)w_i = \lambda\sum_{i=1}^n\alpha_iw_i + \sum_{i=1}^n\beta_iw_i = \lambdaT(v_1) + T(v_2).
+	\end{align*}
+	Logo $T$ é uma transformação linear.
+
+	Resta agora mostrar que $T$ é única. Suponha que exista uma transformação linear $S : V \to W$ tal que $S(u_i) = w_i$ para todo $i = 1$, \dots, $n$. Para $v = \sum_{i=1}^n\alpha_iu_i$ temos
+	\[
+		S(v) = S(\sum_{i=1}^n\alpha_iu_i) = \sum_{i=1}^n\alpha_iS(u_i) = \sum_{i=1}^n\alpha_iw_i = \sum_{i=1}^n\alpha_iT(u_i) = T(\sum_{i=1}^n\alpha_iu_i) = T(v)
+	\]
+	para todo $v \in V$. Logo $T=S$, isto é, existe uma única transformação linear que satisfaz as condições do teorema.
+\end{prova}
