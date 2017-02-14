@@ -34,9 +34,11 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 
 \begin{lema}
 	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transformação linear. Então:
-	\begin{enumerate}
+	\begin{enumerate}\label{transformacao_linear_propriedades_basicas}
 		\item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
+
 		\item $T(-u) = -T(u)$, para cada $u \in V$.
+
 		\item $T(\sum_{i=1}^m\alpha_iu_i) = \sum_{i=1}^mT(u_i)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
 	\end{enumerate}
 \end{lema}
@@ -47,10 +49,12 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 			0_W + T(0_V) = T(0_V + 0_V) = T(0_V) + T(0_V),
 		\]
 		ou seja, $T(0_V) = 0_W$.
+
 		\item Basta observar que $-u = (-1_\cp{K})u$ e daí
 		\[
 			T(-u) = T((-1_\cp{K})u) = -1_\cp{K}T(u) = -T(u).
 		\]
+
 		\item Por indução em $m$. Se $m = 2$, então
 		\[
 			T(\alpha_1u_1 + \alpha_2u_2) = T(\alpha_1u_1) + T(\alpha_2u_2) = \alpha_1T(u_1) + \alpha_2T(u_2).
@@ -65,3 +69,64 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\end{align*}
 	\end{enumerate}
 \end{prova}
+
+\begin{exemplo}
+	\begin{enumerate}
+		\item Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. A função $T : V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ é uma transformação linear.
+		
+		\item Seja $V$ um $\cp{K}$-espaço vetorial. A função $T : V \to V$ dada por $T(u) = u$ para todo $u \in V$ é uma transformação linear.
+		
+		\item Considere $\real$ como um $\real$-espaço vetorial. Dado $a \in \real$, defina $T_a : \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Então $T_a$ é uma transformação linear. Agora, seja $T : \real \to \real$ dada por $T(x) = e^x$. Então $T$ não é uma transformação linear pois $T(0) \ne 0$.
+		
+		\item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espaços vetoriais. Defina $T : \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
+		\[
+			T(a, b, c) = \begin{bmatrix}
+				a+b & 0_\cp{K}\\
+				0_\cp{K} & c - b
+			\end{bmatrix}.
+		\]
+		Então $T$ é uma transformação linear. De fato, dados $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$ temos
+		\begin{align*}
+			T(\lambda(a,b,c) + (d,e,f)) = T(\lambda a + d, \lambda b + e, \lambda c + f) = \begin{bmatrix}
+				(\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
+				0_\cp{K} & (\lambda c + f) - (\lambda b + e)
+			\end{bmatrix} = \begin{bmatrix}
+				\lambda a + \lambda b & 0_\cp{K}\\
+				0_\cp{K} & \lambda c - \lambda b
+			\end{bmatrix} + \begin{bmatrix}
+				d + e & 0_\cp{K}\\
+				0_\cp{K} & f - e
+			\end{bmatrix} = \lambda T(a,b,c) + T(d,e,f).
+		\end{align*}
+
+		\item Seja $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial e considere $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
+		\[
+			D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n-1}.
+		\]
+		Então $D$ é uma transformação linear.
+
+		\item Seja $\mathcal{C}([a,b], \real) = \{ f : [a,b] \to \real \mid f \mbox{ é uma função contínua}\}$. É imediato verificar que $\mathcal{C}([a,b], \real)$ é um $\real$-espaço vetorial. Defina $T : \mathcal{C}([a,b], \real) \to \real$ por
+		\[
+			T(f(x)) = \int_a^bf(x)dx.
+		\]
+		Então $T$ é uma transformação linear.
+
+		\item Sejam $a_1$, \dots, $a_n \in \cp{K}$. Defina $T : \cp{K}^n \to \cp{K}$ por
+		\[
+			T(x_1, \dots, x_n) = \sum_{i=1}^na_ix_i.
+		\]
+		É imediato verificar que $T$ é uma transformação linear. Denote por $e_i$ o elemento de $\cp{K}^n$ contendo $1_\cp{K}$ na posição $i$ e $0_\cp{K}$ das demais. Então $\{e_1, \dots, e_n\}$ é uma base de $\cp{K}^n$ e
+		\[
+			T(e_i) = a_i
+		\]
+		para $i = 1$, \dots, $n$. Agora, se $S : \cp{K}^n \to \cp{K}$ é uma transformação linear, então pelo Lema \ref{transformacao_linear_propriedades_basicas} item (c)
+		\[
+			S(x_1, \dots, x_n) = S(\sum_{i=1}^nx_ie_i) = \sum_{i=1}^nS(e_i)
+		\]
+		onde $S(e_i) \in \cp{K}$ para $i = 1$, \dots, $n$. Logo qualquer transformação linear de $T : \cp{K}^n \to \cp{K}$ é da forma
+		\[
+			T(x_1, \dots, x_n) = \sum_{i=1}^na_ix_i,
+		\]
+		para determinados escalares $a_1$, \dots, $a_n \in \cp{K}$. Isto é, para determinarmos a transformação $T$ só precisamos conhecer seus valores na base $\{e_1, \dots, e_n\}$ de $\cp{K}^n$.
+	\end{enumerate}
+\end{exemplo}
