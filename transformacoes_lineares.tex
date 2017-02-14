@@ -385,7 +385,7 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 	\]
 \end{exemplo}
 
-\begin{lema}
+\begin{lema}\label{transformacao_gera_imagem}
 	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ é uma base de $V$, então $\{T(u_1), \dots, T(u_n)\}$ gera $\im T$.
 \end{lema}
 \begin{prova}
@@ -395,3 +395,21 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 	\]
 	ou seja, todo vetor de $\im T$ é uma combinação linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im T = [T(u_1), \dots, T(u_n)]$ como queríamos.
 \end{prova}
+
+\begin{exemplo}
+	Considere $\complex^2$ e $\real^3$ como $\real$-espaços vetoriais e seja $T : \complex^2 \to \real^3$ dada por
+	\[
+		T(a+bi, c+di) = (a - c, b + 2d, a + b - c + 2d)
+	\]
+	onde $a$, $b$ e $c \in \real$. É fácil ver que $T$ é uma transformação linear. Seja $\{(1,0);(i,0);(0,1);(0,i)\}$ uma base de $\complex^2$. Temos pelo Lema \ref{transformacao_gera_imagem} que $\{T(1,0);T(i,0);T(0,1);T(0,i)\}$ gera $\im T$. Agora
+	\begin{align*}
+		T(1,0) &= (1,0,1);\quad T(i,0) = (0,1,1)\\
+		T(0,1) &= (-1,0,-1);\quad T(0,i) = (0,2,2)
+	\end{align*}
+	e temos
+	\begin{align*}
+		T(1,0) &= -T(0,1)\\
+		T(i,0) &= 2T(0,i).
+	\end{align*}
+	Observe que $T(1,0)$ não é múltiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ é uma base de $\im T$.
+\end{exemplo}
