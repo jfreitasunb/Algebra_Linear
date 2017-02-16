@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 17:40
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.21)  14 FEB 2017 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1406,9 +1406,9 @@ Missing character: There is no ç in font cmbx12!
 Missing character: There is no õ in font cmbx12!
 Missing character: There is no á in font cmr12!
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 18.
  [3])
 \tf@toc=\write7
 \openout7 = `Algebra_Linear.toc'.
@@ -2123,6 +2123,15 @@ Package babel Info: Redefining portuges shorthand "|
  [66]
 Missing character: There is no á in font cmr12!
 Missing character: There is no é in font cmr12!
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 446.
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ç in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no é in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no ã in font cmti12!
+Missing character: There is no ç in font cmbxti10!
 )
 Missing character: There is no ç in font cmbx10!
 Missing character: There is no õ in font cmbx10!
@@ -2134,7 +2143,6 @@ Package babel Info: Redefining portuges shorthand "|
 \openout2 = `formas_canonicas.aux'.
 
  (./formas_canonicas.tex
-Missing character: There is no á in font cmbx10!
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining portuges shorthand "|
@@ -2489,7 +2497,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
 Here is how much of TeX's memory you used:
  38420 strings out of 493706
  790215 string characters out of 6145769
- 985094 words of memory out of 5000000
+ 985220 words of memory out of 5000000
  41178 multiletter control sequences out of 15000+600000
  21363 words of font info for 84 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
