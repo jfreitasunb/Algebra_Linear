@@ -489,5 +489,32 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		e então $\{(-1,0,1);(0,1,1)\}$ gera $\im T$ e como estes vetores não são múltiplos um do outro, eles formam uma base para $\im T$. Assim $\im T = [(-1,0,1);(0,1,1)]$ e $\dim_\real\im T = 2$.
 
 		\item Considere o espaço vetorial $\mathcal{P}(\complex)$ sobre $\complex$ e seja $\mathcal{D} : \mathcal{P}(C) \to \mathcal{P}(C)$ dada por $\mathcal{D}(p(x)) = p'(x)$ a derivada de $p(x)$. Observe que $\ker D = \{p(x) = a \mid a \in \complex\}$. Além disso, $\im \mathcal{D} = \mathcal{P}(\complex)$ pois todo elemento de $\mathcal{P}(\complex)$ tem uma primitiva.
+
+		\item Seja
+		\[
+			\cp{K}^\n = \{(a_i)_{i \in \n} = (a_1, a_2, \dots, a_n, \dots) \mid a_i \in \cp{K}, i \ge 1\}
+		\]
+		onde $\cp{K} = \real$ ou $\cp{K} = \complex$. Defina
+		\begin{itemize}
+			\item $(a_1,a_2,\dots,a_n,\dots) + (b_1,b_2,\dots,b_n,\dots) = (a_1+b_1,a_2+b_2,\dots,a_n+b_n,\dots)$
+
+			\item $\lambda(a_1,a_2,\dots,a_n,\dots) = (\lambda a_1,\lambda a_2,\dots,\lambda a_n,\dots)$
+		\end{itemize}
+		para todos $(a_1,a_2,\dots,a_n,\dots)$, $(b_1,b_2,\dots,b_n,\dots) \in \cp{K}^\n$ e todo $\lambda \in \cp{K}$. É fácil ver que $\cp{K}^\n$ é um $\cp{K}$-espaço vetorial. Defina $T : \cp{K}^\n \to \cp{K}^\n$ dada por
+		\[
+			T((a_i)_{i\in\n}) = ((a_i)_{i+1\in\n}) = (a_2,a_3,\dots,a_n,\dots).
+		\]
+		É imediato ver que $T$ é uma transformação linear. Além disso, $T$ é sobrejetora pois dada uma sequência $(y_i)_{i\in\n}$, considere $x = (0,y_1,y_2,\dots,y_n,\dots) \in \cp{K}^\n$. Temos
+		\[
+			T(x) = (y_1,y_2,\dots,y_n,\dots),
+		\]
+		assim $\im T = \cp{K}^\n$. Além disso, $T$ não é injetora pois dado $(x_1,0,0,\dots,0,\dots) \in \cp{K}^\n$ tempos
+		\[
+			T(x_1,0,0,\dots,0,\dots) = (0,0,0,\dots,0,\dots)
+		\]
+		e então
+		\[
+			\ker T = \{(x_1,0,0,\dots,0) \mid x_1 \in \cp{K}\}.
+		\]
 	\end{enumerate}
 \end{exemplos}
