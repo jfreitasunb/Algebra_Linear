@@ -691,6 +691,46 @@ Assim provamos o seguinte teorema:
 	No caso em que $V = W$ e $\mathcal{B}_1 = \mathcal{B}_2 = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$ simplesmente por $[T]_\mathcal{B}$
 \end{definicao}
 
+\begin{exemplos}
+	\begin{enumerate}
+		\item Seja $T : \real^2 \to \real^2$ a transformação linear definida por
+		\[
+			T(x,y) = (x,0).
+		\]
+		Considere $\real^2$ com a base canônica $\mathcal{B} = \{e_1=(1,0);e_2=(0,1)\}$. Encontre $[T]_\mathcal{B}$.
+		\begin{solucao}
+			Temos
+			\begin{align*}
+				T(e_1) &= (1,0) = 1(1,0) + 0(0,1)\\
+				T(e_2) &= (0,0) = 0(1,0) + 0(0,1).
+			\end{align*}
+			Logo a matriz de $T$ é
+			\[
+				[T]_\mathcal{B} = \begin{bmatrix}
+					1 & 0\\
+					0 & 0
+				\end{bmatrix}.
+			\]
+			Além disso, dado $(x,y) \in \real^2$ temos
+			\[
+				(x,y) = xe_1 + ye_2
+			\]
+			e então
+			\[
+				[(x,y)]_\mathcal{B} = (x,y)_\mathcal{B}.
+			\]
+			Assim podemos escrever
+			\[
+				[T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
+					1 & 0\\
+					0 & 0
+				\end{bmatrix}[(x,y)]_\mathcal{B}
+			\]
+			para todo $(x,y) \in \real^2$.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplos}
+
 
 
 % section transformacoes_lineares_e_matrizes (end)
