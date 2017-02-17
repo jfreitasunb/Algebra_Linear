@@ -728,6 +728,40 @@ Assim provamos o seguinte teorema:
 			\]
 			para todo $(x,y) \in \real^2$.
 		\end{solucao}
+
+		\item Seja $T : \real^3 \to \real^2$ tal que
+		\[
+			T(x,y,z) = (2x+y-z,3x-2y+4z).
+		\]
+		Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
+		\begin{solucao}
+			Temos
+			\begin{align*}
+				T(1,1,1) &= (2,5) = 3(1,3) - 1(1,4)\\
+				T(1,1,0) &= (3,1) = 11(1,3) - 8(1,4)\\
+				T(1,0,0) &= (2,3) = 5(1,5) - 3(1,4)
+			\end{align*}
+			e daí
+			\[
+				[T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
+					3 & 11 & 5\\
+					-1 & -8 & -3
+				\end{bmatrix}.
+			\]
+			Agora considerando as bases $\mathcal{B}_3 = \{(1,0,0);(0,1,0);(0,0,1)\}$ e $\mathcal{B}_4 = \{\(1,0);(0,1)}$ obtemos
+			\begin{align*}
+				T(1,0,0) &= (2,3) = 2(1,0) + 3(0,1)\\
+				T(0,1,0) &= (1,-2) = 1(1,0) - 2(0,1)\\
+				T(0,0,1) &= (-1,4) = -1(1,0) + 4(0,1)
+			\end{align*}
+			e assim a matriz de $T$ será
+			\[
+				[T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
+					2 & 1 & -1\\
+					3 & -2 & 4
+				\end{bmatrix}.
+			\]
+		\end{solucao}
 	\end{enumerate}
 \end{exemplos}
 
