@@ -599,7 +599,89 @@ e dizemos que $\alpha_1$, \dots, $\alpha_n$ são as \textbf{coordenadas de $u$ e
 	\end{enumerate}
 \end{exemplos}
 
+Agora, sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transformação lineares. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
+\begin{align*}
+	T(v_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}wq = \sum_{i=1}^qb_{i1}w_i\\
+	T(v_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}wq = \sum_{i=1}^qb_{i2}w_i\\
+	&\vdots\\
+	T(v_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}wq = \sum_{i=1}^qb_{ip}w_i
+\end{align*}
+para certos $b_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
 
+Agora, seja $x \in V$. Então
+\[
+	x = \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_pv_p
+\]
+onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Daí
+\begin{align*}
+	T(x) &= T(\alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_pv_p) = \alpha_1T(v_1) + \alpha_2T(v_2) + \cdots + \alpha_pT(v_p)\\
+	&= \alpha_1\sum_{i=1}^qb_{i1}w_i + \alpha_2\sum_{i=1}^qb_{i2}w_i + \cdots + \alpha_p\sum_{i=1}^qb_{ip}w_i\\
+	&= \sum_{j=1}^p\alpha_j\left(\sum_{i=1}^qb_{ij}w_i\right) = \sum_{j=1}^p\sum_{i=1}^q(\alpha_jb_{ij}w_i)\\
+	&= \sum_{i=1}^q\left(\sum_{j=1}^p\alpha_jb_{ij}\right)w_i.
+\end{align*}
+Note que os escalares $\sum_{j=1}^p\alpha_jb_{1j}$, $\sum_{j=1}^p\alpha_jb_{2j}$, \dots, $\sum_{j=1}^p\alpha_jb_{qj}$ são as coordenadas do vetor $T(x)$ em relação à base $\mathcal{B}_2$, isto é,
+\[
+	[T(x)]_{\mathcal{B}_2} = \left(\sum_{j=1}^p\alpha_jb_{1j}, \sum_{j=1}^p\alpha_jb_{2j}, \dots, \sum_{j=1}^p\alpha_jb_{qj}\right).
+\]
+Por outro lado,
+\[
+	\underbrace{\begin{bmatrix}
+		b_{11} & b_{21} & \dots & b_{q1}\\
+		b_{12} & b_{22} & \dots & b_{q2}\\
+		\vdots & & \ddots & \vdots\\
+		b_{1p} & b_{2p} & \dots & b_{qp}
+	\end{bmatrix}}_{A}\begin{bmatrix}
+		\alpha_1\\
+		\alpha_2\\
+		\vdots\\
+		\alpha_n
+	\end{bmatrix} = \begin{bmatrix}
+		b_{11}\alpha_1 + b_{21}\alpha_2 + \cdots + b_{q1}\alpha_p\\
+		b_{12}\alpha_1 + b_{22}\alpha_2 + \cdots + b_{q2}\alpha_p\\
+		\vdots \\
+		b_{1p}\alpha_1 + b_{2p}\alpha_2 + \cdots + b_{qp}\alpha_p
+	\end{bmatrix}
+\]
+e daí podemos escrever
+\[
+	[T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+\]
+onde $A \in \cp{M}_{q\times p}(\cp{K})$.
+
+Agora seja $A \in \cp{M}_{q\times p}(\cp{K})$ onde
+\[
+	A = \begin{bmatrix}
+		a_{11} & a_{21} & \dots & a_{1p}\\
+		a_{21} & a_{22} & \dots & a_{2p}\\
+		\vdots & & \ddots & \vdots\\
+		a_{q1} & a_{q2} & \dots & a_{qp}
+	\end{bmatrix}.
+\]
+
+Seja $V$ um espaço vetorial sobre $\cp{K}$ de dimensão $p \ge 1$ e $W$ um espaço vetorial sobre $\cp{K}$ de dimensão $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$ e $W$, respectivamente. Defina $T : V \to W$ por
+\begin{align*}
+	T(v_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
+	&\vdots\\
+	T(v_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q.
+\end{align*}
+Então $T$ é uma transformação linear  tal que
+\[
+	[T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+\]
+para todo $x \in V$.
+
+Assim provamos o seguinte teorema:
+\begin{teorema}
+	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$ e $W$, respectivamente. Então para cada transformação linear $T : V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
+	\[
+		[T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+	\]
+	para todo vetor $x \in B$. Além disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transformação lineares $T : V \to W$ tal que
+	\[
+		[T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+	\]
+	para todo $x \in V$.
+\end{teorema}
 
 
 
