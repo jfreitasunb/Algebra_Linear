@@ -330,7 +330,7 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 	\end{enumerate}
 \end{exemplos}
 
-\begin{proposicao}
+\begin{proposicao}\label{caracteriza_transformacao_injetora}
 	Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T : V \to W$ uma transformação linear. Então $T$ é injetora se, e somente se, $\ker T = \{0_V\}$.
 \end{proposicao}
 \begin{prova}
@@ -448,3 +448,24 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 \begin{definicao}
 	Sejam $V$ e $W$ espaços vetoriais sobre o corpo $\cp{K}$ e seja $T : V \to W$ uma transformação linear. Se $T$ é um isomorfismo, então dizemos que $V$ e $W$ são \textbf{espaços vetoriais isomorfos} e denotamos por $V \cong W$.
 \end{definicao}
+
+\begin{proposicao}
+	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n < \infty$ e seja $T : V \to W$ uma transformação linear. Então as seguintes afirmações são equivalentes:
+	\begin{enumerate}
+		\item $T$ é um isomorfismo.
+		\item $T$ é injetora.
+		\item $T$ é sobrejetora.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	As implicações $(i) \Rightarrow (ii) \Rightarrow (iii)$ seguem da definição de isomorfismo.
+	\begin{enumerate}
+		\item[$(ii) \Rightarrow (i)$] Suponha que $T$ é injetora. Queremos mostrar que $T$ é um isomorfismo. Assim só precisamos mostrar que $T$ é sobrejetora. Como $T$ é injetora, então pela Proposição \ref{caracteriza_transformacao_injetora}, temos $\ker T = \{0_V\}$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} temos
+		\[
+			\dim_\cp{K}\im T = \dim_\cp{K}V = \dim_\cp{K}W = n,
+		\]
+		logo $\im T = W$, isto é, $T$ é sobrejetora. Assim $T$ é um isomorfismo.
+
+		\item[$(iii) \Rightarrow (i)$] Suponha que $T$ é sobrejetora. Queremos mostrar que $T$ é um isomorfismo. Para isso, basta mostrar que $T$ é injetora. Como $T$ é sobrejetora, então $\im T = W$ e daí $\dim_\cp{K}\im T = n$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} devemos ter $\dim_\cp{K}\ker T = 0$, ou seja, $\ker T = \{0_V\}$ e então $T$ é injetora. Logo, $T$ é um isomorfismo.
+	\end{enumerate}
+\end{prova}
