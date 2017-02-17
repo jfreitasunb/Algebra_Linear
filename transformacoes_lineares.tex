@@ -469,3 +469,23 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 		\item[$(iii) \Rightarrow (i)$] Suponha que $T$ é sobrejetora. Queremos mostrar que $T$ é um isomorfismo. Para isso, basta mostrar que $T$ é injetora. Como $T$ é sobrejetora, então $\im T = W$ e daí $\dim_\cp{K}\im T = n$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} devemos ter $\dim_\cp{K}\ker T = 0$, ou seja, $\ker T = \{0_V\}$ e então $T$ é injetora. Logo, $T$ é um isomorfismo.
 	\end{enumerate}
 \end{prova}
+
+\begin{exemplos}
+	\begin{enumerate}
+		\item Considere a transformação linear $T : \real^2 \to \real^3$ dada por $T(x,y) = (-y, x, x+y)$. Pelo Teorema \ref{teorema_do_nucleo_e_da_imagem}, sabemos que $T$ não pode ser sobrejetora, logo $\dim_\real\im T \le 2$. Agora
+		\[
+			(x,y) \in \ker T \Leftrightarrow T(x,y) = (0,0,0) \Leftrightarrow (-y,x,x+y) = (0,0,0) \Leftrightarrow x = y = 0.
+		\]
+		Daí $\ker T = \{(0,0)\}$ e então $T$ é injetora.
+
+		Temos
+		\[
+			\im T = \{(-y,x,x+y) \in \real^3 \mid x, y \in \real\}.
+		\]
+		Note que
+		\[
+			(-y,x,x+y) = y(-1,0,1) + x(0,1,1)
+		\]
+		e então $\{(-1,0,1);(0,1,1)\}$ gera $\im T$ e como estes vetores não são múltiplos um do outro, eles formam uma base para $\im T$. Assim $\im T = [(-1,0,1);(0,1,1)]$ e $\dim_\real\im T = 2$.
+	\end{enumerate}
+\end{exemplos}
