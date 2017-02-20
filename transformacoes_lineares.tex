@@ -766,7 +766,7 @@ Assim provamos o seguinte teorema:
 \end{exemplos}
 
 \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-	Sejam $F : V \to W$ e $G : W \to U$ duas transformações lineares onde $V$, $W$ e $U$ são $\cp{K}$-espaços vetoriais de dimensões $p$, $q$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_V$, $\mathcal{B}_W$ e $\mathcal{B}_U$ para $V$, $W$ e $U$, respectivamente. Então $(G \circ F) : V \to U$ dada por $(G\comp F)(v) = G(F(v))$ é uma transformação linear e
+	Sejam $F : V \to W$ e $G : W \to U$ duas transformações lineares onde $V$, $W$ e $U$ são $\cp{K}$-espaços vetoriais de dimensões $p$, $q$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_V$, $\mathcal{B}_W$ e $\mathcal{B}_U$ para $V$, $W$ e $U$, respectivamente. Então $(G \circ F) : V \to U$ dada por $(G\circ F)(v) = G(F(v))$ é uma transformação linear e
 	\[
 		[(G \circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_U}}[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}.
 	\]
@@ -785,7 +785,7 @@ Assim provamos o seguinte teorema:
 	\begin{align*}
 		(G\circ F)(v_j) &= G(F(v_j)) = G(\sum_{i=1}^qa_{ij}w_i)\\
 		&= \sum_{i=1}^qa_{ij}G(w_i) = \sum_{i=1}^qa_{ij}\sum_{k=1}^rb_{ki}w_i\\
-		$= \sum_{k=1}^r\sum_{i=1}^qb_{ki}a_{ij}u_i.
+		&= \sum_{k=1}^r\sum_{i=1}^qb_{ki}a_{ij}u_i.
 	\end{align*}
 	Assim da unicidade dos escalares obtemos
 	\[
@@ -798,5 +798,68 @@ Assim provamos o seguinte teorema:
 	como queríamos.
 \end{prova}
 
+Vamos tratar, principalmente, com a representação por matrizes de transformações lineares de um espaço em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar atenção sempre à base escolhida. Assim como um espaço vetorial pode ter várias bases distintas, o que acontecerá com a matriz representante de uma transformação linear quando mudamos a base ordenada? Vamos considerar $T : V \to V$ uma transformação linear sobre o $\cp{K}$-espaço vetorial de dimensão finita $V$ e sejam
+\[
+	\mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
+\]
+bases ordenadas de $V$. Qual a relação entre as matrizes $[T]_{\mathcal{B}_1}$ e $[T]_{\mathcal{B}_2}$?
+
+Para responder a esta questão, primeiro vamos determinar uma relação entre $[x]_{\mathcal{B}_1}$ e $[x]_{\mathcal{B}_2}$, para todo $x \in V$. Como $\mathcal{B}_1$ é uma base de $V$, então existem $\alpha_{ij} \in \cp{K}$, $1 \le i,\ j \le n$ tais que
+\begin{align*}
+	w_1 &= \alpha{11}v_1 + \cdots + \alpha_{n1}v_n\\
+	&\vdots\\
+	w_n &= \alpha{1n}v_1 + \cdots + \alpha_{nn}v_n.
+\end{align*}
+Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
+\[
+	x = \beta_1w_1 + \cdots + \beta_nw_n.
+\]
+Daí
+\begin{align*}
+	x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + (\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
+	&= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n\\
+	&= \sum_{j=1}^n\beta_j\alpha_{1j}v_1 + \cdots + \sum_{j=1}^n\beta_j\alpha_{nj}v_n\\
+	&= \sum_{i=1}^n\left(\sum_{j=1}^n\beta_j\alpha_{ij}\right)v_i.
+\end{align*}
+Assim as coordenadas de $x$ em relação à base $\mathcal{B}_1$ são
+\[
+	[x]_{\mathcal{B}_1} = \begin{bmatrix}
+		\sum_{j=1}^n\beta_j\alpha_{1j}\\
+		\vdots\\
+		\sum_{j=1}^n\beta_j\alpha_{nj}
+	\end{bmatrix}.
+\]
+Seja $P$ a matriz cuja entrada $(i,j)$ é o escalar $\alpha_{ij}$, isto é,
+\[
+	P = \begin{bmatrix}
+		\alpha_{11} & \cdots & \alpha_{1n}\\
+		\vdots\\
+		\alpha_{n1} & \cdots & \alpha_{nn}
+	\end{bmatrix}.
+\]
+Então podemos escrever
+\[
+	[x]_{\mathcal{B}_1} = P \begin{bmatrix}
+		\beta_1\\ 
+		\vdots\\
+		\beta_n
+	\end{bmatrix} = P[x]_{\mathcal{B}_2}.
+\]
+Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ são bases de $V$, então $[x]_{\mathcal{B}_1} = [0_V]_{\mathcal{B}_1}$ se, e somente se, $[x]_{\mathcal{B}_2} = [0_V]_{\mathcal{B}_2}$. Logo $P$ possui inversa. Assim mostramos o seguinte teorema:
+
+\begin{teorema}\label{teorema_mudanca_base}
+	Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invertível tal que
+	\begin{enumerate}
+		\item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+		\item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+	\end{enumerate}
+	para todo $x \in V$. As colunas de $P = \begin{bmatrix}
+		P_1 & P_2 & \cdots & P_n
+	\end{bmatrix}$ são dadas por
+	\[
+		P_j = [w_j]_{\mathcal{B}_2}
+	\]
+	para $j = 1$, \dots, $n$.
+\end{teorema}
 
 % section transformacoes_lineares_e_matrizes (end)
