@@ -877,7 +877,7 @@ Além disso, também temos o seguinte teorema:
 	A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} é é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
 \end{definicao}
 
-Agora, sejam $T : V \to V$ uma transformação linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp_{M}_n(\cp{K})$ invertível tal que
+Agora, sejam $T : V \to V$ uma transformação linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invertível tal que
 \begin{equation}\label{equacao_mudanca_base}
 	[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
 \end{equation}
@@ -914,4 +914,27 @@ e como $G(v_i) = w_i$ podemos escrever
 	G(v_i) = w_i = \sum_{i=1}^n\alpha_{ij}v_i
 \]
 e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
+
+\begin{teorema}
+	Sejam $V$ um espaço vetorial sobre $\cp{K}$ de dimensão finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T : V \to V$ é uma transformação linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
+	\end{bmatrix} \in \cp{M}_n(\cp{K})$ é uma matriz com colunas
+	\[
+		P_j = [w_j]_{\mathcal{B}_1}
+	\]
+	então
+	\[
+		[T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P.
+	\]
+	Alternativamente, se $G$ é o isomorfismo de $V$ definido por $G(v_i) = w_i$, $i = 1$, \dots, $n$ então
+	\[
+		[T]_{\mathcal{B}_2} = ([G]_{\mathcal{B}_1})^{-1}[T]_{\mathcal{B}_1}[G]_{\mathcal{B}_1}.
+	\]
+\end{teorema}
+
+\begin{definicao}
+	Sejam $A$, $B \in \cp{M}_n(\cp{K})$. Dizemos que $B$ é \textbf{semelhante} a $A$ sobre $\cp{K}$ se existe $P \in \cp{M}_n(\cp{K})$ invertível tal que
+	\[
+		B = P^{-1}AP.
+	\]
+\end{definicao}
 % section transformacoes_lineares_e_matrizes (end)
