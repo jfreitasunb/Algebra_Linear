@@ -765,6 +765,38 @@ Assim provamos o seguinte teorema:
 	\end{enumerate}
 \end{exemplos}
 
+\begin{teorema}\label{matriz_da_composicao_de_transformacoes}
+	Sejam $F : V \to W$ e $G : W \to U$ duas transformações lineares onde $V$, $W$ e $U$ são $\cp{K}$-espaços vetoriais de dimensões $p$, $q$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_V$, $\mathcal{B}_W$ e $\mathcal{B}_U$ para $V$, $W$ e $U$, respectivamente. Então $(G \circ F) : V \to U$ dada por $(G\comp F)(v) = G(F(v))$ é uma transformação linear e
+	\[
+		[(G \circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_U}}[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}.
+	\]
+\end{teorema}
+\begin{prova}
+	É imediato verificar que $G\circ F$ é uma transformação linear.
+
+	Sejam $\mathcal{B}_V = \{v_1,\dots,v_p\}$, $\mathcal{B}_W = \{w_1,\dots,w_q\}$ e $\mathcal{B}_U = \{u_1,\dots,u_r\}$ bases ordenadas para $V$, $W$ e $U$, respectivamente. Considere as matrizes
+	\begin{enumerate}
+		\item $[F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (a_{ij})_{q\times p}$ onde $F(v_j) = \sum_{i=1}^qa_{ij}w_i$ para $j=1$, \dots, $p$;
+		\item $[G]_{{\mathcal{B}_W},{\mathcal{B}_U}} = (b_{ij})_{r\times p}$ onde $G(w_j) = \sum_{k=1}^rb_{ij}u_i$ para $k=1$, \dots, $r$;
+		\item $[G \circ F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (c_{ij})_{r\times p}$ onde $(G\circ F)(v_j) = sum_{k=1}^rc_{ij}u_i$ para $k=1$, \dots, $r$.
+	\end{enumerate}
+
+	Vamos calcular $(G\circ F)(v_j)$
+	\begin{align*}
+		(G\circ F)(v_j) &= G(F(v_j)) = G(\sum_{i=1}^qa_{ij}w_i)\\
+		&= \sum_{i=1}^qa_{ij}G(w_i) = \sum_{i=1}^qa_{ij}\sum_{k=1}^rb_{ki}w_i\\
+		$= \sum_{k=1}^r\sum_{i=1}^qb_{ki}a_{ij}u_i.
+	\end{align*}
+	Assim da unicidade dos escalares obtemos
+	\[
+		c_{kj} = \sum_{i=1}^qb_{ki}a_{ij}
+	\]
+	para $j=1$, \dots, $p$ e $k = 1$, \dots, $r$. Isto é, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ é o elemento na posição $(k,j)$ da matriz resultante da multiplicação de $[G]_{{\mathcal{B}_W},{\mathcal{B}_U}}$ por $[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}$. Portanto
+	\[
+		[(G\circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_U}}[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}
+	\]
+	como queríamos.
+\end{prova}
 
 
 % section transformacoes_lineares_e_matrizes (end)
