@@ -864,7 +864,7 @@ Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ são bases de $V$, então $[x
 
 Além disso, também temos o seguinte teorema:
 
-\begin{teorema}
+\begin{teorema}\label{teorema_matriz_mudanca_base}
 	Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Então existe uma única base ordenada $\mathcal{B}_2$ de $V$ tal que
 	\begin{enumerate}
 		\item $[x]_{\mathcal{B}_1} = P[\mathcal{B}_1]_{\mathcal{B}_2}$
@@ -873,4 +873,7 @@ Além disso, também temos o seguinte teorema:
 	para todo $x \in V$.
 \end{teorema}
 
+\begin{definicao}
+	A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} é é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+\end{definicao}
 % section transformacoes_lineares_e_matrizes (end)
