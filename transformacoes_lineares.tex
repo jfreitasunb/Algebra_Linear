@@ -876,4 +876,42 @@ Além disso, também temos o seguinte teorema:
 \begin{definicao}
 	A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} é é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
 \end{definicao}
+
+Agora, sejam $T : V \to V$ uma transformação linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp_{M}_n(\cp{K})$ invertível tal que
+\begin{equation}\label{equacao_mudanca_base}
+	[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
+\end{equation}
+para todo $x \in V$. Mas, para todo $x \in V$ temos
+\begin{equation}\label{equacao_coordenadas_imagem}
+	[T(x)]_{\mathcal{B}_1} = [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1}.
+\end{equation}
+Aplicando \eqref{equacao_mudanca_base} ao vetor $T(x)$ obtemos
+\begin{equation}\label{equacao_mudanca_base_imagem}
+	[T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}.
+\end{equation}
+Combinando \eqref{equacao_mudanca_base}, \eqref{equacao_coordenadas_imagem} e \eqref{equacao_mudanca_base_imagem}:
+\begin{align*}
+	[T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1} &= [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}\\
+	[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= P[T(x)]_{\mathcal{B}_2}\\
+	P^{-1}[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= [T(x)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_2}[x]_{\mathcal{B}_2}.
+\end{align*}
+Daí
+\[
+	P^{-1}[T]_{\mathcal{B}_1} = [T]_{\mathcal{B}_2}
+\]
+o que responde nossa pergunta.
+
+Por outro lado, sabemos que existe uma única transformação linear $G : V \to V$ tal que
+\[
+	G(v_i) = w_i
+\]
+para $i = 1$, \dots, $n$. Mais ainda, tal transformação linear é um isomorfismo. Afirmamos que a matriz $P$ acima é exatamente a matriz de $G$ em relação à base $\mathcal{B}_1$. De fato, as entradas de $P$ são definidas por
+\[
+	w_i = \sum_{i=1}^n\alpha_{ij}v_i
+\]
+e como $G(v_i) = w_i$ podemos escrever
+\[
+	G(v_i) = w_i = \sum_{i=1}^n\alpha_{ij}v_i
+\]
+e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
 % section transformacoes_lineares_e_matrizes (end)
