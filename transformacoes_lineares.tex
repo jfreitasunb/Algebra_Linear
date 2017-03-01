@@ -777,8 +777,10 @@ Assim provamos o seguinte teorema:
 	Sejam $\mathcal{B}_V = \{v_1,\dots,v_p\}$, $\mathcal{B}_W = \{w_1,\dots,w_q\}$ e $\mathcal{B}_U = \{u_1,\dots,u_r\}$ bases ordenadas para $V$, $W$ e $U$, respectivamente. Considere as matrizes
 	\begin{enumerate}
 		\item $[F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (a_{ij})_{q\times p}$ onde $F(v_j) = \sum_{i=1}^qa_{ij}w_i$ para $j=1$, \dots, $p$;
+
 		\item $[G]_{{\mathcal{B}_W},{\mathcal{B}_U}} = (b_{ij})_{r\times p}$ onde $G(w_j) = \sum_{k=1}^rb_{ij}u_i$ para $k=1$, \dots, $r$;
-		\item $[G \circ F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (c_{ij})_{r\times p}$ onde $(G\circ F)(v_j) = sum_{k=1}^rc_{ij}u_i$ para $k=1$, \dots, $r$.
+
+		\item $[G \circ F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (c_{ij})_{r\times p}$ onde $(G\circ F)(v_j) = \sum_{k=1}^rc_{ij}u_i$ para $k=1$, \dots, $r$.
 	\end{enumerate}
 
 	Vamos calcular $(G\circ F)(v_j)$
@@ -806,9 +808,9 @@ bases ordenadas de $V$. Qual a rela\c{c}\~ao entre as matrizes $[T]_{\mathcal{B}
 
 Para responder a esta quest\~ao, primeiro vamos determinar uma rela\c{c}\~ao entre $[x]_{\mathcal{B}_1}$ e $[x]_{\mathcal{B}_2}$, para todo $x \in V$. Como $\mathcal{B}_1$ \'e uma base de $V$, ent\~ao existem $\alpha_{ij} \in \cp{K}$, $1 \le i,\ j \le n$ tais que
 \begin{align*}
-	w_1 &= \alpha{11}v_1 + \cdots + \alpha_{n1}v_n\\
+	w_1 &= \alpha_{11}v_1 + \cdots + \alpha_{n1}v_n\\
 	&\vdots\\
-	w_n &= \alpha{1n}v_1 + \cdots + \alpha_{nn}v_n.
+	w_n &= \alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n.
 \end{align*}
 Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
 \[
@@ -874,7 +876,7 @@ Al\'em disso, tamb\'em temos o seguinte teorema:
 \end{teorema}
 
 \begin{definicao}
-	A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} \'e chamada de \textbf{matriz de mudan\c{c}a de base} \'e \'e denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+	A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} \'e chamada de \textbf{matriz de mudan\c{c}a de base} e \'e denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
 \end{definicao}
 
 Agora, sejam $T : V \to V$ uma transforma\c{c}\~ao linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
