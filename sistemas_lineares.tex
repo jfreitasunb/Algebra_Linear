@@ -912,7 +912,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 	O n\'umero $n - p$ \'e chamado de \textbf{grau de liberdade} e as $n - p$ vari\'aveis s\~ao chamadas de \textbf{vari\'aveis livres}.
 \end{teorema}
 \begin{prova}
-	\textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e que o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz reduzida a forma em escada deve comter uma linha da forma
+	\textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e que o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz, quando reduzida \`a forma em escada deve conter uma linha da forma
 	\[
 	\begin{pmatrix}
 		0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & \mid & z_r
@@ -925,7 +925,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 	\]
 	o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
 
-	\textit{$2^a$ Parte: Se o posto \'e igual, ent\~ao existe solu\c{c}\~ao:} Nesta situa\c{c}\~ao podem ocorrem dois casos:
+	\textit{$2^a$ Parte: Se o posto \'e igual, ent\~ao existe solu\c{c}\~ao:} Nesta situa\c{c}\~ao podem ocorrer dois casos:
 	\begin{enumerate}
 		\item Se $p = n$, ent\~ao a matriz linha-reduzida \`a forma em escada tem a forma
 		\[
@@ -943,7 +943,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 		\[
 			x_1 = z_1, x_2 = z_2, \cdots, x_n = z_n.
 		\]
-		\item Se $p \ne n$, ent\~ao devemos ter $p < n$. Caso $p > n$, como a matriz est\'a na forma escada o elemento $1_\cp{K}$ deve ocorre em duas linhas diferentes, mas na mesma coluna. Mas neste caso, podemos anular uma destas linhas repetidas. Logo, $p < n$. Neste caso a matriz na forma escada pode ter a forma:
+		\item Se $p \ne n$, ent\~ao devemos ter $p < n$. Caso $p > n$, como a matriz est\'a na forma escada o elemento $1_\cp{K}$ deve ocorrer em duas linhas diferentes, mas na mesma coluna. Mas neste caso, podemos anular uma destas linhas repetidas. Logo, $p < n$. Neste caso a matriz na forma escada pode ter a forma:
 		\begin{enumerate}
 			\item \[
 			\begin{bmatrix}
@@ -961,7 +961,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 			\begin{cases}
 				x_1 = z_1 - a_{1 p + 1}x_{p + 1} - a_{1 p + 2}x_{p + 2} + \cdots + a_{1n}x_{n}\\
 				x_2 = z_2 - a_{2 p + 1}x_{p + 1} - a_{2 p + 2}x_{p + 2} + \cdots + a_{2n}x_{n}\\
-				\vdots\\
+				\qquad \vdots\\
 				x_p = z_p - a_{p p + 1}x_{p + 1} - a_{p p + 2}x_{p + 2} + \cdots + a_{pn}x_{n}\\
 			\end{cases}
 		\]
@@ -983,7 +983,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 			\begin{cases}
 				x_2 = z_1 - a_{1 p + 2}x_{p + 2} - a_{1 p + 3}x_{p + 3} + \cdots + a_{1n}x_{n}\\
 				x_3 = z_2 - a_{2 p + 3}x_{p + 3} - a_{2 p + 3}x_{p + 3} + \cdots + a_{2n}x_{n}\\
-				\vdots\\
+				\qquad \vdots\\
 				x_p = z_p - a_{p p + 2}x_{p + 2} - a_{p p + 3}x_{p + 3} + \cdots + a_{pn}x_{n}\\
 			\end{cases}
 		\]
@@ -1108,7 +1108,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 					\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
 				\end{bmatrix}.
 			\]
-			Aplicando as opera\c{c}\~oes elementares para reduzir $A$ a forma em escada:
+			Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 			\begin{align*}
 				A &= \begin{gmatrix}[b]
   						\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
@@ -1223,7 +1223,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 Seja $\cp{K}$ um corpo. Denotamos por $\cp{M}_{p \times q}(\cp{K})$ o conjunto de todas as matrizes $p \times q$ com entradas em $\cp{K}$. A soma e o produtos de matrizes s\~ao definidos de modo usual.
 
 Quando $p = q = n$, dizemos que uma matriz $A \in \cp{M}_{n \times n}(\cp{K})$, que denotaremos simplesmente por $\cp{M}_{n}(\cp{K})$, \'e \textbf{quadrada}.\index{Matriz!Quadrada}
-Tal conjunto tem elemento neutro para a multiplica\c{c}\~ao de matrizes que \'e a \textbf{matriz indentidade} $I_n$ dada por
+Tal conjunto tem elemento neutro para a multiplica\c{c}\~ao de matrizes que \'e a \textbf{matriz identidade} $I_n$ dada por
 \[
 \begin{pmatrix}
 	1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
@@ -1286,7 +1286,7 @@ Temos ent\~ao os seguintes sistemas para resolver:
 		3y + 4t = 1
 	\end{cases}.
 \]
-Assim podemos considerar a matriz ampliada contendo colunos correspondentes a cada um dos sistemas e reduz{\'\i}-la \`a forma em escada:
+Assim podemos considerar a matriz ampliada contendo colunas correspondentes a cada um dos sistemas e reduz{\'\i}-la \`a forma em escada:
 \begin{align*}
 	A &= \begin{gmatrix}[b]
   			1 & 2 & 1 & 0 \\
