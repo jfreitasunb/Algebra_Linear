@@ -143,15 +143,15 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\[
 		T(v) = T(\alpha_1u_1 + \cdots + \alpha_nu_n) = \alpha_1w_1 + \cdots + \alpha_nw_n.
 	\]
-	A unicidade dos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ garantem que $T$ est\'a bem definida, isto \'e, um mesmo elemento de $V$ n\~ao pode ter duas imagens distintas.
+	A unicidade dos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ garante que $T$ est\'a bem definida, isto \'e, um mesmo elemento de $V$ n\~ao pode ter duas imagens distintas.
 
 	Agora, note que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$. Assim precisamos mostrar que $T$ \'e linear. Sejam $v_1 = \sum_{i=1}^n\alpha_iu_i$, $v_2 = \sum_{i=1}^n\beta_iu_i$ e $\lambda \in \cp{K}$. Ent\~ao
 	\begin{align*}
-		T(\lambda v_1 + v_2) = T(\lambda\sum_{i=1}^n\alpha_iu_i + \sum_{i=1}^n\beta_iu_i) = T(\sum_{i=1}^n(\lambda\alpha_i + \beta_i)u_i) = \sum_{i=1}^n(\lambda_i\alpha_i + \beta_i)w_i = \lambda\sum_{i=1}^n\alpha_iw_i + \sum_{i=1}^n\beta_iw_i = \lambda T(v_1) + T(v_2).
+		T(\lambda v_1 + v_2) &= T(\lambda\sum_{i=1}^n\alpha_iu_i + \sum_{i=1}^n\beta_iu_i) = T(\sum_{i=1}^n(\lambda\alpha_i + \beta_i)u_i) \\ &= \sum_{i=1}^n(\lambda_i\alpha_i + \beta_i)w_i = \lambda\sum_{i=1}^n\alpha_iw_i + \sum_{i=1}^n\beta_iw_i \\ &= \lambda T(v_1) + T(v_2).
 	\end{align*}
 	Logo $T$ \'e uma transforma\c{c}\~ao linear.
 
-	Resta agora mostrar que $T$ \'e \'unica. Suponha que exista uma transforma\c{c}\~ao linear $S : V \to W$ tal que $S(u_i) = w_i$ para todo $i = 1$, \dots, $n$. Para $v = \sum_{i=1}^n\alpha_iu_i$ temos
+	Resta mostrar que $T$ \'e \'unica. Suponha que exista uma transforma\c{c}\~ao linear $S : V \to W$ tal que $S(u_i) = w_i$ para todo $i = 1$, \dots, $n$. Para $v = \sum_{i=1}^n\alpha_iu_i$ temos
 	\[
 		S(v) = S(\sum_{i=1}^n\alpha_iu_i) = \sum_{i=1}^n\alpha_iS(u_i) = \sum_{i=1}^n\alpha_iw_i = \sum_{i=1}^n\alpha_iT(u_i) = T(\sum_{i=1}^n\alpha_iu_i) = T(v)
 	\]
@@ -203,7 +203,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{proposicao}
 \begin{prova}
 	\begin{enumerate}
-		\item Inicialmente $\ker T \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker T$. Agora, sejam $u_1$, $u_2 \in \ker T$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in cp{K}$, isto \'e, precisamos mostrar que $\lambda u_1 + u_2 \in \ker T$. Temos
+		\item Inicialmente $\ker T \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker T$. Agora, sejam $u_1$, $u_2 \in \ker T$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in \cp{K}$, isto \'e, precisamos mostrar que $\lambda u_1 + u_2 \in \ker T$. Temos
 		\[
 			T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2) = 0_W.
 		\]
@@ -274,7 +274,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 					0 & 0\\ 0 & 1
 				\end{bmatrix}\right\}
 			\]
-			\'e um conjunto gerado de $\im T$. No entanto tal conjunto n\~ao \'e L.I.. Mas o conjunto
+			\'e um conjunto gerador de $\im T$. No entanto tal conjunto n\~ao \'e L.I.. Mas o conjunto
 			\[
 				\left\{ \begin{bmatrix}
 					1 & 0\\ 0 & 0
@@ -381,7 +381,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\]
 	Da{\'\i} $\dim_\cp{K}\im T = 4$ e novamente
 	\[
-		\dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_cp{K}\cp{M}_2(\cp{K}).
+		\dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
 	\]
 \end{exemplo}
 
@@ -415,7 +415,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
-	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetorias com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao
+	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao
 	\[
 		\dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
 	\]
@@ -488,7 +488,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\]
 		e ent\~ao $\{(-1,0,1);(0,1,1)\}$ gera $\im T$ e como estes vetores n\~ao s\~ao m\'ultiplos um do outro, eles formam uma base para $\im T$. Assim $\im T = [(-1,0,1);(0,1,1)]$ e $\dim_\real\im T = 2$.
 
-		\item Considere o espa\c{c}o vetorial $\mathcal{P}(\complex)$ sobre $\complex$ e seja $\mathcal{D} : \mathcal{P}(C) \to \mathcal{P}(C)$ dada por $\mathcal{D}(p(x)) = p'(x)$ a derivada de $p(x)$. Observe que $\ker D = \{p(x) = a \mid a \in \complex\}$. Al\'em disso, $\im \mathcal{D} = \mathcal{P}(\complex)$ pois todo elemento de $\mathcal{P}(\complex)$ tem uma primitiva.
+		\item Considere o espa\c{c}o vetorial $\mathcal{P}(\complex)$ sobre $\complex$ e seja $\mathcal{D} : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por $\mathcal{D}(p(x)) = p'(x)$ a derivada de $p(x)$. Observe que $\ker D = \{p(x) = a \mid a \in \complex\}$. Al\'em disso, $\im \mathcal{D} = \mathcal{P}(\complex)$ pois todo elemento de $\mathcal{P}(\complex)$ tem uma primitiva.
 
 		\item Seja
 		\[
@@ -560,7 +560,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \section{Transforma\c{c}\~oes Lineares e Matrizes} % (fold)
 \label{sec:transformacoes_lineares_e_matrizes}
 
-Sejam $V$ um espa\c{c}o vetorial sbore $\cp{K}$ de dimens\~ao $n \ge 1$ e $\mathcal{B} = \{v_1,\dots,v_n\}$ uma base de $V$. Sabemos que cada elemento de $V$ se escreve de modo \'unico como combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, isto \'e,dado $u \in V$ existem \'unicos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $n \ge 1$ e $\mathcal{B} = \{v_1,\dots,v_n\}$ uma base de $V$. Sabemos que cada elemento de $V$ se escreve de modo \'unico como combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, isto \'e, dado $u \in V$ existem \'unicos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
 \[
 	u = \alpha_1v_1 + \cdots + \alpha_nv_n.
 \]
@@ -599,12 +599,12 @@ e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ 
 	\end{enumerate}
 \end{exemplos}
 
-Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao lineares. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
+Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao lineares. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
 \begin{align*}
-	T(v_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}wq = \sum_{i=1}^qb_{i1}w_i\\
-	T(v_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}wq = \sum_{i=1}^qb_{i2}w_i\\
+	T(v_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q = \sum_{i=1}^qb_{i1}w_i\\
+	T(v_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q = \sum_{i=1}^qb_{i2}w_i\\
 	&\vdots\\
-	T(v_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}wq = \sum_{i=1}^qb_{ip}w_i
+	T(v_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q = \sum_{i=1}^qb_{ip}w_i
 \end{align*}
 para certos $b_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
 
@@ -658,7 +658,7 @@ Agora seja $A \in \cp{M}_{q\times p}(\cp{K})$ onde
 	\end{bmatrix}.
 \]
 
-Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$ e $W$, respectivamente. Defina $T : V \to W$ por
+Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ bases ordenadas de $V$ e $W$, respectivamente. Defina $T : V \to W$ por
 \begin{align*}
 	T(v_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
 	&\vdots\\
@@ -688,7 +688,7 @@ Assim provamos o seguinte teorema:
 	\[
 		A = [T]_{\mathcal{B}_{1},\mathcal{B}_{2}}.
 	\]
-	No caso em que $V = W$ e $\mathcal{B}_1 = \mathcal{B}_2 = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$ simplesmente por $[T]_\mathcal{B}$
+	No caso em que $V = W$ e $\mathcal{B}_1 = \mathcal{B}_2 = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$ simplesmente por $[T]_\mathcal{B}$.
 \end{definicao}
 
 \begin{exemplos}
