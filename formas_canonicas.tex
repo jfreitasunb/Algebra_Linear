@@ -15,9 +15,9 @@ Dados $T$, $G \in \mathcal{L}(V,W)$ e $\lambda \in \cp{K}$ defina
 para todo $u \in V$. \'E f\'acil verificar que $(\mathcal{L}(V,W),+,\cdot)$ \'e um $\cp{K}$-espa\c{c}o vetorial. O vetor nulo \'e a transforma\c{c}\~ao linear $0 : V \to W$ tal que $0(u) = 0_W$ para todo $u \in V$. Dado $T \in \mathcal{L}(V,W)$, o vetor oposto \'e $(-T) : V \to W$ definido por $(-T)(u) = -T(u)$ para todo $u \in V$.
 
 \begin{teorema}
-	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}o vetoriais  com dimens\~oes $p$ e $q$, respectivamente. Ent\~ao
+	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais  com dimens\~oes $p$ e $q$, respectivamente. Ent\~ao
 	\[
-		\dim_\cp{K}\mathcal{L}(V,W) = pq = \dim_\cp{K}V\dim_\cp{K}W.
+		\dim_\cp{K}\mathcal{L}(V,W) = pq = (\dim_\cp{K}V)(\dim_\cp{K}W).
 	\]
 \end{teorema}
 \begin{prova}
@@ -64,7 +64,7 @@ para todo $u \in V$. \'E f\'acil verificar que $(\mathcal{L}(V,W),+,\cdot)$ \'e 
 	\end{align*}
 	e como $\mathcal{B}_W = \{w_1,\dots,w_q\}$ \'e L.I. em $W$, ent\~ao $b_{ij} = 0_\cp{K}$ para todo $1 \le i \le q$ e $1 \le j \le p$. Logo $\mathcal{A}$ \'e L.I. e assim uma base para $\mathcal{L}(V,W)$. Portanto
 	\[
-		\dim_\cp{K}\mathcal{L}(V,W) = pq = \dim_\cp{K}V\dim_\cp{K}W
+		\dim_\cp{K}\mathcal{L}(V,W) = pq = (\dim_\cp{K}V)(\dim_\cp{K}W)
 	\]
 	como quer{\'\i}amos.
 \end{prova}
@@ -356,7 +356,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 
 		Aplicando $T$ em \eqref{equacaoauxiliar1} obtemos
 		\begin{equation}\label{equacaoauxiliar2}
-			0_V = T(u_1) + T(u_2) + \cdots + T(u_r) = \lambda_1u_1 + \lambda2u_2 + \cdots + \lambda_ru_r.
+			0_V = T(u_1) + T(u_2) + \cdots + T(u_r) = \lambda_1u_1 + \lambda_2u_2 + \cdots + \lambda_ru_r.
 		\end{equation}
 		Agora multiplicando \eqref{equacaoauxiliar1} por $\lambda_1$ e subtraindo de \eqref{equacaoauxiliar2} obtemos
 		\begin{align*}
@@ -394,7 +394,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 	\]
 	com $q(\lambda) \ne 0$, seja o polin\^omio caracter{\'\i}stico de $T$.
 	\begin{enumerate}[label=({\roman*})]
-		\item O n\'umero $m$ \'e chamada de \textbf{multiplicidade \'alg\'ebrica} de $\lambda$ e o denotamos por $ma(\lambda)$.\index{Multiplicidade!Alg\'ebrica}
+		\item O n\'umero $m$ \'e chamada de \textbf{multiplicidade alg\'ebrica} de $\lambda$ e o denotamos por $ma(\lambda)$.\index{Multiplicidade!Alg\'ebrica}
 		\item Chamamos de \textbf{multiplicidade geom\'etrica} de $\lambda$ \`a dimens\~ao do subespa\c{c}o $\aut_T(\lambda)$ e indicamos tal n\'umero por $mg(\lambda)$.\index{Multiplicidade!Geom\'etrica}
 	\end{enumerate}
 \end{definicao}
@@ -418,7 +418,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 	Seja $\lambda$ um autovalor de $T : V \to V$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao $mg(\lambda) \le ma(\lambda)$.
 \end{proposicao}
 \begin{prova}
-	Seja $W = \aut_T(\lambda)$ e assuma que $\dim\cp{K}W = r$. Sejam $\mathcal{B}_W = \{w_1,\dots,w_r\}$ uma base de $W$ e $\mathcal{B}_V = \{w_1,\dots,w_r,u_{r + 1},\dots,u_n\}$ uma base de $V$ contendo $\mathcal{B}_W$. Como $T(w_i) = \lambda w_i$ para $i = 1$, \dots, $r$; podemos escrever $[T]_{\mathcal{B}_V}$ na forma
+	Seja $W = \aut_T(\lambda)$ e assuma que $\dim_\cp{K}W = r$. Sejam $\mathcal{B}_W = \{w_1,\dots,w_r\}$ uma base de $W$ e $\mathcal{B}_V = \{w_1,\dots,w_r,u_{r + 1},\dots,u_n\}$ uma base de $V$ contendo $\mathcal{B}_W$. Como $T(w_i) = \lambda w_i$ para $i = 1$, \dots, $r$; podemos escrever $[T]_{\mathcal{B}_V}$ na forma
 	\[
 		[T]_{\mathcal{B}_V} = \begin{bmatrix}
 			\lambda & 0_\cp{K} & \dots & 0_\cp{K} & a_{1r+1} & \dots & a_{1n}\\
@@ -538,7 +538,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 		\[
 			(x,y) = \alpha(0,1) = \beta(1,1)
 		\]
-		e da{\'\i} $\alpha = \beta = 0$. Logo, $W_1 \cap W_2 =\{(0,0\}$ e ent\~ao $W_1 + W_2$ \'e uma soma direta. Mais ainda
+		e da{\'\i} $\alpha = \beta = 0$. Logo, $W_1 \cap W_2 =\{(0,0)\}$ e ent\~ao $W_1 + W_2$ \'e uma soma direta. Mais ainda
 		\[
 			\dim_\real(W_1 \oplus W_2) = \dim_\real W_1 + \dim_\real W_2 = 2
 		\]
@@ -636,7 +636,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 \section{Polin\^omio Minimal} % (fold)
 \label{sec:polinomio_minimal}
 
-Seja $T : V \to V$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ V. Para cada $i \ge 0$ definindo
+Seja $T : V \to V$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$. Para cada $i \ge 0$ se definirmos
 \[
 	T^i = \begin{cases}
 		\underbrace{T\circ T \circ \dots \circ T}_{i \mbox{ vezes}}, & i \ge 1\\
@@ -691,7 +691,7 @@ para todo $u \in V$.
 \end{exemplo}
 
 \begin{teorema}
-	Seja $T \in \mathcal{L}(V,V)$, onde $\dim_\cp{K} V < \infty$. Os polin\^omios caracter{\'\i}stico e minimal de $T$ possuem exatamente as mesmas ra{\'\i}zes, a menos de multiplicadade.
+	Seja $T \in \mathcal{L}(V,V)$, onde $\dim_\cp{K} V < \infty$. Os polin\^omios caracter{\'\i}stico e minimal de $T$ possuem exatamente as mesmas ra{\'\i}zes, a menos de multiplicidade.
 \end{teorema}
 
 \begin{exemplo}
@@ -936,7 +936,7 @@ onde $T_1^2 = 0$ e $T_2$ \'e invert{\'\i}vel. O operador $T_1$ \'e chamado de \t
 \end{definicao}
 
 \begin{definicao}
-	Uma operador linear $T : V \to V$ \'e chamado de \textbf{nilpotente} se existir um $r > 0$ tal que $T^r = 0$. O \textbf{{\'\i}ndice de nilpot\^enica} de um operador nilpotente ser\'a o menor inteiro $i$ tal que $T^i = 0$.\index{Operador Linear!Nilpotente}
+	Uma operador linear $T : V \to V$ \'e chamado de \textbf{nilpotente} se existir um $r > 0$ tal que $T^r = 0$. O \textbf{{\'\i}ndice de nilpot\^encia} de um operador nilpotente ser\'a o menor inteiro $i$ tal que $T^i = 0$.\index{Operador Linear!Nilpotente}
 \end{definicao}
 
 \begin{observacao}
@@ -1531,7 +1531,7 @@ Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso tem
 	\end{solucao}
 	\item Existe 1 autovalor L.I.
 
-	Encontre a forma de Jorda e a base correspondente para o operador representado pela matriz
+	Encontre a forma de Jordan e a base correspondente para o operador representado pela matriz
 	\[
 		A = \begin{bmatrix}
 			-1 & -1 & 0\\
