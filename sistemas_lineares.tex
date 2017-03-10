@@ -154,15 +154,15 @@ onde
 	&\overline{p - 1} = \{bp + (p - 1) \mid b \in \integer\} = \{(b + 1)p - 1) \mid b \in \integer\}\\ &= \{cp - 1 \mid c \in \integer\} = \{-1, \pm p - 1, \pm 2p - 1, \pm 3p - 1, \dots\}.
 \end{align*}
 
-defina em $\integer_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{a}$, $\overline{b} \in \integer_p$
+defina em $\integer_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{x}$, $\overline{y} \in \integer_p$
 \begin{align*}
-	\overline{a} \oplus \overline{b} = \overline{a + b}\\
-	\overline{a} \otimes \overline{b} = \overline{ab},
+	\overline{x} \oplus \overline{y} = \overline{x + y}\\
+	\overline{x} \otimes \overline{y} = \overline{xy},
 \end{align*}
-onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros. Para determinar o valor de $\overline{a + b}$ e de $\overline{ab}$, encontramos o resto da divis\~ao inteira de $a + b$ por $p$ e de $ab$ por $p$. Logo
+onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros. Para determinar o valor de $\overline{x + y}$ e de $\overline{xy}$, encontramos o resto da divis\~ao inteira de $x + y$ por $p$ e de $xy$ por $p$. Logo
 \begin{align*}
-	\overline{a} \oplus \overline{b} \in \integer_p\\
-	\overline{a} \otimes \overline{b} \in \integer_p.
+	\overline{x} \oplus \overline{y} \in \integer_p\\
+	\overline{x} \otimes \overline{y} \in \integer_p.
 \end{align*}
 
 \begin{exemplo}
@@ -198,42 +198,42 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 	Para todo $p \in \integer$, $p$ n\'umero primo, $(\integer_p, \oplus, \otimes)$ \'e um corpo.
 \end{teorema}
 \begin{prova}
-	Dados $\overline{a}$, $\overline{b}$, $\overline{c} \in \integer_p$ temos:
+	Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \integer_p$ temos:
 	\begin{enumerate}
-		\item[A1)] $\overline{a} \oplus \overline{b} = \overline{a + b} = \overline{b + a} = \overline{b} \oplus \overline{a}$;
-		\item[A2)] $(\overline{a} \oplus \overline{b}) \oplus \overline{c} = (\overline{a + b}) \oplus \overline{c} = \overline{(a + b) + c} = \overline{a + (b + c)} = \overline{a} \oplus (\overline{b} \oplus \overline{c}) = \overline{a} \oplus (\overline{b} \oplus \overline{c})$
-		\item[A3)] Temos que $\overline{0} \in \integer_p$ e para todo $\overline{a} \in \integer_p$:
+		\item[A1)] $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
+		\item[A2)] $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
+		\item[A3)] Temos que $\overline{0} \in \integer_p$ e para todo $\overline{x} \in \integer_p$:
 		\[
-		  \overline{0} \oplus \overline{a} = \overline{a} \oplus \overline{0} = \overline{a + 0} = \overline{a}.
+		  \overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
 		\]
 		Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\integer_p$.
-		\item[A4)] Dado $\overline{a} \in \integer_p$, tome $\overline{p - a} \in \integer_p$, pois $0 \le p - a \le p - 1$. Assim
+		\item[A4)] Dado $\overline{x} \in \integer_p$, tome $\overline{p - x} \in \integer_p$, pois $0 \le p - x \le p - 1$. Assim
 		\[
-		  \overline{a} \oplus \overline{p - a} = \overline{p - a} \oplus \overline{a} = \overline{(p - a) + a} = \overline{p} = \overline{0}.
+		  \overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
 		\]
 		Logo todo elemento de $\integer_p$ possui oposto aditivo.
-		\item[M1)] $\overline{a} \otimes \overline{b} = \overline{a\cdot b} = \overline{b \cdot a} = \overline{b} \otimes \overline{a}$.
-		\item[M2)] $(\overline{a} \otimes \overline{b}) \otimes \overline{c} = (\overline{a\cdot b}) \otimes \overline{c} = \overline{(a\cdot b) \cdot c} = 
-		\overline{a\cdot (b\cdot c)} = \overline{a} \otimes (\overline{b} \otimes \overline{c})$.
+		\item[M1)] $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
+		\item[M2)] $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
+		\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
 		\item[M3)] O elemento $\overline{1} \in \integer_p$ \'e tal que
 		\[
-		  \overline{1} \otimes \overline{a} = \overline{a} \otimes \overline{1} = \overline{a\cdot 1} = \overline{a}
+		  \overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
 		\]
-		para todo $\overline{a} \in \integer_p$.
-		\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $x$, $y \in \integer$ tais que
+		para todo $\overline{x} \in \integer_p$.
+		\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \integer$ tais que
 		\[
-		  ax + py = 1
+		  xy + pz = 1
 		\]
-		para todo $a \in \{1, 2, \dots, p - 1\}$. Logo,
+		para todo $x \in \{1, 2, \dots, p - 1\}$. Logo,
 		\begin{align*}
-			&\overline{ax + py} = \overline{1}\\
-			&\overline{ax} \oplus \overline{py} = \overline{1}\\
-			&\overline{a} \otimes \overline{x} + \overline{p} \otimes \overline{y} = \overline{1}\\
-			&\overline{a} \otimes \overline{x} = \overline{1}
+			&\overline{xy + pz} = \overline{1}\\
+			&\overline{xy} \oplus \overline{pz} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} + \overline{p} \otimes \overline{z} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} = \overline{1}
 		\end{align*}
-		uma vez que $\overline{p} = \overline{0}$. Como $\overline{x}$ \'e obtido pelo resto da divis\~ao inteira de $x$ por $p$, ent\~ao 
-		$\overline{x} \in \integer_p$. Observe que $x \ne 0$ pois $p \ge 2$ e $x \ne p$ pois sen\~ao $(a + p)y = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{x} \ne 0$ e assim todo elemento $\overline{a} \in \integer_p$ possui inverso multiplicativo.
-		\item[D)] $\overline{a} \otimes (\overline{b} \oplus \overline{c}) = \overline{a} \oplus (\overline{b + c}) = \overline{a \cdot (b + c)} = \overline{ab + ac} = \overline{ab} \oplus \overline{ac} = \overline{a} \otimes \overline{b} \oplus \overline{a} \otimes \overline{c}$.
+		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
+		$\overline{y} \in \integer_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(a + p)y = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne 0$ e assim todo elemento $\overline{x} \in \integer_p$ possui inverso multiplicativo.
+		\item[D)] $\overline{x} \otimes (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y + z}) = \overline{x \cdot (y + z)} = \overline{xy + xz} = \overline{xy} \oplus \overline{xz} = \overline{x} \otimes \overline{y} \oplus \overline{x} \otimes \overline{z}$.
 	\end{enumerate}
 	Portanto, $(\integer_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
 \end{prova}
