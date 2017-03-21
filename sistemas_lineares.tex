@@ -1502,3 +1502,76 @@ Propriedades do determinante: Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in
 \begin{teorema}
 Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det A \ne 0_\cp{K}$.
 \end{teorema}
+
+
+\begin{elimination}[3]{3}{1.75em}{1.1}
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        4 & -7 & 4 & 0 & 1 & 0 \\
+        3 & -4 & 2 & 0 & 0 & 1
+    }
+    {
+        \\
+        R_{2} \rightarrow R_{2} - R_{1} \\
+        R_{3} - \frac{3}{4} R_{1}
+    }
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        0 &  1 & -1 & -1 & 1 & 0 \\
+        0 &  2 & -\frac{7}{4} & -\frac{3}{4} & 0 & 1
+    }
+    {
+        \\
+        \\
+        R_{3} - 2 R_{2} \\
+    }
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        0 &  1 & -1 & -1 & 1 & 0 \\
+        0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
+    }
+    {
+        \\
+        \\
+        R_{3} - 2 R_{2} \\
+    }
+\end{elimination}
+
+\begin{elimination}{6}{1.75em}{1.1}
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        4 & -7 & 4 & 0 & 1 & 0 \\
+        3 & -4 & 2 & 0 & 0 & 1
+    }
+    {
+        \\
+        R_{2} - R_{1} \\
+        R_{3} - \frac{3}{4} R_{1}
+    }
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        0 &  1 & -1 & -1 & 1 & 0 \\
+        0 &  2 & -\frac{7}{4} & -\frac{3}{4} & 0 & 1
+    }
+    {
+        \\
+        \\
+        R_{3} - 2 R_{2} \\
+    }
+    \eliminationstep
+    {
+        4 & -8 & 5 & 1 & 0 & 0 \\
+        0 &  1 & -1 & -1 & 1 & 0 \\
+        0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
+    }
+    {
+        \\
+        \\
+        R_{3} - 2 R_{2} \\
+    }
+\end{elimination}
