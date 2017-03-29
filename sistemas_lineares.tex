@@ -850,35 +850,28 @@ A &= \begin{gmatrix}[b]
 \end{gmatrix}\leadsto\begin{gmatrix}[b]
 1 & 2 & 1 & 0\\
 0 & 2 & 4 & 5\\
-0 & 4 & 0 & 1
+0 & -4 & 0 & 1
 \rowops
 \mult1{\times (1/2)}
 \end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
 1 & 2 & 1 & 0\\
 0 & 1 & 2 & 5/2\\
-0 & 4 & 0 & 1
+0 & -4 & 0 & 1
 \rowops
 \add[-2]{1}{0}
-\add[-4]{1}{2}
+\add[4]{1}{2}
 \end{gmatrix}\leadsto\begin{gmatrix}[b]
-1 & 0 & -3 & 5\\
-0 & 1 & 2 & 5/2\\
-0 & 0 & 8 & 11
-\rowops
-\add[-2]{1}{0}
-\add[-4]{1}{2}
-\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-1 & 0 & -3 & 5\\
+1 & 0 & -3 & -5\\
 0 & 1 & 2 & 5/2\\
 0 & 0 & 8 & 11
 \rowops
 \mult2{\times 1/8}
-\end{gmatrix}\leadsto\begin{gmatrix}[b]
-1 & 0 & -3 & 5\\
+\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
+1 & 0 & -3 & -5\\
 0 & 1 & 2 & 5/2\\
 0 & 0 & 1 & 11/8
 \rowops
-\add[-3]{2}{0}
+\add[3]{2}{0}
 \add[-2]{2}{1}
 \end{gmatrix}\\&\leadsto\begin{bmatrix}
 1 & 0 & 0 & -7/8\\
@@ -900,7 +893,7 @@ x_1 = x_2 = \cdots = x_n = 0_\cp{K},
 um sistema n\~ao homog\^eneo pode ter:
 \begin{enumerate}
 	\item Uma \'unica solu\c{c}\~ao $x_1 = \alpha_1$, $x_2 = \alpha_2$, \dots, $x_n = \alpha_n$, onde $\alpha_i \in \cp{K}$, para $i = 1$, 2, \dots, $n$. Neste caso dizemos que o sistema \'e \textbf{poss{\'\i}vel e determinado}.
-	\item Mais de uma solu\c{c}\~ao. Neste caso dizemos que o sistema \'e \textbf{poss{\'\i}vel e indeterminado}. Caso o corpo $\cp{K}$ tenha infintos elementos, o sistema ter\'a infinitas solu\c{c}\~oes.
+	\item Mais de uma solu\c{c}\~ao. Neste caso dizemos que o sistema \'e \textbf{poss{\'\i}vel e indeterminado}. Caso o corpo $\cp{K}$ tenha infinitos elementos, o sistema ter\'a infinitas solu\c{c}\~oes.
 	\item Nenhuma solu\c{c}\~ao. Neste caso dizemos o que sistema \'e \textbf{imposs{\'\i}vel}.
 \end{enumerate}
 
@@ -947,16 +940,15 @@ onde $A$ \'e uma matriz $m \times n$ e $B$ \'e uma matriz $m \times 1$, ambas co
 O n\'umero $n - p$ \'e chamado de \textbf{grau de liberdade} e as $n - p$ vari\'aveis s\~ao chamadas de \textbf{vari\'aveis livres}.
 \end{teorema}
 \begin{prova}
-\textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e que o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz, quando reduzida \`a forma em escada deve conter uma linha da forma
+\textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz, quando reduzida \`a forma em escada deve conter uma linha da forma
 \[
 \begin{bmatrix}
-0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & \mid & z_r
-\end{bmatrix}
+0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & \mid & 1_\cp{K}
+\end{bmatrix}.
 \]
-onde $z_r \ne 0_\cp{K}$.
 Logo o sistema associado a essa matriz tem uma equa\c{c}\~ao do tipo
 \[
-0_\cp{K}x_1 + 0_\cp{K}x_2 + \cdots + 0_\cp{K}x_n = z_r
+0_\cp{K}x_1 + 0_\cp{K}x_2 + \cdots + 0_\cp{K}x_n = 1_\cp{K}
 \]
 o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
 
@@ -1213,7 +1205,7 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\]
 	\end{solucao}
 	\item $\begin{cases}
-	x_1 - x_2 + 2x_4 = 4\\
+	x_1 - x_2 + 2x_3 = 4\\
 	x_1 + x_3 = 6\\
 	2x_1 - 3x_2 + 5x_3 = 4
 	\end{cases}$  em $\rac$.
@@ -1333,9 +1325,9 @@ A &= \begin{gmatrix}[b]
 1 & 2 & 1 & 0 \\
 0 & -2 & -3 & 1
 \rowops
-\add[-3]{0}{1}
+\add{1}{0}
 \end{gmatrix}\leadsto&\begin{gmatrix}[b]
-1 & 2 & 1 & 0 \\
+1 & 0 & -2 & 1 \\
 0 & -2 & -3 & 1
 \rowops
 \mult1{ \times (-1/2)}
@@ -1399,7 +1391,7 @@ A &= \begin{gmatrix}[p]
 0 & -1 & 1 & -1 & 0 & 1\\
 0 & 2 & 1 & 0 & 1 & 0
 \rowops
-\mult2{-1}
+\mult1{-1}
 \end{gmatrix}\leadsto\begin{gmatrix}[p]
 1 & 1 & 0 & 1 & 0 & 0 \\
 0 & 1 & -1 & 1 & 0 & -1\\
@@ -1502,87 +1494,3 @@ Propriedades do determinante: Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in
 \begin{teorema}
 Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det A \ne 0_\cp{K}$.
 \end{teorema}
-
-
-\begin{elimination}[1]{5}{1.75em}{1.1}
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        4 & -7 & 4 & 0 & 1 & 0 \\
-        3 & -4 & 2 & 0 & 0 & 1
-    }
-    {
-        \\
-        \\
-        R_{3} - \frac{3}{4} R_{1}
-    }
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        0 &  1 & -1 & -1 & 1 & 0 \\
-        0 &  2 & -\frac{7}{4} & -\frac{3}{4} & 0 & 1
-    }
-    {
-        \\
-        \\
-        R_{3} - 2 R_{2} \\
-    }
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        0 &  1 & -1 & -1 & 1 & 0 \\
-        0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
-    }
-    {
-        \\
-        \\
-        R_{3} - 2 R_{2} \\
-    }
-\end{elimination}
-
-\begin{elimination}{6}{1.5em}{1.1}
-    A = \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        4 & -7 & 4 & 0 & 1 & 0 \\
-        3 & -4 & 2 & 0 & 0 & 1
-    }
-    {
-        \\
-        R_{2} - R_{1} \\
-        R_{3} - \frac{3}{4} R_{1}
-    }
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        0 &  1 & -1 & -1 & 1 & 0 \\
-        0 &  2 & -\frac{7}{4} & -\frac{3}{4} & 0 & 1
-    }
-    {
-        \\
-        \\
-        R_{3} - 2 R_{2} \\
-    }
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        0 &  1 & -1 & -1 & 1 & 0 \\
-        0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
-    }
-    {
-        \\
-        \\
-        R_{3} - 2 R_{2} \\
-    }
-    \eliminationstep
-    {
-        4 & -8 & 5 & 1 & 0 & 0 \\
-        0 &  1 & -1 & -1 & 1 & 0 \\
-        0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
-    }
-    {
-        \\
-        \\
-        \\
-    } = B
-\end{elimination}
