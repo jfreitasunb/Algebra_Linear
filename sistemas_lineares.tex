@@ -457,12 +457,12 @@ Na forma matricial as opera\c{c}\~oes elementares s\~ao descritas como:\index{Op
 \begin{observacao}
 Denotaremos a matriz
 \[
-\begin{pmatrix}
+\begin{bmatrix}
 0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
 0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
 \vdots & & \vdots\\
 0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}
-\end{pmatrix},
+\end{bmatrix},
 \]
 onde $0_{\cp{K}}$ \'e o elemento neutro da soma no corpo $\cp{K}$, simplesmente por $0$.
 \end{observacao}
@@ -475,18 +475,18 @@ A cada opera\c{c}\~ao elementar sobre linhas $e$, corresponde uma opera\c{c}\~ao
 \begin{prova}
 Vamos verificar que cada uma das opera\c{c}\~oes elementares possui uma opera\c{c}\~ao inversa. Seja $A$ uma matriz $m \times n$ sobre o corpo $\cp{K}$
 \[
-A = \begin{pmatrix}
+A = \begin{bmatrix}
 a_{11} & a_{12} & \cdots & a_{1n}\\
 a_{21} & a_{22} & \cdots & a_{2n}\\
 \vdots & & & \vdots\\
 a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{pmatrix}.
+\end{bmatrix}.
 \]
 \begin{enumerate}
 	\item [e1)] Suponha que $e$ seja a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $A$. Temos
 	\[
 	e(A) = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	a_{11} & a_{12} & \cdots & a_{1n}\\
 	a_{21} & a_{22} & \cdots & a_{2n}\\
 	\vdots\\
@@ -495,7 +495,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 	a_{i1} & a_{i2} & \cdots & a_{in}\\
 	\vdots\\
 	a_{m1} & a_{m2} & \cdots & a_{mn}
-	\end{pmatrix}.
+	\end{bmatrix}.
 	\]
 	Ent\~ao, seja $e'$ a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $e(A)$. Assim
 	\[
@@ -506,14 +506,14 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 	\item [e2)] Suponha que $e$ seja a opera\c{c}\~ao que multiplica a $i$-\'esima de $A$ por $\alpha \in \cp{K}$, onde $\alpha \ne 0_\cp{K}$. Temos
 	\[
 	e(A) = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	a_{11} & a_{12} & \cdots & a_{1n}\\
 	a_{21} & a_{22} & \cdots & a_{2n}\\
 	\vdots\\
 	\alpha a_{i1} & \alpha a_{i2} & \cdots & \alpha a_{in}\\
 	\vdots\\
 	a_{m1} & a_{m2} & \cdots & a_{mn}
-	\end{pmatrix}.
+	\end{bmatrix}.
 	\]
 	Seja $e'$ a opera\c{c}\~ao que multiplica a linha $i$ de $e(A)$ por $\alpha^{-1} \in \cp{K}$. Ent\~ao
 	\[
@@ -522,26 +522,26 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 	\item [e3)] Suponha que $e$ seja a opera\c{c}\~ao que substitui a linha $i$ de $A$ pela linha $i$ mais $\alpha$ vezes a linha $j$. Temos
 	\[
 	e(A) = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	a_{11} & a_{12} & \cdots & a_{1n}\\
 	a_{21} & a_{22} & \cdots & a_{2n}\\
 	\vdots\\
 	a_{i1} + \alpha a_{j1} & a_{i2} + \alpha a_{j2} & \cdots & a_{in} + \alpha a_{jn}\\
 	\vdots\\
 	a_{m1} & a_{m2} & \cdots & a_{mn}
-	\end{pmatrix}.
+	\end{bmatrix}.
 	\]
 	Seja $e'$ a opera\c{c}\~ao que substitui a linha $i$ de $e(A)$ pela linha $i$ mais $(-\alpha)$ vezes a linha $j$. Ent\~ao
 	\[
 	e'(e(A)) = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	a_{11} & a_{12} & \cdots & a_{1n}\\
 	a_{21} & a_{22} & \cdots & a_{2n}\\
 	\vdots\\
 	a_{i1} + \alpha a_{j1} + (-\alpha)a_{j1} & a_{i2} + \alpha a_{j2} + (-\alpha)a_{j2} & \cdots & a_{in} + \alpha a_{jn} + (-\alpha)a_{jn}\\
 	\vdots\\
 	a_{m1} & a_{m2} & \cdots & a_{mn}
-	\end{pmatrix}.
+	\end{bmatrix}.
 	\]
 	e assim
 	\[
@@ -562,19 +562,19 @@ $A \rightarrow B$ ou $A \sim B$.
 \begin{exemplo}
 A matriz
 \[
-B = \begin{pmatrix}
+B = \begin{bmatrix}
 1 & 0\\
 0 & 1\\
 0 & 0
-\end{pmatrix}
+\end{bmatrix}
 \]
 \'e linha equivalente \`a matriz
 \[
-A = \begin{pmatrix}
+A = \begin{bmatrix}
 1 & 0\\
 4 & -1\\
 -3 & 4
-\end{pmatrix}
+\end{bmatrix}
 \]
 pois
 \begin{elimination}{2}{1.5em}{1.1}
@@ -660,11 +660,11 @@ Assim podemos supor que $B$ \'e obtida de $A$ por meio de uma \'unica opera\c{c}
 \begin{exemplo}
 Considere o sistema homog\^eneo $AX = 0$, onde:
 \begin{enumerate}
-	\item $A = \begin{pmatrix}
+	\item $A = \begin{bmatrix}
 	2 & -1 & 3 & 2\\
 	1 & 4 & 0 & -1\\
 	2 & 6 & -1 & 5
-	\end{pmatrix}.$
+	\end{bmatrix}.$
 	Para encontrar a solu\c{c}\~ao deste sistema s\'o precisamos encontrar uma matriz $B$ que seja linha equivalente \`a $A$ e que seja mais f\'acil de determinar a solu\c{c}\~ao do sistema resultante. Assim, vamos executar as opera\c{c}\~oes elementares em $A$ de modo a simplific\'a-la:
 	\begin{align*}
 	A = \begin{gmatrix}[b]
@@ -789,15 +789,15 @@ Uma matriz R $m \times n$ \'e chamada de \textbf{linha-reduzida} se:
 	O s{\'\i}mbolo $\delta_{ij}$ \'e chamada \textbf{s{\'\i}mbolo de Kronecher} \'e ser\'a utilizado com certa frequ\^encia.
 	\item As matrizes
 	\[
-	A = \begin{pmatrix}
+	A = \begin{bmatrix}
 	1 & 0 & 0 & 0\\
 	0 & 1 & -1 & 0\\
 	0 & 0 & 1 & 0
-	\end{pmatrix}; \quad B = \begin{pmatrix}
+	\end{bmatrix}; \quad B = \begin{bmatrix}
 	0 & 2 & 1\\
 	1 & 0 & -3\\
 	0 & 0 & 0
-	\end{pmatrix}
+	\end{bmatrix}
 	\]
 	n\~ao s\~ao linha-reduzidas.
 \end{enumerate}
@@ -826,21 +826,21 @@ Uma matriz $R$ $m \times n$ \'e chamada uma \textbf{matriz linha-reduzida \`a fo
 \begin{exemplo}
 \begin{enumerate}
 	\item  A matriz identidade e a matriz nula s\~ao linha-reduzidas \`a forma escada;
-	\item $\begin{pmatrix}
+	\item $\begin{bmatrix}
 	1 & 0 & 0 & 0\\
 	0 & 1 & -1 & 0\\
 	0 & 0 & 1 & 0
-	\end{pmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
-	\item $\begin{pmatrix}
+	\end{bmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
+	\item $\begin{bmatrix}
 	0 & 2 & 1\\
 	1 & 0 & -3\\
 	0 & 0 & 0
-	\end{pmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
-	\item $\begin{pmatrix}
+	\end{bmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
+	\item $\begin{bmatrix}
 	0 & 1 & -3 & 0 & 2\\
 	0 & 0 & 0 & 1 & 2\\
 	0 & 0 & 0 & 0 & 0
-	\end{pmatrix}$ \'E linha-reduzida \`a forma escada.
+	\end{bmatrix}$ \'E linha-reduzida \`a forma escada.
 \end{enumerate}
 \end{exemplo}
 
@@ -975,9 +975,9 @@ O n\'umero $n - p$ \'e chamado de \textbf{grau de liberdade} e as $n - p$ vari\'
 \begin{prova}
 \textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e que o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz, quando reduzida \`a forma em escada deve conter uma linha da forma
 \[
-\begin{pmatrix}
+\begin{bmatrix}
 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & \mid & z_r
-\end{pmatrix}
+\end{bmatrix}
 \]
 onde $z_r \ne 0_\cp{K}$.
 Logo o sistema associado a essa matriz tem uma equa\c{c}\~ao do tipo
@@ -1286,12 +1286,12 @@ Seja $\cp{K}$ um corpo. Denotamos por $\cp{M}_{p \times q}(\cp{K})$ o conjunto d
 Quando $p = q = n$, dizemos que uma matriz $A \in \cp{M}_{n \times n}(\cp{K})$, que denotaremos simplesmente por $\cp{M}_{n}(\cp{K})$, \'e \textbf{quadrada}.\index{Matriz!Quadrada}
 Tal conjunto tem elemento neutro para a multiplica\c{c}\~ao de matrizes que \'e a \textbf{matriz identidade} $I_n$ dada por
 \[
-\begin{pmatrix}
+\begin{bmatrix}
 1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
 0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
 \vdots\\
 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K}
-\end{pmatrix}.
+\end{bmatrix}.
 \]
 
 \begin{definicao}
@@ -1398,11 +1398,11 @@ Se $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel e se uma sequ\^encia de opera\c{
 \begin{exemplo}
 Seja
 \[
-A = \begin{pmatrix}
+A = \begin{bmatrix}
 1 & 1 & 0\\
 0 & 2 & 1\\
 1 & 0 & 1
-\end{pmatrix}.
+\end{bmatrix}.
 \]
 Determine a inversa de $A$, se existir.
 \begin{solucao}
@@ -1446,19 +1446,19 @@ A &= \begin{gmatrix}[p]
 \rowops
 \add[-1]{2}{0}
 \add{2}{1}
-\end{gmatrix}\\&\leadsto\begin{pmatrix}
+\end{gmatrix}\\&\leadsto\begin{bmatrix}
 1 & 0 & 0 & 2/3 & -1/3 & 1/3 \\
 0 & 1 & 0 & 1/3 & 1/3 & -1/3\\
 0 & 0 & 1 & -2/3 & 1/3 & 2/3
-\end{pmatrix}.
+\end{bmatrix}.
 \end{align*}
 Logo $A$ \'e invert{\'\i}vel e
 \[
-A^{-1} = \begin{pmatrix}
+A^{-1} = \begin{bmatrix}
 2/3 & -1/3 & 1/3 \\
 1/3 & 1/3 & -1/3\\
 -2/3 & 1/3 & 2/3
-\end{pmatrix}.
+\end{bmatrix}.
 \]
 \end{solucao}
 \end{exemplo}
