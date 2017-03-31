@@ -1,5 +1,5 @@
-% !TEX encoding = ISO-8859-1
-
+%!TEX program = xelatex 
+%!TEX encoding = ISO-8859-1
 \documentclass[12pt]{exam}
 
 \usepackage{caption}
@@ -73,7 +73,7 @@
 
 \begin{figure}[h]
         \begin{minipage}[c]{1.7cm}
-        \includegraphics[width=1.7cm]{../../../imagens/unb.pdf}
+        \includegraphics[width=1.7cm]{unb.pdf}
         \end{minipage}%
         \hspace{0pt}
         \begin{minipage}[c]{4in}
@@ -85,23 +85,12 @@
 \vesp{-0.35} \hrule
 
 \begin{center}
-{\Large\bf \'Algebra Linear - Turma A -- 2$^{o}$/2013} \\ \vspace{9pt} {\large\bf
+{\Large\bf \'Algebra Linear - Turma A -- 1$^{o}$/2017} \\ \vspace{9pt} {\large\bf
   $4^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Espa\c{c}os Vetoriais}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
 \end{center}
 \hrule
 
 \vesp{.6}
-
-\begin{exercicio}
-  Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$.
-  \begin{enumerate}[label={\alph*})]
-    \item Mostre que $0_\cp{K} v = 0_V$ para todo $v \in V$ e que $\alpha 0_V = 0_V$ para todo $\alpha \in \cp{K}$.
-    \item Mostre que se $\alpha v = 0_V$, com $\alpha \in \cp{K}$ e $v \in V$, ent\~ao $\alpha = 0_\cp{K}$ ou $v = 0_V$.
-  \end{enumerate}
-\end{exercicio}
-\begin{exercicio}
-Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que todo subconjunto de $V$ que cont\'em $\mathcal{B}$ \'e um conjunto gerador de $V$.
-\end{exercicio}
 
 \begin{exercicio}
   Mostre que os seguintes conjuntos s\~ao espa\c{c}os vetoriais:
@@ -120,13 +109,20 @@ Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que
       \item $(p + q)(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
       \item $(\alpha p)(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
     \end{itemize}
-    Assim $\mathcal{P}(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+
     \item Para cada $m \ge 0$ defina
     \[
       \mathcal{P}_m(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, 0 \le n \le m \}.
     \]
-    Assim $\mathcal{P}_m(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+     Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$.
+
     \item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+
+    \item Sejam $X$ um conjunto qualquer n\~ao vazio e $\mathcal{F}(X, \cp{K})$ o conjunto de todas as fun\c{c}\~oes $f : X \to \cp{K}$. Defina as seguintes operações em $\mathcal{F}(X, \cp{K})$:
+    \begin{itemize}
+      \item  para $f$, $g \in \mathcal{F}(X, \cp{K})$, defina a fun\c{c}\~ao $f + g : X \to \cp{K}$ dada por $(f+g)(x) = f(x) + g(x)$ para cada $x \in X$.
+      \item para $f \in \mathcal{F}(X, \cp{K})$ e $\alpha \in \cp{K}$, defina a fun\c{c}\~ao $\alpha f: X \to \cp{K}$ dada por $(\alpha f)(x) = \alpha f(x)$ para cada $x \in X$.
+    \end{itemize}
   \end{enumerate}
 \end{exercicio}
 
@@ -169,6 +165,17 @@ Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que
     \mathcal{B} = \{(1_\cp{K}, 0_\cp{K}, \dots, 0_\cp{K}); (0_\cp{K}, 1_\cp{K}, 0_\cp{K}, \dots, 0_\cp{K}); (0_\cp{K}, 0_\cp{K}, 1_\cp{K}, \dots, 0_\cp{K}); \dots; (0_\cp{K}, 0_\cp{K}, 0_\cp{K}, \dots, 1_\cp{K})\}
   \]
   \'e uma base de $\cp{K}^n$ como um $\cp{K}$-espa\c{c}o vetorial. Tal base \'e chamada de \textbf{base can\^onica} de $\cp{K}^n$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$.
+  \begin{enumerate}[label={\alph*})]
+    \item Mostre que $0_\cp{K} v = 0_V$ para todo $v \in V$ e que $\alpha 0_V = 0_V$ para todo $\alpha \in \cp{K}$.
+    \item Mostre que se $\alpha v = 0_V$, com $\alpha \in \cp{K}$ e $v \in V$, ent\~ao $\alpha = 0_\cp{K}$ ou $v = 0_V$.
+  \end{enumerate}
+\end{exercicio}
+\begin{exercicio}
+Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que todo subconjunto de $V$ que cont\'em $\mathcal{B}$ \'e um conjunto gerador de $V$.
 \end{exercicio}
 
 \begin{exercicio}
