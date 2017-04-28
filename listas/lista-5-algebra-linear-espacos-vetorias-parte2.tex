@@ -131,6 +131,34 @@ $V = \real^3$ e $S = \{(x_1, x_2, x_1x_2) \in \real^3 \mid x_1, x_2 \in \real\}$
 \end{exercicio}
 
 \begin{exercicio}
+$V = \real^2$ e $S = \{(x, y) \in \real^2 \mid x + 3y = 0\}$; $\cp{K} = \real$.
+\begin{solucao}
+  \'E subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \real^2$ e $S = \{(x, y) \in \real^2 \mid y = x + 1\}$; $\cp{K} = \real$.
+\begin{solucao}
+  N\~ao \'e subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \real^2$ e $S = \{(x, y) \in \real^2 \mid x \ge 0\}$; $\cp{K} = \real$.
+\begin{solucao}
+  N\~ao \'e subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \real^3$ e $S = \{(x, y, z) \in \real^3 \mid y = x + 2 \mbox{ e } z = 0\}$; $\cp{K} = \real$.
+\begin{solucao}
+  N\~ao \'e subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
 $V = \real^4$ e $S = \{(x_1, x_2, x_3, x_4) \in \real^4 \mid x_1 + x_2 = 0, x_3 - x_4 = 0 \in \real\}$; $\cp{K} = \real$.
 \begin{solucao}
   \'E subespa\c{c}o.
@@ -145,7 +173,35 @@ $V = \real^4$ e $S = \{(x_1, x_2, x_3, x_4) \in \real^4 \mid 2x_1 + x_2 - x_4 = 
 \end{exercicio}
 
 \begin{exercicio}
-$V = \cp{M}_2(\complex)$ e $S = \left\{\begin{pmatrix} a & b\\ c & d\end{pmatrix} \in V \mid b = c\right\}$; $\cp{K} = \complex$.
+$V = \cp{M}_2(\complex)$ e $S = \left\{\begin{bmatrix} a & b\\ c & d\end{bmatrix} \in V \mid b = c\right\}$; $\cp{K} = \complex$.
+\begin{solucao}
+  \'E subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \cp{M}_2(\real)$ e $S = \left\{\begin{bmatrix} a & b\\ c & d\end{bmatrix} \in V \mid c = a + b \mbox{ e } d = 0\right\}$; $\cp{K} = \real$.
+\begin{solucao}
+  \'E subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \cp{M}_2(\real)$ e $S = \left\{\begin{bmatrix} a & b\\ 0 & c\end{bmatrix} \in V \mid a, b, c \in \real\right\}$; $\cp{K} = \real$.
+\begin{solucao}
+  \'E subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \cp{M}_2(\real)$ e $S = \left\{\begin{bmatrix} a & b\\ b & c\end{bmatrix} \in V \mid a, b, c \in \real\right\}$; $\cp{K} = \real$.
+\begin{solucao}
+  \'E subespa\c{c}o.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+$V = \cp{M}_2(\real)$ e $S = \left\{\begin{bmatrix} a & a+b\\ a-b & b\end{bmatrix} \in V \mid a, b \in \real \right\}$; $\cp{K} = \real$.
 \begin{solucao}
   \'E subespa\c{c}o.
 \end{solucao}
@@ -260,14 +316,15 @@ Encontre uma base e a dimens\~ao de $W$.
     \item Exiba uma base para $[v_1, v_2, v_3, v_4]$. Qual \'e a dimens\~ao?
     \item $[v_1, v_2, v_3, v_4] = \real^4$? Por qu\^e?
   \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item N\~ao.
+      \item $\dim_\real [v_1, v_2, v_3, v_4] = 3$.
+      \item N\~ao.
+    \end{enumerate}
+  \end{solucao}
 \end{exercicio}
-\begin{solucao}
-  \begin{enumerate}[label={\alph*})]
-    \item N\~ao.
-    \item $\dim_\real [v_1, v_2, v_3, v_4] = 3$.
-    \item N\~ao.
-  \end{enumerate}
-\end{solucao}
+
 
 \begin{exercicio}
   Considere o sistema linear
@@ -298,6 +355,32 @@ Encontre uma base e a dimens\~ao de $W$.
   Determine uma base de $\mathcal{B}$ de $W$ que esteja contida em $\mathcal{A}$.
 \end{exercicio}
 
+\begin{exercicio}
+  Seja $S$ o subespa\c{c}o de $M_2(\real)$:
+  \[
+    S = \left\{\begin{bmatrix}
+      a & b\\c & d
+    \end{bmatrix} \mid c = a+b \mbox{ e } d = a\right\}.
+  \]
+  \begin{enumerate}[label={\alph*})]
+    \item Qual a dimens\~ao de $S$?
+    \item O conjunto
+    \[
+      \left\{\begin{bmatrix}
+        1 & -1\\0 & 1
+      \end{bmatrix}, \begin{bmatrix}
+        2 & 1\\3 & 4
+      \end{bmatrix}\right\}
+    \]
+    \'e uma base de $S$? Justifique.
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\dim_\real S = 2$
+      \item N\~ao.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
 
 \newpage
 \Closesolutionfile{ans}
