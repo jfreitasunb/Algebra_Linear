@@ -251,7 +251,7 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear tal que em rela\c{c}\~ao \`a base can\^onica $\mathcal{B} = {(1,0,0); (0,1,0); (0,0,1)}$:
+  Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear tal que em rela\c{c}\~ao \`a base can\^onica $\mathcal{B} = \{(1,0,0); (0,1,0); (0,0,1)\}$:
   \[
     [T]_\mathcal{B} =\begin{bmatrix}
       1 & 2 & 1\\
@@ -271,7 +271,20 @@
     \end{pmatrix} = \begin{pmatrix}
       0 & x\\
       z - w & 0
-    \end{pmatrix}.
+    \end{pmatrix},
+  \]
+  onde $\cp{M}_2(\complex)$ é um $\complex$-espa\c{c}o vetorial
+  e
+  \[
+      \mathcal{B}_1 = \left\{u_1 = \begin{bmatrix}
+        1 & 0\\0 & 0
+      \end{bmatrix}, u_2 = \begin{bmatrix}
+        0 & 1\\0 & 0
+      \end{bmatrix}, u_3 = \begin{bmatrix}
+        0 & 0\\1 & 0
+      \end{bmatrix}, u_4 = \begin{bmatrix}
+        0 & 0\\0 & 1
+      \end{bmatrix}\right\}
   \]
     \begin{enumerate}[label=({\alph*})]
       \item Determine a matriz de $T$ com rela\c{c}\~ao \`a base can\^onica $\mathcal{B}_1$.
@@ -292,7 +305,7 @@
         \end{pmatrix}\right\}
       \]
       de $\cp{M}_2(\complex)$.
-      \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}_2} = P^1[T]_{\mathcal{B}_1}P$.
+      \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P$.
     \end{enumerate}
 \end{exercicio}
 
