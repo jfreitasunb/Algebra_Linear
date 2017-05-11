@@ -599,10 +599,10 @@ e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ 
 
 Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
 \begin{align*}
-	T(u_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q = \sum_{i=1}^qb_{i1}w_i\\
-	T(u_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q = \sum_{i=1}^qb_{i2}w_i\\
+	T(u_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q\\
+	T(u_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q\\
 	&\vdots\\
-	T(u_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q = \sum_{i=1}^qb_{ip}w_i
+	T(u_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q
 \end{align*}
 para certos $b_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
 
@@ -613,31 +613,37 @@ Agora, seja $x \in V$. Ent\~ao
 onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Da{\'\i}
 \begin{align*}
 	T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
-	&= \alpha_1\sum_{i=1}^qb_{i1}w_i + \alpha_2\sum_{i=1}^qb_{i2}w_i + \cdots + \alpha_p\sum_{i=1}^qb_{ip}w_i\\
-	&= \sum_{j=1}^p\alpha_j\left(\sum_{i=1}^qb_{ij}w_i\right) = \sum_{j=1}^p\sum_{i=1}^q(\alpha_jb_{ij}w_i)\\
-	&= \sum_{i=1}^q\left(\sum_{j=1}^p\alpha_jb_{ij}\right)w_i.
+	&= \alpha_1(b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q) + \alpha_2(b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q) + \cdots \\
+	&+ \alpha_p(b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q)\\
+	&= (\sum_{j=1}^p\alpha_jb_{1j})w_1 + (\sum_{j=1}^p\alpha_jb_{2j})w_2 + \cdots + (\sum_{j=1}^p\alpha_jb_{qj})w_q\\
+	&= \sum_{i=1}^q\left(\sum_{j=1}^pb_{ij}\alpha_j\right)w_i.
 \end{align*}
-Note que os escalares $\sum_{j=1}^p\alpha_jb_{1j}$, $\sum_{j=1}^p\alpha_jb_{2j}$, \dots, $\sum_{j=1}^p\alpha_jb_{qj}$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
+Note que os escalares $\sum_{j=1}^pb_{1j}\alpha_j$, $\sum_{j=1}^pb_{2j}\alpha_j$, \dots, $\sum_{j=1}^pb_{qi}\alpha_j$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
 \[
-	[T(x)]_{\mathcal{B}_2} = \left(\sum_{j=1}^p\alpha_jb_{1j}, \sum_{j=1}^p\alpha_jb_{2j}, \dots, \sum_{j=1}^p\alpha_jb_{qj}\right).
+	[T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
+		\sum_{j=1}^p b_{1j}\alpha_j\\
+		\sum_{j=1}^p b_{2j}\alpha_j\\
+		\vdots\\
+		\sum_{j=1}^p b_{qj}\alpha_j
+	\end{bmatrix}.
 \]
 Por outro lado,
 \[
 	\underbrace{\begin{bmatrix}
-		b_{11} & b_{21} & \dots & b_{q1}\\
-		b_{12} & b_{22} & \dots & b_{q2}\\
+		b_{11} & b_{12} & \dots & b_{1p}\\
+		b_{21} & b_{22} & \dots & b_{2p}\\
 		\vdots & & \ddots & \vdots\\
-		b_{1p} & b_{2p} & \dots & b_{qp}
+		b_{q1} & b_{q2} & \dots & b_{qp}
 	\end{bmatrix}}_{A}\begin{bmatrix}
 		\alpha_1\\
 		\alpha_2\\
 		\vdots\\
 		\alpha_n
 	\end{bmatrix} = \begin{bmatrix}
-		b_{11}\alpha_1 + b_{21}\alpha_2 + \cdots + b_{q1}\alpha_p\\
-		b_{12}\alpha_1 + b_{22}\alpha_2 + \cdots + b_{q2}\alpha_p\\
+		b_{11}\alpha_1 + b_{12}\alpha_2 + \cdots + b_{1p}\alpha_p\\
+		b_{21}\alpha_1 + b_{22}\alpha_2 + \cdots + b_{2p}\alpha_p\\
 		\vdots \\
-		b_{1p}\alpha_1 + b_{2p}\alpha_2 + \cdots + b_{qp}\alpha_p
+		b_{q1}\alpha_1 + b_{q2}\alpha_2 + \cdots + b_{qp}\alpha_p
 	\end{bmatrix}
 \]
 e da{\'\i} podemos escrever
