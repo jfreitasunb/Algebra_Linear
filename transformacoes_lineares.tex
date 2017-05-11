@@ -597,22 +597,22 @@ e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ 
 	\end{enumerate}
 \end{exemplos}
 
-Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao lineares. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
+Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
 \begin{align*}
-	T(v_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q = \sum_{i=1}^qb_{i1}w_i\\
-	T(v_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q = \sum_{i=1}^qb_{i2}w_i\\
+	T(u_1) &= b_{11}w_1 + b_{21}w_2 + \cdots + b_{q1}w_q = \sum_{i=1}^qb_{i1}w_i\\
+	T(u_2) &= b_{12}w_1 + b_{22}w_2 + \cdots + b_{q2}w_q = \sum_{i=1}^qb_{i2}w_i\\
 	&\vdots\\
-	T(v_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q = \sum_{i=1}^qb_{ip}w_i
+	T(u_p) &= b_{1p}w_1 + b_{2p}w_2 + \cdots + b_{qp}w_q = \sum_{i=1}^qb_{ip}w_i
 \end{align*}
 para certos $b_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
 
 Agora, seja $x \in V$. Ent\~ao
 \[
-	x = \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_pv_p
+	x = \alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p
 \]
 onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Da{\'\i}
 \begin{align*}
-	T(x) &= T(\alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_pv_p) = \alpha_1T(v_1) + \alpha_2T(v_2) + \cdots + \alpha_pT(v_p)\\
+	T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
 	&= \alpha_1\sum_{i=1}^qb_{i1}w_i + \alpha_2\sum_{i=1}^qb_{i2}w_i + \cdots + \alpha_p\sum_{i=1}^qb_{ip}w_i\\
 	&= \sum_{j=1}^p\alpha_j\left(\sum_{i=1}^qb_{ij}w_i\right) = \sum_{j=1}^p\sum_{i=1}^q(\alpha_jb_{ij}w_i)\\
 	&= \sum_{i=1}^q\left(\sum_{j=1}^p\alpha_jb_{ij}\right)w_i.
@@ -656,11 +656,11 @@ Agora seja $A \in \cp{M}_{q\times p}(\cp{K})$ onde
 	\end{bmatrix}.
 \]
 
-Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ bases ordenadas de $V$ e $W$, respectivamente. Defina $T : V \to W$ por
+Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V$ e $W$, respectivamente. Defina $T : V \to W$ por
 \begin{align*}
-	T(v_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
+	T(v_1) &= a_{11}l_1 + a_{21}l_2 + \cdots + a_{q1}l_q\\
 	&\vdots\\
-	T(v_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q.
+	T(v_p) &= a_{1p}l_1 + a_{2p}l_2 + \cdots + a_{qp}l_q.
 \end{align*}
 Ent\~ao $T$ \'e uma transforma\c{c}\~ao linear  tal que
 \[
