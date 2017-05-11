@@ -254,14 +254,10 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\begin{bmatrix}
 					a + b & 0\\
 					0 & c - b
-				\end{bmatrix} &= a \begin{bmatrix}
+				\end{bmatrix} &= (a + b) \begin{bmatrix}
 					1 & 0\\ 0 & 0
-				\end{bmatrix} + b \begin{bmatrix}
-					1 & 0\\ 0 & 0
-				\end{bmatrix} + c \begin{bmatrix}
+				\end{bmatrix} + (c - b) \begin{bmatrix}
 					0 & 0\\ 0 & 1
-				\end{bmatrix} + b \begin{bmatrix}
-					0 & 0\\ 0 & -1
 				\end{bmatrix}
 			\end{align*}
 			e \'e f\'acil ver que
@@ -269,20 +265,10 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\mathcal{B}' = \left\{ \begin{bmatrix}
 					1 & 0\\ 0 & 0
 				\end{bmatrix}; \begin{bmatrix}
-					1 & 0\\ 0 & -1
-				\end{bmatrix}; \begin{bmatrix}
 					0 & 0\\ 0 & 1
 				\end{bmatrix}\right\}
 			\]
-			\'e um conjunto gerador de $\im T$. No entanto tal conjunto n\~ao \'e L.I.. Mas o conjunto
-			\[
-				\left\{ \begin{bmatrix}
-					1 & 0\\ 0 & 0
-				\end{bmatrix}; \begin{bmatrix}
-					0 & 0\\ 0 & 1
-				\end{bmatrix}\right\}
-			\]
-			\'e uma base de $\im T$, ou seja, $\dim_\real\im T = 2$. Observe que
+			\'e um conjunto gerador de $\im T$ e \'e L.I., ou seja, \'e uma base de $\im T$, com isso $\dim_\real\im T = 2$. Observe que
 			\[
 				\dim_\real\ker T + \dim_\real\im T = 3 = \dim_\real\real^3.
 			\]
