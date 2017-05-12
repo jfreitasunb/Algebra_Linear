@@ -655,7 +655,7 @@ onde $A \in \cp{M}_{q\times p}(\cp{K})$.
 Agora seja $B \in \cp{M}_{q\times p}(\cp{K})$ onde
 \[
 	B = \begin{bmatrix}
-		b_{11} & b_{21} & \dots & b_{1p}\\
+		b_{11} & b_{12} & \dots & b_{1p}\\
 		b_{21} & b_{22} & \dots & b_{2p}\\
 		\vdots & & \ddots & \vdots\\
 		b_{q1} & b_{q2} & \dots & b_{qp}
@@ -770,36 +770,36 @@ Assim provamos o seguinte teorema:
 \end{exemplos}
 
 \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-	Sejam $F : V \to W$ e $G : W \to U$ duas transforma\c{c}\~oes lineares onde $V$, $W$ e $U$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p$, $q$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_V$, $\mathcal{B}_W$ e $\mathcal{B}_U$ para $V$, $W$ e $U$, respectivamente. Ent\~ao $(G \circ F) : V \to U$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
+	Sejam $F : U \to V$ e $G : V \to W$ duas transforma\c{c}\~oes lineares onde $U$, $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Ent\~ao $(G \circ F) : U \to W$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
 	\[
-		[(G \circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_U}}[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}.
+		[(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
 	\]
 \end{teorema}
 \begin{prova}
 	\'E imediato verificar que $G\circ F$ \'e uma transforma\c{c}\~ao linear.
 
-	Sejam $\mathcal{B}_V = \{v_1,\dots,v_p\}$, $\mathcal{B}_W = \{w_1,\dots,w_q\}$ e $\mathcal{B}_U = \{u_1,\dots,u_r\}$ bases ordenadas para $V$, $W$ e $U$, respectivamente. Considere as matrizes
+	Sejam $\mathcal{B}_U = \{u_1,\dots,u_n\}$, $\mathcal{B}_V = \{v_1,\dots,v_m\}$ e $\mathcal{B}_W = \{w_1,\dots,w_r\}$ bases ordenadas para $U$, $V$ e $W$, respectivamente. Considere as matrizes
 	\begin{enumerate}
-		\item $[F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (a_{ij})_{q\times p}$ onde $F(v_j) = \sum_{i=1}^qa_{ij}w_i$ para $j=1$, \dots, $p$;
+		\item $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}} = (a_{ij})_{m\times n}$ onde $F(u_j) = \sum_{i=1}^m a_{ij}v_i$ para $j=1$, \dots, $n$;
 
-		\item $[G]_{{\mathcal{B}_W},{\mathcal{B}_U}} = (b_{ij})_{r\times p}$ onde $G(w_j) = \sum_{k=1}^rb_{ij}u_i$ para $k=1$, \dots, $r$;
+		\item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times n}$ onde $G(v_i) = \sum_{k=1}^r b_{ij}w_i$ para $i=1$, \dots, $m$;
 
-		\item $[G \circ F]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (c_{ij})_{r\times p}$ onde $(G\circ F)(v_j) = \sum_{k=1}^rc_{ij}u_i$ para $k=1$, \dots, $r$.
+		\item $[G \circ F]_{{\mathcal{B}_U},{\mathcal{B}_W}} = (c_{kj})_{r\times n}$ onde $(G\circ F)(u_j) = \sum_{k=1}^r c_{kj} w_k$ para $j=1$, \dots, $n$.
 	\end{enumerate}
 
-	Vamos calcular $(G\circ F)(v_j)$
+	Vamos calcular $(G\circ F)(v_j)$ usando (1) e (2):
 	\begin{align*}
-		(G\circ F)(v_j) &= G(F(v_j)) = G(\sum_{i=1}^qa_{ij}w_i)\\
-		&= \sum_{i=1}^qa_{ij}G(w_i) = \sum_{i=1}^qa_{ij}\sum_{k=1}^rb_{ki}w_i\\
-		&= \sum_{k=1}^r\sum_{i=1}^qb_{ki}a_{ij}u_i.
+		(G\circ F)(u_j) &= G(F(u_j)) = G(\sum_{i=1}^m a_{ij}v_i)\\
+		&= \sum_{i=1}^m a_{ij}G(v_i) = \sum_{i=1}^m a_{ij}\sum_{k=1}^r b_{ki}w_k\\
+		&= \sum_{k=1}^r \sum_{i=1}^m b_{ki}a_{ij}w_k.
 	\end{align*}
-	Assim da unicidade dos escalares obtemos
+	Comparando essa \'ultima equa\c{c}\~ao com (3) e usando a unicidade dos escalares obtemos
 	\[
-		c_{kj} = \sum_{i=1}^qb_{ki}a_{ij}
+		c_{kj} = \sum_{i=1}^m b_{ki}a_{ij}
 	\]
-	para $j=1$, \dots, $p$ e $k = 1$, \dots, $r$. Isto \'e, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ \'e o elemento na posi\c{c}\~ao $(k,j)$ da matriz resultante da multiplica\c{c}\~ao de $[G]_{{\mathcal{B}_W},{\mathcal{B}_U}}$ por $[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}$. Portanto
+	para $j=1$, \dots, $n$ e $k = 1$, \dots, $r$. Isto \'e, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}}$ \'e o elemento na posi\c{c}\~ao $(k,j)$ da matriz resultante da multiplica\c{c}\~ao de $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ por $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}$. Portanto
 	\[
-		[(G\circ F)]_{{\mathcal{B}_V},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_U}}[F]_{{\mathcal{B}_V},{\mathcal{B}_W}}
+		[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}
 	\]
 	como quer{\'\i}amos.
 \end{prova}
@@ -822,7 +822,7 @@ Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
 \]
 Da{\'\i}
 \begin{align*}
-	x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + (\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
+	x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
 	&= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n\\
 	&= \sum_{j=1}^n\beta_j\alpha_{1j}v_1 + \cdots + \sum_{j=1}^n\beta_j\alpha_{nj}v_n\\
 	&= \sum_{i=1}^n\left(\sum_{j=1}^n\beta_j\alpha_{ij}\right)v_i.
@@ -863,7 +863,7 @@ Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $V$, ent\~ao $
 		P_1 & P_2 & \cdots & P_n
 	\end{bmatrix}$ s\~ao dadas por
 	\[
-		P_j = [w_j]_{\mathcal{B}_2}
+		P_j = [w_j]_{\mathcal{B}_1}
 	\]
 	para $j = 1$, \dots, $n$.
 \end{teorema}
@@ -873,7 +873,7 @@ Al\'em disso, tamb\'em temos o seguinte teorema:
 \begin{teorema}\label{teorema_matriz_mudanca_base}
 	Seja $P \in \cp{M}_n(\cp{K})$ um matriz invert{\'\i}vel. Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Ent\~ao existe uma \'unica base ordenada $\mathcal{B}_2$ de $V$ tal que
 	\begin{enumerate}
-		\item $[x]_{\mathcal{B}_1} = P[\mathcal{B}_1]_{\mathcal{B}_2}$
+		\item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
 		\item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
 	\end{enumerate}
 	para todo $x \in V$.
