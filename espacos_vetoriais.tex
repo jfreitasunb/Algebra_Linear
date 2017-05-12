@@ -626,32 +626,32 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			Aplicando as opera\c{c}\~oes elementares em $A$ para reduz{\'\i}-la a forma em escada
 			\begin{align*}
 				A &= \begin{gmatrix}[b]
-  					1 & 2 & -1 & 3 & 2\\
-					2 & 4 & 1 & 6 & 3\\
-					1 & 2 & 2 & 3 & 2
+  					1 & 2 & 1\\
+					2 & 4 & 2\\
+					-1 & 1 & 2\\
+					3 & 6 & 3\\
+					2 & 3 & 2
 					\rowops
 			   		\add[-2]{0}{1}
-			   		\add[-1]{0}{2}
-     			\end{gmatrix}\leadsto\begin{gmatrix}[b]
-  					1 & 2 & -1 & 3 & 2\\
-					0 & 0 & 3 & 0 & -1\\
-					0 & 0 & 3 & 0 & 0
-					\rowops
-			   		\add[-1]{1}{2}
-     			\end{gmatrix}\leadsto\\&\begin{bmatrix}
-  					1 & 2 & -1 & 3 & 2\\
-					0 & 0 & 3 & 0 & -1\\
-					0 & 0 & 0 & 0 & 1
+			   		\add[1]{0}{2}
+			   		\add[-3]{0}{3}
+			   		\add[-2]{0}{4}
+     			\end{gmatrix}\leadsto\begin{bmatrix}
+  					1 & 2 & 1\\
+					0 & 0 & 0\\
+					0 & 3 & 3\\
+					0 & 0 & 0\\
+					0 & -1 & 0
      			\end{bmatrix} = M.
      		\end{align*}
-     		Como a matrix $M$ n\~ao possui nenhuma linha nula, ent\~ao $\{p_1(x), p_2(x), p_3(x)\}$ \'e L.I. em $\mathcal{P}_4(\real)$. Observer que $M$ n\~ao tem 1 na segunda e quarta colunas. Assim vamos adicionar a $M$ uma linha com 1 na segunda coluna e outra com 1 na quarta coluna, obtendo
+     		Como a matrix $M$ possui posto 3, ent\~ao $\{p_1(x), p_2(x), p_3(x)\}$ \'e L.I. em $\mathcal{P}_4(\real)$. Observe que $M$ n\~ao tem 1 na segunda e quarta linhas. Assim vamos adicionar a $M$ uma coluna com 1 na segunda linha e outra com 1 na quarta linha, obtendo
      		\[
      			M' = \begin{bmatrix}
-  					1 & 2 & -1 & 3 & 2\\
-					0 & 0 & 3 & 0 & -1\\
-					0 & 1 & 0 & 0 & 0\\
+  					1 & 2 & 1 & 0 & 0\\
 					0 & 0 & 0 & 1 & 0\\
-					0 & 0 & 0 & 0 & 1
+					0 & 3 & 3 & 0 & 0\\
+					0 & 0 & 0 & 0 & 1\\
+					0 & -1 & 0 & 0 & 0
      			\end{bmatrix}.
      		\]
      		Assim $\mathcal{B}' = \{p_1(x), p_2(x), p_3(x),x, x^3\}$ forma uma base de $\mathcal{P}_4(\real)$ contendo $p_1(x)$, $p_2(x)$ e $p_3(x)$.
@@ -674,41 +674,53 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\]
 		\'e L.D. ou L.I. em $V$.
 		\begin{solucao}
-			Considere a matriz $M$ formada pelas entradas das matrizes $A_1$, $A_2$ e $A_3$ escritas como linhas de $M$
+			Considere a matriz $M$ formada pelas entradas das matrizes $A_1$, $A_2$ e $A_3$ escritas como colunas de $M$
 			\[
 				M = \begin{bmatrix}
-					1 & 0 & -1 & 3 & 3 & 2\\
-					0 & -1 & 2 & 4 & 3 & 2\\
-					1 & -2 & 3 & 11 & 9 & 6
+					1 & 0 & 1\\
+					0 & -1 & -2\\
+					-1 & 2 & 3\\
+					3 & 4 & 11\\
+					3 & 3 & 9\\
+					2 & 2 & 6
 				\end{bmatrix}.
 			\]
 			Aplicando as opera\c{c}\~oes elementares em $M$:
 			\begin{align*}
 				M &= \begin{gmatrix}[b]
-  					1 & 0 & -1 & 3 & 3 & 2\\
-					0 & -1 & 2 & 4 & 3 & 2\\
-					1 & -2 & 3 & 11 & 9 & 6
+  					1 & 0 & 1\\
+					0 & -1 & -2\\
+					-1 & 2 & 3\\
+					3 & 4 & 11\\
+					3 & 3 & 9\\
+					2 & 2 & 6
 					\rowops
-			   		\mult1{\times -1}
+			   		\add[1]{0}{2}
+			   		\add[-3]{0}{3}
+			   		\add[-3]{0}{4}
+			   		\add[-2]{0}{5}
      			\end{gmatrix}\leadsto\begin{gmatrix}[b]
-  					1 & 0 & -1 & 3 & 3 & 2\\
-					0 & 1 & -2 & -4 & -3 & -2\\
-					1 & -2 & 3 & 11 & 9 & 6
-					\rowops
-			   		\add[-1]{0}{2}
-     			\end{gmatrix}\leadsto\\&\begin{gmatrix}[b]
-  					1 & 0 & -1 & 3 & 3 & 2\\
-					0 & 1 & -2 & -4 & -3 & -2\\
-					0 & -2 & 4 & 8 & 6 & 4
+  					1 & 0 & 1\\
+					0 & -1 & -2\\
+					0 & 2 & 3\\
+					0 & 4 & 8\\
+					0 & 3 & 6\\
+					0 & 2 & 4
 					\rowops
 			   		\add[2]{1}{2}
-     			\end{gmatrix} \leadsto\begin{bmatrix}
-  					1 & 0 & -1 & 3 & 3 & 2\\
-					0 & 1 & -2 & -4 & -3 & -2\\
-					0 & 0 & 0 & 0 & 0 & 0
+			   		\add[4]{1}{3}
+			   		\add[3]{1}{4}
+			   		\add[2]{1}{5}
+     			\end{gmatrix}\leadsto\\&\begin{bmatrix}
+  					1 & 0 & 1\\
+					0 & -1 & -2\\
+					0 & 0 & 0\\
+					0 & 0 & 0\\
+					0 & 0 & 0\\
+					0 & 0 & 0
      			\end{bmatrix}.
      		\end{align*}
-     		Como a terceira linha \'e nula, ent\~ao o vetor $A_3$ \'e uma combina\c{c}\~ao linear de $A_1$ e $A_2$, ou seja, $\{A_1, A_2, A_3\}$ \'e L.D..
+     		Como a matriz possui posto 2, ent\~ao o vetor $A_3$ \'e uma combina\c{c}\~ao linear de $A_1$ e $A_2$, ou seja, $\{A_1, A_2, A_3\}$ \'e L.D..
 		\end{solucao}
 	\end{enumerate}
 \end{exemplo}
