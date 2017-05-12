@@ -619,13 +619,13 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 	\begin{enumerate}
 		\item Sejam $V = \real^3$ e $W_1 = [(1,0,0)]$. Ent\~ao podemos tomar $W_2 = [(0,1,0); (0,0,1)]$ e teremos $V = W_1 \oplus W_2$. Tamb\'em podemos tomar $W_3 = [(1,1,1); (0,0,1)]$ e assim $V = W_1
 		\oplus W_3$.
-		\item Sejam $V = \cp{M}_2(\real)$ e $W_1 = \left\{\begin{pmatrix}
+		\item Sejam $V = \cp{M}_2(\real)$ e $W_1 = \left\{\begin{bmatrix}
 			a & b\\ 0 & 0
-		\end{pmatrix} \mid a,\ b \in \real\right\}$. Tomando
+		\end{bmatrix} \mid a,\ b \in \real\right\}$. Tomando
 		\[
-			W_2 = \left\{\begin{pmatrix}
+			W_2 = \left\{\begin{bmatrix}
 			0 & 0\\ c & d
-		\end{pmatrix} \mid c,\ d \in \real\right\}
+		\end{bmatrix} \mid c,\ d \in \real\right\}
 		\]
 		temos $V = W_1 \oplus W_2$.
 	\end{enumerate}
@@ -819,42 +819,42 @@ para todo $u \in V$.
 
 Seja $T : \cp{M}_2(\real) \to \cp{M}_2(\real)$ o operador linear dado por
 \[
-	T \begin{pmatrix}
+	T \begin{bmatrix}
 		a & b\\
 		c & d
-	\end{pmatrix} = \begin{pmatrix}
+	\end{bmatrix} = \begin{bmatrix}
 		d & c\\
 		0 & a
-	\end{pmatrix}.
+	\end{bmatrix}.
 \]
 Considere tamb\'em os seguintes subespa\c{c}os de $\cp{M}_2(\real)$:
 \begin{align*}
-	W_1 = \left[e_1 = \begin{pmatrix}
+	W_1 = \left[e_1 = \begin{bmatrix}
 		0 & 1\\
 		0 & 0
-	\end{pmatrix}; e_2 = \begin{pmatrix}
+	\end{bmatrix}; e_2 = \begin{bmatrix}
 		0 & 0\\
 		1 & 0
-	\end{pmatrix}\right]\\
-	W_2 = \left[e_3 = \begin{pmatrix}
+	\end{bmatrix}\right]\\
+	W_2 = \left[e_3 = \begin{bmatrix}
 		1 & 0\\
 		0 & 0
-	\end{pmatrix}; e_4 = \begin{pmatrix}
+	\end{bmatrix}; e_4 = \begin{bmatrix}
 		0 & 0\\
 		0 & 1
-	\end{pmatrix}\right].
+	\end{bmatrix}\right].
 \end{align*}
 
 Temos
 \[
-	T(e_1) = \begin{pmatrix}
+	T(e_1) = \begin{bmatrix}
 		0 & 0\\
 		0 & 0
-	\end{pmatrix} \in W_1,
-	T(e_2) = \begin{pmatrix}
+	\end{bmatrix} \in W_1,
+	T(e_2) = \begin{bmatrix}
 		0 & 1\\
 		0 & 0
-	\end{pmatrix} \in W_1
+	\end{bmatrix} \in W_1
 \]
 assim $W_1$ \'e um subespa\c{c}o $T$-invariante. Seja ent\~ao $T_1 = T : W_1 \to W_1$ e $\mathcal{B}_1 = \{e_1, e_2\}$ uma base de $W_1$. Temos
 \[
@@ -865,14 +865,14 @@ assim $W_1$ \'e um subespa\c{c}o $T$-invariante. Seja ent\~ao $T_1 = T : W_1 \to
 \]
 Agora,
 \[
-	T(e_3) = \begin{pmatrix}
+	T(e_3) = \begin{bmatrix}
 		0 & 0\\
 		0 & 1
-	\end{pmatrix} \in W_2,
-	T(e_4) = \begin{pmatrix}
+	\end{bmatrix} \in W_2,
+	T(e_4) = \begin{bmatrix}
 		1 & 0\\
 		0 & 0
-	\end{pmatrix} \in W_2
+	\end{bmatrix} \in W_2
 \]
 assim $W_2$ \'e um subespa\c{c}o $T$-invariante. Seja ent\~ao $T_2 = T : W_2 \to W_2$ e $\mathcal{B}_2 = \{e_3, e_4\}$ uma base de $W_2$. Temos
 \[
