@@ -318,14 +318,6 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{exemplo}
 
-\begin{corolario}
-	Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$ e de dimens\~ao $n \ge 1$. Seja $\mathcal{B}$ um subconjunto de $V$ com $n$ elementos. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
-	\begin{enumerate}
-		\item $\mathcal{B}$ \'e uma base de $V$;
-		\item $\mathcal{B}$ \'e L.I.;
-		\item $\mathcal{B}$ \'e um conjunto gerador de $V$.
-	\end{enumerate}
-\end{corolario}
 
 \begin{proposicao}\label{ampliarconjuntoLI}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e considere $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$ um conjunto L.I. em $V$. Se existir $u \in V$ que n\~ao seja combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, ent\~ao $\{u_1, u_2, \dots, u_n, u\}$ \'e L.I.
@@ -352,6 +344,15 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \begin{prova}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao-nulo e finitamente gerado. Ent\~ao $V$ possui um conjunto gerador finito, digamos com $m$ elementos, $m > 1$. Seja $u_1 \in V$, $u_1 \ne 0_V$. Ent\~ao $\mathcal{B}_1 = \{u_1\}$ \'e L.I. Se $\mathcal{B}_1$ gera $V$ ent\~ao $\mathcal{B}_1$ \'e uma base de $V$. Caso contr\'ario, existe $u_2 \in V$ tal que $u_2$ n\~ao \'e um m\'ultiplo escalar de $u_1$. Pela Proposi\c{c}\~ao \ref{ampliarconjuntoLI}, $\mathcal{B}_2 = \{u_1, u_2\}$ \'e L.I. Novamente, se $\mathcal{B}_2$ gera $V$, ent\~ao $\mathcal{B}_2$ \'e uma base de $V$. Caso contr\'ario, existe $u_3 \in V$ tal que $u_3$ n\~ao \'e uma combina\c{c}\~ao linear de $u_1$ e $u_2$. Da{\'\i}, $\mathcal{B}_3 = \{u_1, u_2, u_3\}$ \'e L.I. Continuando com este processo chegamos a uma base de $V$ ou obtemos conjuntos L.I. com um n\'umero arbitr\'ario de elementos. A segunda op\c{c}\~ao n\~ao \'e poss{\'\i}vel por causa da Proposi\c{c}\~ao \ref{conjuntoLI}. Portanto, com este processo obtemos uma base de $V$.
 \end{prova}
+
+\begin{corolario}
+	Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$ e de dimens\~ao $n \ge 1$. Seja $\mathcal{B}$ um subconjunto de $V$ com $n$ elementos. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}[label=({\roman*})]
+		\item $\mathcal{B}$ \'e uma base de $V$;
+		\item $\mathcal{B}$ \'e L.I.;
+		\item $\mathcal{B}$ \'e um conjunto gerador de $V$.
+	\end{enumerate}
+\end{corolario}
 
 \begin{teorema}\label{basecontendoconjuntoLI}
 	Seja $V$ uma $\cp{K}$-espa\c{c}o vetorial finitamente gerado e seja $\mathcal{B}$ um conjunto L.I. em $V$. Ent\~ao existe uma base de $V$ contendo $\mathcal{B}$.
