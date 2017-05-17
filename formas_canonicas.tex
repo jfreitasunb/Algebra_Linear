@@ -34,29 +34,29 @@ para todo $u \in V$. \'E f\'acil verificar que $(\mathcal{L}(V,W),+,\cdot)$ \'e 
 	\end{equation}
 	com $pq$ elementos. Vamos mostrar que $\mathcal{A}$ \'e uma base de $\mathcal{L}(V,W)$. Primeiro, seja $G \in \mathcal{L}(V,W)$ e considere a matriz $[G]_{\mathcal{B}_V,\mathcal{B}_W} = (a_{ij})$ com rela\c{c}\~ao \`as bases $\mathcal{B}_V$ e $\mathcal{B}_W$. Assim $[G]_{\mathcal{B}_V,\mathcal{B}_W}$ \'e dada por
 	\begin{align*}
-		T(v_1) &= a_{11}w_1 + \cdots + a_{q1}w_q = \sum_{i = 1}^qa_{i1}w_i\\
+		G(v_1) &= a_{11}w_1 + \cdots + a_{q1}w_q = \sum_{i = 1}^qa_{i1}w_i\\
 		&\vdots\\
-		T(v_p) &= a_{1p}w_1 + \cdots + a_{qp}w_q = \sum_{i = 1}^qa_{ip}w_i,
+		G(v_p) &= a_{1p}w_1 + \cdots + a_{qp}w_q = \sum_{i = 1}^qa_{ip}w_i,
 	\end{align*}
-	ou simplesmente, $G(v_j) = \sum_{i = 1}^qa_{ij}w_i$ para $j = 1$, \dots, $p$. Considere agora a transforma\c{c}\~ao linear $H : V \to W$ dada por
+	ou simplesmente, $G(v_r) = \sum_{i = 1}^qa_{ir}w_i$ para $r = 1$, \dots, $p$. Considere agora a transforma\c{c}\~ao linear $H : V \to W$ dada por
 	\[
 		H = \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}T_{(i,j)}.
 	\]
 	Vamos mostrar que $G = H$. Para isso, basta mostrar que $G(v_j) = H(v_j)$ para $v_j \in \mathcal{B}_V$. Temos
 	\begin{align*}
-		H(v_j) &= \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}T_{(i,j)}(v_j) = \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^p(a_{i1}\delta_{1r}w_i + a_{i2}\delta_{2r}w_i + \cdots + a_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qa_{ij}w_i = G(v_j)
+		H(v_r) &= \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}T_{(i,j)}(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^q(a_{i1}\delta_{1r}w_i + a_{i2}\delta_{2r}w_i + \cdots + a_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qa_{ir}w_i = G(v_r)
 	\end{align*}
-	para cada $j = 1$, \dots, $p$. Portanto $G = H$ e assim $\mathcal{A}$ gera $\mathcal{L}(V,W)$.
+	para cada $r = 1$, \dots, $p$. Portanto $G = H$ e assim $\mathcal{A}$ gera $\mathcal{L}(V,W)$.
 
 	Mostremos agora que $\mathcal{A}$ \'e L.I. em $\mathcal{L}(V,W)$. Para isso, sejam $b_{ij} \in \cp{K}$ com $1 \le i \le q$ e $1 \le j \le p$ tais que
 	\[
 		S = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}T_{(i,j)} = 0.
 	\]
-	Assim $S(v_j) = 0_W$ para todo $j = 1$, \dots, $p$. Da{\'\i}
+	Assim $S(v_r) = 0_W$ para todo $r = 1$, \dots, $p$. Da{\'\i}
 	\begin{align*}
-		0_W &= S(v_j) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}T_{(i,j)}(v_j) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^p(b_{i1}\delta_{1r}w_i + b_{i2}\delta_{2r}w_i + \cdots + b_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qb_{ij}w_i
+		0_W &= S(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}T_{(i,j)}(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^q(b_{i1}\delta_{1r}w_i + b_{i2}\delta_{2r}w_i + \cdots + b_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qb_{ir}w_i
 	\end{align*}
-	para $j = 1$, \dots, $p$. Isto \'e,
+	para $r = 1$, \dots, $p$. Isto \'e,
 	\begin{align*}
 		&b_{11}w_1 + \cdots + b_{q1}w_q = 0_W\\
 		&\vdots\\
