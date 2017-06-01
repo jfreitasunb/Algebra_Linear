@@ -172,14 +172,14 @@ Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se,
 
 Seja $x$ uma vari\'avel. Temos
 \begin{align}
-	[T - xId]_\mathcal{A} = [T]_\mathcal{B} - x[Id]_\mathcal{B} = \begin{bmatrix}
-		x - a_{11} & a_{12} & a_{13} & \cdots & a_{1n}\\
-		a_{21} & x - a_{22} & a_{23} & \cdots & a_{1n}\\
+	[T - xId]_\mathcal{A} = [T]_\mathcal{A} - x[Id]_\mathcal{A} = \begin{bmatrix}
+		a_{11} - x & a_{12} & a_{13} & \cdots & a_{1n}\\
+		a_{21} & a_{22} - x & a_{23} & \cdots & a_{1n}\\
 		\vdots\\
-		a_{n1} & a_{n2} & a_{n3} & \cdots & x - a_{nn}
+		a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn} - x
 	\end{bmatrix}
 \end{align}
-onde $[T]_\mathcal{A} = (a_{ij})$ $a_{ij} \in \cp{K}$ para $1 \le i,\ j \le n$. Assim $\det[T - xId]_\mathcal{A}$ \'e um polin\^omio de grau $n$ com coeficiente em $\cp{K}$. O termo $x^n$ aparece com coeficiente $\pm 1_\cp{K}$. Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se, $\lambda$ \'e uma raiz de
+onde $[T]_\mathcal{A} = (a_{ij})$, $a_{ij} \in \cp{K}$ para $1 \le i,\ j \le n$. Assim $\det[T - xId]_\mathcal{A}$ \'e um polin\^omio de grau $n$ com coeficiente em $\cp{K}$. O termo $x^n$ aparece com coeficiente $\pm 1_\cp{K}$. Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se, $\lambda$ \'e uma raiz de
 \[
 \det[T - xId]_\mathcal{A}.
 \]
@@ -206,7 +206,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 			Vamos considerar a base can\^onica de $\real^2$ dada por $\mathcal{A} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
 			\begin{align}
 				T(1,0) = (0,1) = 0(1,0) + 1(1,0)\\
-				T(1,0) = (-1,0) = -1(1,0) + 0(1,0).
+				T(0,1) = (-1,0) = -1(1,0) + 0(1,0).
 			\end{align}
 			Da{\'\i}
 			\[
