@@ -607,6 +607,58 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   \end{solucao}
 \end{exercicio}
 
+\begin{exercicio}
+  Nos casos abaixo, encontre a forma de Jordan e a base de Jordan que gera essa forma:
+  \begin{enumerate}[label=({\alph*})]
+    \item $A = \begin{bmatrix}
+      2 & 2 & 3\\
+      1 & 3 & 3\\
+      -1 & -2 & -2
+    \end{bmatrix}$
+    \item $B = \begin{bmatrix}
+      5 & 4 & 2\\
+      4 & 5 & 2\\
+      2 & 2 & 2
+    \end{bmatrix}$
+    \item $C = \begin{bmatrix}
+      -1 & 1 & 1\\
+      -2 & 2 & 1\\
+      -1 & 1 & 1
+    \end{bmatrix}$
+    \item $D = \begin{bmatrix}
+      4 & 0 & 1 & 0\\
+      2 & 2 & 3 & 0\\
+      -1 & 0 & 2 & 0\\
+      4 & 0 & 1 & 2
+    \end{bmatrix}$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item Forma de Jordan: $J(A) = \begin{bmatrix}
+        1 & 0 & 0\\
+        1 & 1 & 0\\
+        0 & 0 & 1
+      \end{bmatrix}$, base de Jordan: $\mathcal{B} = \{(1,0,0);(1,1,-1);(-2,1,0)\}$
+      \item Forma de Jordan: $J(B) = \begin{bmatrix}
+        0 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 1 & 1
+      \end{bmatrix}$, base de Jordan: $\mathcal{B} = \{(1,1,0);(0,1,0);(1,1,1)\}$
+      \item Forma de Jordan: $J(C) = \begin{bmatrix}
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 10
+      \end{bmatrix}$, base de Jordan: $\mathcal{B} = \{(-1,0,2);(-1,1,0);(2,2,1)\}$
+      \item Forma de Jordan: $J(D) = \begin{bmatrix}
+        2 & 0 & 0 & 0\\
+        0 & 2 & 0& 0\\
+        0 & 0 & 3 & 0\\
+        0 & 0 & 1 & 3
+      \end{bmatrix}$, base de Jordan: $\mathcal{B} = \{(0,1,0,0);(0,0,0,1);(0,4,1,-2);\linebreak(1,-1,-1,3)\}$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
 \newpage
 \Closesolutionfile{ans}
 \hrule
