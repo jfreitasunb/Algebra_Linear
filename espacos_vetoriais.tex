@@ -120,9 +120,9 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		A matriz linha-reduzida \`a forma em escada deste sistema \'e
 		\[
 			\begin{bmatrix}
-				1 & 0 & -1 & 1\\
-				0 & 1 & 2 & -4\\
-				0 & 0 & 0 & 7
+				1 & 0 & -1 & \phantom{-}1\\
+				0 & 1 & \phantom{-}2 & -4\\
+				0 & 0 & \phantom{-}0 & \phantom{-}7
 			\end{bmatrix}
 		\]
 		e portanto o sistema \'e imposs{\'\i}vel. Logo o vetor $(1, -2, 2)$ n\~ao \'e uma combina\c{c}\~ao linear dos vetores $u_1$, $u_2$ e $u_3$.
@@ -146,9 +146,9 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	cuja matriz linha-reduzida \`a forma em escada \'e
 	\[
 		\begin{bmatrix}
-			1 & 0 & 0 & -1 & 0 & 0 & a - b\\
-			0 & 1 & 0 & -1 & -1 & 0 & a - c\\
-			0 & 0 & 1 & 1 & 0 & -1 & b + c - a
+			1 & 0 & 0 & -1 & \phantom{-}0 & \phantom{-}0 & a - b\\
+			0 & 1 & 0 & -1 & -1 & \phantom{-}0 & a - c\\
+			0 & 0 & 1 & \phantom{-}1 & \phantom{-}0 & -1 & b + c - a
 		\end{bmatrix},
 	\]
 	assim o sistema \'e poss{\'\i}vel e indeterminado, com posto 3 e nulidade 3. Sua solu\c{c}\~ao \'e descrita pela equa\c{c}\~oes
@@ -617,41 +617,41 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			Sabemos que $\mathcal{B} = \{1,x,x^2,x^3,x^4\}$ \'e uma base de $\mathcal{P}_4(\real)$. Tal base \'e chamada de \textbf{base can\^onica} de $\mathcal{P}_4(\real)$. Assim $\dim_\real \mathcal{P}_4(\real) = 5$. Para determinar uma base contendo $p_1(x)$, $p_2(x)$ e $p_3(x)$, come\c{c}amos determinando se tais vetores s\~ao L.I. ou L.D.. Para isso montamos a matriz
 			\[
 				A = \begin{bmatrix}
-					1 & 2 & 1\\
-					2 & 4 & 2\\
+					\phantom{-}1 & 2 & 1\\
+					\phantom{-}2 & 4 & 2\\
 					-1 & 1 & 2\\
-					3 & 6 & 3\\
-					2 & 3 & 2
+					\phantom{-}3 & 6 & 3\\
+					\phantom{-}2 & 3 & 2
 				\end{bmatrix}.
 			\]
 			Aplicando as opera\c{c}\~oes elementares em $A$ para reduz{\'\i}-la a forma em escada
 			\begin{align*}
 				A &= \begin{gmatrix}[b]
-  					1 & 2 & 1\\
-					2 & 4 & 2\\
+  					\phantom{-}1 & 2 & 1\\
+					\phantom{-}2 & 4 & 2\\
 					-1 & 1 & 2\\
-					3 & 6 & 3\\
-					2 & 3 & 2
+					\phantom{-}3 & 6 & 3\\
+					\phantom{-}2 & 3 & 2
 					\rowops
 			   		\add[-2]{0}{1}
 			   		\add[1]{0}{2}
 			   		\add[-3]{0}{3}
 			   		\add[-2]{0}{4}
      			\end{gmatrix}\leadsto\begin{bmatrix}
-  					1 & 2 & 1\\
-					0 & 0 & 0\\
-					0 & 3 & 3\\
-					0 & 0 & 0\\
+  					1 & \phantom{-}2 & 1\\
+					0 & \phantom{-}0 & 0\\
+					0 & \phantom{-}3 & 3\\
+					0 & \phantom{-}0 & 0\\
 					0 & -1 & 0
      			\end{bmatrix} = M.
      		\end{align*}
      		Como a matrix $M$ possui posto 3, ent\~ao $\{p_1(x), p_2(x), p_3(x)\}$ \'e L.I. em $\mathcal{P}_4(\real)$. Observe que $M$ n\~ao tem 1 na segunda e quarta linhas. Assim vamos adicionar a $M$ uma coluna com 1 na segunda linha e outra com 1 na quarta linha, obtendo
      		\[
      			M' = \begin{bmatrix}
-  					1 & 2 & 1 & 0 & 0\\
-					0 & 0 & 0 & 1 & 0\\
-					0 & 3 & 3 & 0 & 0\\
-					0 & 0 & 0 & 0 & 1\\
+  					1 & \phantom{-}2 & 1 & 0 & 0\\
+					0 & \phantom{-}0 & 0 & 1 & 0\\
+					0 & \phantom{-}3 & 3 & 0 & 0\\
+					0 & \phantom{-}0 & 0 & 0 & 1\\
 					0 & -1 & 0 & 0 & 0
      			\end{bmatrix}.
      		\]
@@ -660,17 +660,17 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\item Considere $V = \cp{M}_{3\times 2}(\real)$. Verifique se o conjunto formado pelas matrizes
 		\[
 			A_1 = \begin{bmatrix}
-				1 & 0\\
+				\phantom{-}1 & 0\\
 				-1 & 3\\
-				3 & 2
+				\phantom{-}3 & 2
 			\end{bmatrix}; A_2 = \begin{bmatrix}
 				0 & -1\\
-				2 & 4\\
-				3 & 2
+				2 & \phantom{-}4\\
+				3 & \phantom{-}2
 			\end{bmatrix}; A_3 = \begin{bmatrix}
 				1 & -2\\
-				3 & 11\\
-				9 & 6
+				3 & \phantom{-}11\\
+				9 & \phantom{-}6
 			\end{bmatrix}.
 		\]
 		\'e L.D. ou L.I. em $V$.
@@ -678,47 +678,47 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			Considere a matriz $M$ formada pelas entradas das matrizes $A_1$, $A_2$ e $A_3$ escritas como colunas de $M$
 			\[
 				M = \begin{bmatrix}
-					1 & 0 & 1\\
-					0 & -1 & -2\\
-					-1 & 2 & 3\\
-					3 & 4 & 11\\
-					3 & 3 & 9\\
-					2 & 2 & 6
+					\phantom{-}1 & \phantom{-}0 & \phantom{-}1\\
+					\phantom{-}0 & -1 & -2\\
+					-1 & \phantom{-}2 & \phantom{-}3\\
+					\phantom{-}3 & \phantom{-}4 & \phantom{-}11\\
+					\phantom{-}3 & \phantom{-}3 & \phantom{-}9\\
+					\phantom{-}2 & \phantom{-}2 & \phantom{-}6
 				\end{bmatrix}.
 			\]
 			Aplicando as opera\c{c}\~oes elementares em $M$:
 			\begin{align*}
 				M &= \begin{gmatrix}[b]
-  					1 & 0 & 1\\
-					0 & -1 & -2\\
-					-1 & 2 & 3\\
-					3 & 4 & 11\\
-					3 & 3 & 9\\
-					2 & 2 & 6
+  					\phantom{-}1 & \phantom{-}0 & \phantom{-}1\\
+					\phantom{-}0 & -1 & -2\\
+					-1 & \phantom{-}2 & \phantom{-}3\\
+					\phantom{-}3 & \phantom{-}4 & \phantom{-}11\\
+					\phantom{-}3 & \phantom{-}3 & \phantom{-}9\\
+					\phantom{-}2 & \phantom{-}2 & \phantom{-}6
 					\rowops
 			   		\add[1]{0}{2}
 			   		\add[-3]{0}{3}
 			   		\add[-3]{0}{4}
 			   		\add[-2]{0}{5}
      			\end{gmatrix}\leadsto\begin{gmatrix}[b]
-  					1 & 0 & 1\\
+  					1 & \phantom{-}0 & \phantom{-}1\\
 					0 & -1 & -2\\
-					0 & 2 & 3\\
-					0 & 4 & 8\\
-					0 & 3 & 6\\
-					0 & 2 & 4
+					0 & \phantom{-}2 & \phantom{-}3\\
+					0 & \phantom{-}4 & \phantom{-}8\\
+					0 & \phantom{-}3 & \phantom{-}6\\
+					0 & \phantom{-}2 & \phantom{-}4
 					\rowops
 			   		\add[2]{1}{2}
 			   		\add[4]{1}{3}
 			   		\add[3]{1}{4}
 			   		\add[2]{1}{5}
      			\end{gmatrix}\leadsto\\&\begin{bmatrix}
-  					1 & 0 & 1\\
+  					1 & \phantom{-}0 & \phantom{-}1\\
 					0 & -1 & -2\\
-					0 & 0 & 0\\
-					0 & 0 & 0\\
-					0 & 0 & 0\\
-					0 & 0 & 0
+					0 & \phantom{-}0 & \phantom{-}0\\
+					0 & \phantom{-}0 & \phantom{-}0\\
+					0 & \phantom{-}0 & \phantom{-}0\\
+					0 & \phantom{-}0 & \phantom{-}0
      			\end{bmatrix}.
      		\end{align*}
      		Como a matriz possui posto 2, ent\~ao o vetor $A_3$ \'e uma combina\c{c}\~ao linear de $A_1$ e $A_2$, ou seja, $\{A_1, A_2, A_3\}$ \'e L.D..
