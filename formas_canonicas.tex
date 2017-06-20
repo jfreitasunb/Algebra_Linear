@@ -266,7 +266,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 		\begin{solucao}
 			Temos
 			\[
-				p_T(x) = \det([T - xId]_\mathcal{A}) = (3 - x)^2(-1 -x)
+				p_T(x) = \det([T - xId]_\mathcal{A}) = (3 - x)^2(1 - x)
 			\]
 			e assim os autovalores de $T$ s\~ao $\lambda_1 = 3$ e $\lambda_2 = -1$.
 			\begin{itemize}
@@ -275,7 +275,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 					\begin{bmatrix}
 						0 & -3 & -4\\
 						0 & 0 & 5\\
-						0 & 0 & -4
+						0 & 0 & -2
 					\end{bmatrix}\begin{bmatrix}
 						x\\y\\z
 					\end{bmatrix} = \begin{bmatrix}
@@ -287,11 +287,11 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 					\aut_T(3) = \{(x,0,0) \mid x \in \real\} = [(1,0,0)]
 				\]
 				e ent\~ao $\mathcal{B}_1 = \{(1,0,0)\}$ \'e uma base de $\aut_T(3)$ e $\dim_\real\aut_T(3) = 1$.
-				\item Para $\lambda_2 = -1$ temos que $(x,y,z) \in \aut_T(-1)$ se, e s\'o se,
+				\item Para $\lambda_2 = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
 				\[
 					\begin{bmatrix}
-						4 & -3 & -4\\
-						0 & 4 & 5\\
+						2 & -3 & -4\\
+						0 & 2 & 5\\
 						0 & 0 & 0
 					\end{bmatrix}\begin{bmatrix}
 						x\\y\\z
@@ -301,9 +301,9 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 				\]
 				Assim
 				\[
-					\aut_T(-1) = \{(z/16,-5z/4,z) \mid z \in \real\} = [(1/16,-5/4,1)]
+					\aut_T(1) = \{(-7z/4,-5z/2,z) \mid z \in \real\} = [(-7/4,-5/2,1)]
 				\]
-				e ent\~ao $\mathcal{B}_2 = \{(1/16,-5/4,1)\}$ \'e uma base de $\aut_T(-1)$ e $\dim_\real\aut_T(-1) = 1$.
+				e ent\~ao $\mathcal{B}_2 = \{(-7/4,-5/2,1)\}$ \'e uma base de $\aut_T(1)$ e $\dim_\real\aut_T(1) = 1$.
 			\end{itemize}
 			Note que o conjunto $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2$ \'e L.I. mas n\~ao \'e uma base de $\real^3$. Neste caso o operador $T$ n\~ao \'e diagonaliz\'avel.
 		\end{solucao}
