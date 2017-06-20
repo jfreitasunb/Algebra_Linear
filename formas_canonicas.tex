@@ -1267,12 +1267,12 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 		\item Seja $T : \real^6 \to \real^6$ o operador linear representado pela matriz
 		\[
 			[T] = \begin{bmatrix}
-				-1 & 1 & -1 & -3 & -1 & 7\\
-				0 & -1 & 1 & 2 & 3 & 2\\
-				0 & 0 & -1 & 0 & -2 & 1\\
-				0 & 0 & 0 & -1 & 1 & -2\\
-				0 & 0 & 0 & 0 & -1 & 3\\
-				0 & 0 & 0 & 0 & 0 & -4
+				-1 & \phantom{-}1 & -1 & -3 & -1 & \phantom{-}7\\
+				\phantom{-}0 & -1 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+				\phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}0 & -2 & \phantom{-}1\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}1 & -2\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}3\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -4
 			\end{bmatrix}.
 		\]
 		Encontre a forma de Jordan de $T$.
@@ -1306,21 +1306,21 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 			Vamos determinar agora, $\aut_T(-1)$ para decidir qual ser\'a a forma de Jordan de $T$. Temos
 			\begin{align*}
 				\begin{gmatrix}[b]
-  					0 & 1 & -1 & -3 & -1 & 7\\
-					0 & 0 & 1 & 2 & 3 & 2\\
-					0 & 0 & 0 & 0 & -2 & 1\\
-					0 & 0 & 0 & 0 & 1 & -2\\
-					0 & 0 & 0 & 0 & 0 & 3\\
-					0 & 0 & 0 & 0 & 0 & -3
+  					0 & 1 & -1 & -3 & -1 & \phantom{-}7\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & \phantom{-}1\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & -2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}3\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -3
 					\rowops
 			   		\mult5{\times -1/3}
      			\end{gmatrix}\leadsto\\\begin{gmatrix}[b]
-  					0 & 1 & -1 & -3 & -1 & 7\\
-					0 & 0 & 1 & 2 & 3 & 2\\
-					0 & 0 & 0 & 0 & -2 & 1\\
-					0 & 0 & 0 & 0 & 1 & -2\\
-					0 & 0 & 0 & 0 & 0 & 3\\
-					0 & 0 & 0 & 0 & 0 & 1
+  					0 & 1 & -1 & -3 & -1 & \phantom{-}7\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & \phantom{-}1\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & -2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}3\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
 					\rowops
 			   		\add[-3]{5}{4}
 			   		\add[2]{5}{3}
@@ -1329,22 +1329,22 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 			   		\add[-7]{5}{0}
      			\end{gmatrix}\leadsto\\\begin{gmatrix}[b]
   					0 & 1 & -1 & -3 & -1 & 0\\
-					0 & 0 & 1 & 2 & 3 & 0\\
-					0 & 0 & 0 & 0 & -2 & 0\\
-					0 & 0 & 0 & 0 & 1 & 0\\
-					0 & 0 & 0 & 0 & 0 & 0\\
-					0 & 0 & 0 & 0 & 0 & 1
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & 1
 					\rowops
 			   		\add[2]{3}{2}
 			   		\add[-3]{3}{1}
 			   		\add{3}{0}
      			\end{gmatrix}\leadsto\begin{bmatrix}
   					0 & 1 & -1 & -3 & 0 & 0\\
-					0 & 0 & 1 & 2 & 0 & 0\\
-					0 & 0 & 0 & 0 & 0 & 0\\
-					0 & 0 & 0 & 0 & 1 & 0\\
-					0 & 0 & 0 & 0 & 0 & 0\\
-					0 & 0 & 0 & 0 & 0 & 1
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 1 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 1
      			\end{bmatrix}
      		\end{align*}
      		donde obtemos que $\aut_T(-1) = \{(x_1, x_2, -2x_2, x_2, 0, 0) \mid x_1, x_2 \in \real\}$. Logo obtemos $\dim_\real \aut_T(-1) = 2$, com isso existem dois blocos de Jordan associados ao autovalor -1 e portanto a forma de Jordan de $T$ \'e
@@ -1534,9 +1534,9 @@ Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso tem
 	Encontre a forma de Jordan e a base correspondente para o operador representado pela matriz
 	\[
 		A = \begin{bmatrix}
-			-1 & -1 & 0\\
-			0 & -1 & -2\\
-			0 & 0 & -1
+			-1 & -1 & \phantom{-}0\\
+			\phantom{-}0 & -1 & -2\\
+			\phantom{-}0 & \phantom{-}0 & -1
 		\end{bmatrix}.
 	\]
 	\begin{solucao}
@@ -1552,8 +1552,8 @@ Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso tem
 	\[
 		\begin{bmatrix}
 			-1 & & \\
-			1 & -1 &\\
-			0 & 1 & -1
+			\phantom{-}1 & -1 &\\
+			\phantom{-}0 & \phantom{-}1 & -1
 		\end{bmatrix}.
 	\]
 	Assim se $\mathcal{B} = \{v_1, v_2, v_3\}$ \'e a base de Jordan, ent\~ao
@@ -1565,9 +1565,9 @@ Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso tem
 	Tome $v_3 = (1,0,0)$ e seja $v_2 = (x,y,z)$. Temos
 	\[
 		\begin{bmatrix}
-			0 & -1 & 0\\
-			0 & 0 & -2\\
-			0 & 0 & 0
+			0 & -1 & \phantom{-}0\\
+			0 & \phantom{-}0 & -2\\
+			0 & \phantom{-}0 & \phantom{-}0
 		\end{bmatrix}\begin{bmatrix}
 			x\\
 			y\\
@@ -1587,17 +1587,17 @@ Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso tem
 	Agora, precisamos encontrar $v_1 = (\alpha, \beta, \gamma)$ tal que $(A + I_3)(v_1) = v_2$. Do sistema
 	\[
 		\begin{bmatrix}
-			0 & -1 & 0\\
-			0 & 0 & -2\\
-			0 & 0 & 0
+			0 & -1 & \phantom{-}0\\
+			0 & \phantom{-}0 & -2\\
+			0 & \phantom{-}0 & \phantom{-}0
 		\end{bmatrix}\begin{bmatrix}
 			\alpha\\
 			\beta\\
 			\gamma
 		\end{bmatrix} = \begin{bmatrix}
-			0\\
+			\phantom{-}0\\
 			-1\\
-			0
+			\phantom{-}0
 		\end{bmatrix}
 	\]
 	encontramos
