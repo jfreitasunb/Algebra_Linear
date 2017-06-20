@@ -210,11 +210,11 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 			\end{align}
 			Da{\'\i}
 			\[
-				[T]_\mathcal{A} = \begin{bmatrix}0 & -1\\ 1 & 0\end{bmatrix}
+				[T]_\mathcal{A} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}
 			\]
 			e ent\~ao
 			\begin{align*}
-				p_T(x) = \det([T - xId]_\mathcal{A}) = \det\begin{bmatrix} -x & -1\\1 & -x\end{bmatrix} = x^2 + 1.
+				p_T(x) = \det([T - xId]_\mathcal{A}) = \det\begin{bmatrix} -x & -1\\\phantom{-}1 & -x\end{bmatrix} = x^2 + 1.
 			\end{align*}
 			Como $p_T(x)$ n\~ao possui ra{\'\i}zes em $\real$, segue que $T$ n\~ao possui autovalores.
 		\end{solucao}
@@ -224,11 +224,11 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 			\begin{itemize}
 				\item Para $\lambda_1 = i$ temos:
 				\[
-					[T - iId]_\mathcal{A} = \begin{bmatrix} -i & -1\\1 & -i\end{bmatrix}
+					[T - iId]_\mathcal{A} = \begin{bmatrix} -i & -1\\\phantom{-}1 & -i\end{bmatrix}
 				\]
 				e assim $(x,y) \in \aut_T(i)$ se, e s\'o se,
 				\[
-					\begin{bmatrix} -i & -1\\1 & -i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
+					\begin{bmatrix} -i & -1\\\phantom{-}1 & -i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
 				\]
 				isto \'e, $x = iy$. Logo
 				\[
@@ -237,11 +237,11 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 				Assim, $\mathcal{B}_1 = \{(i,1)\}$ \'e uma base de $\aut_T(i)$ e da{\'\i} $\dim_\complex\aut_T(i) = 1$.
 				\item Para $\lambda_1 = -i$ temos:
 				\[
-					[T + iId]_\mathcal{A} = \begin{bmatrix} i & -1\\1 & i\end{bmatrix}
+					[T + iId]_\mathcal{A} = \begin{bmatrix} i & -1\\1 & \phantom{-}i\end{bmatrix}
 				\]
 				e assim $(x,y) \in \aut_T(-i)$ se, e s\'o se,
 				\[
-					\begin{bmatrix} i & -1\\1 & i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
+					\begin{bmatrix} i & -1\\1 & \phantom{-}i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
 				\]
 				isto \'e, $x = -iy$. Logo
 				\[
@@ -251,15 +251,15 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 			\end{itemize}
 			Agora o conjunto $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2 = \{(i,1);(-i,1)\}$ \'e uma base de $\complex^2$ e nesta base temos
 			\[
-				[T]_\mathcal{B} = \begin{bmatrix} i & 0\\0 & -i\end{bmatrix}.
+				[T]_\mathcal{B} = \begin{bmatrix} i & \phantom{-}0\\0 & -i\end{bmatrix}.
 			\]
 		\end{solucao}
 		\item Seja $T : \real^3 \to \real^3$ o operador linear tal que
 		\[
 			[T]_\mathcal{A} = \begin{bmatrix}
 								3 & -3 & -4\\
-								0 & 3 & 5\\
-								0 & 0 & 1
+								0 & \phantom{-}3 & \phantom{-}5\\
+								0 & \phantom{-}0 & \phantom{-}1
 							\end{bmatrix}
 		\]
 		onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determine, casa exista, uma base de $\real^3$ tal que o operador $T$ seja diagonaliz\'avel.
@@ -274,8 +274,8 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 				\[
 					\begin{bmatrix}
 						0 & -3 & -4\\
-						0 & 0 & 5\\
-						0 & 0 & -2
+						0 & \phantom{-}0 & \phantom{-}5\\
+						0 & \phantom{-}0 & -2
 					\end{bmatrix}\begin{bmatrix}
 						x\\y\\z
 					\end{bmatrix} = \begin{bmatrix}
@@ -291,8 +291,8 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 				\[
 					\begin{bmatrix}
 						2 & -3 & -4\\
-						0 & 2 & 5\\
-						0 & 0 & 0
+						0 & \phantom{-}2 & \phantom{-}5\\
+						0 & \phantom{-}0 & \phantom{-}0
 					\end{bmatrix}\begin{bmatrix}
 						x\\y\\z
 					\end{bmatrix} = \begin{bmatrix}
@@ -310,9 +310,9 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 		\item Seja $T : \real^3 \to \real^3$ o operador tal que
 		\[
 			[T]_\mathcal{A} = \begin{bmatrix}
-								1 & 2 & -1\\
-								-2 & -3 & 1\\
-								2 & 2 & -2
+								\phantom{-}1 & \phantom{-}2 & -1\\
+								-2 & -3 & \phantom{-}1\\
+								\phantom{-}2 & \phantom{-}2 & -2
 							\end{bmatrix}
 		\]
 		onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determinar se $T$ \'e diagonaliz\'avel.
@@ -329,9 +329,9 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 			\'E f\'acil verificar que o conjunto $\mathcal{B} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ \'e L.I, logo uma base de $\real^3$. Nesta base temos
 			\[
 				[T]_\mathcal{B} = \begin{bmatrix}
-								-1 & 0 & 0\\
-								0 & -1 & 0\\
-								0 & 0 & -2
+								-1 & \phantom{-}0 & \phantom{-}0\\
+								\phantom{-}0 & -1 & \phantom{-}0\\
+								\phantom{-}0 & \phantom{-}0 & -2
 							\end{bmatrix}.
 			\]
 			Logo $T$ \'e diagonaliz\'avel.
@@ -461,9 +461,9 @@ se, e somente se, $mg(\lambda_i) = ma(\lambda_i)$ para $i = 1$, \dots, $r$. Assi
 Seja $T : \real^3 \to \real^3$ o operador tal que
 		\[
 	[T]_\mathcal{A} = \begin{bmatrix}
-			1 & 2 & -1\\
-			-2 & -3 & 1\\
-			2 & 2 & -2
+			\phantom{-}1 & \phantom{-}2 & -1\\
+			-2 & -3 & \phantom{-}1\\
+			\phantom{-}2 & \phantom{-}2 & -2
 		\end{bmatrix}
 		\]
 onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Sabemos que $T$ \'e diagonaliz\'avel e os autoespa\c{c}os de $T$ s\~ao
@@ -512,7 +512,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 		\[
 			[T]_\mathcal{B} = \begin{bmatrix}
 				0 & -1\\
-				1 & 0
+				1 & \phantom{-}0
 			\end{bmatrix}.
 		\]
 		Ent\~ao os \'unicos subespa\c{c}os $T$-invariantes s\~ao os triviais. De fato, qualquer outro espa\c{c}o $T$-invariante teria dimens\~ao 1, isto \'e, se $W$ \'e um subespa\c{c}o de $\real^2$, $T$-invariante ent\~ao $W = [v]$. Da{\'\i} $v$ seria um autovetor de $T$. Mas
@@ -698,9 +698,9 @@ para todo $u \in V$.
 	Seja $T$ o operador sobre $\real^n$ representado em rela\c{c}\~ao \`a base can\^onica pela matriz $A$ dada. Encontre o polin\^omio minimal de $T$.
 	\begin{enumerate}
 		\item $A = \begin{bmatrix}
-			5 & -6 & -6\\
-			-1 & 4 & 2\\
-			3 & -6 & -4
+			\phantom{-}5 & -6 & -6\\
+			-1 & \phantom{-}4 & \phantom{-}2\\
+			\phantom{-}3 & -6 & -4
 		\end{bmatrix}$, $n = 3$
 		\begin{solucao}
 			O polin\^omio caracter{\'\i}stico de $T$ \'e
@@ -714,14 +714,14 @@ para todo $u \in V$.
 			Temos
 			\[
 				A - I_3 = \begin{bmatrix}
-					4 & -6 & -6\\
-					-1 & 3 & 2\\
-					3 & -6 & -5
+					\phantom{-}4 & -6 & -6\\
+					-1 & \phantom{-}3 & \phantom{-}2\\
+					\phantom{-}3 & -6 & -5
 				\end{bmatrix},
 				A - 2I_3 = \begin{bmatrix}
-					3 & -6 & -6\\
-					-1 & 2 & 2\\
-					3 & -6 & -6
+					\phantom{-}3 & -6 & -6\\
+					-1 & \phantom{-}2 & \phantom{-}2\\
+					\phantom{-}3 & -6 & -6
 				\end{bmatrix}
 			\]
 			e assim
@@ -735,9 +735,9 @@ para todo $u \in V$.
 			Note que $p_T(x) = m_T(x)(x - 2)$ e assim $p_T(A) = [0]_{3 \times 3}$.
 		\end{solucao}
 		\item $A = \begin{bmatrix}
-			2 & 1 & 0 & 0\\
-			0 & 2 & 0 & 0\\
-			0 & 0 & 1 & 1\\
+			2 & 1 & \phantom{-}0 & 0\\
+			0 & 2 & \phantom{-}0 & 0\\
+			0 & 0 & \phantom{-}1 & 1\\
 			0 & 0 & -2 & 4
 		\end{bmatrix}$, $n = 4$.
 		\begin{solucao}
@@ -752,14 +752,14 @@ para todo $u \in V$.
 			Temos
 			\[
 				f(A) = (A - 3I_4)(A - 2I_4) = \begin{bmatrix}
-					-1 & 1 & 0 & 0\\
-					0 & -1 & 0 & 0\\
-					0 & 0 & -2 & 1\\
-					0 & 0 & -2 & 1
+					-1 & \phantom{-}1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & -1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1
 				\end{bmatrix}
 				\begin{bmatrix}
-					0 & 1 & 0 & 0\\
-					0 & 0 & 0 & 0\\
+					0 & 1 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & 0\\
 					0 & 0 & -1 & 1\\
 					0 & 0 & -2 & 2
 				\end{bmatrix} = \begin{bmatrix}
@@ -772,14 +772,14 @@ para todo $u \in V$.
 			Agora
 			\[
 				g(A) = (A - 3I_4)(A - 2I_4)^2 = \begin{bmatrix}
-					-1 & 1 & 0 & 0\\
-					0 & -1 & 0 & 0\\
-					0 & 0 & -2 & 1\\
-					0 & 0 & -2 & 1
+					-1 & \phantom{-}1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & -1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1
 				\end{bmatrix}
 				\begin{bmatrix}
-					0 & 1 & 0 & 0\\
-					0 & 0 & 0 & 0\\
+					0 & 1 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & 0\\
 					0 & 0 & -1 & 1\\
 					0 & 0 & -2 & 2
 				\end{bmatrix}^2 = \begin{bmatrix}
@@ -1174,15 +1174,15 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 			As poss{\'\i}veis formas s\~ao
 			\begin{align*}
 				[T]_\mathcal{B} = \begin{bmatrix}
-					-1 & 0 & 0 & &\\
-					1 & -1 & 0 & & \\
-					0 & 1 & -1 & &\\
+					-1 & \phantom{-}0 & \phantom{-}0 & &\\
+					\phantom{-}1 & -1 & \phantom{-}0 & & \\
+					\phantom{-}0 & \phantom{-}1 & -1 & &\\
 					& & & 2 & \\
 					& & & & 2
 				\end{bmatrix}, \quad [T]_\mathcal{B} = \begin{bmatrix}
-					-1 & 0 & 0 & &\\
-					1 & -1 & 0 & & \\
-					0 & 1 & -1 & &\\
+					-1 & \phantom{-}0 & \phantom{-}0 & &\\
+					\phantom{-}1 & -1 & \phantom{-}0 & & \\
+					\phantom{-}0 & \phantom{-}1 & -1 & &\\
 					& & & 2 & 0\\
 					& & & 1 & 2
 				\end{bmatrix}\\
@@ -1217,10 +1217,10 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 		\item Seja $T : \cp{K}^4 \to \cp{K}^4$ tal que em rela\c{c}\~ao \`a base can\^onica, $T$ seja representado pela matriz
 		\[
 			[T] = \begin{bmatrix}
-				3 & -1 & 1 & -7\\
+				3 & -1 & \phantom{-}1 & -7\\
 				9 & -3 & -7 & -1\\
-				0 & 0 & 4 & -8\\
-				0 & 0 & 2 & -4
+				0 & \phantom{-}0 & \phantom{-}4 & -8\\
+				0 & \phantom{-}0 & \phantom{-}2 & -4
 			\end{bmatrix}.
 		\]
 		Encontre a forma de Jordan de $T$.
@@ -1232,25 +1232,25 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 			C\'alculos simples mostram que $m_T(x) = x^2$. Assim a forma de Jordan de $T$ possui um bloco de Jordan de tamanho 2 associado a 0. Agora,
 			\begin{align*}
 				\begin{gmatrix}[b]
-  					3 & -1 & 1 & -7\\
+  					3 & -1 & \phantom{-}1 & -7\\
 					9 & -3 & -7 & -1\\
-					0 & 0 & 4 & -8\\
-					0 & 0 & 2 & -4
+					0 & \phantom{-}0 & \phantom{-}4 & -8\\
+					0 & \phantom{-}0 & \phantom{-}2 & -4
 					\rowops
 			   		\add[-3]{0}{1}
 			   		\add[-1/2]{2}{3}
      			\end{gmatrix}\leadsto\begin{gmatrix}[b]
-  					3 & -1 & 1 & -7\\
-					0 & 0 & -10 & -20\\
-					0 & 0 & 4 & -8\\
-					0 & 0 & 0 & 0
+  					3 & -1 & \phantom{-}1 & -7\\
+					0 & \phantom{-}0 & -10 & -20\\
+					0 & \phantom{-}0 & \phantom{-}4 & -8\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0
 					\rowops
 			   		\add[-0,4]{1}{2}
      			\end{gmatrix}\leadsto\begin{bmatrix}
-  					3 & -1 & 1 & -7\\
-					0 & 0 & -10 & -20\\
-					0 & 0 & 0 & 0\\
-					0 & 0 & 0 & 0
+  					3 & -1 & \phantom{-}1 & -7\\
+					0 & \phantom{-}0 & -10 & -20\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0
      			\end{bmatrix}
 			\end{align*}
 			e assim $\dim_\cp{K}\aut_T(a) = 2$, isto \'e, existem dois blocos de Jordan associados ao autovalor 0. Portanto, existe uma base $\mathcal{B}$ de $V$ tal que
