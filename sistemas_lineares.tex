@@ -55,7 +55,7 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. Quando n\~ao houver
 \begin{enumerate}
 	\item S\~ao exemplos de corpos os conjuntos: $\rac$, $\real$, $\complex$ com as opera\c{c}\~oes de soma e multiplica\c{c}\~oes usuais destes conjuntos.
 
-	\item O conjunto $\integer$ com a soma e multiplica\c{c}\~oes usuais n\~ao \'e um corpo, pois por exemplo, n\~ao existe $b \in \integer$ tal que $2b = 1$.
+	\item O conjunto $\z$ com a soma e multiplica\c{c}\~oes usuais n\~ao \'e um corpo, pois por exemplo, n\~ao existe $b \in \z$ tal que $2b = 1$.
 
 	\item Seja
 	\[
@@ -134,42 +134,42 @@ Propriedades importantes: Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao
 
 \section{Corpos Finitos}\label{sec:corpor_finitos}\index{Corpos!Finitos}
 
-Seja $p \in \integer$ um n\'umero primo. Dado $a \in \integer$, sempre \'e poss{\'\i}vel escrever
+Seja $p \in \z$ um n\'umero primo. Dado $a \in \z$, sempre \'e poss{\'\i}vel escrever
 \[
 a = bp + r,
 \]
-onde $b$, $r \in \integer$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$, 
+onde $b$, $r \in \z$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$, 
 $1$, $2$, \dots, $p -1 $.
 
 Assim vamos considerar o seguinte conjunto
 \[
-\integer_p = \{\overline{0}, \overline{1}, \overline{2}, \dots, \overline{p - 1}\}
+\z_p = \{\overline{0}, \overline{1}, \overline{2}, \dots, \overline{p - 1}\}
 \]
 onde
 \begin{align*}
-&\overline{0} = \{bp \mid b \in \integer\} = \{0, \pm p, \pm 2p, \pm 3p, \dots\}\\
-&\overline{1} = \{bp + 1\mid b \in \integer\} = \{\pm p + 1, \pm 2p + 1, \pm 3p + 1, \dots\}\\
-&\overline{2} = \{bp + 2\mid b \in \integer\} = \{\pm p + 2, \pm 2p + 2, \pm 3p + 2, \dots\}\\
+&\overline{0} = \{bp \mid b \in \z\} = \{0, \pm p, \pm 2p, \pm 3p, \dots\}\\
+&\overline{1} = \{bp + 1\mid b \in \z\} = \{\pm p + 1, \pm 2p + 1, \pm 3p + 1, \dots\}\\
+&\overline{2} = \{bp + 2\mid b \in \z\} = \{\pm p + 2, \pm 2p + 2, \pm 3p + 2, \dots\}\\
 \vdots\\
-&\overline{p - 1} = \{bp + (p - 1) \mid b \in \integer\} = \{(b + 1)p - 1) \mid b \in \integer\}\\ &= \{cp - 1 \mid c \in \integer\} = \{-1, \pm p - 1, \pm 2p - 1, \pm 3p - 1, \dots\}.
+&\overline{p - 1} = \{bp + (p - 1) \mid b \in \z\} = \{(b + 1)p - 1) \mid b \in \z\}\\ &= \{cp - 1 \mid c \in \z\} = \{-1, \pm p - 1, \pm 2p - 1, \pm 3p - 1, \dots\}.
 \end{align*}
 
-defina em $\integer_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{x}$, $\overline{y} \in \integer_p$
+defina em $\z_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{x}$, $\overline{y} \in \z_p$
 \begin{align*}
 \overline{x} \oplus \overline{y} = \overline{x + y}\\
 \overline{x} \otimes \overline{y} = \overline{xy},
 \end{align*}
 onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros. Para determinar o valor de $\overline{x + y}$ e de $\overline{xy}$, encontramos o resto da divis\~ao inteira de $x + y$ por $p$ e de $xy$ por $p$. Logo
 \begin{align*}
-\overline{x} \oplus \overline{y} \in \integer_p\\
-\overline{x} \otimes \overline{y} \in \integer_p.
+\overline{x} \oplus \overline{y} \in \z_p\\
+\overline{x} \otimes \overline{y} \in \z_p.
 \end{align*}
 
 \begin{exemplos}
 \begin{enumerate}
 	\item Para $p = 3$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$ e $2$. Da{\'\i}
 		\[
-			\integer_3 = \{\overline{0}, \overline{1}, \overline{2}\}
+			\z_3 = \{\overline{0}, \overline{1}, \overline{2}\}
 		\]
 	e temos
 	\begin{center}
@@ -187,8 +187,8 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 			$\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
 		\end{tabular}
 	\end{center}
-	Note que a soma $\oplus$ e o produto $\otimes$ em $\integer_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
-	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\integer_3$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\integer_3, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_3$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_3, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
 	\[
 		(\overline{1} \oplus \overline{1}) \oplus \overline{1} = (\overline{1 + 1}) \oplus \overline{1} = \overline{2} \oplus \overline{1} = \overline{3} = \overline{0}.
 	\]
@@ -196,7 +196,7 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 
 	\item Para $p = 5$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$, $2$, $3$ e $4$. Da{\'\i}
 		\[
-			\integer_5 = \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}
+			\z_5 = \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}
 		\]
 	e temos
 		\begin{center}
@@ -219,8 +219,8 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 				$\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
 			\end{tabular}
 		\end{center}
-	Note que a soma $\oplus$ e o produto $\otimes$ em $\integer_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
-	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\integer_5$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\integer_5, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_5$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_5, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
 	\[
 		\overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} = \overline{1 + 1 + 1 + 1 + 1} = \overline{5} = \overline{0}.
 	\]
@@ -229,32 +229,32 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 \end{exemplos}
 
 \begin{teorema}
-Para todo $p \in \integer$, $p$ n\'umero primo, $(\integer_p, \oplus, \otimes)$ \'e um corpo.
+Para todo $p \in \z$, $p$ n\'umero primo, $(\z_p, \oplus, \otimes)$ \'e um corpo.
 \end{teorema}
 \begin{prova}
-Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \integer_p$ temos:
+Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \z_p$ temos:
 \begin{enumerate}
 	\item[A1)] $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
 	\item[A2)] $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
-	\item[A3)] Temos que $\overline{0} \in \integer_p$ e para todo $\overline{x} \in \integer_p$:
+	\item[A3)] Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
 	\[
 	\overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
 	\]
-	Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\integer_p$.
-	\item[A4)] Dado $\overline{x} \in \integer_p$, tome $\overline{p - x} \in \integer_p$, pois $0 \le p - x \le p - 1$. Assim
+	Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\z_p$.
+	\item[A4)] Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
 	\[
 	\overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
 	\]
-	Logo todo elemento de $\integer_p$ possui oposto aditivo.
+	Logo todo elemento de $\z_p$ possui oposto aditivo.
 	\item[M1)] $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
 	\item[M2)] $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
 	\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
-	\item[M3)] O elemento $\overline{1} \in \integer_p$ \'e tal que
+	\item[M3)] O elemento $\overline{1} \in \z_p$ \'e tal que
 	\[
 	\overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
 	\]
-	para todo $\overline{x} \in \integer_p$.
-	\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \integer$ tais que
+	para todo $\overline{x} \in \z_p$.
+	\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
 	\[
 	xy + pz = 1
 	\]
@@ -266,20 +266,20 @@ Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \integer_p$ temos:
 	&\overline{x} \otimes \overline{y} = \overline{1}
 	\end{align*}
 	uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
-	$\overline{y} \in \integer_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(a + p)y = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne 0$ e assim todo elemento $\overline{x} \in \integer_p$ possui inverso multiplicativo.
+	$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(a + p)y = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne 0$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
 	\item[D)] $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
 \end{enumerate}
-Portanto, $(\integer_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
+Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
 \end{prova}
 
 \begin{observacao}
 \begin{enumerate}
-	\item Se $p$ n\~ao for um n\'umero primo, $(\integer_p, \oplus, \otimes)$ pode n\~ao ser corpo. Por exemplo, em $\integer_6$ temos $\overline{2} \ne \overline{0}$ e $\overline{3} \ne \overline{0}$, mas
+	\item Se $p$ n\~ao for um n\'umero primo, $(\z_p, \oplus, \otimes)$ pode n\~ao ser corpo. Por exemplo, em $\z_6$ temos $\overline{2} \ne \overline{0}$ e $\overline{3} \ne \overline{0}$, mas
 	\[
 	\overline{2}\otimes \overline{3} = \overline{2\cdot 3} = \overline{6} = \overline{0}.
 	\]
 
-	\item Para simplificar a nota\c{c}\~ao vamos denotar $\oplus$ por $+$ e $\otimes$ por $\cdot$. Assim vamos dizer simplesmente que $(\integer_p, +, \cdot)$ \'e um corpo.
+	\item Para simplificar a nota\c{c}\~ao vamos denotar $\oplus$ por $+$ e $\otimes$ por $\cdot$. Assim vamos dizer simplesmente que $(\z_p, +, \cdot)$ \'e um corpo.
 \end{enumerate}
 \end{observacao}
 
@@ -1071,7 +1071,7 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\overline{1}x + \overline{5}y + \overline{2}z = \overline{2}\\
 	\overline{2}x + \overline{3}y + \overline{4}z = \overline{4}\\
 	\overline{4}x + \overline{5}y + \overline{1}z = \overline{5}
-	\end{cases}$ em $\integer_7$.
+	\end{cases}$ em $\z_7$.
 	\begin{solucao}
 	A matriz ampliada do sistema \'e
 	\[
@@ -1111,11 +1111,11 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\end{align*}
 	Assim o posto de $A$ \'e $p = 2$ e a nulidade \'e 1. Logo temos uma \'unica vari\'avel livre que \'e $z$. A solu\c{c}\~ao ent\~ao \'e dada por
 	\[
-	x = \overline{1} + \overline{5}z,\quad y = \overline{3},\quad z \in \integer_7.
+	x = \overline{1} + \overline{5}z,\quad y = \overline{3},\quad z \in \z_7.
 	\]
 	O conjunto solu\c{c}\~ao \'e
 	\[
-	S = \{(x, y, z) \mid x, y , z \in \integer_7\} = \{(\overline{1} + \overline{5}z, \overline{3}, z) \mid z \in \integer_7\}.
+	S = \{(x, y, z) \mid x, y , z \in \z_7\} = \{(\overline{1} + \overline{5}z, \overline{3}, z) \mid z \in \z_7\}.
 	\]
 	Tal conjunto cont\'em exatamente 7 solu\c{c}\~oes distintas.
 	\end{solucao}
@@ -1124,7 +1124,7 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\overline{3}x_1 + \overline{1}x_2 + \overline{2}x_3 + \overline{1}x_4 = \overline{9}\\
 	\overline{1}x_1 + \overline{4}x_3 + \overline{3}x_4 = \overline{6}\\
 	\overline{5}x_1 + \overline{1}x_3 + \overline{1}x_4 = \overline{9}
-	\end{cases}$ em $\integer_{11}$.
+	\end{cases}$ em $\z_{11}$.
 	\begin{solucao}
 	A matriz ampliada do sistema \'e
 	\[
