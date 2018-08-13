@@ -10,46 +10,46 @@
 
 \begin{definicao}\index{Corpos}
 Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por
-$+$ (adi\c{c}\~ao) e $\cdot$ (multiplica\c{c}\~ao) de modo que
+$\oplus$ (adi\c{c}\~ao) e $\otimes$ (multiplica\c{c}\~ao) de modo que
 \begin{align*}
-a + b \in \cp{K}\\
-a \cdot b \in \cp{K}
+a \oplus b \in \cp{K}\\
+a \otimes b \in \cp{K}
 \end{align*}
 para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
 \begin{itemize}
 
-	\item[A1)] \textbf{Comutatividade da soma}: $a + b = b + a$ para todos $a$, $b \in \cp{K}$;
-	\item[A2)] \textbf{Associatividade da soma}: $a + (b + c) = (a + b) + c$, para todos $a$, $b$ e $c \in \cp{K}$;
-	\item[A3)] \textbf{Elemento neutro da soma}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+	\item[A1)] \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
+	\item[A2)] \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
+	\item[A3)] \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
 	\[
-	a + 0_\cp{K} = 0_\cp{K} + a = a
+		a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
 	\]
-	para todo $a \in \cp{K}$. (Elemento neutro da soma)
-	\item[A4)] \textbf{Elemento oposto da soma}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+	para todo $a \in \cp{K}$. (Elemento neutro da adi\c{c}\~ao)
+	\item[A4)] \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
 	\[
-	a + (-a) = (-a) + a = 0_\cp{K}.
+		a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
 	\]
-	\item[M1)] \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \cdot b = b \cdot a$ para todos $a$, $b \in \cp{K}$;
-	\item[M2)] \textbf{Associatividade da multiplica\c{c}\~ao}: $a \cdot (b \cdot c) = (a \cdot b) \cdot c$, para todos $a$, $b$ e $c \in \cp{K}$;
+	\item[M1)] \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
+	\item[M2)] \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
 	\item[M3)] \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
 	\[
-	a \cdot 1_\cp{K} = 1_\cp{K} \cdot a = a
+		a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
 	\]
 	para todo $a \in \cp{K}$.
-	\item[M4)] \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+	\item[M4)] \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
 	tal que
 	\[
-	a \cdot a^{-1} = a^{-1} \cdot a = 1_\cp{K}.
+		a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
 	\]
-	\item[D)] \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a + b)\cdot c = a\cdot c + b\cdot c$, para todos $a$, $b$ e $c \in \cp{K}$.
+	\item[D)] \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
 \end{itemize}
 \end{definicao}
 
 Para simplificar a nota\c{c}\~ao vamos escrever
 \[
-a \cdot b = ab.
+a \otimes b = ab.
 \]
-Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, +, \cdot)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
 
 \begin{exemplo}
 \begin{enumerate}
@@ -175,16 +175,16 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
-			$\oplus$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$\\\hline
-			$\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$\\\hline
+			$\oplus$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$\\\hline
 			\end{tabular} \qquad \begin{tabular}{|c|c|c|c|c|c|}
 			\hline
-			$\otimes$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
-			$\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
+			$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+			$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
 		\end{tabular}
 	\end{center}
 	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
@@ -202,21 +202,21 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|c|c|c|c|}
 				\hline
-				$\oplus$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$\\\hline
-				$\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
-				$\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
-				$\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
+				$\oplus$ &\rule{0pt}{2.5ex}$\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
+				$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
+				$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
 			\end{tabular} \qquad 
 			\begin{tabular}{|c|c|c|c|c|c|}
 				\hline
-				$\otimes$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
-				$\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{4}$& $\overline{1}$ & $\overline{3}$ \\\hline
-				$\overline{3}$ & $\overline{0}$ & $\overline{3}$ & $\overline{1}$& $\overline{4}$ & $\overline{2}$ \\\hline
-				$\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
+				$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{4}$& $\overline{1}$ & $\overline{3}$ \\\hline
+				$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{0}$ & $\overline{3}$ & $\overline{1}$& $\overline{4}$ & $\overline{2}$ \\\hline
+				$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
 			\end{tabular}
 		\end{center}
 	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
