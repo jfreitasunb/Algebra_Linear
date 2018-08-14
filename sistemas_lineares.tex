@@ -77,7 +77,7 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 	Então $(\rac, \oplus, \otimes)$ \'e um corpo.
 	\begin{solucao}
 		De fato, para todos $x$, $y$ e $z \in \rac$ temos:
-		\begin{enumerate}
+		\begin{enumerate}[label={\arabic*})]
 			\item $x \oplus y = x + y - 3 = y + x - 3 = y \oplus x$.
 			Logo $x \oplus y = y \oplus x$.
 
@@ -97,14 +97,14 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 			\[
 				x \ oplus y = x \oplus (6 - x) = x + (6 - x ) - 3 = 3 = 0_{\cp{K}},
 			\]
-			logo $y = 6 - x$ é o oposto na adição $\oplus$ definida em $\rac$.
+			logo $y = 6 - x$ é o oposto de $x$ na adição $\oplus$ definida em $\rac$.
 
 			\item $x \otimes y = x + y - \dfrac{xy}{3} = y + x - \dfrac{yx}{3} = y \otimes x$, para todos $x$, $y \in \rac$.
 
 			\item Para $x$, $y$ e $z \in \rac$ temos
 			\begin{align*}
-				(x \otimes y) \otimes z &= (x + y - \dfrac{xy}{3}) \otimes z = (x + y - \dfrac{xy}{3}) + y - \dfrac{(x + y - \dfrac{xy}{3})z}{3} \\ &= x + y - \dfrac{xy}{3} + z - \dfrac{xz}{3} - \dfrac{yz}{3} + \dfrac{xyz}{9}\\
-				x \otimes (y \otimes z) &= x \otimes (y + z - \dfrac{yz}{3}) = x + (y + z - \dfrac{yz}{3}) - \dfrac{x(y + z - \dfrac{yz}{3})}{3} \\ &= x + y + z - \dfrac{yz}{3} - \dfrac{xy}{3} - \dfrac{xz}{3} + \dfrac{xyz}{9},
+				(x \otimes y) \otimes z &= \left(x + y - \dfrac{xy}{3}\right) \otimes z = (x + y - \dfrac{xy}{3}) + y - \dfrac{\left(x + y - \dfrac{xy}{3}\right)z}{3} \\ &= x + y - \dfrac{xy}{3} + z - \dfrac{xz}{3} - \dfrac{yz}{3} + \dfrac{xyz}{9}\\
+				x \otimes (y \otimes z) &= x \otimes \left(y + z - \dfrac{yz}{3}\right) = x + (y + z - \dfrac{yz}{3}) - \dfrac{x\left(y + z - \dfrac{yz}{3}\right)}{3} \\ &= x + y + z - \dfrac{yz}{3} - \dfrac{xy}{3} - \dfrac{xz}{3} + \dfrac{xyz}{9},
 			\end{align*}
 			logo $(x \otimes y) \otimes z = x \otimes (y \otimes z)$, como queríamos.
 
@@ -116,14 +116,14 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 
 			\item Dado $x \in \rac$, $x \ne 3 = 0_{\cp{K}}$ tome $y = \dfrac{-3x}{3 - x} \in \rac$. Temos
 			\[
-				x \otimes y = x \otimes \dfrac{-3x}{3 - x} = x + \dfrac{-3x}{3 - x} - \dfrac{x(\dfrac{-3x}{3 - x})}{3} = 0 = 1_{\cp{K}}.
+				x \otimes y = x \otimes \dfrac{-3x}{3 - x} = x + \dfrac{-3x}{3 - x} - \dfrac{x\left(\dfrac{-3x}{3 - x}\right)}{3} = 0 = 1_{\cp{K}}.
 			\]
 			Logo $y = \dfrac{-3x}{3 - x}$ é o inverso multiplicativo de $x$ na operação $\otimes$ em $\rac$.
 
 			\item Para todos $x$, $y$ e $z \in \rac$ temos
 			\begin{align*}
 				(x \oplus y) \otimes z &= (x + y - 3) \otimes z = (x + y - 3) + z - \dfrac{(x + y - 3)z}{3} \\ &= x + y - 3 + z - \dfrac{xz}{3} - \dfrac{yz}{3} + z\\
-				(x \otimes z) \oplus (y \otimes z) &= (x + z - \dfrac{xz}{3}) \oplus (y + z - \dfrac{yz}{3}) \\ &= x + z - \dfrac{xz}{3} + y + z - \dfrac{yz}{3} - 3,
+				(x \otimes z) \oplus (y \otimes z) &= \left(x + z - \dfrac{xz}{3}\right) \oplus \left(y + z - \dfrac{yz}{3}\right) \\ &= x + z - \dfrac{xz}{3} + y + z - \dfrac{yz}{3} - 3,
 			\end{align*}
 			Logo $(x \oplus y) \otimes z = (x \otimes z) \oplus (y \otimes z)$.
 		\end{enumerate}
