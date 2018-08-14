@@ -75,6 +75,29 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 		x \otimes y = x + y - \dfrac{xy}{3}.
 	\end{align*}
 	Então $(\rac, \oplus, \otimes)$ \'e um corpo.
+	\begin{solucao}
+		De fato, para todos $x$, $y$ e $z \in \rac$ temos:
+		\begin{enumerate}
+			\item $x \oplus y = x + y - 3 = y + x - 3 = y \oplus x$.
+			Logo $x \oplus y = y \oplus x$.
+
+			\item Temos $(x \oplus y) \oplus z = (x + y - 3) \oplus z = (x + y - 3) + z - 3 = x + y + z - 6$ e $x \oplus ( y \oplus z) = x \oplus (y + z - 3) = x + (y + z - 3) - 3 = x + y + z - 6$. Logo $(x \oplus y) \oplus z = x \oplus ( y \oplus z)$, como queríamos.
+
+			\item Tome $0_{\cp{K}} = 3$. Então para todo $x \in \rac$ temos
+			\[
+				x \oplus 0_{\cp{K}} = x \oplus 3 = x + 3 - x = x.
+			\]
+			Logo $0_{\cp{K}} = 3$ é o elemento neutro da operação $\oplus$ em $\rac$.
+
+			\item Para $x \in \rac$ tome $y = 6 - x \in \rac$. Assim
+			\[
+				x \ oplus y = x \oplus (6 - x) = x + (6 - x ) - 3 = 3 = 0_{\cp{K}},
+			\]
+			logo $y = 6 - x$ é o oposto na adição $\oplus$ definida em $\rac$.
+
+
+		\end{enumerate}
+	\end{solucao}
 \end{enumerate}
 \end{exemplo}
 
