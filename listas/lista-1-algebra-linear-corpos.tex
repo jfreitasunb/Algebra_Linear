@@ -37,7 +37,7 @@
 
 \newcommand{\sub}{\subseteq}
 \newcommand{\n}{\mathbb{N}}
-\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\z}{\mathbb{Z}}
 \newcommand{\rac}{\mathbb{Q}}
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\complex}{\mathbb{C}}
@@ -95,41 +95,41 @@
 \begin{exercicio}
 Verifique se os seguintes conjuntos, com as operações dadas, s\~ao corpos.
 \begin{enumerate}[label={\alph*})]
-    \item $A = \{ a + bi \mid a,\ b \in \cp{Q}\}$, onde $i$ \'e o n\'umero complexo imagin\'ario e as operações são as mesmas operações de $\cp{C}$;
-    \item $B = \{ a + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in B$ definimos
+    \item $A = \{ a + bi \mid a,\ b \in \rac\}$, onde $i$ \'e o n\'umero complexo imagin\'ario e as operações são as mesmas operações de $\complex$;
+    \item $B = \{ a + b\sqrt{3} \mid a,\ b \in \rac\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in B$ definimos
     \begin{align*}
       a + b\sqrt{3} &= c + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
       (a + b\sqrt{3}) \oplus (c + d\sqrt{3}) &= (a + c) + (b + d)\sqrt{3},\\
       (a + b\sqrt{3}) \otimes (c + d\sqrt{3}) &= (ac + 3bd) + (ad + bc)\sqrt{3}.
     \end{align*}
-    \item $C = \{ a + b\sqrt[3]{2} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a + b\sqrt[3]{2}$, $c + d\sqrt[3]{2} \in C$ definimos
+    \item $C = \{ a + b\sqrt[3]{2} \mid a,\ b \in \rac\}$. Aqui dados $a + b\sqrt[3]{2}$, $c + d\sqrt[3]{2} \in C$ definimos
     \begin{align*}
       a + b\sqrt[3]{2} &= c + d\sqrt[3]{2} \mbox{ quando } a = c \mbox{ e } b = d,\\
       (a + b\sqrt[3]{2}) \oplus (c + d\sqrt[3]{2}) &= (a + c) + (b + d)\sqrt[3]{2},\\
       (a + b\sqrt[3]{2}) \otimes (c + d\sqrt[3]{2}) &= (ac + bd\sqrt[3]{4}) + (ad + bc)\sqrt[3]{2}.
     \end{align*}
-    \item $D = \{ a\sqrt{2} + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a\sqrt{2} + b\sqrt{3}$, $c\sqrt{2} + d\sqrt{3} \in D$ definimos
+    \item $D = \{ a\sqrt{2} + b\sqrt{3} \mid a,\ b \in \rac\}$. Aqui dados $a\sqrt{2} + b\sqrt{3}$, $c\sqrt{2} + d\sqrt{3} \in D$ definimos
     \begin{align*}
       a\sqrt{2} + b\sqrt{3} &= c\sqrt{2} + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
       (a\sqrt{2} + b\sqrt{3}) \oplus (c\sqrt{2} + d\sqrt{3}) &= (a + c)\sqrt{2} + (b + d)\sqrt{3},\\
       (a\sqrt{2} + b\sqrt{3}) \otimes (c\sqrt{2} + d\sqrt{3}) &= (2ac + 3bd) + (ad + bc)\sqrt{6}.
     \end{align*}
-    \item $E = \{ a + b\sqrt{2} \mid a,\ b \in \cp{Z}\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in E$ definimos
+    \item $E = \{ a + b\sqrt{2} \mid a,\ b \in \z\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in E$ definimos
     \begin{align*}
       a + b\sqrt{3} &= c + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
       (a + b\sqrt{3}) \oplus (c + d\sqrt{3}) &= (a + c) + (b + d)\sqrt{3},\\
       (a + b\sqrt{3}) \otimes (c + d\sqrt{3}) &= (ac + 3bd) + (ad + bc)\sqrt{3}.
     \end{align*}
-    \item $(\cp{Q}, \oplus, \odot)$ onde $a \oplus b = a + b - 1$ e $a \odot b = a + b - ab$.
+    \item $(\rac, \oplus, \odot)$ onde $a \oplus b = a + b - 1$ e $a \odot b = a + b - ab$.
   \end{enumerate}  
 \end{exercicio}
 
 \begin{exercicio}
 Resolva as seguintes equa\c{c}\~oes:
 \begin{enumerate}[label={\alph*})]
-  \item $x \oplus \overline{2} = \overline{0}$ no conjunto $\integer_4$;
-  \item $x^2 \oplus \overline{2}x = \overline{2}$ no conjunto $\integer_5$;
-  \item $x^3 \oplus \overline{2}x = \overline{3}$ no conjunto $\integer_7$.
+  \item $x \oplus \overline{2} = \overline{0}$ no conjunto $\z_4$;
+  \item $x^2 \oplus \overline{2}x = \overline{2}$ no conjunto $\z_5$;
+  \item $x^3 \oplus \overline{2}x = \overline{3}$ no conjunto $\z_7$.
 \end{enumerate}
 \end{exercicio}
 
@@ -141,26 +141,26 @@ Resolva as seguintes equa\c{c}\~oes:
       \overline{2}x \oplus y = \overline{2}
     \end{cases}
   \]
-  no conjunto $\integer_4$. Este sistema possui solu\c{c}\~ao em $\integer_3$?
+  no conjunto $\z_4$. Este sistema possui solu\c{c}\~ao em $\z_3$?
 \end{exercicio}
 
 \begin{exercicio}
-  Resolva a equa\c{c}\~ao $x^2 \oplus \overline{2}x \oplus \overline{1} = \overline{0}$ nos conjuntos $\integer_7$ e $\integer_{11}$, caso ela tenha ra{\'\i}zes.
+  Resolva a equa\c{c}\~ao $x^2 \oplus \overline{2}x \oplus \overline{1} = \overline{0}$ nos conjuntos $\z_7$ e $\z_{11}$, caso ela tenha ra{\'\i}zes.
 \end{exercicio}
 
 \begin{exercicio}
-  Para quais valores de $\overline{c}$ a equa\c{c}\~ao $\overline{2}\otimes x = \overline{c}$ tem solu\c{c}\~ao no conjunto $\integer_5$.
+  Para quais valores de $\overline{c}$ a equa\c{c}\~ao $\overline{2}\otimes x = \overline{c}$ tem solu\c{c}\~ao no conjunto $\z_5$.
 \end{exercicio}
 
 \begin{exercicio}
-Seja $\mathbb{K}$ um corpo. Definimos a caracter{\'\i}stica \textbf{$\ch \mathbb{K}$} de $\mathbb{K}$ da seguinte maneira:
+Seja $\cp{K}$ um corpo. Definimos a caracter{\'\i}stica \textbf{$\ch \cp{K}$} de $\cp{K}$ da seguinte maneira:
 \begin{enumerate}[label=({\roman*})]
-  \item se a soma $1 + 1 + \cdots + 1$ for sempre diferente de zero, ent\~ao \textbf{$\ch \mathbb{K} = 0$};
-  \item se a soma $\underbrace{1 + 1 + \cdots + 1}_{m} = 0$, para algum $m \ge 2$, ent\~ao \textbf{$\ch \mathbb{K}$} \'e o menor n\'umero $m$ com esta propriedade.
+  \item se a soma $1 + 1 + \cdots + 1$ for sempre diferente de zero, ent\~ao \textbf{$\ch \cp{K} = 0$};
+  \item se a soma $\underbrace{1 + 1 + \cdots + 1}_{m} = 0$, para algum $m \ge 2$, ent\~ao \textbf{$\ch \cp{K}$} \'e o menor n\'umero $m$ com esta propriedade.
 \end{enumerate}
 Com base nesta defini\c{c}\~ao:
 \begin{enumerate}[label={\alph*})]
-  \item Mostre que se $\ch \mathbb{K} = m \ne 0$, ent\~ao $m$ \'e um n\'umero primo.
+  \item Mostre que se $\ch \cp{K} = m \ne 0$, ent\~ao $m$ \'e um n\'umero primo.
   \item Exiba corpos com caracter{\'\i}sticas iguais a 0 e outros com caracter{\'\i}sticas distintas de 0.
 \end{enumerate}
 \end{exercicio}
@@ -176,7 +176,7 @@ Com base nesta defini\c{c}\~ao:
 \end{exercicio}
 
 \begin{exercicio}
-  Ache todos os elementos quadrados de $\integer_5$, $\integer_7$ e $\integer_{11}$.
+  Ache todos os elementos quadrados de $\z_5$, $\z_7$ e $\z_{11}$.
 \end{exercicio}
 
 % \newpage
