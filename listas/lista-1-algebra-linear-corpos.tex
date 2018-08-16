@@ -95,11 +95,31 @@
 \begin{exercicio}
 Verifique se os seguintes conjuntos s\~ao corpos:
 \begin{enumerate}[label={\alph*})]
-    \item $M = \{ a + bi \mid a,\ b \in \cp{Q}\}$, onde $i$ \'e o n\'umero complexo imagin\'ario;
-    \item $M = \{ a + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$;
-    \item $M = \{ a + b\sqrt[3]{2} \mid a,\ b \in \cp{Q}\}$;
-    \item $M = \{ a\sqrt{2} + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$;
-    \item $M = \{ a + b\sqrt{2} \mid a,\ b \in \cp{Z}\}$.
+    \item $M = \{ a + bi \mid a,\ b \in \cp{Q}\}$, onde $i$ \'e o n\'umero complexo imagin\'ario e as operações são as mesmas operações de $\cp{C}$;
+    \item $M = \{ a + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in M$ definimos
+    \begin{align*}
+      a + b\sqrt{3} &= c + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
+      (a + b\sqrt{3}) \oplus (c + d\sqrt{3}) &= (a + c) + (b + d)\sqrt{3},\\
+      (a + b\sqrt{3}) \otimes (c + d\sqrt{3}) &= (ac + 3bd) + (ad + bc)\sqrt{3}
+    \end{align*}
+    \item $M = \{ a + b\sqrt[3]{2} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a + b\sqrt[3]{2}$, $c + d\sqrt[3]{2} \in M$ definimos
+    \begin{align*}
+      a + b\sqrt[3]{2} &= c + d\sqrt[3]{2} \mbox{ quando } a = c \mbox{ e } b = d,\\
+      (a + b\sqrt[3]{2}) \oplus (c + d\sqrt[3]{2}) &= (a + c) + (b + d)\sqrt[3]{2},\\
+      (a + b\sqrt[3]{2}) \otimes (c + d\sqrt[3]{2}) &= (ac + bd\sqrt[3]{4}) + (ad + bc)\sqrt[3]{2}
+    \end{align*}
+    \item $M = \{ a\sqrt{2} + b\sqrt{3} \mid a,\ b \in \cp{Q}\}$. Aqui dados $a\sqrt{2} + b\sqrt{3}$, $c\sqrt{2} + d\sqrt{3} \in M$ definimos
+    \begin{align*}
+      a\sqrt{2} + b\sqrt{3} &= c\sqrt{2} + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
+      (a\sqrt{2} + b\sqrt{3}) \oplus (c\sqrt{2} + d\sqrt{3}) &= (a + c)\sqrt{2} + (b + d)\sqrt{3},\\
+      (a\sqrt{2} + b\sqrt{3}) \otimes (c\sqrt{2} + d\sqrt{3}) &= (2ac + 3bd) + (ad + bc)\sqrt{6}
+    \end{align*}
+    \item $M = \{ a + b\sqrt{2} \mid a,\ b \in \cp{Z}\}$. Aqui dados $a + b\sqrt{3}$, $c + d\sqrt{3} \in M$ definimos
+    \begin{align*}
+      a + b\sqrt{3} &= c + d\sqrt{3} \mbox{ quando } a = c \mbox{ e } b = d,\\
+      (a + b\sqrt{3}) \oplus (c + d\sqrt{3}) &= (a + c) + (b + d)\sqrt{3},\\
+      (a + b\sqrt{3}) \otimes (c + d\sqrt{3}) &= (ac + 3bd) + (ad + bc)\sqrt{3}
+    \end{align*}
     \item $(\cp{Q}, \oplus, \odot)$ onde $a \oplus b = a + b - 1$ e $a \odot b = a + b - ab$.
   \end{enumerate}  
 \end{exercicio}
