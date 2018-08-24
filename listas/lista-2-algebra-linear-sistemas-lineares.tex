@@ -136,6 +136,27 @@
 \end{exercicio}
 
 \begin{exercicio}
+  Qual o erro na seguintes sequência de operações elementares?
+    \begin{eqnarray*}
+      \begin{amatrix}{3} 
+        1 & 0 & 2 & 3 \\ 
+        0 & 1 & 2& 3 \\
+        2 & 0 & 1 & 4 \\
+      \end{amatrix} 
+      & 
+      \stackrel{L_1' \to L_1+L_2}{
+      \stackrel{L_2' \to L_1-L_2}{ 
+      \stackrel{L_3' \to  L_1+2L_2}{\sim}}}
+      &
+      \begin{amatrix}{3} 
+      1 & 1 & 4 & 6 \\
+      1 & \!\!-1 & 0& 0 \\
+      1 & 2 & 6 & 9 
+      \end{amatrix}
+    \end{eqnarray*}
+\end{exercicio}
+
+\begin{exercicio}
   Demonstrar que as duas matrizes seguintes \textbf{n\~ao} s\~ao linha-equivalentes:
   \[
     \begin{bmatrix}
@@ -499,27 +520,6 @@ $\begin{cases}
     \item \textit{Transitiva}: Para $x$, $y$ e $z \in U$, se $x \sim y$ e $y \sim z$, então $x \sim z$.
   \end{enumerate}
   Mostre que linha-equivalência de matrizes é uma relação de equivalência.
-\end{exercicio}
-
-\begin{exercicio}
-  Qual o erro na seguintes sequência de operações elementares?
-    \begin{eqnarray*}
-      \begin{amatrix}{3} 
-        1 & 0 & 2 & 3 \\ 
-        0 & 1 & 2& 3 \\
-        2 & 0 & 1 & 4 \\
-      \end{amatrix} 
-      & 
-      \stackrel{L_1' \to L_1+L_2}{
-      \stackrel{L_2' \to L_1-L_2}{ 
-      \stackrel{L_3' \to  L_1+2L_2}{\sim}}}
-      &
-      \begin{amatrix}{3} 
-      1 & 1 & 4 & 6 \\
-      1 & \!\!-1 & 0& 0 \\
-      1 & 2 & 6 & 9 
-      \end{amatrix}
-    \end{eqnarray*}
 \end{exercicio}
 
 \newpage
