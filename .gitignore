@@ -28,3 +28,9 @@ plano-algebra_linear_\(2018_2\)\.pdf
 listas/ans1\.tex
 
 listas/lista-1-algebra-linear-corpos\.pdf
+
+*.fls
+
+*.fdb_latexmk
+
+listas/lista-2-algebra-linear-sistemas-lineares\.pdf
