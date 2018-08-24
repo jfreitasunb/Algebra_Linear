@@ -17,6 +17,17 @@
 \usetikzlibrary{lindenmayersystems}
 \usetikzlibrary[shadings]
 
+%-------------amatrix
+% Augmented matrix.  Usage (note the argument does not count the aug col):
+% \begin{amatrix}{2}
+%   1  2  3 \\  4  5  6
+% \end{amatrix}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{r}|r@{}}
+}{%
+  \end{array}\right)
+}
+
 \Newassociation{solucao}{Solution}{ans}
 \newtheorem{exercicio}{}
 
@@ -491,23 +502,23 @@ $\begin{cases}
 \end{exercicio}
 
 \begin{exercicio}
-  Qual o erro na seguinte sequência de operações elementares?
+  Qual o erro na seguintes sequência de operações elementares?
     \begin{eqnarray*}
-      \begin{pmatrix} 
+      \begin{amatrix}{3} 
         1 & 0 & 2 & 3 \\ 
         0 & 1 & 2& 3 \\
         2 & 0 & 1 & 4 \\
-      \end{pmatrix} 
+      \end{amatrix} 
       & 
-      \stackrel{L_1 \to L_1+L_2}{
-      \stackrel{L_2 \to L_1-L_2}{ 
-      \stackrel{L_3 \to  L_1+2L_2}{\sim}}}
+      \stackrel{L_1' \to L_1+L_2}{
+      \stackrel{L_2' \to L_1-L_2}{ 
+      \stackrel{L_3' \to  L_1+2L_2}{\sim}}}
       &
-      \begin{pmatrix}
+      \begin{amatrix}{3} 
       1 & 1 & 4 & 6 \\
       1 & \!\!-1 & 0& 0 \\
       1 & 2 & 6 & 9 
-      \end{pmatrix}
+      \end{amatrix}
     \end{eqnarray*}
 \end{exercicio}
 
