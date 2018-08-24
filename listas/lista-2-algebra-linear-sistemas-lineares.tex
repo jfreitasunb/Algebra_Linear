@@ -124,36 +124,34 @@
 \begin{exercicio}
   Seja $\cp{K}$ um corpo. Dados $a$, $b$, $c$, $d$, $e$, $f \in \cp{K}$, mostre que as duas matrizes seguintes são linha-equivalentes, se supormos que $ad - bc \ne 0_{\cp{K}}$:
   \[
-    \begin{bmatrix}
+    \begin{amatrix}{2}
       a & b & e\\
       c & d & f
-    \end{bmatrix} \sim \begin{bmatrix}
+    \end{amatrix} \sim \begin{amatrix}{2}
       1_{\cp{K}} & 0_{\cp{K}} & (de - bf)(ad - bc)^{-1}\\
       0_{\cp{K}} & 1_{\cp{K}} & (af - ce)(ad - bc)^{-1}
-    \end{bmatrix}
+    \end{amatrix}
   \]
   onde $(ad - bc)^{-1}$ é o inverso multiplicativo de $ad - bc$ no corpo $\cp{K}$.
 \end{exercicio}
 
 \begin{exercicio}
-  Qual o erro na seguintes sequência de operações elementares?
-    \begin{eqnarray*}
+  Qual o erro na seguinte sequência de operações elementares?
+    \begin{align*}
       \begin{amatrix}{3} 
         1 & 0 & 2 & 3 \\ 
         0 & 1 & 2& 3 \\
         2 & 0 & 1 & 4 \\
       \end{amatrix} 
-      & 
-      \stackrel{L_1' \to L_1+L_2}{
-      \stackrel{L_2' \to L_1-L_2}{ 
-      \stackrel{L_3' \to  L_1+2L_2}{\sim}}}
-      &
+      \stackrel{L_1 \to L_1+L_2}{
+      \stackrel{L_2 \to L_1-L_2}{ 
+      \stackrel{L_3 \to  L_1+2L_2}{\sim}}}
       \begin{amatrix}{3} 
       1 & 1 & 4 & 6 \\
       1 & \!\!-1 & 0& 0 \\
       1 & 2 & 6 & 9 
       \end{amatrix}
-    \end{eqnarray*}
+    \end{align*}
 \end{exercicio}
 
 \begin{exercicio}
