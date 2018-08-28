@@ -147,53 +147,64 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 \end{proposicao}
 \begin{prova}
 	Vamos provar algumas propriedades.
-	\begin{enumerate}
-	\item[i)] De fato, suponha que $0_1$ e $0_2$ sejam elementos neutros da soma em $\cp{K}$. Temos
-	\[
-		0_1 = 0_1 + 0_2 = 0_2.
-	\]
+	\begin{enumerate}[label={\roman*})]
+		\item De fato, suponha que $0_1$ e $0_2$ sejam elementos neutros da soma em $\cp{K}$. Temos
+		\[
+			0_1 = 0_1 + 0_2 = 0_2.
+		\]
 	
-	\item[ii)] Sejam $b$ e $c$ elementos opostos de $a$, ent\~ao
-	\[
-	b = b + 0_\cp{K} = b + (c + a) = (b + a) + c = 0_\cp{K} + c = c.
-	\]
+		\item Sejam $b$ e $c$ elementos opostos de $a$. Daí
+		\begin{align*}
+			a + b &= 0_\cp{K}\\
+			a + c &= 0_\cp{K}.
+		\end{align*}
+	 	Ent\~ao
+		\[
+			b = b + 0_\cp{K} = b + (c + a) = (b + a) + c = 0_\cp{K} + c = c.
+		\]
+		
+		\item Temos
+		\begin{align*}
+			b &= b + 0_{\cp{K}} = b + (a + (-a)) = (b + a) + (-a) \\ &= (a + b) + (-a) = (a + c) + (-a) = (c + a) + (-a) \\ &= c + (a + (-a)) = c + 0_{\cp{K}} \\ &= c
+		\end{align*}
+		como queríamos.
 	
-	
-	\item[iv)] De fato,
-	\[
-		a\cdot 0_\cp{K} + 0_\cp{K} = a\cdot 0_\cp{K} = a\cdot (0_\cp{K} + 0_\cp{K}) = a\cdot 0_\cp{K} + a\cdot 0_\cp{K},
-	\]
-	logo pela lei do cancelamento, $a\cdot 0_\cp{K} = 0_\cp{K}$ como quer{\'\i}amos.
-	
-	
-	\item[v)]
-	De fato, suponha que $1_a$ e $1_b$ sejam elementos neutros da multiplica\c{c}\~ao. Ent\~ao
-	\[
-		1_a = 1_a\cdot 1_b = 1_b.
-	\]
-	
-	
-	\item[vi)]
-	Dado $a \in \cp{K}$, $a \ne 0$, suponha que $b$, $c \in \cp{K}$ sejam tais que
-	\[
-		ab = 1 \quad ac = 1.
-	\]
-	Ent\~ao
-	\[
-		b = 1b = (ac)b = c(ab) = c1 = c.
-	\]
+		\item De fato,
+		\[
+			a\cdot 0_\cp{K} + 0_\cp{K} = a\cdot 0_\cp{K} = a\cdot (0_\cp{K} + 0_\cp{K}) = a\cdot 0_\cp{K} + a\cdot 0_\cp{K},
+		\]
+		logo pela lei do cancelamento, $a\cdot 0_\cp{K} = 0_\cp{K}$ como quer{\'\i}amos.
 	
 	
-	\item[viii)]
-	Suponha que $a \ne 0_\cp{K}$, ent\~ao existe $a^{-1}$. Da{\'\i}
-	\begin{align*}
-		&ab = 0_\cp{K}\\
-		&a^{-1}(ab) = a^{-1}0_\cp{K}\\
-		&1b = 0_\cp{K}\\
-		&b = 0_\cp{K}.
-	\end{align*}
+		\item
+		De fato, suponha que $1_a$ e $1_b$ sejam elementos neutros da multiplica\c{c}\~ao. Ent\~ao
+		\[
+			1_a = 1_a\cdot 1_b = 1_b.
+		\]
 	
-\end{enumerate}
+		\item Dado $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, suponha que $b$, $c \in \cp{K}$ sejam tais que
+		\[
+			ab = 1_{\cp{K}} \quad ac = 1_{\cp{K}}.
+		\]
+		Ent\~ao
+		\[
+			b = 1_{\cp{K}}b = (ac)b = c(ab) = c1_{\cp{K}} = c.
+		\]
+		
+		\item De fato,
+		\begin{align*}
+			b &= b1_{\cp{K}} = b(aa^{-1}) = (ba)a^{-1} = (ab)a^{-1} \\ &= (ac)a^{-1} = (ca)a^{-1} = c(aa^{-1}) = c1_{\cp{K}} \\ &= c
+		\end{align*}
+	
+		\item
+		Suponha que $a \ne 0_\cp{K}$, ent\~ao existe $a^{-1}$. Da{\'\i}
+		\begin{align*}
+			&ab = 0_\cp{K}\\
+			&a^{-1}(ab) = a^{-1}0_\cp{K}\\
+			&1b = 0_\cp{K}\\
+			&b = 0_\cp{K}.
+		\end{align*}
+	\end{enumerate}
 \end{prova}
 
 
