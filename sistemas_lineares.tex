@@ -132,40 +132,48 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 \end{enumerate}
 \end{exemplo}
 
-Propriedades importantes: Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao
-\begin{enumerate}
-	\item O elemento neutro da soma \'e \'unico.
-	\begin{solucao}
-	De fato, suponha que $0_1$ e $0_2$ sejam elementos neutros da soma em $\cp{K}$. Temos
+\begin{proposicao}
+	Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao:
+	\begin{enumerate}[label={\roman*})]
+		\item O elemento neutro da soma \'e \'unico.
+		\item O oposto aditivo de cada elemento de $\cp{K}$ \'e \'unico.
+		\item Vale a lei do cancelamento, isto \'e, se $a + b = a + c$ ent\~ao $b = c$.
+		\item Para todo $a \in \cp{K}$, $a\cdot 0_\cp{K} = 0_\cp{K}$.
+		\item O elemento neutro da multiplica\c{c}\~ao \'e \'unico.
+		\item O inverso de um elemento n\~ao nulo \'e \'unico.
+		\item Se $a \in \cp{K}$ \'e tal que $a \ne 0_\cp{K}$ e $ab = ac$, ent\~ao $b = c$.
+		\item Se $ab = 0_\cp{K}$, com $a$ e $b \in \cp{K}$, ent\~ao $a = 0_\cp{K}$ ou $b = 0_\cp{K}$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	Vamos provar algumas propriedades.
+	\begin{enumerate}
+	\item[i)] De fato, suponha que $0_1$ e $0_2$ sejam elementos neutros da soma em $\cp{K}$. Temos
 	\[
-	0_1 = 0_1 + 0_2 = 0_2.
+		0_1 = 0_1 + 0_2 = 0_2.
 	\]
-	\end{solucao}
-	\item O oposto aditivo de cada elemento de $\cp{K}$ \'e \'unico.
-	\begin{solucao}
-	Sejam $b$ e $c$ elementos opostos de $a$, ent\~ao
+	
+	\item[ii)] Sejam $b$ e $c$ elementos opostos de $a$, ent\~ao
 	\[
 	b = b + 0_\cp{K} = b + (c + a) = (b + a) + c = 0_\cp{K} + c = c.
 	\]
-	\end{solucao}
-	\item Vale a lei do cancelamento, isto \'e, se $a + b = a + c$ ent\~ao $b = c$.
-	\item Para todo $a \in \cp{K}$, $a\cdot 0_\cp{K} = 0_\cp{K}$.
-	\begin{solucao}
-	De fato,
+	
+	
+	\item[iv)] De fato,
 	\[
 		a\cdot 0_\cp{K} + 0_\cp{K} = a\cdot 0_\cp{K} = a\cdot (0_\cp{K} + 0_\cp{K}) = a\cdot 0_\cp{K} + a\cdot 0_\cp{K},
 	\]
 	logo pela lei do cancelamento, $a\cdot 0_\cp{K} = 0_\cp{K}$ como quer{\'\i}amos.
-	\end{solucao}
-	\item O elemento neutro da multiplica\c{c}\~ao \'e \'unico.
-	\begin{solucao}
+	
+	
+	\item[v)]
 	De fato, suponha que $1_a$ e $1_b$ sejam elementos neutros da multiplica\c{c}\~ao. Ent\~ao
 	\[
 		1_a = 1_a\cdot 1_b = 1_b.
 	\]
-	\end{solucao}
-	\item O inverso de um elemento n\~ao nulo \'e \'unico.
-	\begin{solucao}
+	
+	
+	\item[vi)]
 	Dado $a \in \cp{K}$, $a \ne 0$, suponha que $b$, $c \in \cp{K}$ sejam tais que
 	\[
 		ab = 1 \quad ac = 1.
@@ -174,10 +182,9 @@ Propriedades importantes: Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao
 	\[
 		b = 1b = (ac)b = c(ab) = c1 = c.
 	\]
-	\end{solucao}
-	\item Se $a \in \cp{K}$ \'e tal que $a \ne 0_\cp{K}$ e $ab = ac$, ent\~ao $b = c$.
-	\item Se $ab = 0_\cp{K}$, com $a$ e $b \in \cp{K}$, ent\~ao $a = 0_\cp{K}$ ou $b = 0_\cp{K}$.
-	\begin{solucao}
+	
+	
+	\item[viii)]
 	Suponha que $a \ne 0_\cp{K}$, ent\~ao existe $a^{-1}$. Da{\'\i}
 	\begin{align*}
 		&ab = 0_\cp{K}\\
@@ -185,8 +192,10 @@ Propriedades importantes: Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao
 		&1b = 0_\cp{K}\\
 		&b = 0_\cp{K}.
 	\end{align*}
-	\end{solucao}
+	
 \end{enumerate}
+\end{prova}
+
 
 % \begin{observacao}
 % Os elementos de um corpo qualquer $\cp{K}$ s\~ao chamados de \textbf{escalares}.
@@ -1540,12 +1549,15 @@ $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a 
 \end{enumerate}
 \end{exemplo}
 
-Propriedades do determinante: Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos
-\begin{enumerate}
-	\item $\det(AB) = \det A \det B$,
-	\item $\det(\lambda A) = \lambda^n \det(A)$,
-	\item $\det(A^{-1}) = (\det A)^{-1}$.
-\end{enumerate}
+\begin{proposicao}
+	Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
+	\begin{enumerate}
+		\item $\det(AB) = \det A \det B$,
+		\item $\det(\lambda A) = \lambda^n \det(A)$,
+		\item $\det(A^{-1}) = (\det A)^{-1}$.
+	\end{enumerate}
+\end{proposicao}
+
 
 \begin{proposicao}
 	Seja $A$ uma matriz $n \times n$ com entradas num corpo $\cp{K}$.
