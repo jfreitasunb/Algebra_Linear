@@ -7,7 +7,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 
 \begin{definicao}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um \textbf{produto interno} sobre $V$ \'e uma fun\c{c}\~ao $\langle\ ,\ \rangle : V \times V \to \cp{K}$ que satisfaz as propriedades seguintes:\index{Produto interno}
-	\begin{enumerate}
+	\begin{enumerate}[label={\roman*})]
 		\item $\langle u + v , w\rangle = \langle u, w\rangle + \langle v, w\rangle$ para todos $u$, $v$ e $w \in V$.
 		\item $\langle \lambda u, w\rangle = \lambda \langle u, w\rangle$ para todo $\lambda \in \cp{K}$ e todos $u$, $w \in V$.
 		\item $\langle u, w\rangle = \overline{\langle w, u\rangle}$ para todos $u$, $w \in V$. (Aqui, $\overline{a + bi} = a - bi$.)
@@ -17,7 +17,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 
 \begin{observacao}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial com produto interno $\langle\ ,\ \rangle$. Temos
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item $\langle 0_V, w\rangle = \langle w, 0_V\rangle = 0_\cp{K}$ para todo $w \in V$.
 
 		De fato,
@@ -31,7 +31,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 \end{observacao}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Em $\real^3$ a fun\c{c}\~ao $\langle\ ;\ \rangle : \real^3\times\real^3 \to \real$ dada por
 		\[
 			\langle (a, b, c); (x, y , z)\rangle = ax + by + cz
@@ -39,7 +39,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 		\'e um produto interno.
 		\begin{solucao}
 			De fato, dados $(a, b, c)$, $(x, y, z)$, $(u,v,w) \in \real^3$ e $\lambda \in \real$ temos:
-			\begin{enumerate}
+			\begin{enumerate}[label={\roman*})]
 				\item $\langle (a, b, c) + (x, y, z); (u, v, w)\rangle = \langle (a + x, b + y, c+ z); (u, v, w)\rangle = (a + x)u + (b + y)v + (c + z)w = \langle (a, b, c); (u, v, w)\rangle + \langle (x, y, z); (u, v, w)\rangle$.
 				\item $\langle \lambda(a, b, c), (x, y, z)\rangle = \langle (\lambda a, \lambda b, \lambda c), (x, y, z)\rangle = \lambda a x + \lambda b y + \lambda cz = \lambda\langle (a, b, c); (x, y, z)\rangle$
 				\item $\langle (a, b, c); (x, y, z)\rangle = ax + by + cz = \langle (x, y, z), (a, b, c)\rangle$.
@@ -102,7 +102,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 \end{observacao}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Em $\real^3$ considere o produto interno can\^onico. Dados $u = (a, b, c)$ e $v = (x, y, z)$ temos
 		\[
 			\norma{u - v} = \norma{(a - x, b - y, c - z)} = \sqrt{(a - x)^2 + (b - y)^2 + (c - z)^2}
@@ -120,7 +120,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 
 \begin{definicao}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial munido de um produto interno $\langle\ , \rangle$.
-	\begin{enumerate}
+	\begin{enumerate}[label={\roman*})]
 		\item Dizemos que $u$ e $w$ s\~ao vetores \textbf{ortogonais} se $\langle u, w \rangle = 0$.
 		\item Um subconjunto $\mathcal{A}$ de $V$ \'e chamado de \textbf{ortogonal} se os seus elementos s\~ao ortogonais dois a dois.
 		\item Dizemos que um subconjunto $\mathcal{A}$ de $V$ \'e \textbf{ortonormal} se for um conjunto ortogonal e se $\norma{u} = 1$ para todo $u \in \mathcal{A}$.
@@ -141,7 +141,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 
 \begin{proposicao}\label{ortogonalLI}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial com produto interno e seja $\mathcal{A}$ um sobconjunto ortogonal de $V$ formado por vetores n\~ao nulos.
-	\begin{enumerate}[label=({\alph*})]
+	\begin{enumerate}[label={\roman*})]
 		\item Se $u \in [v_1, \dots, v_n]$ com $v_i \in \mathcal{A}$ para $i = 1$, \dots, $n$, ent\~ao
 		\[
 			u = \sum_{i = 1}^n \dfrac{\langle u, v_i \rangle}{\norma{v_i}^2}v_i.
@@ -150,7 +150,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 	\end{enumerate}
 \end{proposicao}
 \begin{prova}
-	\begin{enumerate}[label=({\alph*})]
+	\begin{enumerate}[label={\roman*})]
 		\item  Seja $u = \alpha_1 v_1 + \cdots + \alpha_n v_n$ com $\alpha_i \in \cp{K}$ para $i = 1$, \dots, $n$. Como $\{v_1, \dots, v_n\}$ \'e ortogonal temos
 		\[
 			\langle u, v_j \rangle = \langle \sum_{i = 1}^n\alpha_i v_i, v_j \rangle = \sum_{i = 1}^n \alpha_i\langle v_i, v_j \rangle = \alpha_j \langle v_j, v_j \rangle
@@ -188,7 +188,7 @@ Durante este cap{\'\i}tulo o corpo base $\cp{K}$ de um espa\c{c}o vetorial $V$ s
 \label{sec:processo_de_ortogonaliza_cao_de_gram_schmidt}
 
 Seja $V$ um $\cp{K}$-espa\c{c}o vetorial com um produto interno. Considere $\mathcal{A} = \{v_1, \dots, v_n\} \subset V$ um conjunto L.I. Vamos obter um novo conjunto L.I. $\mathcal{B} = \{w_1, \dots, w_n\}$ ortogonal e que gera o mesmo espa\c{c}o vetorial que $\mathcal{A}$. Para tal fazemos:
-\begin{enumerate}
+\begin{enumerate}[label={\roman*})]
 	\item $w_1 = v_1$
 	\item $w_2 = v_2 - \dfrac{\langle v_2, w_1\rangle}{\norma{w_1}^2}w_1$.
 
@@ -207,7 +207,7 @@ Seja $V$ um $\cp{K}$-espa\c{c}o vetorial com um produto interno. Considere $\mat
 \'E f\'acil verificar que os vetores $w_1$, \dots, $w_n$ definidos anteriormente s\~ao dois a dois ortogonais, logo $\mathcal{B} = \{w_1, \dots, w_n\}$ \'e um conjunto ortogonal. Mais ainda, pela Proposi\c{c}\~ao \ref{ortogonalLI}, o conjunto $\mathcal{B}$ \'e L.I. e $w_i \in [v_1, \dots, v_n] = U$ para $i = 1$, \dots, $n$. Agora como $\dim_\cp{K} U = n$, segue que $\mathcal{B}$ \'e uma base para $U$, como quer{\'\i}amos.
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Seja $V = \complex^3$ com o produto interno can\^onico. Determinar uma base ortogonal de $\complex^3$ contendo o vetor $(1, 2i, 0)$.
 		\begin{solucao}
 			Primeiro obtemos uma base de $\complex^3$ contedo $(1, 2i, 0)$. Por exemplo, podemos considerar a base $\{v_1 = (1, 2i, 0); v_2 = (0, 1, 0); v_3 = (0, 0, 1)\}$. Defina $w_1 = v_1 = (1, 2i, 0)$, assim
