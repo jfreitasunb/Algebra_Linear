@@ -74,7 +74,7 @@ para todo $u \in V$. \'E f\'acil verificar que $(\mathcal{L}(V,W),+,\cdot)$ \'e 
 \end{corolario}
 
 \begin{definicao}
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um \textbf{operador linear} \'e uma transforma\c{c}\~ao linear $T : V \to V$.\index{Operador Linear}
 		\item Se $T : V \to V$ \'e um operador linear, denotamos $T \circ T$ por $T^2$ e mais geralmente
 		\[
@@ -126,7 +126,7 @@ para $i = 1$, \dots, $n$.
 
 \begin{definicao}
 	Seja $T : V \to V$ um operador linear.
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item Um \textbf{autovalor} de $T$ \'e um elemento $\lambda \in \cp{K}$ tal que existe um vetor n\~ao nulo $u \in V$ com $T(u) = \lambda u$.\index{Autovalor}
 		\item Se $\lambda$ \'e um autovalor de $T$, ent\~ao todo vetor n\~ao nulo $u \in V$ tal que
 		\[
@@ -200,7 +200,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 \end{definicao}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
 		\begin{solucao}
 			Vamos considerar a base can\^onica de $\real^2$ dada por $\mathcal{A} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
@@ -341,13 +341,13 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 
 \begin{teorema}
 	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e sejam $\lambda_1$, \dots, $\lambda_r$, $r \ge 1$, autovalores de $T$, dois a dois distintos.
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item Se $u_1 + \cdots + u_r = 0_V$ com $u_i \in \aut_T(\lambda_i)$; $i = 1$, \dots, $r$; ent\~ao $u_i = 0_V$ para todo $i$.
 		\item Para cada $i = 1$, \dots, $r$ seja $\mathcal{B}_i$ um conjunto linearmente independente contido em $\aut_T(\lambda_i)$. Ent\~ao $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \'e L.I. em $V$.
 	\end{enumerate}
 \end{teorema}
 \begin{prova}
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item A prova ser\'a por indu\c{c}\~ao em $r \ge 1$. Se $r = 1$, nada h\'a a fazer. Seja $r > 1$ e suponha que o teorema seja v\'alido para todo $j < r$. Vamos mostrar que tamb\'em \'e v\'alido para $j = r$. Temos
 		\begin{equation}\label{equacaoauxiliar1}
 			u_1 + u_2 + \cdots + u_r = 0_V
@@ -393,7 +393,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 		p_T(x) = (x - \lambda)^mq(x)
 	\]
 	com $q(\lambda) \ne 0$, seja o polin\^omio caracter{\'\i}stico de $T$.
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item O n\'umero $m$ \'e chamada de \textbf{multiplicidade alg\'ebrica} de $\lambda$ e o denotamos por $ma(\lambda)$.\index{Multiplicidade!Alg\'ebrica}
 		\item Chamamos de \textbf{multiplicidade geom\'etrica} de $\lambda$ \`a dimens\~ao do subespa\c{c}o $\aut_T(\lambda)$ e indicamos tal n\'umero por $mg(\lambda)$.\index{Multiplicidade!Geom\'etrica}
 	\end{enumerate}
@@ -408,7 +408,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 \end{observacao}
 
 \begin{exemplo}
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\arabic*})]
 		\item $p_T(x) = (x - 2)(x^2 - 5x + 6)$, $ma(2) = 2$
 		\item $p_T(x) = (x + 1)^3(x - 2)$, $ma(2) = 1$, $ma(-1) = 3$.
 	\end{enumerate}
@@ -448,7 +448,7 @@ Assim, pela proposi\c{c}\~ao anterior,
 se, e somente se, $mg(\lambda_i) = ma(\lambda_i)$ para $i = 1$, \dots, $r$. Assim temos o seguinte teorema:
 \begin{teorema}
 	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e sejam $\lambda_1$, \dots, $\lambda_r \in \cp{K}$ seus autovalores distintos. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
-	\begin{enumerate}[label=({\roman*})]
+	\begin{enumerate}[label={\roman*})]
 		\item $T$ \'e diagonaliz\'avel.
 		\item $p_T(x) = (x - \lambda_1)^{n_1}\dots(x - \lambda_r)^{n_r}$, $n_i \ge 1$ e $mg(\lambda_i) = ma(\lambda_i)$ para cada $i = 1$, \dots, $r$.
 		\item $\dim_\cp{K}V = \displaystyle\sum_{i = 1}^r \dim_\cp{K}\aut_T(\lambda_i)$.
@@ -503,7 +503,7 @@ e ent\~ao $T(W) \varsubsetneq W$.
 
 \begin{exemplo}
 Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial.
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Os subespa\c{c}os triviais de $V$ s\~ao $T$-invariantes.
 		\item Os subespa\c{c}os $\ker T$ e $\im T$ s\~ao $T$-invariantes. De fato, se $u \in \ker T$, ent\~ao $T(u) = 0_V \in \ker T$. Assim $T(\ker T) \sub \ker T$. Agora, se $w \in \im T$, ent\~ao existe $u \in V$ tal que $T(u) = w$. Assim $T(w) = T(T(u))$, logo $T(w) \in \im T$ para todo $w \in \im T$.
 		\item Se $\lambda$ for um autovalor de $T$, ent\~ao $\aut_T(\lambda)$ \'e um subespa\c{c}o $T$-invariante.
@@ -528,7 +528,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 \end{definicao}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Sejam $W_1$ e $W_2$ dois subespa\c{c}os de $\complex^4$ com bases $\{(1,2,0,i);(i,0,0,1)\}$ e $\{(0,0,3,1)\}$, respectivamente. Seja $(z_1,z_2,z_3,z_4) \in W_1 \cap W_2$. Temos
 		\[
 			(z_1,z_2,z_3,z_4) = \alpha(1,2,0,i)	+ \beta(i,0,0,1) = \gamma(0,0,3,1)
@@ -551,7 +551,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 
 \begin{definicao}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e sejam $W_1$ e $W_2$ dois subespa\c{c}os de $V$. Dizemos que $V$ \'e a \textbf{soma direta} de $W_1$ e $W_2$ se
-	\begin{enumerate}
+	\begin{enumerate}[label={\roman*})]
 		\item $W_1 \cap W_2 = \{0_V\}$;
 		\item $W_1 + W_2 = V$.
 	\end{enumerate}
@@ -616,7 +616,7 @@ Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetori
 \end{prova}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Sejam $V = \real^3$ e $W_1 = [(1,0,0)]$. Ent\~ao podemos tomar $W_2 = [(0,1,0); (0,0,1)]$ e teremos $V = W_1 \oplus W_2$. Tamb\'em podemos tomar $W_3 = [(1,1,1); (0,0,1)]$ e assim $V = W_1
 		\oplus W_3$.
 		\item Sejam $V = \cp{M}_2(\real)$ e $W_1 = \left\{\begin{bmatrix}
@@ -696,7 +696,7 @@ para todo $u \in V$.
 
 \begin{exemplo}
 	Seja $T$ o operador sobre $\real^n$ representado em rela\c{c}\~ao \`a base can\^onica pela matriz $A$ dada. Encontre o polin\^omio minimal de $T$.
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item $A = \begin{bmatrix}
 			\phantom{-}5 & -6 & -6\\
 			-1 & \phantom{-}4 & \phantom{-}2\\
@@ -948,7 +948,7 @@ onde $T_1^2 = 0$ e $T_2$ \'e invert{\'\i}vel. O operador $T_1$ \'e chamado de \t
 \end{observacao}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Seja $D : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ o operador deriva\c{c}\~ao. \'E f\'acil ver que $D$ \'e nilpotente de {\'\i}ndice de nilpot\^enica 4.
 		\item Seja $D : \mathcal{P}_n(\real) \to \mathcal{P}_n(\real)$ o operador deriva\c{c}\~ao. \'E f\'acil ver que $D$ \'e nilpotente de {\'\i}ndice de nilpot\^enica $n + 1$.
 		\item Seja $T : \real^2 \to \real^2$ o operador linear tal que
@@ -976,7 +976,7 @@ onde $T_1^2 = 0$ e $T_2$ \'e invert{\'\i}vel. O operador $T_1$ \'e chamado de \t
 
 \begin{proposicao}\label{basenilpotente}
 	Seja $T : V \to V$ um operador linear nilpotente de {\'\i}ndice de nilpot\^encia $r \ge 1$ e $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Se $u \in V$ \'e tal que $T^{r - 1}(u) \ne 0_V$, ent\~ao
-	\begin{enumerate}
+	\begin{enumerate}[label={\roman*})]
 		\item O conjunto $\{u, T(u), \dots, T^{r - 1}(u)\}$ \'e L.I..
 		\item Existe um subespa\c{c}o $T$-invariante $W$ de $V$ tal que $V = U \oplus W$, onde $U$ \'e o $\cp{K}$-espa\c{c}o vetorial dado por $U = [u,T(u),\dots, T^{r - 1}(u)]$.
 	\end{enumerate}
@@ -1026,7 +1026,7 @@ Al\'em disso, se o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = (x - \la
 
 \begin{teorema}\label{operadornilpotente}
 	Seja $T : V \to V$ um operador linear nilpotente com {\'\i}ndice de nilpot\^encia $r \ge 1$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao existem n\'umeros positivos $p$, $m_1$, \dots, $m_p$ e vetores $u_1$, \dots, $u_p$ tais que
-	\begin{enumerate}[label=({\alph*})]
+	\begin{enumerate}[label={\roman*})]
 		\item $r = m_1 \ge m_2 \ge \cdots \ge m_p$.
 		\item O conjunto $\mathcal{B} = \{u_1, T(u_1), \dots, T^{r - 1}(u_1); \dots; u_p, T(u_p), \dots, T^{r - 1}(u_p)\}$ \'e uma base de $V$.
 		\item $T^{m_i}(u_i) = 0_V$ para cada $i = 1$, \dots, $p$.
@@ -1040,7 +1040,7 @@ Al\'em disso, se o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = (x - \la
 		p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
 	\]
 	onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Ent\~ao $V = W_1 \oplus \cdots \oplus W_r$ onde para cada $i = 1$, \dots, $r$ temos:
-	\begin{enumerate}[label=({\alph*})]
+	\begin{enumerate}[label={\roman*})]
 		\item $\dim_\cp{K} W_i = m_i$
 		\item O subespa\c{c}o $W_i$ \'e $T-invariante$
 		\item A restri\c{c}\~ao do operador $\lambda_i Id - T$ \`a $W_i$ \'e nilpotente.
@@ -1089,7 +1089,7 @@ onde para cada $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$
 A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} associada ao operador linear $T$. Os n\'umeros $p_i$, $m_{ij}$, $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$ s\~ao completamente determinados por $T$. Mais ainda, pelo item (d) do Teorema \ref{operadornilpotente}, dois operadores lineares $S \in \mathcal{L}(V,V)$ e $T \in \mathcal{L}(W,W)$ t\^em a mesma forma de Jordan se, e somente se, existir um isomorfismo $\Phi : V \to W$ tal que $\Phi^{-1}S\Phi = T$.\index{Jordan!Forma de}
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item Seja $T : \cp{K}^7 \to \cp{K}^7$ um operador linear tal que seu polin\^omio caracter{\'\i}stico \'e $p_T(x) = (x - 2)^4(x - 3)^3$. Encontre a(s) poss{\'\i}vel(is) forma(s) de Jordan associadas a $T$.
 		\begin{solucao}
 			Como $p_T(x) = (x - 2)^4(x - 3)^3$, ent\~ao $V = W_1 \oplus W_2$ onde $\dim_\cp{K}W_1 = 4$ e $\dim_\cp{K}W_2 = 3$. Assim $T = T_1 \oplus T_2$, onde $T_1 = T : W_1 \to W_1$ e $T_2 = T : W_2 \to W_2$. Agora, $(T_1 - 2I_4)$ \'e nilpotente de {\'\i}ndice de nilpot\^encia $r \le 4$.
@@ -1363,7 +1363,7 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 \end{exemplo}
 
 \begin{observacao}
-	\begin{enumerate}
+	\begin{enumerate}[label={\arabic*})]
 		\item  Se um operador linear $T : V \to V$, onde $\dim_\cp{K} V < \infty$, \'e tal que
 			\[
 				p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
@@ -1401,7 +1401,7 @@ isto \'e,
 \end{align*}
 
 Assim para achar a base de Jordan precisamos de:
-\begin{enumerate}
+\begin{enumerate}[label={\roman*})]
 	\item Achar todos os autovetores correspondentes a um certo autovalor, isto \'e, encontrar $\aut_T(\lambda)$.
 	\item O n\'umero de autovetores L.I. associados ao autovalor $\lambda$ \'e igual ao n\'umero de blocos de Jordan associados \`a $\lambda$.
 	\item Resolver a equa\c{c}\~ao $(T - \lambda Id)(u) = v_\lambda$ onde $v_\lambda$ \'e o autovetor associado ao autovalor $\lambda$ para cada autovetor diferente.
@@ -1409,7 +1409,7 @@ Assim para achar a base de Jordan precisamos de:
 
 Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso temos tr\^es situa\c{c}\~oes para analisar:
 
-\begin{enumerate}
+\begin{enumerate}[label={\arabic*})]
 	\item Existem 3 autovetores L.I.
 
 	Por exemplo, para o operador representado pela matriz
