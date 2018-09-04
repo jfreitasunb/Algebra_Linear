@@ -1182,12 +1182,12 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\add[\overline{3}]{1}{0}
 	\add[\overline{5}]{1}{2}
 	\add[\overline{4}]{1}{3}
-	\end{gmatrix}\leadsto&\begin{bmatrix}
+	\end{gmatrix}\leadsto&\begin{amatrix}{3}
 	\overline{1} & \overline{0} & \overline{2} & \overline{1}\\
 	\overline{0} & \overline{1} & \overline{0} & \overline{3}\\
 	\overline{0} & \overline{0} & \overline{0} & \overline{0}\\
 	\overline{0} & \overline{0} & \overline{0} & \overline{0}
-	\end{bmatrix}.
+	\end{amatrix}.
 	\end{align*}
 	Assim o posto de $A$ \'e $p = 2$ e a nulidade \'e 1. Logo temos uma \'unica vari\'avel livre que \'e $z$. A solu\c{c}\~ao ent\~ao \'e dada por
 	\[
@@ -1272,12 +1272,12 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\add[\overline{10}]{3}{2}
 	\add[\overline{9}]{3}{1}
 	\add[\overline{1}]{3}{0}
-	\end{gmatrix}\\&\leadsto\begin{bmatrix}
+	\end{gmatrix}\\&\leadsto\begin{amatrix}{4}
 	\overline{1} & \overline{0} & \overline{0} & \overline{0} & \overline{6}\\
 	\overline{0} & \overline{1} & \overline{0} & \overline{0} & \overline{4}\\
 	\overline{0} & \overline{0} & \overline{1} & \overline{0} & \overline{8}\\
 	\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
-	\end{bmatrix}.
+	\end{amatrix}.
 	\end{align*}
 	Assim o posto de $A$ \'e $p = 4$ e a nulidade \'e 0. Logo o sistema tem uma \'unica solu\c{c}\~ao dada por
 	\[
@@ -1300,25 +1300,25 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 	\begin{align*}
-	A = \begin{gmatrix}[b]
+	A &= \begin{gmatrix}[b]
 	1 & -1 & 2 & 4 \\
 	1 & \phantom{-}0 & 1 & 6 \\
 	2 & -3 & 5 & 4 
 	\rowops
 	\add[-1]{0}{1}
 	\add[-2]{0}{2}
-	\end{gmatrix}\kern-6.23pt\leadsto&\begin{gmatrix}[b]
+	\end{gmatrix}\kern-6.23pt\leadsto\begin{gmatrix}[b]
 	1 & -1 & \phantom{-}2 & 4 \\
 	0 & \phantom{-}1 & -1 & 2 \\
 	0 & -1 & \phantom{-}1 & -4 
 	\rowops
 	\add{1}{0}
 	\add{1}{2}
-	\end{gmatrix}\leadsto&\begin{bmatrix}
+	\end{gmatrix}\\&\leadsto\begin{amatrix}{3}
 	1 & 0 & \phantom{-}1 & \phantom{-}6 \\
 	0 & 1 & -1 & \phantom{-}2 \\
 	0 & 0 & \phantom{-}0 & -2 
-	\end{bmatrix}.
+	\end{amatrix}.
 	\end{align*}
 	Assim o sistema n\~ao tem solu\c{c}\~ao. Note que o posto da matriz ampliada \'e $p = 3$ e a posto da matriz dos coeficientes \'e 2.
 	\end{solucao}
