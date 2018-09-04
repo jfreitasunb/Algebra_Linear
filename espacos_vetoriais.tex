@@ -259,14 +259,14 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{proposicao}
 \begin{prova}
 	Vamos provar que todo conjunto de elementos de $V$ que contenha mais do que $m$ vetores \'e L.D. Para tanto, seja $\mathcal{A} = \{u_1, u_2, \dots, u_n\}$ com $n > m$. Como $\{v_1, v_2, \dots, v_m\}$ \'e um conjunto gerador de $V$, ent\~ao existem escalares $\alpha_{ij} \in \cp{K}$ tais que para cada $j = 1$, 2, \dots, $n$ temos
-	\[
+	\begin{align}\label{combinacao_linear_u_v}
 		u_j = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{mj}v_m = \sum_{i = 1}^m\alpha_{ij}v_i.
-	\]
+	\end{align}
 	Assim queremos mostrar que existem escalares $\lambda_1$, $\lambda_2$, \dots, $\lambda_n$ n\~ao todos nulos de modo que
-	\[
-		\lambda_1 u_1 + \lambda_2 u_2 + \cdots + \lambda_n u_n = 0_V.
-	\]
-	Agora,
+	\begin{align}\label{vetores_u_LI}
+		\sum_{i = 1}^n \lambda_iu_i = \lambda_1 u_1 + \lambda_2 u_2 + \cdots + \lambda_n u_n = 0_V.
+	\end{align}
+	Agora, substituindo os valores em \eqref{combinacao_linear_u_v} na equação \eqref{vetores_u_LI} obtemos
 	\[
 		\sum_{j = 1}^n\lambda_ju_j = \sum_{j = 1}^n\lambda_j\left(\sum_{i = 1}^m\alpha_{ij}v_i\right) = \sum_{j = 1}^n\sum_{i = 1}^m\lambda_j\alpha_{ij}v_i = \sum_{i = 1}^m\left(\sum_{j = 1}^n\lambda_j\alpha_{ij}\right)v_i.
 	\]
