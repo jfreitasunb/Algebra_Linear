@@ -979,12 +979,12 @@ um sistema n\~ao homog\^eneo pode ter:
 
 Com o objetivo de resolver o sistema \eqref{equacaolinear} vamos come\c{c}ar formando a matriz ampliada
 \[
-P = [A|B] = \begin{bmatrix}
+P = [A|B] = \begin{amatrix}{4}
 a_{11} & a_{12} & \dots & a_{1n} & b_1\\
 a_{21} & a_{22} & \dots & a_{2n} & b_2\\
-\vdots\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\
 a_{m1} & a_{m2} & \dots & a_{mn} & b_m\\
-\end{bmatrix}_{m \times (n + 1)}.
+\end{amatrix}_{m \times (n + 1)}.
 \]
 
 Sabemos que $P$ \'e linha-equivalente a uma matriz linha-reduzida \`a forma em escada $R$. A \'ultima coluna de $R$ cont\'em elementos $z_1$, $z_2$, \dots, $z_m$ que s\~ao resultados das opera\c{c}\~oes elementares aplicadas \`a matriz $P$. Seja 
@@ -1036,15 +1036,15 @@ o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
 \begin{enumerate}
 	\item Se $p = n$, ent\~ao a matriz linha-reduzida \`a forma em escada tem a forma
 	\[
-	\begin{bmatrix}
+	\begin{amatrix}{5}
 	1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & z_1\\
 	0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & z_2\\
-	\vdots\\
+	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 	0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & z_n\\
 	0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K}\\
-	\vdots\\
+	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 	0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K}
-	\end{bmatrix}
+	\end{amatrix}
 	\]
 	e a solu\c{c}\~ao do sistema ser\'a
 	\[
@@ -1053,15 +1053,15 @@ o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
 	\item Se $p \ne n$, ent\~ao devemos ter $p < n$. Caso $p > n$, como a matriz est\'a na forma escada o elemento $1_\cp{K}$ deve ocorrer em duas linhas diferentes, mas na mesma coluna. Mas neste caso, podemos anular uma destas linhas repetidas. Logo, $p < n$. Neste caso a matriz na forma escada pode ter a forma:
 	\begin{enumerate}
 		\item \[
-		\begin{bmatrix}
+		\begin{amatrix}{9}
 		1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{1p+1} & a_{1p+2} & \cdots & a_{1n} & z_1\\
 		0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{2p+1} & a_{2p+2} & \cdots & a_{2n} & z_2\\
-		\vdots\\
+		\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & a_{pp+1} & a_{pp+2} & \cdots & a_{pn} & z_p\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & 0_\cp{K}\\
-		\vdots\\
+		\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}  & 0_\cp{K}
-		\end{bmatrix}.
+		\end{amatrix}.
 		\]
 		Neste caso teremos
 		\[
@@ -1075,15 +1075,15 @@ o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
 		e o sistema ter\'a mais de uma solu\c{c}\~ao, sendo $x_{p + 1}$ , $x_{p + 2}$, \dots, $x_n$ as vari\'aveis livres.
 		\item Uma segunda forma a ser considerada para a matriz reduzida \'e
 		\[
-		\begin{bmatrix}
+		\begin{amatrix}{9}
 		0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{1p+2} & a_{1p+3} & \cdots & a_{1n} & z_1\\
 		0_\cp{K} & 0_\cp{K} & 1_\cp{K} & \cdots & 0_\cp{K} & a_{2p+2} & a_{2p+3} & \cdots & a_{2n} & z_2\\
-		\vdots\\
+		\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & a_{pp+2} & a_{pp+3} & \cdots & a_{pn} & z_p\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & 0_\cp{K}\\
-		\vdots\\
+		\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}  & 0_\cp{K}
-		\end{bmatrix}.
+		\end{amatrix}.
 		\]
 		Neste caso teremos
 		\[
@@ -1155,12 +1155,12 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\begin{solucao}
 	A matriz ampliada do sistema \'e
 	\[
-	A = \begin{bmatrix}
+	A = \begin{amatrix}{3}
 	\overline{1} & \overline{4} & \overline{2} & \overline{6}\\
 	\overline{1} & \overline{5} & \overline{2} & \overline{2}\\
 	\overline{2} & \overline{3} & \overline{4} & \overline{4}\\
 	\overline{4} & \overline{5} & \overline{1} & \overline{5}
-	\end{bmatrix}.
+	\end{amatrix}.
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ a forma em escada:
 	\begin{align*}
@@ -1208,12 +1208,12 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\begin{solucao}
 	A matriz ampliada do sistema \'e
 	\[
-	A = \begin{bmatrix}
+	A = \begin{amatrix}{4}
 	\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
 	\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
 	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
 	\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
-	\end{bmatrix}.
+	\end{amatrix}.
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 	\begin{align*}
@@ -1292,11 +1292,11 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\begin{solucao}
 	A matriz dos coeficentes deste sistema \'e
 	\[
-	\begin{bmatrix}
+	\begin{amatrix}{3}
 	1 & -1 & 2 & 4 \\
 	1 & \phantom{-}0 & 1 & 6 \\
 	2 & -3 & 5 & 4 
-	\end{bmatrix}.
+	\end{amatrix}.
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 	\begin{align*}
