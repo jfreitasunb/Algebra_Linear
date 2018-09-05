@@ -1394,44 +1394,44 @@ y + 2t = 0\\
 \end{cases}.
 \]
 Assim podemos considerar a matriz ampliada contendo colunas correspondentes a cada um dos sistemas e reduz{\'\i}-la \`a forma em escada:
-\begin{elimination}[2]{2}{1.4em}{1.1}% Decreased from 1.75em
-    A = \eliminationstep
-    {
-        1 & 2 & 1 & 0 \\
-        3 & 4 & 0 & 1
-    }
-    {
+\begin{align*}
+	A &= \left[
+			\begin{array}{cc|cc}
+		        1 & 2 & 1 & 0 \\
+		        3 & 4 & 0 & 1
+    		\end{array}
+    	\right]
+    	\begin{array}{l}
     	\\
         L_2 \to L_2 - 3L_1
-    }
-    \eliminationstep
-    {
-        1 &  2 & 1 & 0 \\
-        0 &  -2 & -3 & 1
-    }
-    {
+    	\end{array} \sim
+    \left[
+    	\begin{array}{cc|cc}
+    		1 &  2 & \phantom{-}1 & 0 \\
+        	0 &  -2 & -3 & 1	
+    	\end{array}
+    \right]
+    \begin{array}{l}
         L_1 \to L_1 + L_2\\
-        \phantom{x}
-    }\\
-    \eliminationstep
-    {
-        1 &  0 & -2 & 1 \\
-        0 &  -2 & -3 & 1
-    }
-    {
+    \end{array}\\ &\sim
+    \left[
+    	\begin{array}{cc|cc}
+        	1 &  0 & -2 & 1 \\
+        	0 &  -2 & -3 & 1
+    	\end{array}
+    \right]
+    \begin{array}{l}
         \\
         L_2 \to -\dfrac{1}{2}L_2
-    }
-    \eliminationstep
-    {
-    	1 &  0 & -2 & 1 \\
-        0 &  1 & \dfrac{3}{2} & -\dfrac{1}{2}
-    }
-    {
-    	\phantom{x}\\
-    	\phantom{x}
-    }
-\end{elimination}
+    \end{array} \sim
+    \left[
+    	\begin{array}{cc|cc}
+    		1 &  0 & -2 & \phantom{-}1 \\
+        	0 &  1 & \phantom{-}3/2 & -1/2
+    	\end{array}
+    \right]
+\end{align*}
+
 
 Assim a matriz
 \[
