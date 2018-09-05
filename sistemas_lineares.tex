@@ -838,36 +838,62 @@ Considere o sistema homog\^eneo $AX = 0$, onde:
 	\phantom{-}1 & 2
 	\end{bmatrix}.$ Temos:
 	\begin{align*}
-	A &= \begin{gmatrix}[b]
-	-1 & i\\
-	-i & 1\\
-	\phantom{-}1 & 2
-	\rowops
-	\swap02
-	\end{gmatrix}\leadsto\begin{gmatrix}[b]
-	\phantom{-}1 & 2\\
-	-i & 1\\
-	-1 & i
-	\rowops
-	\add[i]{0}{1}
-	\add{0}{2}
-	\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-	1 & 2\\
-	0 & 1 + 2i\\
-	0 & 2 + i
-	\rowops
-	\mult1{\times \dfrac{1 - 2i}{5}}
-	\end{gmatrix}\leadsto\begin{gmatrix}[b]
-	1 & 2\\
-	0 & 1\\
-	0 & 2 + i
-	\rowops
-	\add[-(2 + i)]{1}{2}
-	\end{gmatrix}\\&\leadsto\begin{bmatrix}
-	1 & 2\\
-	0 & 1\\
-	0 & 0
-	\end{bmatrix}.
+		A &= 
+			\left[
+				\begin{array}{cc}
+					-1 & i\\
+					-i & 1\\
+					\phantom{-}1 & 2
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \leftrightarrow L_3\\
+				\phantom{x}\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cc}
+					\phantom{-}1 & 2\\
+					-i & 1\\
+					-1 & i
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				L_2 \to L_2 + iL_1\\
+				L_3 \to L_3 + L_1
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{cc}
+					1 & 2\\
+					0 & 1 + 2i\\
+					0 & 2 + i
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				L_2 \to \dfrac{1 - 2i}{5}L_2\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cc}
+					1 & 2\\
+					0 & 1\\
+					0 & 2 + i
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				\phantom{x}\\
+				L_3 \to L_3 - (2 + i)L_2
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{cc}
+					1 & 2\\
+					0 & 1\\
+					0 & 0
+				\end{array}
+			\right]
 	\end{align*}
 	Assim obtemos o sistema
 	\[
