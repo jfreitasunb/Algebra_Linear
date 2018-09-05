@@ -1217,67 +1217,110 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 	\begin{align*}
-	A &= \begin{gmatrix}[b]
-	\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
-	\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
-	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
-	\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
-	\rowops
-	\swap02
-	\end{gmatrix}\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
-	\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
-	\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
-	\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
-	\rowops
-	\add[\overline{8}]{0}{1}
-	\add[\overline{9}]{0}{2}
-	\add[\overline{6}]{0}{3}
-	\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
-	\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
-	\overline{0} & \overline{1} & \overline{5} & \overline{7} & \overline{6}\\
-	\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
-	\rowops
-	\add[\overline{10}]{1}{2}
-	\end{gmatrix}\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
-	\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
-	\overline{0} & \overline{0} & \overline{4} & \overline{4} & \overline{4}\\
-	\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
-	\rowops
-	\mult2{\times \overline{3}}
-	\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
-	\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
-	\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
-	\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
-	\rowops
-	\add[\overline{10}]{2}{1}
-	\add[\overline{7}]{2}{0}
-	\add[\overline{8}]{2}{3}
-	\end{gmatrix}\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
-	\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
-	\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
-	\overline{0} & \overline{0} & \overline{0} & \overline{5} & \overline{9}
-	\rowops
-	\mult3{\times \overline{9}}
-	\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-	\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
-	\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
-	\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
-	\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
-	\rowops
-	\add[\overline{10}]{3}{2}
-	\add[\overline{9}]{3}{1}
-	\add[\overline{1}]{3}{0}
-	\end{gmatrix}\\&\leadsto\begin{amatrix}{4}
-	\overline{1} & \overline{0} & \overline{0} & \overline{0} & \overline{6}\\
-	\overline{0} & \overline{1} & \overline{0} & \overline{0} & \overline{4}\\
-	\overline{0} & \overline{0} & \overline{1} & \overline{0} & \overline{8}\\
-	\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
-	\end{amatrix}.
+		A &=
+			\left[
+				\begin{array}{cccc|c}
+					\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
+					\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
+					\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+					\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \leftrightarrow L_3
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+					\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
+					\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
+					\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				L_2 \to L_2 + \overline{8}L_1\\
+				L_3 \to L_3 + \overline{9}L_1\\
+				L_4 \to L_4 + \overline{6}L_1
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+					\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+					\overline{0} & \overline{1} & \overline{5} & \overline{7} & \overline{6}\\
+					\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				\\
+				L_3 \to L_3 + \overline{10}L_2\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+					\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+					\overline{0} & \overline{0} & \overline{4} & \overline{4} & \overline{4}\\
+					\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				\\
+				L_3 \to \overline{3}L_3\\
+				\phantom{x}
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+					\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+					\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+					\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \to L_1 + \overline{7}L_3\\
+				L_2 \to L_2 + \overline{10}L_3\\
+				\\
+				L_4 \to L_4 + \overline{8}L_3
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
+					\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
+					\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+					\overline{0} & \overline{0} & \overline{0} & \overline{5} & \overline{9}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				\\
+				\\
+				L_4 \to \overline{9}L_4
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
+					\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
+					\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+					\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \to L_1 + L_4\\
+				L_2 \to L_2 + \overline{9}L_4\\
+				L_3 \to L_3 + \overline{10}L_4\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc|c}
+					\overline{1} & \overline{0} & \overline{0} & \overline{0} & \overline{6}\\
+					\overline{0} & \overline{1} & \overline{0} & \overline{0} & \overline{4}\\
+					\overline{0} & \overline{0} & \overline{1} & \overline{0} & \overline{8}\\
+					\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
+				\end{array}
+			\right]
 	\end{align*}
 	Assim o posto de $A$ \'e $p = 4$ e a nulidade \'e 0. Logo o sistema tem uma \'unica solu\c{c}\~ao dada por
 	\[
@@ -1300,25 +1343,38 @@ Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
 	\]
 	Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 	\begin{align*}
-	A &= \begin{gmatrix}[b]
-	1 & -1 & 2 & 4 \\
-	1 & \phantom{-}0 & 1 & 6 \\
-	2 & -3 & 5 & 4 
-	\rowops
-	\add[-1]{0}{1}
-	\add[-2]{0}{2}
-	\end{gmatrix}\kern-6.23pt\leadsto\begin{gmatrix}[b]
-	1 & -1 & \phantom{-}2 & 4 \\
-	0 & \phantom{-}1 & -1 & 2 \\
-	0 & -1 & \phantom{-}1 & -4 
-	\rowops
-	\add{1}{0}
-	\add{1}{2}
-	\end{gmatrix}\\&\leadsto\begin{amatrix}{3}
-	1 & 0 & \phantom{-}1 & \phantom{-}6 \\
-	0 & 1 & -1 & \phantom{-}2 \\
-	0 & 0 & \phantom{-}0 & -2 
-	\end{amatrix}.
+		A &=
+			\left[
+				\begin{array}{ccc|c}
+					1 & -1 & 2 & 4 \\
+					1 & \phantom{-}0 & 1 & 6 \\
+					2 & -3 & 5 & 4
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				L_2 \to L_2 - L_1\\
+				L_3 \to L_3 - 3L_1\\
+			\end{array} \sim		
+			\left[
+				\begin{array}{ccc|c}
+					1 & -1 & \phantom{-}2 & \phantom{-}4 \\
+					0 & \phantom{-}1 & -1 & \phantom{-}2 \\
+					0 & -1 & \phantom{-}1 & -4 
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \to L_1 + L_2\\
+				\\
+				L_3 \to L_3 + L_2
+			\end{array}\\ &\sim
+			\left[
+				\begin{array}{ccc|c}
+					1 & 0 & \phantom{-}1 & \phantom{-}6 \\
+					0 & 1 & -1 & \phantom{-}2 \\
+					0 & 0 & \phantom{-}0 & -2 
+				\end{array}
+			\right]
 	\end{align*}
 	Assim o sistema n\~ao tem solu\c{c}\~ao. Note que o posto da matriz ampliada \'e $p = 3$ e a posto da matriz dos coeficientes \'e 2.
 	\end{solucao}
