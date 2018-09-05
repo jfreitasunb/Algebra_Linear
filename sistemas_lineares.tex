@@ -9,127 +9,125 @@
 \section{Corpos}\label{ssub:corpos}
 
 \begin{definicao}\index{Corpos}
-Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por
-$\oplus$ (adi\c{c}\~ao) e $\otimes$ (multiplica\c{c}\~ao) de modo que
-\begin{align*}
-a \oplus b \in \cp{K}\\
-a \otimes b \in \cp{K}
-\end{align*}
-para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
-\begin{itemize}
-
-	\item[A1)] \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
-	\item[A2)] \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
-	\item[A3)] \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
-	\[
-		a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
-	\]
-	para todo $a \in \cp{K}$. (Elemento neutro da adi\c{c}\~ao)
-	\item[A4)] \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
-	\[
-		a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
-	\]
-	\item[M1)] \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
-	\item[M2)] \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
-	\item[M3)] \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
-	\[
-		a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
-	\]
-	para todo $a \in \cp{K}$.
-	\item[M4)] \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
-	tal que
-	\[
-		a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
-	\]
-	\item[D)] \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
-\end{itemize}
+	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $\oplus$ (adi\c{c}\~ao) e $\otimes$ (multiplica\c{c}\~ao) de modo que
+	\begin{align*}
+		a \oplus b \in \cp{K}\\
+		a \otimes b \in \cp{K}
+	\end{align*}
+	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+	\begin{itemize}
+		\item[A1)] \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
+		\item[A2)] \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item[A3)] \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\[
+			a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
+		\]
+		para todo $a \in \cp{K}$. (Elemento neutro da adi\c{c}\~ao)
+		\item[A4)] \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		\[
+			a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
+		\]
+		\item[M1)] \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
+		\item[M2)] \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item[M3)] \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
+		\[
+			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
+		\]
+		para todo $a \in \cp{K}$.
+		\item[M4)] \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+		tal que
+		\[
+			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
+		\]
+		\item[D)] \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
+	\end{itemize}
 \end{definicao}
 
 Para simplificar a nota\c{c}\~ao vamos escrever
 \[
-a \otimes b = ab.
+	a \otimes b = ab.
 \]
 Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
 
 \begin{exemplo}
-\begin{enumerate}[label={\arabic*})]
-	\item S\~ao exemplos de corpos os conjuntos: $\rac$, $\real$, $\complex$ com as opera\c{c}\~oes de soma e multiplica\c{c}\~oes usuais destes conjuntos.
+	\begin{enumerate}[label={\arabic*})]
+		\item S\~ao exemplos de corpos os conjuntos: $\rac$, $\real$, $\complex$ com as opera\c{c}\~oes de soma e multiplica\c{c}\~oes usuais destes conjuntos.
 
-	\item O conjunto $\z$ com a soma e multiplica\c{c}\~oes usuais n\~ao \'e um corpo, pois por exemplo, n\~ao existe $b \in \z$ tal que $2b = 1$.
+		\item O conjunto $\z$ com a soma e multiplica\c{c}\~oes usuais n\~ao \'e um corpo, pois por exemplo, n\~ao existe $b \in \z$ tal que $2b = 1$.
 
-	\item Seja
-	\[
-	\rac{[\sqrt{2}]} = \{a + b\sqrt{2} \mid a,\ b \in \rac\}.
-	\]
-	Dados $a + b\sqrt{2}$, $c + d\sqrt{2} \in \rac{[\sqrt{2}]}$, defina
-	\begin{align*}
-	(a + b\sqrt{2}) + (c + d\sqrt{2}) = (a + c) + (b + d)\sqrt{2}\\
-	(a + b\sqrt{2})(c + d\sqrt{2}) = (ac + 2bd) + (ad + bc)\sqrt{2}
-	\end{align*}
-	Al\'em disso, $a + b\sqrt{2} = c + d\sqrt{2}$ se, e somente se, $a = c$ e $b = d$.
-	Aqui o elemento neutro da adi\c{c}\~ao \'e $0$, o elemento neutro da multiplica\c{c}\~ao \'e $1$, o oposto aditivo de $a + b\sqrt{2}$ \'e $-a - b\sqrt{2}$ e o inverso multiplicativo de $a + b\sqrt{2}$ \'e $\dfrac{a - b\sqrt{2}}{a^2 - 2b^2}$ para $a \ne 0$ ou $b \ne 0$.
+		\item Seja
+		\[
+			\rac{[\sqrt{2}]} = \{a + b\sqrt{2} \mid a,\ b \in \rac\}.
+		\]
+		Dados $a + b\sqrt{2}$, $c + d\sqrt{2} \in \rac{[\sqrt{2}]}$, defina
+		\begin{align*}
+			(a + b\sqrt{2}) + (c + d\sqrt{2}) = (a + c) + (b + d)\sqrt{2}\\
+			(a + b\sqrt{2})(c + d\sqrt{2}) = (ac + 2bd) + (ad + bc)\sqrt{2}
+		\end{align*}
+		Al\'em disso, $a + b\sqrt{2} = c + d\sqrt{2}$ se, e somente se, $a = c$ e $b = d$.
+		Aqui o elemento neutro da adi\c{c}\~ao \'e $0$, o elemento neutro da multiplica\c{c}\~ao \'e $1$, o oposto aditivo de $a + b\sqrt{2}$ \'e $-a - b\sqrt{2}$ e o inverso multiplicativo de $a + b\sqrt{2}$ \'e $\dfrac{a - b\sqrt{2}}{a^2 - 2b^2}$ para $a \ne 0$ ou $b \ne 0$.
 
-	\item Considere as opera\c{c}\~oes $\oplus$ e $\otimes$ em $\rac$ definidas por
-	\begin{align*}
-		x \oplus y = x + y - 3\\
-		x \otimes y = x + y - \dfrac{xy}{3},
-	\end{align*}
-	para todos $x$, $y \in \rac$. Ent\~ao $(\rac, \oplus, \otimes)$ \'e um corpo.
-	\begin{solucao}
-		De fato, para todos $x$, $y$ e $z \in \rac$ temos:
-		\begin{enumerate}[label={\arabic*})]
-			\item $x \oplus y = x + y - 3 = y + x - 3 = y \oplus x$.
-			Logo $x \oplus y = y \oplus x$.
+		\item Considere as opera\c{c}\~oes $\oplus$ e $\otimes$ em $\rac$ definidas por
+		\begin{align*}
+			x \oplus y = x + y - 3\\
+			x \otimes y = x + y - \dfrac{xy}{3},
+		\end{align*}
+		para todos $x$, $y \in \rac$. Ent\~ao $(\rac, \oplus, \otimes)$ \'e um corpo.
+		\begin{solucao}
+			De fato, para todos $x$, $y$ e $z \in \rac$ temos:
+			\begin{enumerate}[label={\arabic*})]
+				\item $x \oplus y = x + y - 3 = y + x - 3 = y \oplus x$.
+				Logo $x \oplus y = y \oplus x$.
 
-			\item Temos
-			\begin{align*}
-				(x \oplus y) \oplus z &= (x + y - 3) \oplus z = (x + y - 3) + z - 3 = x + y + z - 6\\
-				x \oplus ( y \oplus z) &= x \oplus (y + z - 3) = x + (y + z - 3) - 3 = x + y + z - 6.
-			\end{align*} Logo $(x \oplus y) \oplus z = x \oplus ( y \oplus z)$, como quer{\'\i}amos.
+				\item Temos
+				\begin{align*}
+					(x \oplus y) \oplus z &= (x + y - 3) \oplus z = (x + y - 3) + z - 3 = x + y + z - 6\\
+					x \oplus ( y \oplus z) &= x \oplus (y + z - 3) = x + (y + z - 3) - 3 = x + y + z - 6.
+				\end{align*} Logo $(x \oplus y) \oplus z = x \oplus ( y \oplus z)$, como quer{\'\i}amos.
 
-			\item Tome $0_{\cp{K}} = 3$. Ent\~ao para todo $x \in \rac$ temos
-			\[
-				x \oplus 0_{\cp{K}} = x \oplus 3 = x + 3 - x = x.
-			\]
-			Logo $0_{\cp{K}} = 3$ \'e o elemento neutro da opera\c{c}\~ao $\oplus$ em $\rac$.
+				\item Tome $0_{\cp{K}} = 3$. Ent\~ao para todo $x \in \rac$ temos
+				\[
+					x \oplus 0_{\cp{K}} = x \oplus 3 = x + 3 - x = x.
+				\]
+				Logo $0_{\cp{K}} = 3$ \'e o elemento neutro da opera\c{c}\~ao $\oplus$ em $\rac$.
 
-			\item Para $x \in \rac$ tome $y = 6 - x \in \rac$. Assim
-			\[
-				x \oplus y = x \oplus (6 - x) = x + (6 - x ) - 3 = 3 = 0_{\cp{K}},
-			\]
-			logo $y = 6 - x$ \'e o oposto de $x$ na adi\c{c}\~ao $\oplus$ definida em $\rac$.
+				\item Para $x \in \rac$ tome $y = 6 - x \in \rac$. Assim
+				\[
+					x \oplus y = x \oplus (6 - x) = x + (6 - x ) - 3 = 3 = 0_{\cp{K}},
+				\]
+				logo $y = 6 - x$ \'e o oposto de $x$ na adi\c{c}\~ao $\oplus$ definida em $\rac$.
 
-			\item $x \otimes y = x + y - \dfrac{xy}{3} = y + x - \dfrac{yx}{3} = y \otimes x$, para todos $x$, $y \in \rac$.
+				\item $x \otimes y = x + y - \dfrac{xy}{3} = y + x - \dfrac{yx}{3} = y \otimes x$, para todos $x$, $y \in \rac$.
 
-			\item Para $x$, $y$ e $z \in \rac$ temos
-			\begin{align*}
-				(x \otimes y) \otimes z &= \left(x + y - \dfrac{xy}{3}\right) \otimes z = \left(x + y - \dfrac{xy}{3}\right) + y - \dfrac{\left(x + y - \dfrac{xy}{3}\right)z}{3} \\ &= x + y - \dfrac{xy}{3} + z - \dfrac{xz}{3} - \dfrac{yz}{3} + \dfrac{xyz}{9}\\
-				x \otimes (y \otimes z) &= x \otimes \left(y + z - \dfrac{yz}{3}\right) = x + \left(y + z - \dfrac{yz}{3}\right) - \dfrac{x\left(y + z - \dfrac{yz}{3}\right)}{3} \\ &= x + y + z - \dfrac{yz}{3} - \dfrac{xy}{3} - \dfrac{xz}{3} + \dfrac{xyz}{9},
-			\end{align*}
-			logo $(x \otimes y) \otimes z = x \otimes (y \otimes z)$, como quer{\'\i}amos.
+				\item Para $x$, $y$ e $z \in \rac$ temos
+				\begin{align*}
+					(x \otimes y) \otimes z &= \left(x + y - \dfrac{xy}{3}\right) \otimes z = \left(x + y - \dfrac{xy}{3}\right) + y - \dfrac{\left(x + y - \dfrac{xy}{3}\right)z}{3} \\ &= x + y - \dfrac{xy}{3} + z - \dfrac{xz}{3} - \dfrac{yz}{3} + \dfrac{xyz}{9}\\
+					x \otimes (y \otimes z) &= x \otimes \left(y + z - \dfrac{yz}{3}\right) = x + \left(y + z - \dfrac{yz}{3}\right) - \dfrac{x\left(y + z - \dfrac{yz}{3}\right)}{3} \\ &= x + y + z - \dfrac{yz}{3} - \dfrac{xy}{3} - \dfrac{xz}{3} + \dfrac{xyz}{9},
+				\end{align*}
+				logo $(x \otimes y) \otimes z = x \otimes (y \otimes z)$, como quer{\'\i}amos.
 
-			\item Tome $1_{\cp{K}} = 0$. Ent\~ao
-			\[
-				x \otimes 1_{\cp{K}} = x \otimes 0 = x + 0 - \dfrac{x0}{3} = x,
-			\]
-			para todo $x \in \rac$. Logo $1_{\cp{K}} = 0$ \'e a unidade da opera\c{c}\~ao $\otimes$ em $\rac$.
+				\item Tome $1_{\cp{K}} = 0$. Ent\~ao
+				\[
+					x \otimes 1_{\cp{K}} = x \otimes 0 = x + 0 - \dfrac{x0}{3} = x,
+				\]
+				para todo $x \in \rac$. Logo $1_{\cp{K}} = 0$ \'e a unidade da opera\c{c}\~ao $\otimes$ em $\rac$.
 
-			\item Dado $x \in \rac$, $x \ne 3 = 0_{\cp{K}}$ tome $y = \dfrac{-3x}{3 - x} \in \rac$. Temos
-			\[
-				x \otimes y = x \otimes \dfrac{-3x}{3 - x} = x + \dfrac{-3x}{3 - x} - \dfrac{x\left(\dfrac{-3x}{3 - x}\right)}{3} = 0 = 1_{\cp{K}}.
-			\]
-			Logo $y = \dfrac{-3x}{3 - x}$ \'e o inverso multiplicativo de $x$ na opera\c{c}\~ao $\otimes$ em $\rac$.
+				\item Dado $x \in \rac$, $x \ne 3 = 0_{\cp{K}}$ tome $y = \dfrac{-3x}{3 - x} \in \rac$. Temos
+				\[
+					x \otimes y = x \otimes \dfrac{-3x}{3 - x} = x + \dfrac{-3x}{3 - x} - \dfrac{x\left(\dfrac{-3x}{3 - x}\right)}{3} = 0 = 1_{\cp{K}}.
+				\]
+				Logo $y = \dfrac{-3x}{3 - x}$ \'e o inverso multiplicativo de $x$ na opera\c{c}\~ao $\otimes$ em $\rac$.
 
-			\item Para todos $x$, $y$ e $z \in \rac$ temos
-			\begin{align*}
-				(x \oplus y) \otimes z &= (x + y - 3) \otimes z = (x + y - 3) + z - \dfrac{(x + y - 3)z}{3} \\ &= x + y - 3 + z - \dfrac{xz}{3} - \dfrac{yz}{3} + z\\
-				(x \otimes z) \oplus (y \otimes z) &= \left(x + z - \dfrac{xz}{3}\right) \oplus \left(y + z - \dfrac{yz}{3}\right) \\ &= x + z - \dfrac{xz}{3} + y + z - \dfrac{yz}{3} - 3,
-			\end{align*}
-			Logo $(x \oplus y) \otimes z = (x \otimes z) \oplus (y \otimes z)$.
-		\end{enumerate}
-		Portanto $(\rac, \oplus, \otimes)$ \'e um corpo.
-	\end{solucao}
-\end{enumerate}
+				\item Para todos $x$, $y$ e $z \in \rac$ temos
+				\begin{align*}
+					(x \oplus y) \otimes z &= (x + y - 3) \otimes z = (x + y - 3) + z - \dfrac{(x + y - 3)z}{3} \\ &= x + y - 3 + z - \dfrac{xz}{3} - \dfrac{yz}{3} + z\\
+					(x \otimes z) \oplus (y \otimes z) &= \left(x + z - \dfrac{xz}{3}\right) \oplus \left(y + z - \dfrac{yz}{3}\right) \\ &= x + z - \dfrac{xz}{3} + y + z - \dfrac{yz}{3} - 3,
+				\end{align*}
+				Logo $(x \oplus y) \otimes z = (x \otimes z) \oplus (y \otimes z)$.
+			\end{enumerate}
+			Portanto $(\rac, \oplus, \otimes)$ \'e um corpo.
+		\end{solucao}
+	\end{enumerate}
 \end{exemplo}
 
 \begin{proposicao}
@@ -246,119 +244,118 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 \end{align*}
 
 \begin{exemplos}
-\begin{enumerate}[label={\arabic*})]
-	\item Para $p = 3$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$ e $2$. Da{\'\i}
-		\[
-			\z_3 = \{\overline{0}, \overline{1}, \overline{2}\}
-		\]
-	e temos
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$\oplus$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$\\\hline
-			\end{tabular} \qquad \begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
-			$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
-		\end{tabular}
-	\end{center}
-	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
-	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_3$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_3, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
-	\[
-		(\overline{1} \oplus \overline{1}) \oplus \overline{1} = (\overline{1 + 1}) \oplus \overline{1} = \overline{2} \oplus \overline{1} = \overline{3} = \overline{0}.
-	\]
-	e $\overline{1} \ne \overline{0}$.
-
-	\item Para $p = 5$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$, $2$, $3$ e $4$. Da{\'\i}
-		\[
-			\z_5 = \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}
-		\]
-	e temos
+	\begin{enumerate}[label={\arabic*})]
+		\item Para $p = 3$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$ e $2$. Da{\'\i}
+			\[
+				\z_3 = \{\overline{0}, \overline{1}, \overline{2}\}
+			\]
+		e temos
 		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|c|c|c|}
-				\hline
-				$\oplus$ &\rule{0pt}{2.5ex}$\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
-				$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
-				$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
-			\end{tabular} \qquad 
 			\begin{tabular}{|c|c|c|c|c|c|}
 				\hline
-				$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
-				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{4}$& $\overline{1}$ & $\overline{3}$ \\\hline
-				$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{0}$ & $\overline{3}$ & $\overline{1}$& $\overline{4}$ & $\overline{2}$ \\\hline
-				$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
+				$\oplus$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$\\\hline
+				\end{tabular} \qquad \begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
 			\end{tabular}
 		\end{center}
-	Note que a soma $\oplus$ e o produto $\otimes$ em $\z_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
-	oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_5$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_5, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
-	\[
-		\overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} = \overline{1 + 1 + 1 + 1 + 1} = \overline{5} = \overline{0}.
-	\]
-	e $\overline{1} \ne \overline{0}$.
-\end{enumerate}
+		Note que a soma $\oplus$ e o produto $\otimes$ em $\z_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+		oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_3$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_3, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+		\[
+			(\overline{1} \oplus \overline{1}) \oplus \overline{1} = (\overline{1 + 1}) \oplus \overline{1} = \overline{2} \oplus \overline{1} = \overline{3} = \overline{0}.
+		\]
+		e $\overline{1} \ne \overline{0}$.
+
+		\item Para $p = 5$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$, $2$, $3$ e $4$. Da{\'\i}
+			\[
+				\z_5 = \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}
+			\]
+		e temos
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|}
+					\hline
+					$\oplus$ &\rule{0pt}{2.5ex}$\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
+				\end{tabular} \qquad 
+				\begin{tabular}{|c|c|c|c|c|c|}
+					\hline
+					$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{4}$& $\overline{1}$ & $\overline{3}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{0}$ & $\overline{3}$ & $\overline{1}$& $\overline{4}$ & $\overline{2}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
+				\end{tabular}
+			\end{center}
+		Note que a soma $\oplus$ e o produto $\otimes$ em $\z_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+		oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_5$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_5, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+		\[
+			\overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} = \overline{1 + 1 + 1 + 1 + 1} = \overline{5} = \overline{0}.
+		\]
+		e $\overline{1} \ne \overline{0}$.
+	\end{enumerate}
 \end{exemplos}
 
 \begin{teorema}
-Para todo $p \in \z$, $p$ n\'umero primo, $(\z_p, \oplus, \otimes)$ \'e um corpo.
+	Para todo $p \in \z$, $p$ n\'umero primo, $(\z_p, \oplus, \otimes)$ \'e um corpo.
 \end{teorema}
 \begin{prova}
-Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \z_p$ temos:
-\begin{enumerate}
-	\item[A1)] $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
-	\item[A2)] $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
-	\item[A3)] Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
-	\[
-	\overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
-	\]
-	Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\z_p$.
-	\item[A4)] Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
-	\[
-	\overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
-	\]
-	Logo todo elemento de $\z_p$ possui oposto aditivo.
-	\item[M1)] $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
-	\item[M2)] $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
-	\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
-	\item[M3)] O elemento $\overline{1} \in \z_p$ \'e tal que
-	\[
-	\overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
-	\]
-	para todo $\overline{x} \in \z_p$.
-	\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
-	\[
-	xy + pz = 1
-	\]
-	para todo $x \in \{1, 2, \dots, p - 1\}$. Logo,
-	\begin{align*}
-	&\overline{xy + pz} = \overline{1}\\
-	&\overline{xy} \oplus \overline{pz} = \overline{1}\\
-	&\overline{x} \otimes \overline{y} + \overline{p} \otimes \overline{z} = \overline{1}\\
-	&\overline{x} \otimes \overline{y} = \overline{1}
-	\end{align*}
-	uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
-	$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(x + z)p = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne \overline{0}$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
-	\item[D)] $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
-\end{enumerate}
-Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
+	Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \z_p$ temos:
+	\begin{enumerate}
+		\item[A1)] $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
+		\item[A2)] $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
+		\item[A3)] Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
+		\[
+			\overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
+		\]
+		Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\z_p$.
+		\item[A4)] Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
+		\[
+			\overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
+		\]
+		Logo todo elemento de $\z_p$ possui oposto aditivo.
+		\item[M1)] $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
+		\item[M2)] $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
+		\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
+		\item[M3)] O elemento $\overline{1} \in \z_p$ \'e tal que
+		\[
+			\overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
+		\]
+		para todo $\overline{x} \in \z_p$.
+		\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
+		\[
+			xy + pz = 1
+		\]
+		para todo $x \in \{1, 2, \dots, p - 1\}$. Logo,
+		\begin{align*}
+			&\overline{xy + pz} = \overline{1}\\
+			&\overline{xy} \oplus \overline{pz} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} + \overline{p} \otimes \overline{z} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} = \overline{1}
+		\end{align*}
+		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
+		$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(x + z)p = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne \overline{0}$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
+		\item[D)] $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
+	\end{enumerate}
+	Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
 \end{prova}
 
 \begin{observacao}
 \begin{enumerate}
 	\item Se $p$ n\~ao for um n\'umero primo, $(\z_p, \oplus, \otimes)$ pode n\~ao ser corpo. Por exemplo, em $\z_6$ temos $\overline{2} \ne \overline{0}$ e $\overline{3} \ne \overline{0}$, mas
 	\[
-	\overline{2}\otimes \overline{3} = \overline{2\cdot 3} = \overline{6} = \overline{0}.
+		\overline{2}\otimes \overline{3} = \overline{2\cdot 3} = \overline{6} = \overline{0}.
 	\]
-
 	\item Para simplificar a nota\c{c}\~ao vamos denotar $\oplus$ por $+$ e $\otimes$ por $\cdot$. Assim vamos dizer simplesmente que $(\z_p, +, \cdot)$ \'e um corpo.
 \end{enumerate}
 \end{observacao}
@@ -367,52 +364,52 @@ Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
 \begin{equation}\label{sistemalinear}\index{Sistema Linear}
-\begin{cases}
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\
-\qquad \vdots\\
-a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\\
-\end{cases}
+	\begin{cases}
+		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
+		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\
+		\qquad \vdots\\
+		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\\
+	\end{cases}
 \end{equation}
 onde $b_1$, \dots, $b_m$ e $a_{ij}$, $1 \le i \le m$, $1 \le j \le n$ s\~ao elementos de $\cp{K}$ previamente conhecidos. Chamamos \eqref{sistemalinear} de um \textbf{sistema de $m$ equa\c{c}\~oes lineares a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$. Toda $n$-upla $(\alpha_1, \alpha_2, \dots, \alpha_n)$ onde $\alpha_i \in \cp{K}$ para $1 \le i \le n$, que satisfazem a cada uma das equa\c{c}\~oes de \eqref{sistemalinear} \'e chamada de uma \textbf{solu\c{c}\~ao} do sistema. 
 
 Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$, dizemos que o sistema
 \begin{equation}\label{sistemalinearhomogeneo}\index{Sistema Linear}
-\begin{cases}
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0_\cp{K}\\
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0_\cp{K}\\
-\qquad \vdots\\
-a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}\\
-\end{cases}
+	\begin{cases}
+		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0_\cp{K}\\
+		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0_\cp{K}\\
+		\qquad \vdots\\
+		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}\\
+	\end{cases}
 \end{equation}
 \'e um \textbf{sistema linear homog\^eneo}, ou que cada uma de suas equa\c{c}\~oes \'e homog\^enea. Observe que tal sistema sempre possui solu\c{c}\~ao, a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
 
 O m\'etodo mais importante para determinar as solu\c{c}\~oes de um sistema de equa\c{c}\~oes lineares \'e o m\'etodo do \textbf{escalonamento}. Por exemplo, considere o sistema
 \begin{equation}\label{exemploplo1}
-\begin{cases}
-2x_1 - x_2 + x_3 = 0\\
-x_1 + 3x_2 + 4x_ 3 = 0
-\end{cases}
+	\begin{cases}
+		2x_1 - x_2 + x_3 = 0\\
+		x_1 + 3x_2 + 4x_ 3 = 0
+	\end{cases}
 \end{equation}
 onde o corpo considerado \'e $\real$.
 
 Observe que multiplicando a segunda equa\c{c}\~ao de \eqref{exemploplo1} por $-2$ e somando o resultado \`a primeira equa\c{c}\~ao obtemos
 \[
--7x_2 - 7x_3 = 0
+	-7x_2 - 7x_3 = 0
 \]
 o que resulta em $x_2 = -x_3$. Agora se multiplicarmos a primeira equa\c{c}\~ao de \eqref{exemploplo1} por $3$ e somarmos com a segunda, obtemos
 \[
-7x_1 + 7x_3 = 0
+	7x_1 + 7x_3 = 0
 \]
 e da{\'\i} $x_1 = -x_3$.
 
 Assim para que uma terna $(x_1, x_2, x_3)$ de n\'umeros reais seja solu\c{c}\~ao de \eqref{exemploplo1} deve satisfazer
 \[
-x_1 = x_2 = -x_3.
+	x_1 = x_2 = -x_3.
 \]
 Por outro lado, qualquer terna da forma $(a, a, -a)$ \'e solu\c{c}\~ao de \eqref{exemploplo1}. Portanto a solu\c{c}\~ao de \eqref{exemploplo1} \'e da forma
 \[
-(a, a, -a)
+	(a, a, -a)
 \]
 onde $a \in \real$.
 
@@ -426,50 +423,50 @@ No caso de um sistema linear da forma \eqref{sistemalinear}, o processo de elemi
 Estas tr\^es opera\c{c}\~oes s\~ao chamadas de \textbf{opera\c{c}\~oes elementares}.\index{Opera\c{c}\~oes Elementares}
 
 \begin{exemplo}
-Considere o seguinte sistema sobre o corpo $\real$:
-\[
-\begin{cases}
-x_1 + 4x_2 + 3x_3 = 1\\
-2x_1 + 5x_2 + 4x_3 = 4\\
-x_1 - 3x_2 - 2x_3 = 5
-\end{cases}
-\]
-Efetuando opera\c{c}\~oes elementares podemos escrever:
-\begin{align*}
-	&\begin{cases}
-		x_1 + 4x_2 + 3x_3 = 1\\
-		2x_1 + 5x_2 + 4x_3 = 4 & L_2 \rightarrow L_2 - 2L_1\\
-		x_1 - 3x_2 - 2x_3 = 5
-	\end{cases} \sim
-	\begin{cases}
-		x_1 + 4x_2 + 3x_3 = 1\\
-		\phantom{0x_1} -3x_2 - 2x_3 = 2\\
-		x_1 - 3x_2 - 2x_3 = 5 & L_3 \rightarrow L_2 - L_1
-	\end{cases}\\ \\ & \sim
-	\begin{cases}
-		x_1 + 4x_2 + 3x_3 = 1\\
-		\phantom{0x_1} - 3x_2 - 2x_3 = 2 & L_2 \rightarrow (-1/3)L_2\\
-		\phantom{0x_1} - 7x_2 - 5x_3 = 4
-	\end{cases} \sim
-	\begin{cases}
-		x_1 + 4x_2 + 3x_3 = 1\\
-		\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
-		\phantom{0x_1} - 7x_2 - 5x_3 = 4 & L_3 \rightarrow L_3 + 7L_2
-	\end{cases}\\ \\ & \sim
-	\begin{cases}
-		x_1 + 4x_2 + 3x_3 = 1\\
-		\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
-		\phantom{0x_1} \phantom{0x_2}  -(1/3)x_3 = -(2/3)
-	\end{cases}
-\end{align*}
-Assim encontramos
-\[
-x_1 = 3, \quad x_2 = -2, \quad x_3 = 2.
-\]
+	Considere o seguinte sistema sobre o corpo $\real$:
+	\[
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			2x_1 + 5x_2 + 4x_3 = 4\\
+			x_1 - 3x_2 - 2x_3 = 5
+		\end{cases}
+	\]
+	Efetuando opera\c{c}\~oes elementares podemos escrever:
+	\begin{align*}
+		&\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			2x_1 + 5x_2 + 4x_3 = 4 & L_2 \rightarrow L_2 - 2L_1\\
+			x_1 - 3x_2 - 2x_3 = 5
+		\end{cases} \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} -3x_2 - 2x_3 = 2\\
+			x_1 - 3x_2 - 2x_3 = 5 & L_3 \rightarrow L_2 - L_1
+		\end{cases}\\ \\ & \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} - 3x_2 - 2x_3 = 2 & L_2 \rightarrow (-1/3)L_2\\
+			\phantom{0x_1} - 7x_2 - 5x_3 = 4
+		\end{cases} \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
+			\phantom{0x_1} - 7x_2 - 5x_3 = 4 & L_3 \rightarrow L_3 + 7L_2
+		\end{cases}\\ \\ & \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
+			\phantom{0x_1} \phantom{0x_2}  -(1/3)x_3 = -(2/3)
+		\end{cases}
+	\end{align*}
+	Assim encontramos
+	\[
+		x_1 = 3, \quad x_2 = -2, \quad x_3 = 2.
+	\]
 \end{exemplo}
 
 \begin{definicao}\index{Sistemas Equivalentes}
-Dois sistemas de equa\c{c}\~oes lineares s\~ao chamados de \textbf{equivalentes} se, e somente, se toda solu\c{c}\~ao de qualquer um dos sistemas \'e solu\c{c}\~ao do outro.
+	Dois sistemas de equa\c{c}\~oes lineares s\~ao chamados de \textbf{equivalentes} se, e somente, se toda solu\c{c}\~ao de qualquer um dos sistemas \'e solu\c{c}\~ao do outro.
 \end{definicao}
 
 Dado um sistema linear
@@ -518,12 +515,12 @@ onde
 
 Uma outra matriz que podemos associar ao sistema \eqref{sistemalinear} \'e
 \[
-\begin{amatrix}{4}
-	a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
-	a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
-	\vdots & \vdots & \vdots & \vdots & \vdots\\
-	a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
-\end{amatrix}
+	\begin{amatrix}{4}
+		a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+		a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+		\vdots & \vdots & \vdots & \vdots & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
+	\end{amatrix}
 \]
 que \'e chamada de \textbf{matriz ampliada do sistema} ou \textbf{matriz aumentada do sistema}.
 
@@ -535,100 +532,101 @@ Na forma matricial as opera\c{c}\~oes elementares s\~ao descritas como:\index{Op
 \end{itemize}
 
 \begin{observacao}
-Denotaremos a matriz
-\[
-\begin{bmatrix}
-	0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
-	0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
-	\vdots & & \vdots\\
-	0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}
-\end{bmatrix},
-\]
-onde $0_{\cp{K}}$ \'e o elemento neutro da soma no corpo $\cp{K}$, simplesmente por $0$.
+	Denotaremos a matriz
+	\[
+		\begin{bmatrix}
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
+			\vdots & & \vdots\\
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}
+		\end{bmatrix},
+	\]
+	onde $0_{\cp{K}}$ \'e o elemento neutro da soma no corpo $\cp{K}$, simplesmente por $0$.
 \end{observacao}
 
 Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~oes sobre linhas \'e que, tendo efetuado uma tal opera\c{c}\~ao $e$ sobre uma matriz $A$, podemos desfazer essa opera\c{c}\~ao efetuando uma opera\c{c}\~ao de mesmo tipo sobre $e(A)$.
 
 \begin{teorema}
-A cada opera\c{c}\~ao elementar sobre linhas $e$, corresponde uma opera\c{c}\~ao elementar sobre linhas $e'$, do mesmo tipo que $e$, tal que $e'(e(A)) = A$ para qualquer matriz $A$. Em outras palavras, a opera\c{c}\~ao inversa de uma opera\c{c}\~ao elementar sobre linhas existe e \'e uma opera\c{c}\~ao elementar sobre linhas do mesmo tipo.
+	A cada opera\c{c}\~ao elementar sobre linhas $e$, corresponde uma opera\c{c}\~ao elementar sobre linhas $e'$, do mesmo tipo que $e$, tal que $e'(e(A)) = A$ para qualquer matriz $A$. Em outras palavras, a opera\c{c}\~ao inversa de uma opera\c{c}\~ao elementar sobre linhas existe e \'e uma opera\c{c}\~ao elementar sobre linhas do mesmo tipo.
 \end{teorema}
 \begin{prova}
-Vamos verificar que cada uma das opera\c{c}\~oes elementares possui uma opera\c{c}\~ao inversa. Seja $A$ uma matriz $m \times n$ sobre o corpo $\cp{K}$
-\[
-A = \begin{bmatrix}
-	a_{11} & a_{12} & \cdots & a_{1n}\\
-	a_{21} & a_{22} & \cdots & a_{2n}\\
-	\vdots & & & \vdots\\
-	a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{bmatrix}.
-\]
-\begin{enumerate}
-	\item [e1)] Suponha que $e$ seja a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $A$. Temos
+	Vamos verificar que cada uma das opera\c{c}\~oes elementares possui uma opera\c{c}\~ao inversa. Seja $A$ uma matriz $m \times n$ sobre o corpo $\cp{K}$
 	\[
-		e(A) = 
-			\begin{bmatrix}
-				a_{11} & a_{12} & \cdots & a_{1n}\\
-				a_{21} & a_{22} & \cdots & a_{2n}\\
-				\vdots\\
-				a_{j1} & a_{j2} & \cdots & a_{jn}\\
-				\vdots\\
-				a_{i1} & a_{i2} & \cdots & a_{in}\\
-				\vdots\\
-				a_{m1} & a_{m2} & \cdots & a_{mn}
-			\end{bmatrix}.
+		A =
+		\begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1n}\\
+			a_{21} & a_{22} & \cdots & a_{2n}\\
+			\vdots & & & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mn}
+		\end{bmatrix}.
 	\]
-	Ent\~ao, seja $e'$ a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $e(A)$. Assim
-	\[
-		e'(e(A)) = A
-	\]
-	como quer{\'\i}amos.
-
-	\item [e2)] Suponha que $e$ seja a opera\c{c}\~ao que multiplica a $i$-\'esima de $A$ por $\alpha \in \cp{K}$, onde $\alpha \ne 0_\cp{K}$. Temos
-	\[
-		e(A) = 
-			\begin{bmatrix}
-				a_{11} & a_{12} & \cdots & a_{1n}\\
-				a_{21} & a_{22} & \cdots & a_{2n}\\
-				\vdots\\
-				\alpha a_{i1} & \alpha a_{i2} & \cdots & \alpha a_{in}\\
-				\vdots\\
-				a_{m1} & a_{m2} & \cdots & a_{mn}
-			\end{bmatrix}.
-	\]
-	Seja $e'$ a opera\c{c}\~ao que multiplica a linha $i$ de $e(A)$ por $\alpha^{-1} \in \cp{K}$. Ent\~ao
-	\[
-		e'(e(A)) = A.
-	\]
-	\item [e3)] Suponha que $e$ seja a opera\c{c}\~ao que substitui a linha $i$ de $A$ pela linha $i$ mais $\alpha$ vezes a linha $j$. Temos
-	\[
-		e(A) = 
-			\begin{bmatrix}
-				a_{11} & a_{12} & \cdots & a_{1n}\\
-				a_{21} & a_{22} & \cdots & a_{2n}\\
-				\vdots\\
-				a_{i1} + \alpha a_{j1} & a_{i2} + \alpha a_{j2} & \cdots & a_{in} + \alpha a_{jn}\\
-				\vdots\\
-				a_{m1} & a_{m2} & \cdots & a_{mn}
-			\end{bmatrix}.
-	\]
-	Seja $e'$ a opera\c{c}\~ao que substitui a linha $i$ de $e(A)$ pela linha $i$ mais $(-\alpha)$ vezes a linha $j$. Ent\~ao
-	\[
-		e'(e(A)) = 
+	\begin{enumerate}
+		\item [e1)] Suponha que $e$ seja a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $A$. Temos
+		\[
+			e(A) = 
 				\begin{bmatrix}
 					a_{11} & a_{12} & \cdots & a_{1n}\\
 					a_{21} & a_{22} & \cdots & a_{2n}\\
 					\vdots\\
-					a_{i1} + \alpha a_{j1} + (-\alpha)a_{j1} & a_{i2} + \alpha a_{j2} + (-\alpha)a_{j2} & \cdots & a_{in} + \alpha a_{jn} + (-\alpha)a_{jn}\\
+					a_{j1} & a_{j2} & \cdots & a_{jn}\\
+					\vdots\\
+					a_{i1} & a_{i2} & \cdots & a_{in}\\
 					\vdots\\
 					a_{m1} & a_{m2} & \cdots & a_{mn}
 				\end{bmatrix}.
-	\]
-	e assim
-	\[
-		e'(e(A)) = A.
-	\]
-\end{enumerate}
-Portanto cada opera\c{c}\~ao elementar sobre linhas possui uma opera\c{c}\~ao inversa.
+		\]
+		Ent\~ao, seja $e'$ a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $e(A)$. Assim
+		\[
+			e'(e(A)) = A
+		\]
+		como quer{\'\i}amos.
+
+		\item [e2)] Suponha que $e$ seja a opera\c{c}\~ao que multiplica a $i$-\'esima de $A$ por $\alpha \in \cp{K}$, onde $\alpha \ne 0_\cp{K}$. Temos
+		\[
+			e(A) = 
+				\begin{bmatrix}
+					a_{11} & a_{12} & \cdots & a_{1n}\\
+					a_{21} & a_{22} & \cdots & a_{2n}\\
+					\vdots\\
+					\alpha a_{i1} & \alpha a_{i2} & \cdots & \alpha a_{in}\\
+					\vdots\\
+					a_{m1} & a_{m2} & \cdots & a_{mn}
+				\end{bmatrix}.
+		\]
+		Seja $e'$ a opera\c{c}\~ao que multiplica a linha $i$ de $e(A)$ por $\alpha^{-1} \in \cp{K}$. Ent\~ao
+		\[
+			e'(e(A)) = A.
+		\]
+		\item [e3)] Suponha que $e$ seja a opera\c{c}\~ao que substitui a linha $i$ de $A$ pela linha $i$ mais $\alpha$ vezes a linha $j$. Temos
+		\[
+			e(A) = 
+				\begin{bmatrix}
+					a_{11} & a_{12} & \cdots & a_{1n}\\
+					a_{21} & a_{22} & \cdots & a_{2n}\\
+					\vdots\\
+					a_{i1} + \alpha a_{j1} & a_{i2} + \alpha a_{j2} & \cdots & a_{in} + \alpha a_{jn}\\
+					\vdots\\
+					a_{m1} & a_{m2} & \cdots & a_{mn}
+				\end{bmatrix}.
+		\]
+		Seja $e'$ a opera\c{c}\~ao que substitui a linha $i$ de $e(A)$ pela linha $i$ mais $(-\alpha)$ vezes a linha $j$. Ent\~ao
+		\[
+			e'(e(A)) = 
+					\begin{bmatrix}
+						a_{11} & a_{12} & \cdots & a_{1n}\\
+						a_{21} & a_{22} & \cdots & a_{2n}\\
+						\vdots\\
+						a_{i1} + \alpha a_{j1} + (-\alpha)a_{j1} & a_{i2} + \alpha a_{j2} + (-\alpha)a_{j2} & \cdots & a_{in} + \alpha a_{jn} + (-\alpha)a_{jn}\\
+						\vdots\\
+						a_{m1} & a_{m2} & \cdots & a_{mn}
+					\end{bmatrix}.
+		\]
+		e assim
+		\[
+			e'(e(A)) = A.
+		\]
+	\end{enumerate}
+	Portanto cada opera\c{c}\~ao elementar sobre linhas possui uma opera\c{c}\~ao inversa.
 \end{prova}
 
 \begin{definicao}\index{Matriz!Linha Equivalente}
