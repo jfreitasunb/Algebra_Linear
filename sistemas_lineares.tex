@@ -1470,49 +1470,87 @@ Determine a inversa de $A$, se existir.
 \begin{solucao}
 Temos
 \begin{align*}
-A &= \begin{gmatrix}[b]
-1 & 1 & 0 & 1 & 0 & 0 \\
-0 & 2 & 1 & 0 & 1 & 0\\
-1 & 0 & 1 & 0 & 0 & 1
-\rowops
-\add[-1]{0}{2}
-\end{gmatrix}\leadsto\begin{gmatrix}[b]
-1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
-0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0\\
-0 & -1 & 1 & -1 & 0 & 1
-\rowops
-\swap12
-\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
-0 & -1 & 1 & -1 & 0 & 1\\
-0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0
-\rowops
-\mult1{-1}
-\end{gmatrix}\leadsto\begin{gmatrix}[b]
-1 & 1 & \phantom{-}0 & \phantom{-}1 & 0 & 0 \\
-0 & 1 & -1 & \phantom{-}1 & 0 & -1\\
-0 & 2 & \phantom{-}1 & \phantom{-}0 & 1 & 0
-\rowops
-\add[-1]{1}{0}
-\add[-2]{1}{2}
-\end{gmatrix}\\&\leadsto\begin{gmatrix}[b]
-1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
-0 & 1 & -1 & -1 & 0 & 1\\
-0 & 0 & \phantom{-}3 & -2 & 1 & 2
-\rowops
-\mult2{1/3}
-\end{gmatrix}\leadsto\begin{gmatrix}[b]
-1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
-0 & 1 & -1 & -1 & 0 & 1\\
-0 & 0 & \phantom{-}1 & -2/3 & 1/3 & 2/3
-\rowops
-\add[-1]{2}{0}
-\add{2}{1}
-\end{gmatrix}\\&\leadsto\begin{bmatrix}
-1 & 0 & 0 & \phantom{-}2/3 & -1/3 & \phantom{-}1/3 \\
-0 & 1 & 0 & \phantom{-}1/3 & \phantom{-}1/3 & -1/3\\
-0 & 0 & 1 & -2/3 & \phantom{-}1/3 & \phantom{-}2/3
-\end{bmatrix}.
+	A &= \left[
+		\begin{array}{ccc|ccc}
+			1 & 1 & 0 & 1 & 0 & 0 \\
+			0 & 2 & 1 & 0 & 1 & 0\\
+			1 & 0 & 1 & 0 & 0 & 1
+		\end{array}
+	\right]
+	\begin{array}{l}
+		\\
+    	\\
+    	L_3 \to L_3 - L_1
+	\end{array} \sim \left[
+		\begin{array}{ccc|ccc}
+			1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+			0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0\\
+			0 & -1 & 1 & -1 & 0 & 1
+		\end{array}
+	\right]
+	\begin{array}{l}
+		\\
+    	L_2 \leftrightarrow L_3\\
+	\end{array}\\ &\sim \left[
+		\begin{array}{ccc|ccc}
+			1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+			0 & -1 & 1 & -1 & 0 & 1\\
+			0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0
+		\end{array}
+	\right]
+	\begin{array}{l}
+		\\
+    	L_2 \leftrightarrow L_3\\
+	\end{array} \sim \left[
+		\begin{array}{ccc|ccc}
+			1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+			0 & -1 & 1 & -1 & 0 & 1\\
+			0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0
+		\end{array}
+	\right]
+	\begin{array}{l}
+		\\
+    	L_2 \to -L_2\\
+	\end{array}\\ &\sim \left[
+		\begin{array}{ccc|ccc}
+			1 & 1 & \phantom{-}0 & \phantom{-}1 & 0 & 0 \\
+			0 & 1 & -1 & \phantom{-}1 & 0 & -1\\
+			0 & 2 & \phantom{-}1 & \phantom{-}0 & 1 & 0
+		\end{array}
+	\right]
+	\begin{array}{l}
+		L_1 \to L_1 - L_2\\
+    	\\
+    	L_3 \to L_3 -2L_2
+	\end{array} \sim \left[
+		\begin{array}{ccc|ccc}
+			1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
+			0 & 1 & -1 & -1 & 0 & 1\\
+			0 & 0 & \phantom{-}3 & -2 & 1 & 2
+		\end{array}
+	\right]
+	\begin{array}{l}
+		\phantom{x}\\
+    		\phantom{x}\\
+    		L_3 \to \dfrac{1}{3}L_3
+	\end{array}\\ &\sim \left[
+		\begin{array}{ccc|ccc}
+			1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
+			0 & 1 & -1 & -1 & 0 & 1\\
+			0 & 0 & \phantom{-}1 & -2/3 & 1/3 & 2/3
+			\end{array}
+	\right]
+	\begin{array}{l}
+		L_1 \to L_1 - L_3\\
+    		L_2 \to L_2 + L_3\\
+    		\phantom{x}
+	\end{array} \sim \left[
+		\begin{array}{ccc|ccc}
+			1 & 0 & 0 & \phantom{-}2/3 & -1/3 & \phantom{-}1/3 \\
+			0 & 1 & 0 & \phantom{-}1/3 & \phantom{-}1/3 & -1/3\\
+			0 & 0 & 1 & -2/3 & \phantom{-}1/3 & \phantom{-}2/3
+		\end{array}
+	\right]
 \end{align*}
 Logo $A$ \'e invert{\'\i}vel e
 \[
