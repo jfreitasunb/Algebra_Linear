@@ -97,8 +97,8 @@
   \begin{enumerate}[label={\alph*})]
     \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
     \begin{itemize}
-      \item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
-      \item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
+      \item $(a_1, a_2, \dots, a_n) \oplus (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
+      \item $\alpha \otimes (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
     \end{itemize}
     \item Considere o conjunto dos polin\^omios
     \[
@@ -106,8 +106,8 @@
     \]
     Dados $p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$ e $q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_1x + b_0$ em $\mathcal{P}(\cp{K})$, suponha que $n < m$ e defina:
     \begin{itemize}
-      \item $(p + q)(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
-      \item $(\alpha p)(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
+      \item $p(x) \oplus q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
+      \item $\alpha\otimes p(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
     \end{itemize}
 
     \item Para cada $m \ge 0$ defina
@@ -120,8 +120,8 @@
 
     \item Sejam $X$ um conjunto qualquer n\~ao vazio e $\mathcal{F}(X, \cp{K})$ o conjunto de todas as fun\c{c}\~oes $f : X \to \cp{K}$. Defina as seguintes opera\c{c}\~oes em $\mathcal{F}(X, \cp{K})$:
     \begin{itemize}
-      \item  para $f$, $g \in \mathcal{F}(X, \cp{K})$, defina a fun\c{c}\~ao $f + g : X \to \cp{K}$ dada por $(f+g)(x) = f(x) + g(x)$ para cada $x \in X$.
-      \item para $f \in \mathcal{F}(X, \cp{K})$ e $\alpha \in \cp{K}$, defina a fun\c{c}\~ao $\alpha f: X \to \cp{K}$ dada por $(\alpha f)(x) = \alpha f(x)$ para cada $x \in X$.
+      \item  para $f$, $g \in \mathcal{F}(X, \cp{K})$, defina a fun\c{c}\~ao $f + g : X \to \cp{K}$ dada por $(f\oplus g)(x) = f(x) + g(x)$ para cada $x \in X$.
+      \item para $f \in \mathcal{F}(X, \cp{K})$ e $\alpha \in \cp{K}$, defina a fun\c{c}\~ao $\alpha \otimes f: X \to \cp{K}$ dada por $(\alpha f)(x) = \alpha f(x)$ para cada $x \in X$.
     \end{itemize}
   \end{enumerate}
 \end{exercicio}
