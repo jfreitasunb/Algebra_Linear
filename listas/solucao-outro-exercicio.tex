@@ -1,0 +1,144 @@
+% !TEX encoding = ISO-8859-1
+\documentclass[12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[all]{xy}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{15}
+\noindent{\bf Exerc{\'\i}cio \arabic{exercicios}: }}
+
+\newcommand{\equi}{\Leftrightarrow}
+\newcommand{\bic}{\leftrightarrow}
+\newcommand{\cond}{\rightarrow}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\nao}{\sim}
+\newcommand{\sub}{\subseteq}
+\newcommand{\e}{\ \wedge\ }
+\newcommand{\ou}{\ \vee\ }
+\newcommand{\vaz}{\emptyset}
+
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\vesp}{\vspace{0.2cm}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\q}{\mathbb{Q}}
+\newtheorem{defin}{Defini{\c c}{\~a}o}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+
+Seja $\cp{K}$ um corpo. Dados $a$, $b$, $c$, $d$, $e$, $f \in \cp{K}$, mostre que as duas matrizes seguintes s\~ao linha-equivalentes, se supormos que $ad - bc \ne 0_{\cp{K}}$:
+\[
+    \left[\begin{array}{cc|c}
+      a & b & e\\
+      c & d & f
+    \end{array}\right] \sim \left[\begin{array}{cc|c}
+      1_{\cp{K}} & 0_{\cp{K}} & (de - bf)(ad - bc)^{-1}\\
+      0_{\cp{K}} & 1_{\cp{K}} & (af - ce)(ad - bc)^{-1}
+    \end{array}\right]
+\]
+onde $(ad - bc)^{-1}$ \'e o inverso multiplicativo de $ad - bc$ no corpo $\cp{K}$.
+
+\textbf{Solu{\c c}{\~a}o}: Como $ad - bc \ne 0_{\cp{K}}$ devemos ter $a \ne 0_\cp{K}$ e $d \ne 0_\cp{K}$ ou $b \ne 0_\cp{K}$ e $c \ne 0_\cp{K}$. Sendo assim vamos supor que $a \ne 0_\cp{K}$ e $d \ne 0_\cp{K}$. Vamos ent\~ao aplicar opera\c{c}\~oes elementares na matriz
+\[
+    \left[\begin{array}{cc|c}
+      a & b & e\\
+      c & d & f
+    \end{array}\right].
+\]
+Antes note que se $d - ca^{-1}b = 0_\cp{K}$, ent\~ao multiplicando essa equa\c{c}\~ao por $a$ obter{\'\i}amos $ad - bc = 0_\cp{K}$. Logo $d - ca^{-1}b \ne 0_\cp{K}$
+\begin{align*}
+    \left[
+        \begin{array}{cc|c}
+            a & b & e\\
+            c & d & f
+        \end{array}
+    \right]
+    \begin{array}{l}
+        L_1 \to a^{-1}L_1\\
+        \phantom{x}
+    \end{array} &\sim
+    \left[
+        \begin{array}{cc|c}
+            1_\cp{K} & a^{-1}b & a^{-1}e\\
+            c & d & f
+        \end{array}
+    \right]
+    \begin{array}{l}
+        \phantom{x}\\
+        L_2 \to L_2 - cL_1
+    \end{array}\\ &\sim
+    \left[
+        \begin{array}{cc|c}
+            1_\cp{K} & a^{-1}b & a^{-1}e\\
+            0_\cp{K} & d - ca^{-1}b & f - ca^{-1}e
+        \end{array}
+    \right]
+    \begin{array}{l}
+        \phantom{x}\\
+        L_2 \to (d - ca^{-1}b)^{-1}L_2
+    \end{array}\\ &\sim
+    \left[
+        \begin{array}{cc|c}
+            1_\cp{K} & a^{-1}b & a^{-1}e\\
+            0_\cp{K} & 1_\cp{K} & (d - ca^{-1}b)^{-1}(f - ca^{-1}e)
+        \end{array}
+    \right]
+    \begin{array}{l}
+        L_1 \to L_1 - a^{-1}bL_2\\
+        \phantom{x}
+    \end{array}\\ &\sim
+    \left[
+        \begin{array}{cc|c}
+            1_\cp{K} & 0_\cp{K} & a^{-1}e - a^{-1}b(d - ca^{-1}b)^{-1}(f - ca^{-1}e)\\
+            0_\cp{K} & 1_\cp{K} & (d - ca^{-1}b)^{-1}(f - ca^{-1}e)
+        \end{array}
+    \right]
+\end{align*}
+Vamos agora simplificar os termos na \'ultima coluna:
+\begin{align*}
+    a^{-1}e - a^{-1}b(d - ca^{-1}b)^{-1}(f - ca^{-1}e) &= a^{-1}e - ba^{-1}(d - ca^{-1}b)^{-1}(f - ca^{-1}e)\\ &= a^{-1}e - b[a(d - ca^{-1}b)]^{-1}(f - ca^{-1}e)\\ &= a^{-1}e - b(ad - aca^{-1}b)^{-1}(f - ca^{-1}e) \\ &= a^{-1}e - b(ad - bc)^{-1}(f - ca^{-1}e)\\ &= a^{-1}e(ad - bc)(ad - bc)^{-1} - b(ad - bc)^{-1}(f - ca^{-1}e)\\ &= (ad - bc)^{-1}[a^{-1}e(ad - bc) - b(f - ca^{-1}e)]\\ &= (ad - bc)^{-1}[a^{-1}ead - a^{-1}ebc - bf + bca^{-1}e]\\ & = (de - bf)(ad - bc)^{-1}
+\end{align*}
+
+\begin{align*}
+    (d - ca^{-1}b)^{-1}(f - ca^{-1}e) &= (a^{-1}ad - a^{-1}cd)^{-1}(a^{-1}af - a^{-1}ce) = [a^{-1}(ad - bc)]^{-1}a^{-1}(af - ce)\\ &= (ad - bc)^{-1}(a^{-1})^{-1}a^{-1}(af - ce)\\ &= (ad - bc)^{-1}aa^{-1}(af - ce)\\ &= (af - ce)(ad - bc)^{-1}
+\end{align*}
+Assim a \'ultima matriz obtida torna-se
+\[
+    \left[
+        \begin{array}{cc|c}
+            1_\cp{K} & 0_\cp{K} & (de - bf)(ad - bc)^{-1}\\
+            0_\cp{K} & 1_\cp{K} & (af - ce)(ad - bc)^{-1}
+        \end{array}
+    \right]
+\]
+portanto
+\[
+    \left[\begin{array}{cc|c}
+      a & b & e\\
+      c & d & f
+    \end{array}\right] \sim \left[\begin{array}{cc|c}
+      1_{\cp{K}} & 0_{\cp{K}} & (de - bf)(ad - bc)^{-1}\\
+      0_{\cp{K}} & 1_{\cp{K}} & (af - ce)(ad - bc)^{-1}
+    \end{array}\right]
+\]
+como quer{\'\i}amos.
+\end{document}
