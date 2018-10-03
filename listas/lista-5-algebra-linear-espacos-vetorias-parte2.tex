@@ -243,7 +243,7 @@ $V = \real^n$ e $S = \{(a_1, a_2, \dots, a_n) \in \real^n \mid a_1a_2 = 0\}$; $\
   \begin{enumerate}[label={\alph*})]
     \item Mostre que $W$ \'e um espa\c{c}o vetorial sobre $\real$.
     \item Determine uma base de $W$.
-    \item Seja $W_1 = \{(a_{ij})_{i,j}, \in \cp{M}_2(\complex), i, j = 1, 2 \mid a_{21} = -\overline{a_{12}}\}$. Prove que $W_1$ \'e um subespa\c{c}o de $\cp{M}_2(\complex)$ sobre $\real$ e ache uma base de $W_1$.
+    \item Seja $W_1 = \{(a_{ij})_{i,j}, \in \cp{M}_2(\complex), i, j = 1, 2 \mid a_{21} = -\overline{a_{12}}\}$, onde $\overline{a + bi} = a - bi$. Prove que $W_1$ \'e um subespa\c{c}o de $\cp{M}_2(\complex)$ sobre $\real$ e ache uma base de $W_1$.
   \end{enumerate}
 \end{exercicio}
 
@@ -279,7 +279,10 @@ $V = \real^n$ e $S = \{(a_1, a_2, \dots, a_n) \in \real^n \mid a_1a_2 = 0\}$; $\
 \end{exercicio}
 
 \begin{exercicio}
-  Mostre que os polin\^omios $1 - x^3$, $(1 - x)^2$, $1 - x$ e $1$ geram o espa\c{c}o dos polin\^omios com coeficientes em $\real$ de grau $\le 3$.
+  Mostre que 
+    \[
+      [1, 1 - x, (1 - x)^2, 1 - x^3] = \mathcal{P}_3(\real).
+    \]
 \end{exercicio}
 
 \begin{exercicio}
