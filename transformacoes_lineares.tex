@@ -217,6 +217,17 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{prova}
 
+\begin{lema}\label{transformacao_gera_imagem}
+	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T : V \to W$ uma transforma\c{c}\~ao linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao $\{T(u_1), \dots, T(u_n)\}$ gera $\im T$.
+\end{lema}
+\begin{prova}
+	Seja $w \in \im T$. Por defini\c{c}\~ao, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ \'e uma base de $V$, ent\~ao existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Da{\'\i}
+	\[
+		w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
+	\]
+	ou seja, todo vetor de $\im T$ \'e uma combina\c{c}\~ao linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im T = [T(u_1), \dots, T(u_n)]$ como quer{\'\i}amos.
+\end{prova}
+
 \begin{exemplos}
 	\begin{enumerate}[label={\arabic*})]
 		\item Seja $T : \real^3 \to \cp{M}_2(\real)$ dada por
@@ -370,17 +381,6 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
 	\]
 \end{exemplo}
-
-\begin{lema}\label{transformacao_gera_imagem}
-	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T : V \to W$ uma transforma\c{c}\~ao linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao $\{T(u_1), \dots, T(u_n)\}$ gera $\im T$.
-\end{lema}
-\begin{prova}
-	Seja $w \in \im T$. Por defini\c{c}\~ao, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ \'e uma base de $V$, ent\~ao existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Da{\'\i}
-	\[
-		w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
-	\]
-	ou seja, todo vetor de $\im T$ \'e uma combina\c{c}\~ao linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im T = [T(u_1), \dots, T(u_n)]$ como quer{\'\i}amos.
-\end{prova}
 
 \begin{exemplo}
 	Considere $\complex^2$ e $\real^3$ como $\real$-espa\c{c}os vetoriais e seja $T : \complex^2 \to \real^3$ dada por
