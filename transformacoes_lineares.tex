@@ -782,12 +782,12 @@ Assim provamos o seguinte teorema:
 	\begin{enumerate}[label=({\arabic*})]
 		\item $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}} = (a_{ij})_{m\times n}$ onde $F(u_j) = \sum_{i=1}^m a_{ij}v_i$ para $j=1$, \dots, $n$;
 
-		\item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times n}$ onde $G(v_i) = \sum_{k=1}^r b_{ij}w_i$ para $i=1$, \dots, $m$;
+		\item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times m}$ onde $G(v_i) = \sum_{k=1}^r b_{ik}w_k$ para $i=1$, \dots, $m$;
 
 		\item $[G \circ F]_{{\mathcal{B}_U},{\mathcal{B}_W}} = (c_{kj})_{r\times n}$ onde $(G\circ F)(u_j) = \sum_{k=1}^r c_{kj} w_k$ para $j=1$, \dots, $n$.
 	\end{enumerate}
 
-	Vamos calcular $(G\circ F)(v_j)$ usando (1) e (2):
+	Vamos calcular $(G\circ F)(u_j)$ usando (1) e (2):
 	\begin{align*}
 		(G\circ F)(u_j) &= G(F(u_j)) = G(\sum_{i=1}^m a_{ij}v_i)\\
 		&= \sum_{i=1}^m a_{ij}G(v_i) = \sum_{i=1}^m a_{ij}\sum_{k=1}^r b_{ki}w_k\\
