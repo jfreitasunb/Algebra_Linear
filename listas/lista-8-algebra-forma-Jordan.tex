@@ -97,8 +97,8 @@
 \begin{exercicio}
   Sejam $U$ e $W$ subespa\c{c}os de $\real^3$ definidos por
   \begin{align*}
-    U = \{(a,b,c) \mid a = b = c\}\\
-    W = \{(0,b,c) \mid b, c \in \real\}.
+    U &= \{(a,b,c) \mid a = b = c\}\\
+    W &= \{(0,b,c) \mid b, c \in \real\}.
   \end{align*}
   Mostre que $\real^3 = U \oplus W$.
 \end{exercicio}
@@ -106,9 +106,9 @@
 \begin{exercicio}
   Sejam $U$, $V$ e $W$ os seguintes subespa\c{c}os de $\real^3$:
   \begin{align*}
-    U = \{(a,b,c) \mid a + b + c = 0\}\\
-    V = \{(a,b,c) \mid a = c\}\\
-    W = \{(0,0,c) \mid c \in \real\}.
+    U &= \{(a,b,c) \mid a + b + c = 0\}\\
+    V &= \{(a,b,c) \mid a = c\}\\
+    W &= \{(0,0,c) \mid c \in \real\}.
   \end{align*}
   Mostre que:
   \begin{enumerate}[label=({\alph*})]
@@ -207,10 +207,10 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   Encontre os polin\^omios caracter{\'\i}stico e minimal das seguintes matrizes:
   \begin{enumerate}[label=({\roman*})]
     \item $A = \begin{bmatrix}
-        1 & 1 & 0 & 0\\
-        -1 & -1 & 0 & 0\\
-        -2 & -2 & 2 & 1\\
-        1 & 1 & -1 & 0
+        \phantom{-} 1 & \phantom{-} 1 & \phantom{-} 0 & 0\\
+        -1 & -1 & \phantom{-} 0 & 0\\
+        -2 & -2 & \phantom{-} 2 & 1\\
+        \phantom{-} 1 & \phantom{-} 1 & -1 & 0
       \end{bmatrix}$
       \item $B = \begin{bmatrix}
         2 & 5 & 0 & 0 & 0\\
@@ -316,14 +316,14 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   \[
     A = \begin{bmatrix}
       -1 & 0 & 0 & -2\\
-      0 & 1 & 0 & 4\\
-      -1 & 0 & 1 & 1\\
-      0 & 0 & 0 & 1
+      \phantom{-} 0 & 1 & 0 & \phantom{-} 4\\
+      -1 & 0 & 1 & \phantom{-} 1\\
+      \phantom{-} 0 & 0 & 0 & \phantom{-} 1
     \end{bmatrix}, \quad B = \begin{bmatrix}
-      1 & 0 & 0 & 0\\
-      -1 & 1 & 0 & 0\\
-      0 & 1 & 1 & 0\\
-      0 & 0 & 0 & -1
+      \phantom{-} 1 & 0 & 0 & \phantom{-} 0\\
+      -1 & 1 & 0 & \phantom{-} 0\\
+      \phantom{-} 0 & 1 & 1 & \phantom{-} 0\\
+      \phantom{-} 0 & 0 & 0 & -1
     \end{bmatrix}.
   \]
   \begin{solucao}
@@ -336,13 +336,13 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   \[
       A = \begin{bmatrix}
       0 & -9 & 0 & 0\\
-      1 & 6 & 0 & 0\\
-      0 & 0 & 3 & 0\\
-      0 & 0 & 0 & 3
+      1 & \phantom{-} 6 & 0 & 0\\
+      0 & \phantom{-} 0 & 3 & 0\\
+      0 & \phantom{-} 0 & 0 & 3
     \end{bmatrix}, \quad B = \begin{bmatrix}
-      5 & -9 & -4\\
-      6 & -11 & -5\\
-      -7 & 13 & 6
+      \phantom{-} 5 & -9 & -4\\
+      \phantom{-} 6 & -11 & -5\\
+      -7 & \phantom{-} 13 & \phantom{-} 6
     \end{bmatrix}.
   \]
   \begin{solucao}
@@ -584,12 +584,12 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   Seja $A$ a matriz complexa
   \[
       A = \begin{bmatrix}
-        2 & 0 & 0 & 0 & 0 & 0\\
-        1 & 2 & 0 & 0 & 0 & 0\\
-        -1 & 0 & 2 & 0 & 0 & 0\\
-        0 & 1 & 0 & 2 & 0 & 0\\
-        1 & 1 & 1 & 1 & 2 & 0\\
-        0 & 0 & 0 & 0 & 1 & -1
+        \phantom{-} 2 & 0 & 0 & 0 & 0 & \phantom{-} 0\\
+        \phantom{-} 1 & 2 & 0 & 0 & 0 & \phantom{-} 0\\
+        -1 & 0 & 2 & 0 & 0 & \phantom{-} 0\\
+        \phantom{-} 0 & 1 & 0 & 2 & 0 & \phantom{-} 0\\
+        \phantom{-} 1 & 1 & 1 & 1 & 2 & \phantom{-} 0\\
+        \phantom{-} 0 & 0 & 0 & 0 & 1 & -1
       \end{bmatrix}.
   \]
   Determinar a forma de Jordan de $A$.
@@ -611,8 +611,8 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
   Nos casos abaixo, encontre a forma de Jordan e a base de Jordan que gera essa forma:
   \begin{enumerate}[label=({\alph*})]
     \item $A = \begin{bmatrix}
-      2 & 2 & 3\\
-      1 & 3 & 3\\
+      \phantom{-} 2 & \phantom{-} 2 & \phantom{-} 3\\
+      \phantom{-} 1 & \phantom{-} 3 & \phantom{-} 3\\
       -1 & -2 & -2
     \end{bmatrix}$
     \item $B = \begin{bmatrix}
@@ -621,21 +621,21 @@ Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaç
       2 & 2 & 2
     \end{bmatrix}$
     \item $C = \begin{bmatrix}
-      1 & 1 & 0\\
-      -1 & 4 & 1\\
+      \phantom{-} 1 & 1 & \phantom{-} 0\\
+      -1 & 4 & \phantom{-} 1\\
       -4 & 13 & -3
     \end{bmatrix}$
     \item $D = \begin{bmatrix}
-      4 & 0 & 1 & 0\\
-      2 & 2 & 3 & 0\\
+      \phantom{-} 4 & 0 & 1 & 0\\
+      \phantom{-} 2 & 2 & 3 & 0\\
       -1 & 0 & 2 & 0\\
-      4 & 0 & 1 & 2
+      \phantom{-} 4 & 0 & 1 & 2
     \end{bmatrix}$
     \item $E = \begin{bmatrix}
-      5 & -1 & 0 & 0\\
-      9 & -1 & 0 & 0\\
-      0 & 0 & 7 & -2\\
-      0 & 0 & 12 & -3
+      5 & -1 & 0 & \phantom{-} 0\\
+      9 & -1 & 0 & \phantom{-} 0\\
+      0 & \phantom{-} 0 & 7 & -2\\
+      0 & \phantom{-} 0 & 12 & -3
     \end{bmatrix}$
   \end{enumerate}
   \begin{solucao}
