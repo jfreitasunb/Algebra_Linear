@@ -241,8 +241,8 @@ onde
 
 defina em $\z_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{x}$, $\overline{y} \in \z_p$
 \begin{align*}
-	\overline{x} \oplus \overline{y} = \overline{x + y}\\
-	\overline{x} \otimes \overline{y} = \overline{xy},
+	\overline{x} \oplus \overline{y} &= \overline{x + y}\\
+	\overline{x} \otimes \overline{y} &= \overline{xy},
 \end{align*}
 onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros. Para determinar o valor de $\overline{x + y}$ e de $\overline{xy}$, encontramos o resto da divis\~ao inteira de $x + y$ por $p$ e de $xy$ por $p$. Logo
 \begin{align*}
@@ -318,28 +318,28 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 \end{teorema}
 \begin{prova}
 	Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \z_p$ temos:
-	\begin{enumerate}
-		\item[A1)] $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
-		\item[A2)] $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
-		\item[A3)] Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
+	\begin{enumerate}[label={\roman*})]
+		\item $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
+		\item $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
+		\item Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
 		\[
 			\overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
 		\]
 		Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\z_p$.
-		\item[A4)] Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
+		\item Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
 		\[
 			\overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
 		\]
 		Logo todo elemento de $\z_p$ possui oposto aditivo.
-		\item[M1)] $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
-		\item[M2)] $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
+		\item $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
+		\item $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
 		\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
-		\item[M3)] O elemento $\overline{1} \in \z_p$ \'e tal que
+		\item O elemento $\overline{1} \in \z_p$ \'e tal que
 		\[
 			\overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
 		\]
 		para todo $\overline{x} \in \z_p$.
-		\item[M4)] Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
+		\item Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
 		\[
 			xy + pz = 1
 		\]
@@ -352,7 +352,7 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 		\end{align*}
 		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
 		$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(x + z)p = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne \overline{0}$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
-		\item[D)] $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
+		\item $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
 	\end{enumerate}
 	Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
 \end{prova}
