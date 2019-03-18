@@ -212,9 +212,16 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 
 \section{Corpos Finitos}\label{sec:corpor_finitos}\index{Corpos!Finitos}
 
-Seja $p \in \z$ um n\'umero primo. Dado $a \in \z$, sempre \'e poss{\'\i}vel escrever
+Aqui vamos utilizar o seguinte resultado, conhecido como \textbf{algoritmo da divisão de Euclides} em $\z$: dados $a$, $b \in \z$ com $b > 0$, então existem únicos $q$, $r \in \z$ tais que
 \[
-	a = bp + r,
+	a = bq + r
+\]
+onde $0 \le r < b$.
+
+
+Fixemos então $p \in \z$ um n\'umero primo. Dado $a \in \z$, sempre \'e poss{\'\i}vel escrever
+\[
+	a = pq + r,
 \]
 onde $b$, $r \in \z$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$, 
 $1$, $2$, \dots, $p -1 $.
