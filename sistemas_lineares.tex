@@ -367,6 +367,56 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 \end{enumerate}
 \end{observacao}
 
+\section{Números Complexos}
+Nesta seção vamos relembrar algumas propriedades básicas dos \textbf{números complexos}. Tal conjunto é definido como
+\[
+	\complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+\]
+Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplicação em $\complex$ por
+\begin{align*}
+	z + w &= (a + c) + (b + d)i\\
+	z\cdot w &= (ac - bd) + (ad + bc)i.
+\end{align*}
+Além disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
+
+Dado um número complexo $z = a + bi \ne 0$, seja
+\[
+	w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
+\]
+Note que
+\begin{align*}
+	z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)}{a^2 + b^2} = 1
+\end{align*}
+assim $w$ é o inverso multiplicativo de $z$ em $\complex$.
+
+O \textbf{módulo} do número complexo $z = a + bi$ é definido como
+\[
+	|z| = \sqrt{a^2 + b^2}
+\]
+e o \textbf{conjudado complexo} de $z = a + bi$ é definido como
+\[
+	\overline{z} = a - bi.
+\]
+
+\begin{proposicao}
+	Para todos $z$, $w \in \complex$ valem:
+	\begin{enumerate}[label={\roman*})]
+		\item $\overline{\overline{z}} = z$;
+		\item $|\overline{z}| = |z|$;
+		\item $z\cdot\overline{z} = |z|^2$;
+		\item $\overline{z^{-1}} = \overline{z}^{-1}$;
+		\item $\overline{z + w} = \overline{z} + \overline{w}$;
+		\item $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$;
+		\item $|z \cdot w| = |z| \cdot |w|$;
+	\end{enumerate}
+\end{proposicao}
+
+Uma propriedade importante dos números complexos que iremos utilizar é a seguinte:
+\begin{teorema}
+	Todo polinômio com coeficientes em $\complex$ possui raízes complexas.
+\end{teorema}
+
+Um corpo satisfazendo a propriedade do teorema anterior é chamado de \textbf{algebricamente fechado}. É fácil ver que $\rac$ e $\real$ não são corpos algebricamente fechados, isto é, existem polinômios com coeficientes em $\rac$ e em $\real$ que não possuem raízes nesses corpos.
 
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
