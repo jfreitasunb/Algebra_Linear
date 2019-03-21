@@ -467,9 +467,45 @@ Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{
 		\lambda a_{21} & \lambda a_{22} & \cdots & \lambda a_{2n}\\
 		\vdots & & & \vdots\\
 		\lambda a_{m1} & \lambda a_{m2} & \cdots & \lambda a_{mn}
-	\end{pmatrix}
+	\end{pmatrix}.
 	\end{align*}
+
+	\item \textit{Produto de matrizes:} Sejam $A = (a_{ij}) \in M_{m\times n}(\cp{K})$ e $B = (b_{ij}) \in M_{n\times p}(\cp{K})$, definimos o \textbf{produto de $A$ por $B$} como sendo a matriz $C = (c_{ij}) \in M_{m\times p}(\cp{K})$ tal que
+	\[
+		c_{ij} = \sum_{l=1}^n a_{il}b_{lj},
+	\]
+	para $i = 1$, \dots, $m$ e $j = 1$, \dots, $p$. Isto é,
+	\begin{align*}
+		A\cdot B &= \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix}\cdots \begin{pmatrix}
+		b_{11} & b_{12} & \cdots & b_{1p}\\
+		b_{21} & b_{22} & \cdots & b_{2p}\\
+		\vdots & & & \vdots\\
+		b_{n1} & b_{n2} & \cdots & b_{np}
+	\end{pmatrix} \\ &= \begin{pmatrix}
+		\sum_{l=1}^n a_{1l}b_{l1} & \sum_{l=1}^n a_{1l}b_{l2} & \cdots & \sum_{l=1}^n a_{1l}b_{lp}\\
+		\sum_{l=1}^n a_{2l}b_{l1} & \sum_{l=1}^n a_{2l}b_{l2} & \cdots & \sum_{l=1}^n a_{2l}b_{lp}\\
+		\vdots & & & \vdots\\
+		\sum_{l=1}^n a_{ml}b_{l1} & \sum_{l=1}^n a_{ml}b_{l2} & \cdots & \sum_{l=1}^n a_{ml}b_{lp}
+	\end{pmatrix}.
+	\end{align*}
+	Não é difícil verificar que o produto de matrizes é associativo.
 \end{enumerate}
+
+No cado particular em que $m = n$, as matrizes em $M_{n\times n}(\cp{K})$ são chamadas de \textbf{matrizes quadradas} e escreveremos simplesmente $M_n(\cp{K})$. No caso de matrizes quadradas a multiplicação de matrizes tem um elemento neutro, ou unidade, que será a matriz
+\[
+	Id_n = \begin{pmatrix}
+		1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
+		0_\cp{K} & 1_\cp{K} & \cdots & 0_\cp{K}\\
+		\vdots & \vdots & & \vdots\\
+		0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K}
+	\end{pmatrix}.
+\]
+De modo geral, a multiplicação de matrizes não é comutativa e não admite inverso multiplicativo.
 
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
