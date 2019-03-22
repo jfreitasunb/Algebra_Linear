@@ -511,6 +511,24 @@ chamada de \textbf{matriz identidade} e para toda $A \in M_n(\cp{K})$ vale
 \]
 De modo geral, a multiplica\c{c}\~ao de matrizes n\~ao \'e comutativa e n\~ao admite inverso multiplicativo.
 
+\begin{proposicao}
+	Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ e $\alpha$, $\beta \in \cp{K}$ vale:
+	\begin{enumerate}[label={\roman*})]
+		\item $(A + B) + C = A + (B + C)$
+		\item $A + B = B + A$
+		\item $\alpha(A + B) = \alpha A + \alpha B$
+		\item $(\alpha + \beta)A = \alpha A + \beta A$.
+	\end{enumerate}
+	Agora se $A \in M_{m\times n}(\cp{K})$, $B \in M_{n\times l}(\cp{K})$ e $C \in M_{l\times p}(\cp{K})$, então:
+	\begin{enumerate}[label={\roman*})]
+		\item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
+		\item $\alpha(A\cdot B) = (\alpha A)\cdot B = A \cdot(\alpha B)$
+	\end{enumerate}
+	Se $A \in M_{m\times n}(\cp{K})$, $B \in M_{m\times n}(\cp{K})$ e $C \in M_{n\times p}(\cp{K})$, então:
+	\[
+		(A + B)\cdot C = (A\cdot C) + (B\cdot C).
+	\]
+\end{proposicao}
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
 \begin{equation}\label{sistemalinear}\index{Sistema Linear}
