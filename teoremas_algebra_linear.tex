@@ -1,0 +1,35 @@
+\documentclass{beamer}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext}
+\usepackage{enumitem}
+\usepackage{times}
+\usepackage{lmodern}
+
+\newcommand{\cp}[1]{\mathbb{#1}}
+
+\mode<presentation>
+{
+\usetheme{Warsaw}
+}
+
+\newtheorem{teorema}{Teorema}
+
+\begin{document}
+\frame{
+  \begin{teorema}
+  Considere o sistema
+  \[
+    AX = B
+  \]
+  onde $A$ \'e uma matriz $m \times n$ e $B$ \'e uma matriz $m \times 1$, ambas com entradas no corpo $\cp{K}$ e $X$ \'e uma matriz $n \times 1$. Ent\~ao:
+  \begin{enumerate}[label={\roman*})]
+    \item O sistema tem solu\c{c}\~ao se, e somente se, o posto da matriz ampliada \'e igual ao posto da matriz dos coeficientes.
+
+    \item Se a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto $p$ e $p = n$, ent\~ao a solu\c{c}\~ao \'e \'unica.
+
+    \item Se a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto $p$ e $p < n$, ent\~ao podemos escolher $n - p$ vari\'aveis, e as outras $p$ vari\'aveis ser\~ao dadas em fun\c{c}\~ao destas $n - p$ vari\'aveis escolhidas.
+  \end{enumerate}
+  O n\'umero $n - p$ \'e chamado de \textbf{grau de liberdade} e as $n - p$ vari\'aveis s\~ao chamadas de \textbf{vari\'aveis livres}.
+\end{teorema}
+}
+\end{document}
+
