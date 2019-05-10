@@ -38,7 +38,7 @@
 \newcommand{\im}{{\rm Im\,}}
 \newcommand{\sub}{\subseteq}
 \newcommand{\n}{\mathbb{N}}
-\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\z}{\mathbb{Z}}
 \newcommand{\rac}{\mathbb{Q}}
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\complex}{\mathbb{C}}
@@ -280,6 +280,53 @@ Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, 
 \end{exercicio}
 
 \begin{exercicio}
+Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
+    \[
+      M = \begin{pmatrix}
+        1 & 0\\
+        0 & 0
+      \end{pmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+\end{exercicio}
+
+
+\begin{exercicio}
+  Seja $F : \mathcal{P}_2(\z_5) \to \mathcal{P}_2(\z_5)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $G : \cp{M}_2(\z_5) \to \cp{M}_2(\z_5)$ dada por $G(X) = MX + X$ onde
+    \[
+      M = \begin{pmatrix}
+        \overline{1} & \overline{0}\\
+        \overline{0} & \overline{0}
+      \end{pmatrix}.
+    \]
+    Considere $\cp{M}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+    \[
+      D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+    \]
+  Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
   Seja $F : \real^3 \to \real^3$ a transforma\c{c}\~ao linear definida por
   \[
     F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
@@ -293,13 +340,13 @@ Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, 
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transforma\c{c}\~ao linear definida por
+  Seja $F : \cp{M}_3(\real) \to \cp{M}_3(\real)$ a transforma\c{c}\~ao linear definida por
   \[
-    F(A) = MA,
+    F(A) = AM - MA,
   \]
   onde $M = \begin{bmatrix}
-    1 & -1\\-2 & 2
-  \end{bmatrix}$ e $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+    1 & 2 & 0\\0 & 3 & 1\\0 & -1 & 1
+  \end{bmatrix}$ e $\cp{M}_3(\real)$ \'e um $\real$-espa\c{c}o vetorial.
   \begin{solucao}
     \begin{enumerate}[label=({\alph*})]
       \item $\dim_\real\im F = 2$
@@ -324,8 +371,13 @@ Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, 
   \end{solucao}
 \end{exercicio}
 
+
 \begin{exercicio}
   Encontre uma transforma\c{c}\~ao linear $F : \real^3 \to \real^4$, cuja imagem \'e gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma transforma\c{c}\~ao linear $G : \z_{19}^3 \to \z_{19}^4$, cuja imagem \'e gerada por $w_1 = (\overline{11},\overline{3},\overline{0},\overline{15})$ e $w_2 = (\overline{2},\overline{1},\overline{18},\overline{17})$.
 \end{exercicio}
 
 \begin{exercicio}
@@ -358,10 +410,12 @@ Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, 
     \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 0$, $\dim_\cp{K} \im T = 3$
     \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 0$
     \item $V = \cp{M}_{3\times 1}(\complex)$, $W = \real^3$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
+    \item $V = \cp{M}_{3\times 1}(\z_{11})$, $W = \z_{11}^3$, $\cp{K} = \z_{11}$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
     \item $V = \mathcal{P}_5(\real)$, $W = \real^4$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 4$, $\dim_\cp{K} \im T = 2$
     \item $V = \mathcal{P}_5(\complex)$, $W = \complex^5$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 1$, $\dim_\cp{K} \im T = 5$
     \item $V = \mathcal{P}_5(\complex)$, $W = \cp{M}_{3\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 2$, $\dim_\cp{K} \im T = 4$
-    \item $V = \mathcal{P}_4(\complex)$, $W = \cp{M}_{2\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
+    \item $V = \mathcal{P}_4(\real)$, $W = \cp{M}_{2\times 2}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
+    \item $V = \mathcal{P}_4(\z_5)$, $W = \cp{M}_{2\times 2}(\z_5)$, $\cp{K} = \z_5$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
   \end{enumerate}
 \end{exercicio}
 
