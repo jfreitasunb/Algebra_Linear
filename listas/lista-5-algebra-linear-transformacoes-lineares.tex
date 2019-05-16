@@ -12,7 +12,7 @@
 \graphicspath{{/ArquivosUbuntu/Dropbox/imagens-latex/}{D:/Dropbox/imagens-latex/}}
 \usepackage{enumitem}
 \usepackage{multicol}
- \usepackage{answers}
+\usepackage{answers}
 \usepackage{tikz,ifthen}
 \usetikzlibrary{lindenmayersystems}
 \usetikzlibrary[shadings]
@@ -25,6 +25,14 @@
 \setlength{\textheight}{10.1in}
 \setlength{\textwidth}{6.5in}
 \setlength{\baselineskip}{12mm}
+
+\usepackage{pageslts}
+\makeatletter
+\renewcommand{\@evenfoot}%
+{\normalsize\slshape Álgebra Linear \today\hfil \upshape Página {\thepage} de \lastpageref{pagesLTS.arabic}
+}
+\renewcommand{\@oddfoot}{\@evenfoot}
+\makeatother
 
 \newcounter{exercicios}
 \setcounter{exercicios}{0}
@@ -68,7 +76,8 @@
 {\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
 
 \begin{document}
-\pagestyle{empty}
+% \pagestyle{empty}
+\pagenumbering{arabic}
 
 \Opensolutionfile{ans}[ans1]
 
