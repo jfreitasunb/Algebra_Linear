@@ -1,5 +1,7 @@
 %!TEX program = xelatex
 % !TEX encoding = ISO-8859-1
+\def\ano{2019}
+\def\semestre{1}
 
 \documentclass[12pt]{exam}
 
@@ -26,13 +28,11 @@
 \setlength{\textwidth}{6.5in}
 \setlength{\baselineskip}{12mm}
 
-\usepackage{pageslts}
-\makeatletter
-\renewcommand{\@evenfoot}%
-{\normalsize\slshape Álgebra Linear \today\hfil \upshape Página {\thepage} de \lastpageref{pagesLTS.arabic}
-}
-\renewcommand{\@oddfoot}{\@evenfoot}
-\makeatother
+\extrafootheight[.25in]{.5in}
+\footrule
+\lfoot{Álgebra Linear \semestre$^o$/\ano}
+\cfoot{}
+\rfoot{Página \thepage\ de \numpages}
 
 \newcounter{exercicios}
 \setcounter{exercicios}{0}
@@ -77,7 +77,7 @@
 
 \begin{document}
 % \pagestyle{empty}
-\pagenumbering{arabic}
+% \pagenumbering{arabic}
 
 \Opensolutionfile{ans}[ans1]
 
@@ -95,7 +95,7 @@
 \vesp{-0.35} \hrule
 
 \begin{center}
-{\Large\bf \'Algebra Linear - Turma A -- 1$^{o}$/2019} \\ \vspace{9pt} {\large\bf
+{\Large\bf \'Algebra Linear - Turma A -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
   $5^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Transforma\c{c}\~oes Lineares}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
 \end{center}
 \hrule
