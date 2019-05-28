@@ -638,7 +638,7 @@ Por outro lado,
 		\alpha_1\\
 		\alpha_2\\
 		\vdots\\
-		\alpha_n
+		\alpha_p
 	\end{bmatrix} = \begin{bmatrix}
 		a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
 		a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
@@ -721,14 +721,18 @@ Assim provamos o seguinte teorema:
 			\]
 			e ent\~ao
 			\[
-				[(x,y)]_\mathcal{B} = (x,y)_\mathcal{B}.
+				[(x,y)]_\mathcal{B} = \begin{bmatrix}
+					x\\y
+				\end{bmatrix}.
 			\]
 			Assim podemos escrever
 			\[
 				[T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
 					1 & 0\\
 					0 & 0
-				\end{bmatrix}[(x,y)]_\mathcal{B}
+				\end{bmatrix}\begin{bmatrix}
+					x\\y
+				\end{bmatrix}
 			\]
 			para todo $(x,y) \in \real^2$.
 		\end{solucao}
