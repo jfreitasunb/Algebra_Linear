@@ -103,6 +103,59 @@
 \vesp{.6}
 
 \begin{exercicio}
+  Sejam $\mathcal{B} = \{(1,0);(0,1)\}$, $\mathcal{B}_1 = \{(-1,1);(1,1)\}$, $\mathcal{B}_2 = \{(\sqrt{3},-1);(\sqrt{3},1)\}$ e $\mathcal{B}_3 = \{(2,0);(0,2)\}$ bases ordenadas de $\real^2$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Quais s\~ao as coordenadas do vetor $v = (3,-2)$ em rela\c{c}\~ao \`a base:
+    \begin{enumerate}[label=({\roman*})]
+      \item $\mathcal{B}$
+      \item $\mathcal{B}_1$
+      \item $\mathcal{B}_2$
+      \item $\mathcal{B}_3$
+    \end{enumerate}
+    \item Ache a matriz de mudan\c{c}a de base nos seguintes casos:
+    \begin{enumerate}[label=({\roman*})]
+      \item $[I]_{\mathcal{B},\mathcal{B}_1}$
+      \item $[I]_{\mathcal{B}_1,\mathcal{B}}$
+      \item $[I]_{\mathcal{B}_2,\mathcal{B}}$
+      \item $[I]_{\mathcal{B}_3,\mathcal{B}}$
+    \end{enumerate}
+    \item As coordenadas de um vetor $v \in \real^2$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao dadas por
+    \[
+      [v]_{\mathcal{B}_1} = \begin{bmatrix}
+        4\\0
+      \end{bmatrix}.
+    \]
+    Quais as coordenadas de $v$ em rela\c{c}\~ao \`a base:
+    \begin{enumerate}[label=({\roman*})]
+      \item $\mathcal{B}$
+      \item $\mathcal{B}_2$
+      \item $\mathcal{B}_3$
+    \end{enumerate}
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Se
+  \[
+    [I]_{\mathcal{B}_1,\mathcal{B}_2} = \begin{bmatrix}
+      1 & 1 & 0\\
+      0 & -1 & 1\\
+      1 & 0 & 1
+    \end{bmatrix}
+  \]
+  encontre:
+  \begin{enumerate}[label=({\alph*})]
+    \item $[v]_{\mathcal{B}_1}$ onde $[v]_{\mathcal{B}_2} = \begin{bmatrix}
+      -1\\2\\3
+    \end{bmatrix}$
+    \item $[v]_{\mathcal{B}_2}$ onde $[v]_{\mathcal{B}_1} = \begin{bmatrix}
+      -1\\2\\3
+    \end{bmatrix}$
+  \end{enumerate}
+\end{exercicio}
+
+
+\begin{exercicio}
   Prove que cada uma das fun\c{c}\~oes abaixo \'e uma transforma\c{c}\~ao linear.
   \begin{enumerate}[label=({\alph*})]
     \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
@@ -277,58 +330,6 @@ Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(
 
 \begin{exercicio}
   Encontre uma transforma\c{c}\~ao linear $G : \z_{19}^3 \to \z_{19}^4$, cuja imagem \'e gerada por $w_1 = (\overline{11},\overline{3},\overline{0},\overline{15})$ e $w_2 = (\overline{2},\overline{1},\overline{18},\overline{17})$.
-\end{exercicio}
-
-\begin{exercicio}
-  Sejam $\mathcal{B} = \{(1,0);(0,1)\}$, $\mathcal{B}_1 = \{(-1,1);(1,1)\}$, $\mathcal{B}_2 = \{(\sqrt{3},-1);(\sqrt{3},1)\}$ e $\mathcal{B}_3 = \{(2,0);(0,2)\}$ bases ordenadas de $\real^2$.
-  \begin{enumerate}[label=({\alph*})]
-    \item Quais s\~ao as coordenadas do vetor $v = (3,-2)$ em rela\c{c}\~ao \`a base:
-    \begin{enumerate}[label=({\roman*})]
-      \item $\mathcal{B}$
-      \item $\mathcal{B}_1$
-      \item $\mathcal{B}_2$
-      \item $\mathcal{B}_3$
-    \end{enumerate}
-    \item Ache a matriz de mudan\c{c}a de base nos seguintes casos:
-    \begin{enumerate}[label=({\roman*})]
-      \item $[I]_{\mathcal{B},\mathcal{B}_1}$
-      \item $[I]_{\mathcal{B}_1,\mathcal{B}}$
-      \item $[I]_{\mathcal{B}_2,\mathcal{B}}$
-      \item $[I]_{\mathcal{B}_3,\mathcal{B}}$
-    \end{enumerate}
-    \item As coordenadas de um vetor $v \in \real^2$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao dadas por
-    \[
-      [v]_{\mathcal{B}_1} = \begin{bmatrix}
-        4\\0
-      \end{bmatrix}.
-    \]
-    Quais as coordenadas de $v$ em rela\c{c}\~ao \`a base:
-    \begin{enumerate}[label=({\roman*})]
-      \item $\mathcal{B}$
-      \item $\mathcal{B}_2$
-      \item $\mathcal{B}_3$
-    \end{enumerate}
-  \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-  Se
-  \[
-    [I]_{\mathcal{B}_1,\mathcal{B}_2} = \begin{bmatrix}
-      1 & 1 & 0\\
-      0 & -1 & 1\\
-      1 & 0 & 1
-    \end{bmatrix}
-  \]
-  encontre:
-  \begin{enumerate}[label=({\alph*})]
-    \item $[v]_{\mathcal{B}_1}$ onde $[v]_{\mathcal{B}_2} = \begin{bmatrix}
-      -1\\2\\3
-    \end{bmatrix}$
-    \item $[v]_{\mathcal{B}_2}$ onde $[v]_{\mathcal{B}_1} = \begin{bmatrix}
-      -1\\2\\3
-    \end{bmatrix}$
-  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
