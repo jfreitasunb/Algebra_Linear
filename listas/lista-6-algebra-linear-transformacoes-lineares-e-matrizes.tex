@@ -158,19 +158,19 @@
 \begin{exercicio}
   Encontre a matriz da transformação linear dada:
   \begin{enumerate}[label=({\alph*})]
-    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial e $\mathcal{B} = \{u_1 = 1, u_2 = x, u_3 = x^2\}$.
     
-    \item $D : \mathcal{P}_2(\complex) \to \mathcal{P}_2(\complex)$ dada por
+    \item $D : \mathcal{P}_2(\complex) \to \mathcal{P}_1(\complex)$ dada por
     \[
       D(a_0 + a_1x + a_2x^2) = a_1 + 2a_2x.
     \]
-    Considere $\mathcal{P}_2(\complex)$ um $\complex$-espa\c{c}o vetorial.
+    Considere $\mathcal{P}_2(\complex)$ e $\mathcal{P}_1(\complex)$ sendo espa\c{c}os vetoriais sobre $\complex$ com bases $\mathcal{B}_1 = \{1, x, x^2\}$ e $\mathcal{B}_2 = \{1, 2 - x\}$, respectivamente.
     
-    \item $D : \mathcal{P}_5(\real) \to \mathcal{P}_5(\real)$ dada por
+    \item $D : \mathcal{P}_3(\real) \to \mathcal{P}_5(\real)$ dada por
     \[
-      D(a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5) = a_1 + 2a_2x + 3a_3x^2 + 4a_4x^3 + 5a_5x^4
+      D(a_0 + a_1x + a_2x^2 + a_3x^3) = a_1 + 2a_2x + 3a_3x^2
     \]
-    Considere $\mathcal{P}_5(\real)$ um $\real$-espa\c{c}o vetorial.
+    Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$ sendo espa\c{c}os vetoriais sobre $\real$ com bases $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4, x^5\}$, respectivamente..
 
     \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
     \[
@@ -206,6 +206,29 @@
   \]
   Considere $\cp{M}_2(\real)$ e $\complex$ como espa\c{c}os vetoriais sobre $\real$.
    \end{enumerate}
+   \begin{solucao}
+     \begin{enumerate}[label=({\alph*})]
+       \item $[F]_\mathcal{B} = \begin{bmatrix}
+         0 & 0 & 0\\
+         0 & 0 & 0\\
+         0 & 0 & 2
+       \end{bmatrix}$
+
+       \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+         0 & 1 & 2\\
+         0 & 0 & -2
+       \end{bmatrix}$
+
+       \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+         0 & 1 & 0 & 0\\
+         0 & 0 & 2 & 0\\
+         0 & 0 & 0 & 3\\
+         0 & 0 & 0 & 0\\
+         0 & 0 & 0 & 0\\
+         0 & 0 & 0 & 0
+       \end{bmatrix}$
+     \end{enumerate}
+   \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
