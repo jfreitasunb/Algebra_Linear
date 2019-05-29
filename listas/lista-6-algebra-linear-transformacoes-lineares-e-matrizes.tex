@@ -156,19 +156,15 @@
 
 
 \begin{exercicio}
-  Prove que cada uma das fun\c{c}\~oes abaixo \'e uma transforma\c{c}\~ao linear.
+  Encontre a matriz da transformação linear dada:
   \begin{enumerate}[label=({\alph*})]
+    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
     \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
     \[
       D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
     \]
     Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
-    \item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
-    \[
-      T(f(x)) = \int_a^bf(x)dx.
-    \]
-    Considere $\mathcal{C}([a,b], \real)$ e $\real$ como $\real$-espa\c{c}os vetoriais.
-    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+    
     \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
     \[
       M = \begin{pmatrix}
@@ -193,35 +189,20 @@
     \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex^2$ como $\complex$-espa\c{c}os vetoriais.
     \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
     \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
-   \end{enumerate}
-\end{exercicio}
 
-\begin{exercicio}
-  Considere a fun\c{c}\~ao $T : \complex \to \cp{M}_2(\real)$ dada por
+    \item Considere a fun\c{c}\~ao $T : \complex \to \cp{M}_2(\real)$ dada por
   \[
     T(x + yi) = \begin{pmatrix}
       x + 7y & 5y\\
       -10y & x - 7y
     \end{pmatrix}.
   \]
-  Considerando $\complex$ como um espa\c{c}o vetorial sobre $\real$:
-  \begin{enumerate}[label=({\alph*})]
-    \item Prove que $T$ \'e uma transforma\c{c}\~ao linear.
-    \item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
-  \end{enumerate}
+  Considere $\cp{M}_2(\real)$ e $\complex$ como espa\c{c}os vetoriais sobre $\real$.
+   \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
   Sejam $T : V \to W$ e $S : W \to W_1$ transforma\c{c}\~oes lineares. Mostre que $S \comp T : V \to W_1$ \'e uma transforma\c{c}\~ao linear.
-\end{exercicio}
-
-
-\begin{exercicio}
-  Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
-  \begin{enumerate}[label=({\alph*})]
-    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
-    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
-  \end{enumerate}
 \end{exercicio}
 
 
