@@ -172,6 +172,12 @@
     \]
     Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$ sendo espa\c{c}os vetoriais sobre $\real$ e $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4, x^5\}$ bases ordenadas de $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$, respectivamente.
 
+    \item $D : \mathcal{P}_n(\real) \to \mathcal{P}_n(\real)$ dada por
+    \[
+      D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n-1}
+    \]
+    Considere $\mathcal{P}_n(\real)$ como um espa\c{c}o vetorial sobre $\real$ e $\mathcal{B}_1 = \{1, x, x^2, \dots, x^n\}$ uma base ordenada de $\mathcal{P}_n(\real)$.
+
     \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
     \[
       M = \begin{pmatrix}
@@ -249,71 +255,80 @@
    \end{enumerate}
    \begin{solucao}
      \begin{enumerate}[label=({\alph*})]
-       \item $[F]_\mathcal{B} = \begin{bmatrix}
-         0 & 0 & 0\\
-         0 & 0 & 0\\
-         0 & 0 & 2
-       \end{bmatrix}$
+        \item $[F]_\mathcal{B} = \begin{bmatrix}
+           0 & 0 & 0\\
+           0 & 0 & 0\\
+           0 & 0 & 2
+        \end{bmatrix}$
 
-       \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         0 & 1 & \phantom{-}2\\
-         0 & 0 & -2
-       \end{bmatrix}$
+        \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          0 & 1 & \phantom{-}2\\
+          0 & 0 & -2
+        \end{bmatrix}$
 
-       \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         0 & 1 & 0 & 0\\
-         0 & 0 & 2 & 0\\
-         0 & 0 & 0 & 3\\
-         0 & 0 & 0 & 0\\
-         0 & 0 & 0 & 0\\
-         0 & 0 & 0 & 0
-       \end{bmatrix}$
+        \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          0 & 1 & 0 & 0\\
+          0 & 0 & 2 & 0\\
+          0 & 0 & 0 & 3\\
+          0 & 0 & 0 & 0\\
+          0 & 0 & 0 & 0\\
+          0 & 0 & 0 & 0
+        \end{bmatrix}$
 
-       \item $[D]_\mathcal{B} = \begin{bmatrix}
-         2 & 1 & 1 & 1\\
-         0 & 1 & 0 & 0\\
-         0 & 0 & 0 & 0\\
-         0 & 0 & 0 & 0
-       \end{bmatrix}$
+        \item $[D]_\mathcal{B} = \begin{bmatrix}
+          0 & 1 & 0 & 0 & \cdots & 0\\
+          0 & 0 & 2 & 0 & \cdots & 0\\
+          0 & 0 & 0 & 3 & \cdots & 0\\
+          \vdots & \vdots & \vdots & \vdots & \cdots & \vdots\\
+          0 & 0 & 0 & 0 & \cdots & n - 1\\
+          0 & 0 & 0 & 0 & \cdots & 0
+        \end{bmatrix}$
 
-       \item $[H]_\mathcal{B} = \begin{bmatrix}
-         \phantom{-}0 & 0 & 2 & 0\\
-         -2 & 0 & 0 & 2\\
-         \phantom{-}0 & 0 & 0 & 0\\
-         \phantom{-}0 & 0 & 0 & 0
-       \end{bmatrix}$
+        \item $[G]_\mathcal{B} = \begin{bmatrix}
+          2 & 1 & 1 & 1\\
+          0 & 1 & 0 & 0\\
+          0 & 0 & 0 & 0\\
+          0 & 0 & 0 & 0
+        \end{bmatrix}$
 
-       \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         1 & 7/6 & -35/0 & \phantom{-}11/12\\
-         0 & 1/3 & -10/9 & -1/6
-       \end{bmatrix}$
+        \item $[H]_\mathcal{B} = \begin{bmatrix}
+          \phantom{-}0 & 0 & 2 & 0\\
+          -2 & 0 & 0 & 2\\
+          \phantom{-}0 & 0 & 0 & 0\\
+          \phantom{-}0 & 0 & 0 & 0
+        \end{bmatrix}$
 
-       \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         1 & 2 & i
-       \end{bmatrix}$
+        \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          1 & 7/6 & -35/0 & \phantom{-}11/12\\
+          0 & 1/3 & -10/9 & -1/6
+        \end{bmatrix}$
 
-       \item $[F]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         0 & 0 & 0 & 0\\
-         1 & 1 & 2 & 1\\
-         0 & 1 & 2 & 3\\
-         0 & 0 & 1 & 3\\
-         0 & 0 & 0 & 1
-       \end{bmatrix}$
+        \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          1 & 2 & i
+        \end{bmatrix}$
 
-       \item $[G]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         1/2 & 1\\
-         3 & 5\\
-         1 & 2
-       \end{bmatrix}$
+        \item $[F]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          0 & 0 & 0 & 0\\
+          1 & 1 & 2 & 1\\
+          0 & 1 & 2 & 3\\
+          0 & 0 & 1 & 3\\
+          0 & 0 & 0 & 1
+        \end{bmatrix}$
 
-       \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-         1 & \phantom{-}7\\
-         1 & \phantom{-}5\\
-         0 & -10\\
-         0 & -7
-       \end{bmatrix}$
-     \end{enumerate}
-   \end{solucao}
+        \item $[G]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          1/2 & 1\\
+          3 & 5\\
+          1 & 2
+        \end{bmatrix}$
+
+        \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          1 & \phantom{-}7\\
+          1 & \phantom{-}5\\
+          0 & -10\\
+          0 & -7
+        \end{bmatrix}$
+      \end{enumerate}
+    \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
