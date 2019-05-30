@@ -46,7 +46,7 @@
 \newcommand{\im}{{\rm Im\,}}
 \newcommand{\sub}{\subseteq}
 \newcommand{\n}{\mathbb{N}}
-\newcommand{\z}{\mathbb{Z}}
+\newcommand{\integer}{\mathbb{Z}}
 \newcommand{\rac}{\mathbb{Q}}
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\complex}{\mathbb{C}}
@@ -418,7 +418,7 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base ordenada can\^onica, $\mathcal{B}$, seja
+  Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base ordenada can\^onica, $\mathcal{B} = \{(1,0,0); (0,1,0); (0,0,1)\}$, seja
   \[
     [T]_\mathcal{B} = \begin{pmatrix}
       \phantom{-}1 & \phantom{-}1 & \phantom{-}0\\
@@ -439,6 +439,32 @@
           1 & 0 & \phantom{-}0
         \end{bmatrix}$
         \item[c)] N\~ao.
+      \end{enumerate}
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $T : \integer_7^3 \to \integer_7^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base ordenada can\^onica, $\mathcal{B} = \{(\overline{1}, \overline{0}, \overline{0}); (\overline{0}, \overline{1}, \overline{0}); (\overline{0}, \overline{0}, \overline{1})\}$, seja
+  \[
+    [T]_\mathcal{B} = \begin{pmatrix}
+      \overline{6} & \overline{1} & \overline{0}\\
+      \overline{6} & \overline{0} & \overline{1}\\
+      \overline{0} & \overline{6} & \overline{6}
+    \end{pmatrix}.
+  \]
+    \begin{enumerate}[label=({\alph*})]
+      \item Determine $T(x,y,z)$.
+      \item Qual \'e a matriz de $T$ com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{(\overline{6},\overline{1},\overline{0});(\overline{1},\overline{6},\overline{1});(\overline{0},\overline{1},\overline{6})\}$?
+      \item A transforma\c{c}\~ao $T$ \'e invert{\'\i}vel? Justifique.
+    \end{enumerate}
+    \begin{solucao}
+      \begin{enumerate}
+        \item[b)] $[T]_{\mathcal{B}_1} = \begin{bmatrix}
+          \overline{0} & \overline{0} & \overline{6}\\
+          \overline{0} & \overline{0} & \overline{0}\\
+          \overline{1} & \overline{5} & \overline{0}
+        \end{bmatrix}$
+        \item[c)] Sim.
       \end{enumerate}
     \end{solucao}
 \end{exercicio}
