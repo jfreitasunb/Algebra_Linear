@@ -273,17 +273,39 @@
     \]
     Considere $\cp{M}_2(\real)$ e $\complex$ como espa\c{c}os vetoriais sobre $\real$ e $\mathcal{B}_1 = \{1, i\}$ e 
     \[
-          \mathcal{B}_2 = \left\{E_{11} = \begin{bmatrix}
-            1 & 0\\0 & 0
-          \end{bmatrix}, E_{12} = \begin{bmatrix}
-            0 & 1\\0 & 0
-          \end{bmatrix}, E_{21} = \begin{bmatrix}
-            0 & 0\\1 & 0
-          \end{bmatrix}, E_{22} = \begin{bmatrix}
-            0 & 0\\0 & 1
-          \end{bmatrix}\right\}.
-      \]
-      bases ordenadas de $\cp{M}_2(\real)$ e $\complex$, respectivamente.
+        \mathcal{B}_2 = \left\{E_{11} = \begin{bmatrix}
+          1 & 0\\0 & 0
+        \end{bmatrix}, E_{12} = \begin{bmatrix}
+          0 & 1\\0 & 0
+        \end{bmatrix}, E_{21} = \begin{bmatrix}
+          0 & 0\\1 & 0
+        \end{bmatrix}, E_{22} = \begin{bmatrix}
+          0 & 0\\0 & 1
+        \end{bmatrix}\right\}.
+    \]
+    bases ordenadas de $\cp{M}_2(\real)$ e $\complex$, respectivamente.
+
+    \item $S : \mathcal{P}_3(\real) \to M_2(\real)$ dada por
+    \[
+      S(a + bx + cx^2 + dx^3) = \begin{bmatrix}
+        3a + 7b - 2c - 5d & 8a + 14b - 2c - 11d\\
+        -4a - 8b + 2c + 6d & 12a + 22b - 4c - 17d
+      \end{bmatrix}.
+    \]
+    Considere $\mathcal{P}_3(\real)$ e $M_2(\real)$ como $\real$-espaços vetoriais e
+    \begin{align*}
+      \mathcal{B}_1 &= \{1 + 2x + x^2 - x^3, 1 + 3x + x^2 + x^3, -1 - 2x + 2x^3, 2 + 3x + 2x^2 - 5x^3\}\\
+      \mathcal{B}_2 &= \left\{\begin{bmatrix}
+        1 & 1\\1 & 2
+      \end{bmatrix}, \begin{bmatrix}
+        2 & 3\\2 & 5
+      \end{bmatrix}, \begin{bmatrix}
+        -1 & -1\\\phantom{-}0 & -2
+      \end{bmatrix}, \begin{bmatrix}
+        -1 & -4\\-2 & -4
+      \end{bmatrix}\right\} 
+    \end{align*}
+    bases ordenadas de $\mathcal{P}_3(\real)$ e $M_2(\real)$, respectivamente.
    \end{enumerate}
    \begin{solucao}
      \begin{enumerate}[label=({\alph*})]
@@ -358,6 +380,13 @@
           1 & \phantom{-}5\\
           0 & -10\\
           0 & -7
+        \end{bmatrix}$
+
+        \item $[S]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+          -90 & \phantom{-}72 & \phantom{-}114 & -220\\
+          \phantom{-}37 & \phantom{-}29 & -46 & \phantom{-}91\\
+          -40 & -34 & \phantom{-}54 & -96\\
+          \phantom{-}4 & \phantom{-}3 & -5 & \phantom{-}10
         \end{bmatrix}$
       \end{enumerate}
     \end{solucao}
@@ -473,7 +502,9 @@
   Mostre que cada uma das transforma\c{c}\~oes lineares a seguir \'e invert{\'\i}vel e determine a transforma\c{c}\~ao linear inversa:
   \begin{enumerate}[label=({\alph*})]
     \item $T : \real^3 \to \real^3$ dada por $T(x,y,z) = (x - 3y - 2z, y - 4z, -z)$;
+    
     \item $G : \real^3 \to \real^3$ dada por $G(x,y,z) = (x, x - y, 2x + y -z)$;
+    
     \item $F : \mathcal{P}_3(\real) \to M_2(\real)$ dada por
     \[
       T(a + bx + cx^2 + dx^3) = \begin{bmatrix}
@@ -481,6 +512,7 @@
         d & b - d
       \end{bmatrix}
     \]
+    
     \item $F : M_2(\real) \to \mathcal{P}_2(\real)$ dada por
     \[
       T\left(\begin{bmatrix}
@@ -489,6 +521,18 @@
     \]
   \end{enumerate}
 \end{exercicio}
+
+\begin{exercicio}
+  A transformação $T : \complex^3 \to M_2(\complex)$ dada por
+  \[
+    T(a,b,c) = \begin{bmatrix}
+      a - b & 2a + 2b + c\\
+      3a + b + c & -2a - 6b -2c
+    \end{bmatrix}
+  \]
+  é inversível? Justifique.
+\end{exercicio}
+
 
 \begin{exercicio}
   Seja $\cp{K}$ um corpo e $T : \cp{K}^2 \to \cp{K}^2$ a transforma\c{c}\~ao linear dada por $T(x_1,x_2) = (x_1 + x_2, x_1)$ para todo $(x_1,x_2) \in \cp{K}^2$. Prove que $T$ \'e um isomorfismo e exiba $T^{-1}$.
