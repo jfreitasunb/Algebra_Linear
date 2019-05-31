@@ -28,7 +28,25 @@
 \setlength{\textwidth}{6.5in}
 \setlength{\baselineskip}{12mm}
 
-\extrafootheight[.25in]{.5in}
+\extraheadheight{0.7in}
+\firstpageheadrule
+\runningheadrule
+\lhead{
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} --
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\vspace*{-0.8cm}
+}
+% \chead{Universidade de Bras{\'\i}lia - Departamento de Matem{\'a}tica}
+% \rhead{}
+% \vspace*{-2cm}
+
+\extrafootheight{.5in}
 \footrule
 \lfoot{\'Algebra Linear \semestre$^o$/\ano}
 \cfoot{}
@@ -81,18 +99,18 @@
 
 \Opensolutionfile{ans}[ans1]
 
-\begin{figure}[h]
-        \begin{minipage}[c]{1.7cm}
-        \includegraphics[width=1.7cm]{unb.pdf}
-        \end{minipage}%
-        \hspace{0pt}
-        \begin{minipage}[c]{4in}
-          {Universidade de Bras{\'\i}lia} \\
-          {Departamento de Matem{\'a}tica}
-\end{minipage}
-\end{figure}
+% \begin{figure}[h]
+%         \begin{minipage}[c]{1.7cm}
+%         \includegraphics[width=1.7cm]{unb.pdf}
+%         \end{minipage}%
+%         \hspace{0pt}
+%         \begin{minipage}[c]{4in}
+%           {Universidade de Bras{\'\i}lia} \\
+%           {Departamento de Matem{\'a}tica}
+% \end{minipage}
+% \end{figure}
 
-\vesp{-0.35} \hrule
+% \vesp{-1.2} \hrule
 
 \begin{center}
 {\Large\bf \'Algebra Linear - Turma A -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
@@ -713,11 +731,11 @@
 
 \newpage
 \Closesolutionfile{ans}
-\hrule
+
 \begin{center}
 {\large\bf RESPOSTAS}
 \end{center}
-\hrule
+
 \input{ans1}
 
 \end{document}
