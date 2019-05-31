@@ -5,113 +5,13 @@
 
 \documentclass[12pt]{exam}
 
-\usepackage{caption}
-\usepackage{amssymb}
-\usepackage{amsmath,amsfonts,amsthm,amstext}
-\usepackage[brazil]{babel}
-% \usepackage[latin1]{inputenc}
-\usepackage{graphicx}
-\graphicspath{{/ArquivosUbuntu/Dropbox/imagens-latex/}{D:/Dropbox/imagens-latex/}}
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{answers}
-\usepackage{tikz,ifthen}
-\usetikzlibrary{lindenmayersystems}
-\usetikzlibrary[shadings]
-
-\Newassociation{solucao}{Solution}{ans}
-\newtheorem{exercicio}{}
-
-\setlength{\topmargin}{-1.0in}
-\setlength{\oddsidemargin}{0in}
-\setlength{\textheight}{10.1in}
-\setlength{\textwidth}{6.5in}
-\setlength{\baselineskip}{12mm}
-
-\extraheadheight{0.7in}
-\firstpageheadrule
-\runningheadrule
-\lhead{
-        \begin{minipage}[c]{1.7cm}
-        \includegraphics[width=1.7cm]{unb.pdf}
-        \end{minipage}%
-        \hspace{0pt}
-        \begin{minipage}[c]{4in}
-          {Universidade de Bras{\'\i}lia} --
-          {Departamento de Matem{\'a}tica}
-\end{minipage}
-\vspace*{-0.8cm}
-}
-% \chead{Universidade de Bras{\'\i}lia - Departamento de Matem{\'a}tica}
-% \rhead{}
-% \vspace*{-2cm}
-
-\extrafootheight{.5in}
-\footrule
-\lfoot{\'Algebra Linear \semestre$^o$/\ano}
-\cfoot{}
-\rfoot{P\'agina \thepage\ de \numpages}
-
-\newcounter{exercicios}
-\setcounter{exercicios}{0}
-\newcommand{\questao}{
-\addtocounter{exercicios}{1}
-\noindent{\bf Exerc{\'\i}cio \Roman{exercicios}: }}
-
-\newcommand{\resp}[1]{
-\noindent{\bf Exerc{\'\i}cio #1: }}
-
-\newcommand{\im}{{\rm Im\,}}
-\newcommand{\sub}{\subseteq}
-\newcommand{\n}{\mathbb{N}}
-\newcommand{\integer}{\mathbb{Z}}
-\newcommand{\rac}{\mathbb{Q}}
-\newcommand{\real}{\mathbb{R}}
-\newcommand{\complex}{\mathbb{C}}
-\newcommand{\cp}[1]{\mathbb{#1}}
-\newcommand{\ch}{\mbox{\textrm{car\,}}\nobreak}
-\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
-\newcommand{\minf}{+\infty}
-\newcommand{\ninf}{-\infty}
-\renewcommand{\sin}{{\rm sen\,}}
-\renewcommand{\sinh}{{\rm senh\,}}
-\renewcommand{\tan}{{\rm tg\,}}
-\renewcommand{\csc}{{\rm cossec\,}}
-\renewcommand{\cot}{{\rm cotg\,}}
-\newcommand{\din}[4]{\displaystyle\int_{#1}^{#2}{#3}{d#4}}
-
-\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
-\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
-\newcommand{\seq}[1]{\{{#1_n\}}}
-\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
-\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
-
-\newcommand{\vesp}[1]{\vspace{ #1  cm}}
-
-\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
-\newcommand{\comp}{\mathbin{\mathchoice
-{\compcent\scriptstyle}{\compcent\scriptstyle}
-{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+\include{pacotes}
+\include{configuracoes_paginas}
+\include{comandos_personalizados}
 
 \begin{document}
-% \pagestyle{empty}
-% \pagenumbering{arabic}
 
 \Opensolutionfile{ans}[ans1]
-
-% \begin{figure}[h]
-%         \begin{minipage}[c]{1.7cm}
-%         \includegraphics[width=1.7cm]{unb.pdf}
-%         \end{minipage}%
-%         \hspace{0pt}
-%         \begin{minipage}[c]{4in}
-%           {Universidade de Bras{\'\i}lia} \\
-%           {Departamento de Matem{\'a}tica}
-% \end{minipage}
-% \end{figure}
-
-% \vesp{-1.2} \hrule
-
 \begin{center}
 {\Large\bf \'Algebra Linear - Turma A -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
   $6^{\underline{a}}$ Lista de Exerc{\'\i}cios -- Transforma\c{c}\~oes Lineares e Matrizes}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
