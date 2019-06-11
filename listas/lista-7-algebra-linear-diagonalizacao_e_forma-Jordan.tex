@@ -197,6 +197,582 @@
   \end{enumerate}
 \end{exercicio}
 
+\begin{exercicio}
+  Sejam $U$ e $W$ subespa\c{c}os de $\real^3$ definidos por
+  \begin{align*}
+    U &= \{(a,b,c) \mid a = b = c\}\\
+    W &= \{(0,b,c) \mid b, c \in \real\}.
+  \end{align*}
+  Mostre que $\real^3 = U \oplus W$.
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $U$, $V$ e $W$ os seguintes subespa\c{c}os de $\real^3$:
+  \begin{align*}
+    U &= \{(a,b,c) \mid a + b + c = 0\}\\
+    V &= \{(a,b,c) \mid a = c\}\\
+    W &= \{(0,0,c) \mid c \in \real\}.
+  \end{align*}
+  Mostre que:
+  \begin{enumerate}[label=({\alph*})]
+    \item $\real^3 = U + V$
+    \item $\real^3 = U + W$
+    \item $\real^3 = V + W$.
+  \end{enumerate}
+  Em qual caso a soma \'e direta?
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ o espa\c{c}o vetorial de todas as fun\c{c}\~oes de $\real$ em $\real$. Seja $U$ o subespa\c{c}o das fun\c{c}\~oes pares e $W$ o subespa\c{c}o das fun\c{c}\~oes {\'\i}mpares. Mostre que $V = U \oplus W$. [Lembre-se que f \'e par se, e somente se, $f(-x) = f(x)$ e que $g$ \'e {\'\i}mpar se, e somente se, $g(-x) = -g(x)$.]
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $W = \{(z,z) \mid z \in \complex\} \sub \complex^2$. Mostre que $W$ \'e um subespa\c{c}o de $\complex^2$ e encontre subespa\c{c}os $U$ e $V$ de $\complex^2$ tais que $W \oplus V = W \oplus U = \complex^2$ e $U \cap V = \{(0,0\}$.
+\end{exercicio}
+
+Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Para subespa\c{c}os $W_1$, \dots, $W_t$ de $V$ dizemos que $V$ \'e uma \textbf{soma direta} de $W_1$, \dots, $W_t$ se
+\begin{itemize}
+  \item $W_1 + \cdots + W_t = \{u_1 + \cdots + u_t \mid u_i \in W_i,\ i = 1,\dots, t\}$
+  \item $W_i \cap (W_1 + \cdots + W_{i - 1} + W_{i + 1} + \cdots + W_t) = \{0_V\}$, $i = 1$, \dots, $t$.
+\end{itemize}
+Neste caso escrevemos
+\[
+  V = W_1 \oplus \cdots \oplus W_t.
+\]
+Se $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita tal que $V = W_1 \oplus \cdots \oplus W_t$, ent\~ao
+\[
+  \dim_\cp{K}V = \sum_{i = 1}^t\dim_\cp{K}W_i.
+\]
+
+\begin{exercicio}
+  Seja $V = W_1 \oplus \cdots \oplus W_t$ e sejam $\mathcal{B}_i \sub W_i$, para cada $i = 1$, \dots, $t$. Considere $\mathcal{B} = \mathcal{B}_1 \cup \dots \cup \mathcal{B}_t$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Mostre que se $\mathcal{B}_i$ for L.I. para cada $i = 1$, \dots, $t$, ent\~ao $\mathcal{B}$ \'e L.I..
+    \item Mostre que se $\mathcal{B}_i$ uma base de $W_i$ para cada $i = 1$, \dots, $t$, ent\~ao $\mathcal{B}$ \'e uma base de $V$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que todo espa\c{c}o vetorial finitamente gerado sobre $\cp{K}$ \'e uma soma direta de subespa\c{c}os vetorias de dimens\~ao 1.
+\end{exercicio}
+
+\begin{exercicio}
+Seja $T \in \mathcal{L}(V,V)$ um operador linear, onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita. Mostre que se $T = T_1 \oplus T_2$, ent\~ao $p_T(x) = p_{T_1}(x)p_{T_2}(x)$.
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $T : V \to V$ um operador linear, $W \sub V$ um subespa\c{c}o de $V$ e $\lambda \in \cp{K}$. Mostre que $W$ \'e $(\lambda Id - T)$-invariante se, e somente se, $W$ for $T$-invariante.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $T \in \mathcal{L}(V,V)$ um operador linear com polin\^omio caracter{\'\i}stico $p_T(x) = x^n$. Mostre que existe $m \ge 1$ tal que $T^m = 0$.
+\end{exercicio}
+
+
+\begin{exercicio}
+  Mostre que se $T : V \to V$ \'e um operador linear nilpotente, ent\~ao $\ker T \ne \{0_V\}$.
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que os seguintes operadores s\~ao nilpotentes e encontre seu \'indice de nilpot\^encia:
+  \begin{enumerate}[label=({\alph*})]
+    \item Seja $D : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ o operador deriva\c{c}\~ao.
+    \item Seja $D : \mathcal{P}_n(\real) \to \mathcal{P}_n(\real)$ o operador deriva\c{c}\~ao.
+    \item Seja $T : \real^2 \to \real^2$ o operador linear tal que
+    \[
+      [T] = \begin{bmatrix}
+        0 & 0\\
+        1 & 0
+      \end{bmatrix}.
+    \]
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre todas as possibilidades para o polin\^omio minimal de um operador $T : \real^5 \to \real^5$ com polin\^omio caracter{\'\i}stico:
+  \begin{enumerate}[label=({\alph*})]
+    \item $p_T(x) = (x - 3)^3(x - 2)^2$
+    \item $p_T(x) = (x - 1)(x - 2)(x - 3)(x - 4)(x - 5)$
+    \item $p_T(x) = (x - 1)^m$, $m \ge 1$
+  \end{enumerate}
+  \'E poss{\'\i}vel concluir que algum deles \'e necessariamente diagonaliz\'avel?
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $m_T(x) = (x - 3)(x - 2)$ ou $m_T(x) = (x - 3)(x - 2)^2$ ou $m_T(x) = (x - 3)^2(x - 2)$ ou $m_T(x) = (x - 3)^2(x - 2)^2$ ou $m_T(x) = (x - 3)^3(x - 2)$ ou $m_T(x) = (x - 3)^3(x - 2)^2$
+      \item $m_T(x) = p_T(x)$ e neste caso \'e diagonaliz\'avel.
+      \item Existem $m$ possibilidades que s\~ao: $m_T(x) = (x - 1)$, $m_T(x) = (x - 1)^2$, \dots, $m_T(x) = (x - 1)^m$
+      \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre os polin\^omios caracter{\'\i}stico e minimal das seguintes matrizes:
+  \begin{enumerate}[label=({\roman*})]
+    \item $A = \begin{bmatrix}
+        \phantom{-} 1 & \phantom{-} 1 & \phantom{-} 0 & 0\\
+        -1 & -1 & \phantom{-} 0 & 0\\
+        -2 & -2 & \phantom{-} 2 & 1\\
+        \phantom{-} 1 & \phantom{-} 1 & -1 & 0
+      \end{bmatrix}$
+      \item $B = \begin{bmatrix}
+        2 & 5 & 0 & 0 & 0\\
+        0 & 2 & 0 & 0 & 0\\
+        0 & 0 & 4 & 2 & 0\\
+        0 & 0 & 3 & 5 & 0\\
+        0 & 0 & 0 & 0 & 7
+      \end{bmatrix}$
+      \item $C = \begin{bmatrix}
+        3 & 1 & 0 & 0 & 0\\
+        0 & 3 & 0 & 0 & 0\\
+        0 & 0 & 3 & 1 & 0\\
+        0 & 0 & 0 & 3 & 1\\
+        0 & 0 & 0 & 0 & 3
+      \end{bmatrix}$
+      \item $D = \begin{bmatrix}
+        \lambda & 0 & 0 & 0 & 0\\
+        0 & \lambda & 0 & 0 & 0\\
+        0 & 0 & \lambda & 0 & 0\\
+        0 & 0 & 0 & \lambda & 0\\
+        0 & 0 & 0 & 0 & \lambda
+      \end{bmatrix}$
+      \item $E = \begin{bmatrix}
+        1 & 1 & 0\\
+        0 & 2 & 0\\
+        0 & 0 & 1
+      \end{bmatrix}$
+      \item $F = \begin{bmatrix}
+        2 & 0 & 0\\
+        0 & 2 & 2\\
+        0 & 0 & 1
+      \end{bmatrix}$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label=({\roman*})]
+      \item $p_A(x) = m_A(x) = x^2(x - 1)^2$.
+      \item $p_B(x) = (x - 2)^3(x - 7)^2$ $m_A(x) = (x - 2)^2(x - 7)$.
+      \item $p_C(x) = (x - 3)^5$ $m_A(x) = (x - 3)^3$.
+      \item $p_D(x) = (x - \lambda)^5$ $m_A(x) = (x - \lambda)$.
+      \item $p_E(x) = (x - 1)^2(x - 2)$ $m_A(x) = (x - 1)(x - 2)$.
+      \item $p_F(x) = (x - 1)(x - 2)^2$ $m_A(x) = (x - 1)(x - 2)$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e $T : V \to V$ um operador linear. Mostre que se para algum $l > 0$, temos que $\ker T^l = \ker T^{l + 1}$, ent\~ao $\ker T^l = \ker T^{l + i}$, para todo $i \ge 0$.
+\end{exercicio}
+
+% \begin{exercicio}
+%   Seja $T : \cp{K}^\cp{N} \to \cp{K}^\cp{N}$ dada por $T((x_n)) = (0,x_1,x_2,\dots,x_n,\dots)$. Mostre que $T$ n\~ao se escreve como uma soma direta de um operador nilpotente com um operador invert{\'\i}vel.
+% \end{exercicio}
+
+\begin{exercicio}
+  Seja $T : \real^5 \to \real^5$ o operador linear dado por
+  \[
+      T(x_1,x_2,x_3,x_4,x_5) = (3x_1 -2x_5, 0 , 2x_3 - x_4 + x_5, x_5 - x_1, 2x_1 - x_5).
+  \]
+  Determine a decomposi\c{c}\~ao $T = T_1 \oplus T_2$ onde $T_1$ \'e nilpotente e $T_2$ \'e invert{\'\i}vel.
+\end{exercicio}
+
+\begin{exercicio}
+  Determine o n\'umero de matrizes n\~ao semelhantes $A$ em $\cp{M}_5(\real)$ que satisfazem a equa\c{c}\~ao $(A + I_5)^3 = 0$.
+  \begin{solucao}
+    Existem 2 tipos de matrizes diferentes.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $A \in \cp{M}_4(\real)$ tal que $A^4 - 8A^2 + 16I = 0$. Quais s\~ao as poss{\'\i}veis formas de Jordan n\~ao semelhantes para $A$?
+  \begin{solucao}
+    \[
+      [A] = \begin{bmatrix}
+        \phantom{-}2 \\
+        & \phantom{-}2 \\
+        & & -2\\
+        & & & -2
+      \end{bmatrix},\qquad [A] = \begin{bmatrix}
+        \phantom{-}2 & \phantom{-}0\\
+        \phantom{-}1& \phantom{-}2 \\
+        & & -2\\
+        & & & -2
+      \end{bmatrix}\]
+      \[
+      [A] = \begin{bmatrix}
+        \phantom{-}2\\
+        & \phantom{-}2 \\
+        & & -2 & \phantom{-}0\\
+        & & \phantom{-}1& -2
+      \end{bmatrix},\qquad
+      [A] = \begin{bmatrix}
+        \phantom{-}2 & \phantom{-}0\\
+        \phantom{-}1& \phantom{-}2 \\
+        & & -2 & \phantom{-}0\\
+        & & \phantom{-}1& -2
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Verifique se as matrizes seguintes s\~ao semelhantes
+  \[
+    A = \begin{bmatrix}
+      -1 & 0 & 0 & -2\\
+      \phantom{-} 0 & 1 & 0 & \phantom{-} 4\\
+      -1 & 0 & 1 & \phantom{-} 1\\
+      \phantom{-} 0 & 0 & 0 & \phantom{-} 1
+    \end{bmatrix}, \quad B = \begin{bmatrix}
+      \phantom{-} 1 & 0 & 0 & \phantom{-} 0\\
+      -1 & 1 & 0 & \phantom{-} 0\\
+      \phantom{-} 0 & 1 & 1 & \phantom{-} 0\\
+      \phantom{-} 0 & 0 & 0 & -1
+    \end{bmatrix}.
+  \]
+  \begin{solucao}
+    N\~ao s\~ao semelhantes.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Ache a forma de Jordan das seguintes matrizes
+  \[
+      A = \begin{bmatrix}
+      0 & -9 & 0 & 0\\
+      1 & \phantom{-} 6 & 0 & 0\\
+      0 & \phantom{-} 0 & 3 & 0\\
+      0 & \phantom{-} 0 & 0 & 3
+    \end{bmatrix}, \quad B = \begin{bmatrix}
+      \phantom{-} 5 & -9 & -4\\
+      \phantom{-} 6 & -11 & -5\\
+      -7 & \phantom{-} 13 & \phantom{-} 6
+    \end{bmatrix}.
+  \]
+  \begin{solucao}
+    \[
+      J(A) = \begin{bmatrix}
+        3 & 0\\
+        1 & 3\\
+        & & 3\\
+        & & & 3
+      \end{bmatrix}, \qquad J(B) = \begin{bmatrix}
+        0 & 0 & 0\\
+        1 & 0 & 0\\
+        0 & 1 & 0
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $A$ uma matriz real $9 \times 9$ cujo polin\^omio caracter{\'\i}stico \'e $(x - 3)^5(x - 2)^4$ e cujo polin\^omio minimal \'e $(x - 3)^3(x - 2)^2$. D\^e as poss{\'\i}veis formas de Jordan de $A$.
+  \begin{solucao}
+    \[
+      [J_1] = \begin{bmatrix}
+        3 & 0 & 0\\
+        1 & 3 & 0\\
+        0 & 1 & 3\\
+        & & & 3\\
+        & & & & 3\\
+        & & & & & 2 & 0\\
+        & & & & & 1 & 2\\
+        & & & & & & & 2\\
+        & & & & & & & & 2
+      \end{bmatrix}\qquad
+      [J_2] = \begin{bmatrix}
+        3 & 0 & 0\\
+        1 & 3 & 0\\
+        0 & 1 & 3\\
+        & & & 3 & 0\\
+        & & & 1 & 3\\
+        & & & & & 2 & 0\\
+        & & & & & 1 & 2\\
+        & & & & & & & 2\\
+        & & & & & & & & 2
+      \end{bmatrix}
+    \]
+    \[
+      [J_3] = \begin{bmatrix}
+        3 & 0 & 0\\
+        1 & 3 & 0\\
+        0 & 1 & 3\\
+        & & & 3\\
+        & & & & 3\\
+        & & & & & 2 & 0\\
+        & & & & & 1 & 2\\
+        & & & & & & & 2 & 0\\
+        & & & & & & & 1 & 2
+      \end{bmatrix}\qquad
+      [J_4] = \begin{bmatrix}
+        3 & 0 & 0\\
+        1 & 3 & 0\\
+        0 & 1 & 3\\
+        & & & 3 & 0\\
+        & & & 1 & 3\\
+        & & & & & 2 & 0\\
+        & & & & & 1 & 2\\
+        & & & & & & & 2 & 0\\
+        & & & & & & & 1 & 2
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $T$ um operador linear sobre um espa\c{c}o de dimens\~ao finita. Mostre que se $m_T(x)$ for um produto de polin\^omios de grau 1 e sem ra{\'\i}zes repetidas, ent\~ao $T$ \'e diagonaliz\'avel.
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre todas as poss{\'\i}veis formas de Jordan para o operador linear $T$ cujo polin\^omios caracter{\'\i}stico e minimal s\~ao como seguem:
+  \begin{enumerate}[label=({\alph*})]
+    \item $p_T(x) = (x - 2)^4(x - 3)^3$, $m_T(x) = (x - 2)^2(x - 3)^2$
+    \item $p_T(x) = (x - 7)^5$, $m_T(x) = (x - 7)^2$
+    \item $p_T(x) = (x - 2)^7$, $m_T(x) = (x - 2)^3$
+    \item $p_T(x) = (x - 3)^4(x - 5)^4$, $m_T(x) = (x - 3)^2(x - 5)^2$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $[T] = \begin{bmatrix}
+        2 & 0 \\
+        1 & 2 \\
+        & & 2 & 0\\
+        & & 1 & 2\\
+        & & & & 3 & 0\\
+        & & & & 1 & 3\\
+        & & & & & & 3
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        2 & 0 \\
+        1 & 2 \\
+        & & 2\\
+        & & & 2\\
+        & & & & 3 & 0\\
+        & & & & 1 & 3\\
+        & & & & & & 3
+      \end{bmatrix}$
+      \item $[T] = \begin{bmatrix}
+        7 & 0 \\
+        1 & 7 \\
+        & & 7 & 0\\
+        & & 1 & 7\\
+        & & & & 7
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        7 & 0 \\
+        1 & 7 \\
+        & & 7\\
+        & & & 7\\
+        & & & & 7
+      \end{bmatrix}$
+      \item $[T] = \begin{bmatrix}
+        2 & 0 & 0\\
+        1 & 2 & 0\\
+        0 & 1 & 2\\
+        & & & 2 & 0 & 0\\
+        & & & 1 & 2 & 0\\
+        & & & 0 & 1 & 2\\
+        & & & & & & 2
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        2 & 0 & 0\\
+        1 & 2 & 0\\
+        0 & 1 & 2\\
+        & & & 2 & 0\\
+        & & & 1 & 2\\
+        & & & & & 2 & 0\\
+        & & & & & 1 & 2
+      \end{bmatrix}$\\
+      $[T] = \begin{bmatrix}
+        2 & 0 & 0\\
+        1 & 2 & 0\\
+        0 & 1 & 2\\
+        & & & 2 & 0\\
+        & & & 1 & 2\\
+        & & & & & 2\\
+        & & & & & & 2
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        2 & 0 & 0\\
+        1 & 2 & 0\\
+        0 & 1 & 2\\
+        & & & 2 \\
+        & & & & 2\\
+        & & & & & 2 \\
+        & & & & & & 2
+      \end{bmatrix}$
+      \item $[T] = \begin{bmatrix}
+        3 & 0\\
+        1 & 3\\
+        & & 3 & 0\\
+        & & 1 & 3\\
+        & & & & 5 & 0\\
+        & & & & 1 & 5\\
+        & & & & & & 5 & 0\\
+        & & & & & & 1 & 5
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        3 & 0\\
+        1 & 3\\
+        & & 3 & 0\\
+        & & 1 & 3\\
+        & & & & 5 & 0\\
+        & & & & 1 & 5\\
+        & & & & & & 5\\
+        & & & & & & & 5
+      \end{bmatrix}$\\
+      $[T] = \begin{bmatrix}
+        3 & 0\\
+        1 & 3\\
+        & & 3\\
+        & & & 3\\
+        & & & & 5 & 0\\
+        & & & & 1 & 5\\
+        & & & & & & 5 & 0\\
+        & & & & & & 1 & 5
+      \end{bmatrix},\quad [T] = \begin{bmatrix}
+        3 & 0\\
+        1 & 3\\
+        & & 3\\
+        & & & 3\\
+        & & & & 5 & 0\\
+        & & & & 1 & 5\\
+        & & & & & & 5\\
+        & & & & & & & 5
+      \end{bmatrix}$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Se $A$ \'e uma matriz $5 \times 5$ complexa com polin\^omio caracter{\'\i}stico $p_A(x) = (x - 2)^3(x + 7)^2$ e polin\^omio minimal $m_A(x) = (x - 2)^2(x + 7)$, qual \'e a forma de Jordan de $A$?
+  \begin{solucao}
+    \[
+      \begin{bmatrix}
+        2 & 0\\
+        1 & 2\\
+        & & 2\\
+        & & & 7\\
+        & & & & 7
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Quantas formas de Jordan s\~ao poss{\'\i}veis para a matriz complexa $6 \times 6$ cujo polin\^omio caracter{\'\i}stico \'e $p_A(x) = (x + 2)^4(x - 1)^2$?
+  \begin{solucao}
+    Existem 10 poss{\'\i}veis formas de Jordan para $A$.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  O operador deriva\c{c}\~ao sobre o espa\c{c}os dos polin\^omios reais de grau menor ou igual a 3 \'e representado em rela\c{c}\~ao \`a base can\^onica pela matriz
+  \[
+      [D]_\mathcal{B} = \begin{bmatrix}
+        0 & 1 & 0 & 0\\
+        0 & 0 & 2 & 0\\
+        0 & 0 & 0 & 3\\
+        0 & 0 & 0 & 0
+      \end{bmatrix}.
+  \]
+  Qual a forma de Jordan deste operador?
+  \begin{solucao}
+    \[
+      \begin{bmatrix}
+        0 & 0 & 0 & 0\\
+        1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $A$ a matriz complexa
+  \[
+      A = \begin{bmatrix}
+        \phantom{-} 2 & 0 & 0 & 0 & 0 & \phantom{-} 0\\
+        \phantom{-} 1 & 2 & 0 & 0 & 0 & \phantom{-} 0\\
+        -1 & 0 & 2 & 0 & 0 & \phantom{-} 0\\
+        \phantom{-} 0 & 1 & 0 & 2 & 0 & \phantom{-} 0\\
+        \phantom{-} 1 & 1 & 1 & 1 & 2 & \phantom{-} 0\\
+        \phantom{-} 0 & 0 & 0 & 0 & 1 & -1
+      \end{bmatrix}.
+  \]
+  Determinar a forma de Jordan de $A$.
+  \begin{solucao}
+    \[
+      \begin{bmatrix}
+        2 & 0 & 0 & 0 \\
+        1 & 2 & 0 & 0\\
+        0 & 1 & 2 & 0\\
+        0 & 0 & 1 & 2\\
+         & & & & -1\\
+         & & & & & 2
+      \end{bmatrix}
+    \]
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Nos casos abaixo, encontre a forma de Jordan e a base de Jordan que gera essa forma:
+  \begin{enumerate}[label=({\alph*})]
+    \item $A = \begin{bmatrix}
+      \phantom{-} 2 & \phantom{-} 2 & \phantom{-} 3\\
+      \phantom{-} 1 & \phantom{-} 3 & \phantom{-} 3\\
+      -1 & -2 & -2
+    \end{bmatrix}$
+    \item $B = \begin{bmatrix}
+      5 & 4 & 2\\
+      4 & 5 & 2\\
+      2 & 2 & 2
+    \end{bmatrix}$
+    \item $C = \begin{bmatrix}
+      \phantom{-} 1 & 1 & \phantom{-} 0\\
+      -1 & 4 & \phantom{-} 1\\
+      -4 & 13 & -3
+    \end{bmatrix}$
+    \item $D = \begin{bmatrix}
+      \phantom{-} 4 & 0 & 1 & 0\\
+      \phantom{-} 2 & 2 & 3 & 0\\
+      -1 & 0 & 2 & 0\\
+      \phantom{-} 4 & 0 & 1 & 2
+    \end{bmatrix}$
+    \item $E = \begin{bmatrix}
+      5 & -1 & 0 & \phantom{-} 0\\
+      9 & -1 & 0 & \phantom{-} 0\\
+      0 & \phantom{-} 0 & 7 & -2\\
+      0 & \phantom{-} 0 & 12 & -3
+    \end{bmatrix}$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item Forma de Jordan: $J(A) = \begin{bmatrix}
+        1 & 0 & 0\\
+        1 & 1 & 0\\
+        0 & 0 & 1
+      \end{bmatrix}$, uma poss{\'\i}vel escolha para a base de Jordan \'e: $\mathcal{B} = \{(1,0,0);(1,1,-1);(-3,1,0)\}$
+      \item Forma de Jordan: $J(B) = \begin{bmatrix}
+        0 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 1 & 1
+      \end{bmatrix}$, uma poss{\'\i}vel escolha para a base de Jordan \'e: $\mathcal{B} = \{(1,1,3);(-3,-1,0);(1,0,-1)\}$
+      \item Forma de Jordan: $J(C) = \begin{bmatrix}
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 10
+      \end{bmatrix}$, uma poss{\'\i}vel escolha para a base de Jordan \'e: $\mathcal{B} = \{(-1,0,2);(-1,1,0);(2,2,1)\}$
+      \item Forma de Jordan: $J(D) = \begin{bmatrix}
+        2 & 0 & 0 & 0\\
+        0 & 2 & 0 & 0\\
+        0 & 0 & 3 & 0\\
+        0 & 0 & 1 & 3
+      \end{bmatrix}$, uma poss{\'\i}vel escolha para a base de Jordan \'e: $\mathcal{B} = \{(0,1,0,0);(0,0,0,1);(1,3,0,1);(1,-1,-1,3)\}$
+      \item Forma de Jordan: $J(E) = \begin{bmatrix}
+        2 & 0 & 0 & 0\\
+        1 & 2 & 0 & 0\\
+        0 & 0 & 3 & 0\\
+        0 & 0 & 0 & 1
+      \end{bmatrix}$, uma poss{\'\i}vel escolha para a base de Jordan \'e: $\mathcal{B} = \{(0,-1,0,0);(1,3,0,0);(0,0,-1,2);(0,0,-1,3)\}$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
 \newpage
 \Closesolutionfile{ans}
 \hrule
