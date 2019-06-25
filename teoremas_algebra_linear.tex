@@ -63,5 +63,61 @@
     \end{itemize}
   \end{definicao}
 }
+\frame{
+  \begin{definicao}
+  Um \textbf{bloco de Jordan} $r \times r$ em $\lambda$ \'e a matrix $J_r(\lambda)$ em $\cp{M}_n(\cp{K})$ que tem $\lambda$ na diagonal principal e 1 na diagonal abaixo da principal, isto \'e,
+  \[
+    J_r(\lambda) = \begin{bmatrix}
+      \lambda & 0 & 0 & \cdots & 0 & 0\\
+      1 & \lambda & 0 & \cdots & 0 & 0\\
+      0 & 1 & \lambda & \cdots & 0 & 0\\
+      \vdots\\
+      0 & 0 & 0 & \cdots & 1 & \lambda
+    \end{bmatrix}_{r \times r}.
+  \]
+\end{definicao}
+}
+\frame{
+  \begin{definicao}
+    Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Para subespa\c{c}os $W_1$, \dots, $W_t$ de $V$ dizemos que $V$ \'e uma \textbf{soma direta} de $W_1$, \dots, $W_t$ se
+    \begin{itemize}
+      \item $W_1 + \cdots + W_t = \{u_1 + \cdots + u_t \mid u_i \in W_i,\ i = 1,\dots, t\}$
+      \item $W_i \cap (W_1 + \cdots + W_{i - 1} + W_{i + 1} + \cdots + W_t) = \{0_V\}$, $i = 1$, \dots, $t$.
+    \end{itemize}
+    Neste caso escrevemos
+    \[
+      V = W_1 \oplus \cdots \oplus W_t.
+    \]
+    Se $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita tal que $V = W_1 \oplus \cdots \oplus W_t$, ent\~ao
+    \[
+      \dim_\cp{K}V = \sum_{i = 1}^t\dim_\cp{K}W_i.
+    \]
+  \end{definicao}
+}
+\frame{
+  \begin{teorema}\label{operadornilpotente}
+    Seja $T : V \to V$ um operador linear nilpotente com {\'\i}ndice de nilpot\^encia $r \ge 1$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao existem n\'umeros positivos $p$, $m_1$, \dots, $m_p$ e vetores $u_1$, \dots, $u_p$ tais que
+    \begin{enumerate}[label={\roman*})]
+      \item $r = m_1 \ge m_2 \ge \cdots \ge m_p$.
+      \item O conjunto $\mathcal{B} = \{u_1, T(u_1), \dots, T^{m_1 - 1}(u_1); u_2, T(u_2), \dots, T^{m_2 - 1}(u_2); \dots; u_p, T(u_p), \dots, \linebreak T^{m_p - 1}(u_p)\}$ \'e uma base de $V$.
+      \item $T^{m_i}(u_i) = 0_V$ para cada $i = 1$, \dots, $p$.
+      \item Se $S$ for um operador linear em um $\cp{K}$-espa\c{c}o vetorial $W$ de dimens\~ao finita, ent\~ao os inteiros $p$, $m_1$, \dots, $m_p$ associados a $S$ e a $T$ s\~ao iguais se, e somente se, existir um isomorfismo $\Phi : V \to W$ com $\Phi T \Phi^{-1} = S$.
+    \end{enumerate}
+  \end{teorema}
+}
+\frame{
+  \begin{teorema}\label{formadejordan}
+    Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Suponha que
+    \[
+      p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
+    \]
+    onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Ent\~ao $V = W_1 \oplus \cdots \oplus W_r$ onde para cada $i = 1$, \dots, $r$ temos:
+    \begin{enumerate}[label={\roman*})]
+      \item $\dim_\cp{K} W_i = m_i$
+      \item O subespa\c{c}o $W_i$ \'e $T-invariante$
+      \item A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.
+    \end{enumerate}
+  \end{teorema}
+}
 \end{document}
 
