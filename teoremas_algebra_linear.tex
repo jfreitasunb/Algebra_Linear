@@ -10,7 +10,7 @@
 {
 \usetheme{Warsaw}
 }
-
+\setbeamertemplate{theorems}[numbered]
 \newtheorem{teorema}{Teorema}
 \newtheorem{definicao}{Definição}
 
@@ -95,7 +95,7 @@
   \end{definicao}
 }
 \frame{
-  \begin{teorema}\label{operadornilpotente}
+  \begin{teorema}
     Seja $T : V \to V$ um operador linear nilpotente com {\'\i}ndice de nilpot\^encia $r \ge 1$,\pause onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita.\pause Ent\~ao existem n\'umeros positivos $p$, $m_1$, \dots, $m_p$ e vetores $u_1$, \dots, $u_p$ tais que\pause
     \begin{enumerate}[label={\roman*})]
       \item $r = m_1 \ge m_2 \ge \cdots \ge m_p$.\pause
@@ -110,16 +110,20 @@
   \end{teorema}
 }
 \frame{
-  \begin{teorema}\label{formadejordan}
+  \begin{teorema}
     Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita.\pause Suponha que
     \[
-      p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
+      p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_r)^{m_r}
     \]
-    \pause onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$.\pause Ent\~ao $V = W_1 \oplus \cdots \oplus W_r$ onde para cada $i = 1$, \dots, $r$ temos:
+    \pause onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$.\pause Ent\~ao
+    \[
+      V = W_1 \oplus \cdots \oplus W_r
+    \]
+    \pause onde para cada $i = 1$, \dots, $r$ temos:\pause
     \begin{enumerate}[label={\roman*})]
-      \item $\dim_\cp{K} W_i = m_i$
-      \item O subespa\c{c}o $W_i$ \'e $T-invariante$
-      \item A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.
+      \item $\dim_\cp{K} W_i = m_i$\pause
+      \item O subespa\c{c}o $W_i$ \'e $T-invariante$\pause
+      \item A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.\pause
     \end{enumerate}
   \end{teorema}
 }
