@@ -164,7 +164,7 @@ Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se,
 \]
 
 \begin{proposicao}
-	Sejam $\lambda \in \cp{K}$ um autovalor do operador linear $T : V \to V$. Ent\~ao
+	Seja $\lambda \in \cp{K}$ um autovalor do operador linear $T : V \to V$. Ent\~ao
 	\[
 		\aut_T(\lambda) = \ker(T - \lambda Id).
 	\]
@@ -342,7 +342,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 \begin{teorema}
 	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e sejam $\lambda_1$, \dots, $\lambda_r$, $r \ge 1$, autovalores de $T$, dois a dois distintos.
 	\begin{enumerate}[label={\roman*})]
-		\item Se $u_1 + \cdots + u_r = 0_V$ com $u_i \in \aut_T(\lambda_i)$; $i = 1$, \dots, $r$; ent\~ao $u_i = 0_V$ para todo $i$.
+		\item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ com $u_i \in \aut_T(\lambda_i)$; $i = 1$, \dots, $r$; ent\~ao $u_i = 0_V$ para todo $i$.
 		\item Para cada $i = 1$, \dots, $r$ seja $\mathcal{B}_i$ um conjunto linearmente independente contido em $\aut_T(\lambda_i)$. Ent\~ao $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \'e L.I. em $V$.
 	\end{enumerate}
 \end{teorema}
@@ -372,7 +372,7 @@ uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_
 		\[
 			\sum_{j = 1}^{n_i}\alpha_{ij}u_{ij} \in \aut_T(\lambda_i)
 		\]
-		para $i = 1$, \dots, $r$. Da{\'\i} segue do item (a) que
+		para $i = 1$, \dots, $r$. Da{\'\i} segue do item \ref{autovetorLI} que
 		\[
 			\sum_{j = 1}^{n_i}\alpha_{ij}u_{ij} = 0_V
 		\]
@@ -936,7 +936,7 @@ onde $T_1^2 = 0$ e $T_2$ \'e invert{\'\i}vel. O operador $T_1$ \'e chamado de \t
 \end{definicao}
 
 \begin{definicao}
-	Uma operador linear $T : V \to V$ \'e chamado de \textbf{nilpotente} se existir um $r > 0$ tal que $T^r = 0$. O \textbf{{\'\i}ndice de nilpot\^encia} de um operador nilpotente ser\'a o menor inteiro $i$ tal que $T^i = 0$.\index{Operador Linear!Nilpotente}
+	Um operador linear $T : V \to V$ \'e chamado de \textbf{nilpotente} se existir um $r > 0$ tal que $T^r = 0$. O \textbf{{\'\i}ndice de nilpot\^encia} de um operador nilpotente ser\'a o menor inteiro $i$ tal que $T^i = 0$.\index{Operador Linear!Nilpotente}
 \end{definicao}
 
 \begin{observacao}
@@ -1024,26 +1024,26 @@ Al\'em disso, se o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = (x - \la
 \]\index{Jordan!Bloco de }
 \end{definicao}
 
-\begin{teorema}\label{operadornilpotente}
+\begin{teorema}\label{operador_nilpotente}
 	Seja $T : V \to V$ um operador linear nilpotente com {\'\i}ndice de nilpot\^encia $r \ge 1$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao existem n\'umeros positivos $p$, $m_1$, \dots, $m_p$ e vetores $u_1$, \dots, $u_p$ tais que
-	\begin{enumerate}[label={\roman*})]
-		\item $r = m_1 \ge m_2 \ge \cdots \ge m_p$.
-		\item O conjunto $\mathcal{B} = \{u_1, T(u_1), \dots, T^{m_1 - 1}(u_1); u_2, T(u_2), \dots, T^{m_2 - 1}(u_2); \dots; u_p, T(u_p), \dots, \linebreak T^{m_p - 1}(u_p)\}$ \'e uma base de $V$.
-		\item $T^{m_i}(u_i) = 0_V$ para cada $i = 1$, \dots, $p$.
-		\item Se $S$ for um operador linear em um $\cp{K}$-espa\c{c}o vetorial $W$ de dimens\~ao finita, ent\~ao os inteiros $p$, $m_1$, \dots, $m_p$ associados a $S$ e a $T$ s\~ao iguais se, e somente se, existir um isomorfismo $\Phi : V \to W$ com $\Phi T \Phi^{-1} = S$.
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{propriedade_i_operado_nilpotente} $r = m_1 \ge m_2 \ge \cdots \ge m_p$.
+		\item\label{propriedade_ii_operado_nilpotente} O conjunto $\mathcal{B} = \{u_1, T(u_1), \dots, T^{m_1 - 1}(u_1); u_2, T(u_2), \dots, T^{m_2 - 1}(u_2); \dots; u_p, T(u_p), \dots, \linebreak T^{m_p - 1}(u_p)\}$ \'e uma base de $V$.
+		\item\label{propriedade_iii_operado_nilpotente} $T^{m_i}(u_i) = 0_V$ para cada $i = 1$, \dots, $p$.
+		\item\label{propriedade_iv_operado_nilpotente} Se $S$ for um operador linear em um $\cp{K}$-espa\c{c}o vetorial $W$ de dimens\~ao finita, ent\~ao os inteiros $p$, $m_1$, \dots, $m_p$ associados a $S$ e a $T$ s\~ao iguais se, e somente se, existir um isomorfismo $\Phi : V \to W$ com $\Phi T \Phi^{-1} = S$.
 	\end{enumerate}
 \end{teorema}
 
-\begin{teorema}\label{formadejordan}
+\begin{teorema}\label{forma_de_jordan}
 	Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Suponha que
 	\[
 		p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_r)^{m_r}
 	\]
 	onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Ent\~ao $V = W_1 \oplus \cdots \oplus W_r$ onde para cada $i = 1$, \dots, $r$ temos:
-	\begin{enumerate}[label={\roman*})]
-		\item $\dim_\cp{K} W_i = m_i$
-		\item O subespa\c{c}o $W_i$ \'e $T-invariante$
-		\item A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{propriedade_i_forma_de_jordan} $\dim_\cp{K} W_i = m_i$
+		\item\label{propriedade_ii_forma_de_jordan} O subespa\c{c}o $W_i$ \'e $T-invariante$
+		\item\label{propriedade_iii_forma_de_jordan} A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.
 	\end{enumerate}
 \end{teorema}
 
@@ -1051,14 +1051,14 @@ Seja $T : V \to V$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial de d
 \[
 	p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
 \]
-com $r \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Pelo Teorema \ref{formadejordan}, existe uma decomposi\c{c}\~ao $V = W_1 \oplus \cdots \oplus W_r$ satisfazendo as propriedades (a), (b) e (c) de seu enunciado. Agora, para cada $i = 1$, \dots, $r$ considere $T_i = T - \lambda_i Id : W_i \to W_i$. Pelo item (c) do Teorema \ref{formadejordan}, $T_i$ \'e nilpotente. Seja $\alpha_i$ o {\'\i}ndice de nilpot\^encia de $T_i$. Assim
+com $r \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Pelo Teorema \ref{forma_de_jordan}, existe uma decomposi\c{c}\~ao $V = W_1 \oplus \cdots \oplus W_r$ satisfazendo as propriedades \ref{propriedade_i_forma_de_jordan}, \ref{propriedade_ii_forma_de_jordan} e \ref{propriedade_iii_forma_de_jordan} de seu enunciado. Agora, para cada $i = 1$, \dots, $r$ considere $T_i = T - \lambda_i Id : W_i \to W_i$. Pelo item \ref{propriedade_iii_forma_de_jordan} do Teorema \ref{forma_de_jordan}, $T_i$ \'e nilpotente. Seja $\alpha_i$ o {\'\i}ndice de nilpot\^encia de $T_i$. Assim
 \begin{align*}
 	T_i^{\alpha_i} = 0\\
 	(T - \lambda_i Id)^{\alpha_i} = 0
 \end{align*}
 e ent\~ao $T_i$ \'e raiz do polin\^omio $(x - \lambda_i)^{\alpha_i}$ para $i = 1$, \dots, $r$. Seja $f(x) = (x - \lambda_1)^{\alpha_1} (x - \lambda_2)^{\alpha_2}\dots (x - \lambda_r)^{\alpha_r}$. Pela defini\c{c}\~ao de {\'\i}ndice de nilpot\^encia, $f(x)$ \'e o polin\^omio de menor grau tal que suas ra{\'\i}zes s\~ao $T_1$, \dots, $T_r$. Logo $T$ \'e uma raiz de $f(x)$, isto \'e, $f(x)$ \'e o polin\^omio minimal de $T$. Portanto o {\'\i}ndice de nilpot\^encia de $T_i$ \'e determinado pelo polin\^omio minimal $m_T(x)$.
 
-Como $T_i$ \'e nilpotente, pelo item (b) do Teorema \ref{operadornilpotente}, existe uma base $\mathcal{B}_i$ de $W_i$ e n\'umeros $p_i$, $m_{i_1} \ge m_{i_2} \cdots \ge m_{i_{p_i}}$ tais que
+Como $T_i$ \'e nilpotente, pelo item \ref{propriedade_ii_operado_nilpotente} do Teorema \ref{operador_nilpotente}, existe uma base $\mathcal{B}_i$ de $W_i$ e n\'umeros $p_i$, $m_{i_1} \ge m_{i_2} \cdots \ge m_{i_{p_i}}$ tais que
 \[
 	[T_i]_{\mathcal{B}_i} = \begin{bmatrix}
 		J_{m_{i_1}}(\lambda_i)\\
@@ -1086,7 +1086,7 @@ onde para cada $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$
 		& & & [T_r]_{\mathcal{B}_r}
 	\end{bmatrix}.
 \end{equation}
-A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} associada ao operador linear $T$. Os n\'umeros $p_i$, $m_{ij}$, $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$ s\~ao completamente determinados por $T$. Mais ainda, pelo item (d) do Teorema \ref{operadornilpotente}, dois operadores lineares $S \in \mathcal{L}(V,V)$ e $T \in \mathcal{L}(W,W)$ t\^em a mesma forma de Jordan se, e somente se, existir um isomorfismo $\Phi : V \to W$ tal que $\Phi^{-1}S\Phi = T$.\index{Jordan!Forma de}
+A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} associada ao operador linear $T$. Os n\'umeros $p_i$, $m_{ij}$, $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$ s\~ao completamente determinados por $T$. Mais ainda, pelo item \ref{propriedade_iv_operado_nilpotente} do Teorema \ref{operador_nilpotente}, dois operadores lineares $S \in \mathcal{L}(V,V)$ e $T \in \mathcal{L}(W,W)$ t\^em a mesma forma de Jordan se, e somente se, existir um isomorfismo $\Phi : V \to W$ tal que $\Phi^{-1}S\Phi = T$.\index{Jordan!Forma de}
 
 \begin{exemplo}
 	\begin{enumerate}[label={\arabic*})]
@@ -1253,7 +1253,7 @@ A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} asso
 					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0
      			\end{bmatrix}
 			\end{align*}
-			e assim $\dim_\cp{K}\aut_T(a) = 2$, isto \'e, existem dois blocos de Jordan associados ao autovalor 0. Portanto, existe uma base $\mathcal{B}$ de $V$ tal que
+			e assim $\dim_\cp{K}\aut_T(0) = 2$, isto \'e, existem dois blocos de Jordan associados ao autovalor 0. Portanto, existe uma base $\mathcal{B}$ de $V$ tal que
 			\[
 				[T]_{B} = \left[\begin{tabular}{cc|cc}
  					0 & 0 &  & \\
