@@ -793,13 +793,14 @@ Assim provamos o seguinte teorema:
 
 	Vamos calcular $(G\circ F)(u_j)$ usando (1) e (2):
 	\begin{align*}
-		(G\circ F)(u_j) &= G(F(u_j)) = G(\sum_{i=1}^m a_{ij}v_i)\\
-		&= \sum_{i=1}^m a_{ij}G(v_i) = \sum_{i=1}^m a_{ij}\sum_{k=1}^r b_{ki}w_k\\
-		&= \sum_{k=1}^r \sum_{i=1}^m b_{ki}a_{ij}w_k.
+		(G\circ F)(u_j) &= G(F(u_j)) = G(a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m)\\
+		&= a_{1j}G(v_1) + a_{2j}G(v_2) + \cdots + a_{mj}G(v_m)\\
+		&= a_{1j}(b_{11}w_1 + b_{12}w_2 + \cdots + b_{1r}w_r) \\ &+ a_{2j}(b_{21}w_1 + b_{22}w_2 + \cdots + b_{2r}w_r) + \cdots \\ &+ a_{mj}(b_{m1}w_1 + b_{m2}w_2 + \cdots + b_{mr}w_r)\\
+		&= (a_{1j}b_{11} + a_{2j}b_{21} + \cdots + a_{mj}b_{m1})w_1 \\ &+ (a_{1j}b_{12} + a_{2j}b_{22} + \cdots + a_{mj}b_{m2})w_2 + \cdots \\ &+ (a_{1j}b_{1r} + a_{2j}b_{2r} + \cdots + a_{mj}b_{mr})w_r.
 	\end{align*}
 	Comparando essa \'ultima equa\c{c}\~ao com (3) e usando a unicidade dos escalares obtemos
 	\[
-		c_{kj} = \sum_{i=1}^m b_{ki}a_{ij}
+		c_{kj} = a_{1j}b_{k1} + a_{2j}b_{k2} + \cdots + a_{mj}b_{km}
 	\]
 	para $j=1$, \dots, $n$ e $k = 1$, \dots, $r$. Isto \'e, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}}$ \'e o elemento na posi\c{c}\~ao $(k,j)$ da matriz resultante da multiplica\c{c}\~ao de $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ por $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}$. Portanto
 	\[
