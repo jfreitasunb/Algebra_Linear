@@ -54,22 +54,22 @@
   \]
   Determine a decomposi\c{c}\~ao $T = T_1 \oplus T_2$ onde $T_1$ \'e nilpotente e $T_2$ \'e invert{\'\i}vel.
 
-\textbf{Solu{\c c}{\~a}o}: Precisamos encontrar $\real$-subespaços vetoriais $T$-invariantes $W_1$ e $W_2$ tais que $T_1 = T : W_1 \to W_1$ seja nilpotente, $T_2 = T : W_2 \to W_2$ seja invertível e $\real^5 = W_1 \oplus W_2$.
+\textbf{Solu{\c c}{\~a}o}: Precisamos encontrar $\real$-subespa\c{c}os vetoriais $T$-invariantes $W_1$ e $W_2$ tais que $T_1 = T : W_1 \to W_1$ seja nilpotente, $T_2 = T : W_2 \to W_2$ seja invert{\'\i}vel e $\real^5 = W_1 \oplus W_2$.
 
 Para issso, primeiro considere
 \[
     \mathcal{B} = \{e_1 = (1,0,0,0,0); e_2 = (0,1,0,0,0); e_3 = (0,0,1,0,0); e_4 = (0,0,0,1,0); e_5 = (0,0,0,0,1)\}
 \]
-a base ordenada canônica de $\real^5$. Note que
+a base ordenada can\^onica de $\real^5$. Note que
 \begin{align*}
-	T(e_1) &= (3,0,0,-1,2) = 3e_1 - e_4 + 2e_5\\
-	T(e_2) &= (0,0,0,0,0)\\
-	T(e_3) &= (0,0,2,0,0) = 2e_3\\
-	T(e_4) &= (0,0,-1,0,0) = -e_3\\
-	T(e_5) &= (-2,0,1,1,-1) = -2e_1 + e_3 + e_4 - e_5.
+    T(e_1) &= (3,0,0,-1,2) = 3e_1 - e_4 + 2e_5\\
+    T(e_2) &= (0,0,0,0,0)\\
+    T(e_3) &= (0,0,2,0,0) = 2e_3\\
+    T(e_4) &= (0,0,-1,0,0) = -e_3\\
+    T(e_5) &= (-2,0,1,1,-1) = -2e_1 + e_3 + e_4 - e_5.
 \end{align*}
 
-Daí,
+Da{\'\i},
 \[
     [T]_\mathcal{B} = \begin{bmatrix}
         3 & 0 & 0 & 0 & -2\\
@@ -82,9 +82,9 @@ Daí,
 
 Segue facilmente que
 \[
- 	\ker T = \{(0,x,y,2y,0)\mid x, y \in \real\}
+    \ker T = \{(0,x,y,2y,0)\mid x, y \in \real\}
 \]
-e uma base para $\ker T$ é $\{e_2, e_3 + 2e_4\}$. Então $\dim_\real\ker T = 2$.
+e uma base para $\ker T$ \'e $\{e_2, e_3 + 2e_4\}$. Ent\~ao $\dim_\real\ker T = 2$.
 
 Agora,
 \[
@@ -96,33 +96,33 @@ Agora,
         4 & 0 & 0 & 0 & 3
     \end{bmatrix}
 \]
-e cálculos simples mostram que
+e c\'alculos simples mostram que
 \[
     \ker T^2 = \{(0,x,y,2y,0)\mid x, y \in \real\} = \ker T.
 \]
-Usando o \textbf{Exercício 26}, podemos concluir que $\ker T = \ker T^{i + 1}$, para todo $i \ge 1$.
-Assim, defina $W_1 = \ker T$, que é um subespaço $T$-invariante, e como
+Usando o \textbf{Exerc{\'\i}cio 26}, podemos concluir que $\ker T = \ker T^{i + 1}$, para todo $i \ge 1$.
+Assim, defina $W_1 = \ker T$, que \'e um subespa\c{c}o $T$-invariante, e como
 \[
-	T_1(e_2) = T_1(e_3 + 2e_4) = (0,0,0,0,0),
+    T_1(e_2) = T_1(e_3 + 2e_4) = (0,0,0,0,0),
 \]
-então $T_1$ é um operador linear nilpotente com índice de nilpotência 1.
+ent\~ao $T_1$ \'e um operador linear nilpotente com {\'\i}ndice de nilpot\^encia 1.
 
 Agora, defina
 \[
-	W_2 = [e_1 + e_5, e_3, e_4 + e_5].
+    W_2 = [e_1 + e_5, e_3, e_4 + e_5].
 \]
 
 Temos, $\dim W_2 = 3$ e
 \begin{align*}
-	T_2(e_1 + e_5) &= e_1 + e_3 + e_5 \in W_2\\
-	T_2(e_3) &= 3e_3 \in W_2\\
-	T_2(e_4 + e_5) &= -2e_1 + e_4 - e_5 = -2(e_1 + e_5) + (e_4 + e_5) \in W_2,
+    T_2(e_1 + e_5) &= e_1 + e_3 + e_5 \in W_2\\
+    T_2(e_3) &= 3e_3 \in W_2\\
+    T_2(e_4 + e_5) &= -2e_1 + e_4 - e_5 = -2(e_1 + e_5) + (e_4 + e_5) \in W_2,
 \end{align*}
-logo $W_2$ é um subespaço $T$-invariante.
+logo $W_2$ \'e um subespa\c{c}o $T$-invariante.
 
-É fácil ver que $\ker T_2 = \{(0,0,0,0,0)\}$, isto é, $T_2 : W_2 \to W_2$ é um operador linear invertível. Também segue de forma direta que
+\'E f\'acil ver que $\ker T_2 = \{(0,0,0,0,0)\}$, isto \'e, $T_2 : W_2 \to W_2$ \'e um operador linear invert{\'\i}vel. Tamb\'em segue de forma direta que
 \[
     \real^5 = W_1 \oplus W_2.
 \]
-Portanto $T = T_1 \oplus T_2$, onde $T_1$ é nilpotente e $T_2$ é invertível.
+Portanto $T = T_1 \oplus T_2$, onde $T_1$ \'e nilpotente e $T_2$ \'e invert{\'\i}vel.
 \end{document}
