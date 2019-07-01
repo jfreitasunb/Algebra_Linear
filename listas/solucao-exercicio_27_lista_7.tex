@@ -82,8 +82,9 @@ Daí,
 
 Segue facilmente que
 \[
- 	\ker T = [e_2, e_3 + 2e_4].
+ 	\ker T = \{(0,x,y,2y,0)\mid x, y \in \real\}
 \]
+e uma base para $\ker T$ é $\{e_2, e_3 + 2e_4\}$. Então $\dim_\real\ker T = 2$.
 
 Agora,
 \[
@@ -97,14 +98,14 @@ Agora,
 \]
 e cálculos simples mostram que
 \[
-    \ker T^2 = [e_2, e_3 + 2e_4] = \ker T.
+    \ker T^2 = \{(0,x,y,2y,0)\mid x, y \in \real\} = \ker T.
 \]
 Usando o \textbf{Exercício 26}, podemos concluir que $\ker T = \ker T^{i + 1}$, para todo $i \ge 1$.
-Assim, defina $W_1 = \ker T$ e como
+Assim, defina $W_1 = \ker T$, que é um subespaço $T$-invariante, e como
 \[
 	T_1(e_2) = T_1(e_3 + 2e_4) = (0,0,0,0,0),
 \]
-então $T_1$ é um operador linear nilpotente de índice de nilpotência 1 e $\dim_\real W_1 = 2$.
+então $T_1$ é um operador linear nilpotente com índice de nilpotência 1.
 
 Agora, defina
 \[
